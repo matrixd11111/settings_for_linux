@@ -1,0 +1,186 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/McKennaii/6gr/25.10.2019/" . "1/")
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/McKennaii/6gr/" . "25.10.2019/")
+ ("/home/matrix/Documents/ProjectWeb/diary/my_diary/my_diary/" . "__pycache__/")
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/McKennaii/10gr/20.10.2019/" . "1/")
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/McKennaii/10gr/" . "20.10.2019/")
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/McKennaii/" . "6gr/")
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/PinkBuffalo/6gr/20.10.2019/" . "1/")
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/PinkBuffalo/6gr/" . "20.10.2019/")
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/PinkBuffalo/10gr/20.10.2019/" . "1/")
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/PinkBuffalo/10gr/" . "20.10.2019/")
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/PinkBuffalo/" . "6gr/")
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/" . "McKennaii/")
+ ("/home/matrix/Documents/learn_2019.10.13/djangoDoc/pools/poolquen/static/" . "poolquen/")
+ ("/home/matrix/.emacs.d/elpa/" . "emmet-mode-20180613.341/")
+ ("/home/matrix/.emacs.d/" . "elpa/")
+ ("/home/matrix/Documents/learn_2019.10.13/djangoDoc/pools/poolquen/templates/" . "poolquen/")
+ ("/home/matrix/Documents/learn_2019.10.13/djangoDoc/pools/poolquen/" . "static/")
+ ("/home/matrix/Documents/learn_2019.10.13/djangoDoc/pools/" . "poolquen/")
+ ("/home/matrix/Documents/learn_2019.10.13/djangoDoc/" . "pools/")
+ ("/home/matrix/Documents/learn_2019.10.13/" . "djangoDoc/")
+ ("/home/matrix/Documents/ProjectWeb/diary/my_diary/diary/templates/" . "diary/")
+ ("/home/matrix/Documents/ProjectWeb/diary/my_diary/diary/" . "migrations/")
+ ("/home/matrix/Documents/ProjectWeb/diary/my_diary/" . "diary/")
+ ("/home/matrix/Documents/ProjectWeb/diary/" . "my_diary/")
+ ("/home/matrix/Documents/ProjectWeb/" . "diary/")
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/" . "Mooshrooms/")
+ ("/home/matrix/Documents/" . "learn_2019.10.13/")
+ ("/home/matrix/" . "my_note/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/matrix/my_note/"
+ "/home/matrix/Documents/learn_2019.10.13/djangoDoc/pools/poolquen/"
+ "/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/McKennaii/6gr/25.10.2019/1/"
+ "/home/matrix/Documents/ProjectWeb/diary/my_diary/diary/migrations/"
+ "/home/matrix/Documents/ProjectWeb/diary/my_diary/my_diary/"
+ "/home/matrix/Documents/ProjectWeb/diary/my_diary/"
+ "/home/matrix/Documents/ProjectWeb/diary/my_diary/diary/"
+ "/home/matrix/Documents/ProjectWeb/diary/my_diary/diary/templates/diary/"
+ "/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/McKennaii/10gr/20.10.2019/1/"
+ "/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/PinkBuffalo/6gr/20.10.2019/1/"
+ "/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/PinkBuffalo/10gr/20.10.2019/1/"
+ "/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/PinkBuffalo/"
+ "/home/matrix/Documents/learn_2019.10.13/djangoDoc/pools/templates/"
+ "/home/matrix/"
+ "/home/matrix/Documents/learn_2019.10.13/djangoDoc/pools/pools/"
+ "/home/matrix/Documents/learn_2019.10.13/djangoDoc/pools/poolquen/static/poolquen/"
+ "/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/programs/"
+ "/home/matrix/.emacs.d/elpa/emmet-mode-20180613.341/"
+ "/home/matrix/.emacs.d/"
+ "/home/matrix/Documents/learn_2019.10.13/djangoDoc/pools/poolquen/templates/poolquen/"
+ "/home/matrix/Documents/ProjectWeb/diary/my_diary/diary/static/"
+ "/home/matrix/Documents/ProjectWeb/diary/"
+ "/home/matrix/Documents/ProjectWeb/my_diary/"
+ "/home/matrix/Documents/"
+ "/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Rezerv/"
+ "/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/texts_docs/"
+ "/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "learnBook.org"
+ "models.py"
+ "description"
+ "0004_auto_20191023_1737.py"
+ "__init__.py"
+ "db.sqlite3"
+ "admin.py"
+ "views.py"
+ "urls.py"
+ "menu.html"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/matrix/Documents/learn_2019.10.13/djangoDoc/pools/poolquen/" (23989 29256 520002 33000) "migrations/" "admin.py~" "templates/" "tests.py" "models.py~" "models.py" "apps.py" "static/" "tests.py~" "views.py~" "__pycache__/" "../" "urls.py" ".#models.py" "views.py" "__init__.py" "urls.py~" "./" "admin.py")
+
+ ("/home/matrix/Documents/learn_2019.10.13/djangoDoc/pools/" (23987 7029 554457 475000) "templates/" "poolquen/" "../" "manage.py" "db.sqlite3" "pools/" "./")
+
+ ("/home/matrix/Documents/" (23985 40465 671209 260000) "db.sql~" "db.sql" "49021958.jpg" "GeekBrains/" "learn_2019.10.13/" "my_learn_01.09.2018_01.10.2019/" "ProjectWeb/" ".emacs.desktop" "../" "./")
+
+ ("/home/matrix/my_note/" (23986 50513 825235 755000) "learnBook.org~" "book.org~" "my_diary.org~" "my_diary.org" "../" "book.org" "./" "learnBook.org")
+
+ ("/home/matrix/" (23988 23156 897376 198000) "Music/" ".gitconfig" "Downloads/" "VirtualBox VMs/" ".gnupg/" ".dmrc" ".xsession-errors.old" ".thumbnails/" ".mysql_history" ".gconf/" ".emacs~" "Programs/" "Desktop/" "Documents/" ".Xauthority" ".config/" ".python_history" ".my.cnf~" ".xsession-errors" ".my.cnf" ".emacs.d/" ".bashrc" "my_note/" "Pictures/" ".sudo_as_admin_successful" ".gtkrc-2.0" ".cache/" ".pki/" "Public/" ".local/" "../" "Videos/" ".gimp-2.8/" ".bashrc~" "Templates/" ".emacs" ".ICEauthority" ".sqlite_history" ".mozilla/" "./" ".bash_history" ".thunderbird/")
+
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/McKennaii/6gr/25.10.2019/1/" (23987 2331 766089 878000) "description" "photo_2019-10-25_17-35-48.jpg" "photo_2019-10-25_17-35-52.jpg" "../" "photo_2019-10-25_17-35-21.jpg" "photo_2019-10-25_17-35-56.jpg" "./")
+
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/McKennaii/6gr/25.10.2019/" (23987 2073 249491 11000) "1/" "../" "./")
+
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/McKennaii/6gr/" (23987 2073 249491 11000) "25.10.2019/" "21.10.2019/" "../" "./")
+
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/McKennaii/" (23981 52925 928161 6000) "10gr/" "../" "6gr/" "./")
+
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/McKennaii/10gr/" (23987 2068 517406 705000) "25.10.2019/" "21.10.2019/" "20.10.2019/" "../" "./")
+
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/McKennaii/10gr/25.10.2019/" (23987 2068 517406 705000) "1/" "../" "./")
+
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/McKennaii/10gr/25.10.2019/1/" (23987 2327 66006 382000) "photo_2019-10-25_17-36-38.jpg" "description" "photo_2019-10-25_17-36-41.jpg" "photo_2019-10-25_17-36-35.jpg" "../" "photo_2019-10-25_17-36-05.jpg" "./")
+
+ ("/home/matrix/Documents/ProjectWeb/diary/my_diary/" (23984 39453 800091 169000) "diary/" "my_diary/" "../" "manage.py" "db.sqlite3" "./")
+
+ ("/home/matrix/Documents/ProjectWeb/diary/my_diary/diary/" (23984 39169 919582 360000) "migrations/" "admin.py~" "templates/" "tests.py" "models.py~" "models.py" "apps.py" "static/" "views.py~" "__pycache__/" "../" "urls.py" "views.py" "__init__.py" "urls.py~" "./" "admin.py")
+
+ ("/home/matrix/Documents/ProjectWeb/diary/my_diary/diary/migrations/" (23984 37019 627577 714000) "0004_auto_20191023_1737.py" "0005_auto_20191023_1740.py" "0001_initial.py" "__pycache__/" "../" "0003_auto_20191023_1604.py" "__init__.py" "0002_auto_20191023_1601.py" "./")
+
+ ("/home/matrix/Documents/ProjectWeb/diary/my_diary/my_diary/__pycache__/" (23967 32894 198917 198000) "wsgi.cpython-36.pyc" "urls.cpython-36.pyc" "../" "settings.cpython-36.pyc" "__init__.cpython-36.pyc" "./")
+
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/texts_docs/" (23976 25612 206234 229000) "description_tgs~" "description" "text.txt~" "Bitcoin" "description~" "Описание.txt" ".bashrc" "Описание.txt~" "description_tgs" "../" ".emacs" "text.emacs~" "./")
+
+ ("/home/matrix/Documents/learn_2019.10.13/djangoDoc/pools/poolquen/templates/poolquen/" (23979 6761 481194 256000) "results.html" "detail.html" "detail.html~" "index.html~" "results.html~" "../" "./" "index.html")
+
+ ("/home/matrix/.emacs.d/" (23981 54543 836819 578000) "url/" "ac-comphist.dat" "init.el~" "ido.last" "abbrev_defs" "auto-save-list/" "elpa/" "ido.last~" "snippets/" ".emacs.desktop" "desktopDjango/" "../" "eww-bookmarks" "init.el" "./")
+
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/programs/" (23979 126 438266 486000) "linux-mint-18-1-serena-32-bit.iso" "pycharm-community-2018.3.5/" "unetbootin-linux64-647.bin" "Cyber Sec Guide tripi.rar" "gtypist-2.9.5/" "debian-9.9.0-amd64-DVD-1.iso" ".emacs.d/" "ubuntu-19.04-desktop-amd64.iso" "tor-browser_ru/" "Sierra-compact-light/" "balenaEtcher-1.5.33-x64.AppImage" "gtypist-2.9.5.tar.gz" "tor-browser-linux64-6.5.1_ru.tar.xz" "../" "linuxmint-18.3-cinnamon-32bit.iso" "emacs-config-master.zip" "Telegram Desktop/" ".emacs" "myBoardJurnal~" "emacs-config-master/" "smartgit/" "./")
+
+ ("/home/matrix/Documents/learn_2019.10.13/djangoDoc/pools/poolquen/static/poolquen/" (23975 15937 589625 377000) "style.css~" "../" "style.css" "images/" "./")
+
+ ("/home/matrix/Documents/learn_2019.10.13/djangoDoc/pools/templates/" (23975 20399 983774 117000) "base_site.html~" "../" "base_site.html" "./")
+
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/PinkBuffalo/6gr/20.10.2019/1/" (23981 53380 193219 921000) "description" "description~" "photo_2019-10-20_17-14-24.jpg" "photo_2019-10-20_17-14-15.jpg" "../" "photo_2019-10-20_17-13-26.jpg" "photo_2019-10-20_17-14-29.jpg" "./")
+
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/McKennaii/10gr/20.10.2019/1/" (23980 28961 427486 993000) "description" "photo_2019-10-20_17-25-48.jpg" "description~" "photo_2019-10-20_17-24-52.jpg" "../" "photo_2019-10-20_17-25-45.jpg" "photo_2019-10-20_17-25-41.jpg" "./")
+
+ ("/home/matrix/Documents/ProjectWeb/diary/my_diary/diary/templates/diary/" (23984 36780 355654 533000) "descr.html~" "base.html~" "index.html~" "style.css~" "menu.html" "../" "descr.html" "base.html" "menu.html~" "./" "index.html")
+
+ ("/home/matrix/Documents/ProjectWeb/" (23980 5592 742626 789000) "diary/" "../" "./")
+
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/McKennaii/10gr/20.10.2019/" (23980 28254 934816 615000) "1/" "../" "./")
+
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/PinkBuffalo/6gr/20.10.2019/" (23980 28094 911955 135000) "1/" "../" "./")
+
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/PinkBuffalo/6gr/" (23980 28128 436554 337000) "20.10.2019/" "../" "./")
+
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/PinkBuffalo/10gr/20.10.2019/1/" (23980 28530 575753 72000) "photo_2019-10-20_17-24-40.jpg" "description" "description~" "photo_2019-10-20_17-24-23.jpg" "../" "photo_2019-10-20_17-24-35.jpg" "./" "photo_2019-10-20_17-24-32.jpg")
+
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/PinkBuffalo/10gr/20.10.2019/" (23980 27561 754446 456000) "1/" "../" "./")
+
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/PinkBuffalo/" (23980 27988 602055 989000) "10gr/" "description" "description~" "../" "6gr/" "./")
+
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/" (23980 28228 58335 788000) "PinkBuffalo/" "McKennaii/" "Для запуска" "../" "./")
+
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/PinkBuffalo/10gr/14.10.2019/" (23972 29659 659165 378000) "photo_2019-10-14_15-46-08.jpg" "description" "photo_2019-10-14_15-45-47.jpg" "photo_2019-10-14_15-46-12.jpg" "photo_2019-10-14_15-46-20.jpg" "photo_2019-10-14_15-46-16.jpg" "../" "./")
+
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Mooshrooms/PinkBuffalo/10gr/" (23980 27553 198294 193000) "14.10.2019/" "20.10.2019/" "../" "./")
+
+ ("/home/matrix/.emacs.d/elpa/emmet-mode-20180613.341/" (23972 52744 311938 243000) "emmet-mode-pkg.el" "emmet-mode.elc" "emmet-mode.el" "../" "./" "emmet-mode-autoloads.el")
+
+ ("/home/matrix/Documents/learn_2019.10.13/djangoDoc/pools/pools/" (23975 12112 272858 278000) "settings.py~" "wsgi.py" "__pycache__/" "../" "urls.py" "__init__.py" "urls.py~" "./" "settings.py")
+
+ ("/home/matrix/Documents/learn_2019.10.13/djangoDoc/pools/poolquen/static/" (23973 62107 764487 131000) "poolquen/" "../" "./")
+
+ ("/home/matrix/.emacs.d/elpa/" (23972 45635 111561 655000) "popup-20160709.1429/" "python-environment-20150310.853/" "cyberpunk-theme-20190717.1509/" "ctable-20171006.11/" "gnupg/" "jedi-20160426.456/" "deferred-20170901.1330/" "s-20180406.808/" "virtualenvwrapper-20190223.1919/" "dash-20190920.1035/" "yasnippet-20190724.1204/" "virtualenv-20140220.2301/" "emmet-mode-20180613.341/" "desktop-environment-20190701.1306/" "../" "concurrent-20161229.330/" "archives/" "jedi-core-20190620.1820/" "company-20190907.1149/" "auto-complete-20170125.245/" "./" "epc-20140610.534/")
+
+ ("/home/matrix/.emacs.d/snippets/" (23965 40831 523773 500000) "html-mode/" "../" "./")
+
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/" (23972 28081 518390 332000) "Screenshot from 2019-09-08 13-07-28.png" "lernScool/" "texts_docs/" "AliensInvasion/" "my_project/" "programs/" "GeekBrains/" "words" "site_ruslan/" "allFiles/" ".emacs.d/" ".bashrc" "book/" "tk/" "emacs_init/" "settings" "Screenshot from 2019-09-08 12-54-24.png" "project/" "../" "testemacs~" "testemacs" ".emacs" "crib/" "Rezerv/" "Mooshrooms/" "./")
+
+ ("/home/matrix/Documents/learn_2019.10.13/djangoDoc/pools/poolquen/templates/" (23972 34048 176724 85000) "poolquen/" "../" "./")
+
+ ("/home/matrix/Documents/ProjectWeb/diary/my_diary/diary/static/" (23968 48987 592318 9000) "../" "style.css" "main.js" "./")
+
+ ("/home/matrix/Documents/learn_2019.10.13/djangoDoc/" (23971 20433 419837 510000) "../" "docum/" "pools/" "./")
+
+ ("/home/matrix/Documents/learn_2019.10.13/" (23971 20296 777309 616000) "../" "djangoDoc/" "./")
+
+ ("/home/matrix/Documents/ProjectWeb/diary/my_diary/my_diary/" (23967 32893 302902 579000) "settings.py~" "wsgi.py" "__pycache__/" "../" "urls.py" "__init__.py" "urls.py~" "./" "settings.py")
+
+ ("/home/matrix/Documents/ProjectWeb/diary/my_diary/diary/templates/" (23965 40145 473241 900000) "diary/" "../" "./")
+
+ ("/home/matrix/Documents/ProjectWeb/diary/" (23962 61133 729673 482000) "test2.py" "pyvenv.cfg" "lib64/" "lib/" "my_diary/" "../" "include/" "share/" "bin/" "./")
+
+ ("/home/matrix/Documents/ProjectWeb/my_diary/" (23962 53499 74542 592000) "lib/" "local/" "testjedi.py" "../" "share/" "bin/" "./" "testjedi.py~")
+
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/Rezerv/" (23960 43338 527140 511000) "Глушко О.Ф/" "planshet/" ".emacs.d/" ".bashrc" "../" "Ship.py" "tele2Maxi_plus/" ".emacs" "Rezerv/" "./")
+
+ ("/home/matrix/Documents/my_learn_01.09.2018_01.10.2019/AliensInvasion/" (23835 32290 696563 780000) "AliensInvasion.py" "bullet.py" "__pycache__/" "../" "Ship.py" "game_fanction.py" ".idea/" "imeges/" "./" "settings.py")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: djangofor
+# key: {for
+# --
+{% for $1 in $2 %}

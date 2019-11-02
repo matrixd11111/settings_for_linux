@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: djangoVarable
+# key: {var
+# --
+{{ $1 }}

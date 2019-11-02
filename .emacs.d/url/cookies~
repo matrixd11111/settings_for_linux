@@ -1,0 +1,26 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ '((".google.com"
+  [url-cookie "1P_JAR" "2019-10-16-15" "15-Nov-2019 15:21:29.00 GMT" "/" ".google.com" nil]
+  [url-cookie "SameSite" "none" "15-Nov-2019 15:21:29.00 GMT" "/" ".google.com" nil]
+  [url-cookie "NID" "189=awfxOYcZHry3RdXUO2f4t4xw_il-GqeEnMVGf8YSFVzOixCEbtTWCvqHMko0uwWsygRtank31RETZ3G-5cS6iFQoaQvI2QZDrxZR_Y1ckuoUgexpau_pD-MDpI7fVqO_uKsQpH-54YQ9uFHGZlqnp-4U6ZBqJLSUjFxQTvQtSEE" "16-Apr-2020 14:42:49.00 GMT" "/" ".google.com" nil]
+  [url-cookie "CGIC" "IgMqLyo" "13-Apr-2020 14:42:49.00 GMT" "/complete/search" ".google.com" nil]
+  [url-cookie "HttpOnly" nil "13-Apr-2020 14:42:49.00 GMT" "/complete/search" ".google.com" nil]
+  [url-cookie "CGIC" "IgMqLyo" "13-Apr-2020 14:42:49.00 GMT" "/search" ".google.com" nil]
+  [url-cookie "HttpOnly" nil "13-Apr-2020 14:42:49.00 GMT" "/search" ".google.com" nil]))
+)
+(setq url-cookie-secure-storage
+ '((".wikipedia.org"
+  [url-cookie "WMF-Last-Access-Global" "16-Oct-2019" "Sun, 17 Nov 2019 12:00:00 GMT" "/" ".wikipedia.org" t]
+  [url-cookie "HttpOnly" nil "Sun, 17 Nov 2019 12:00:00 GMT" "/" ".wikipedia.org" t])
+ ("en.wikipedia.org"
+  [url-cookie "WMF-Last-Access" "16-Oct-2019" "Sun, 17 Nov 2019 12:00:00 GMT" "/" "en.wikipedia.org" t]
+  [url-cookie "HttpOnly" nil "Sun, 17 Nov 2019 12:00:00 GMT" "/" "en.wikipedia.org" t]))
+)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; End:
