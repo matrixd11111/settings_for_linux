@@ -1,1 +1,1 @@
-# my_settings_for_linux
+settings
