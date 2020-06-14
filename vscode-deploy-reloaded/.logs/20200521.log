@@ -1,0 +1,302 @@
+INFO extension.deploy.reloaded.loadplugins - [21/May/2020:06:54:31 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+TRACE workspaces.workspace.ondidchangeactivetexteditor(1) - [21/May/2020:08:20:20 +0000] "ENOENT: no such file or directory, lstat '/home/matrix/Documents/aerodisk/engine2/bin/SCST/tests/test_params.py'
+
+Stack:
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/log.js:88:52
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:3198:18
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at ActionLogger.logSync (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:113:14)
+    at ActionLogger.trace (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:136:21)
+    at Workspace.onDidChangeActiveTextEditor (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:2008:30)"
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:40:37 +0000] "'/var/www/engine/bin/SCST/__init__.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:40:37 +0000] "Setting mode for '/var/www/engine/bin/SCST/__init__.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:40:37 +0000] "'/var/www/engine/bin/SCST/constants.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:40:37 +0000] "Setting mode for '/var/www/engine/bin/SCST/constants.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:40:38 +0000] "'/var/www/engine/bin/SCST/controller.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:40:38 +0000] "Setting mode for '/var/www/engine/bin/SCST/controller.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:40:38 +0000] "'/var/www/engine/bin/SCST/tests/__init__.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:40:38 +0000] "Setting mode for '/var/www/engine/bin/SCST/tests/__init__.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:40:38 +0000] "'/var/www/engine/bin/SCST/tests/conftest.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:40:39 +0000] "Setting mode for '/var/www/engine/bin/SCST/tests/conftest.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:40:39 +0000] "'/var/www/engine/bin/SCST/tests/fixtures.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:40:39 +0000] "Setting mode for '/var/www/engine/bin/SCST/tests/fixtures.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:40:39 +0000] "'/var/www/engine/bin/SCST/tests/test_scst.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:40:40 +0000] "Setting mode for '/var/www/engine/bin/SCST/tests/test_scst.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:40:40 +0000] "'/var/www/engine/bin/SCST/tests/test_common.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:40:40 +0000] "Setting mode for '/var/www/engine/bin/SCST/tests/test_common.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:40:40 +0000] "'/var/www/engine/bin/SCST/tests/test_device.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:40:41 +0000] "Setting mode for '/var/www/engine/bin/SCST/tests/test_device.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:40:41 +0000] "'/var/www/engine/bin/SCST/tests/test_params.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:40:41 +0000] "Setting mode for '/var/www/engine/bin/SCST/tests/test_params.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:40:41 +0000] "'/var/www/engine/bin/SCST/tests/test_target.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:40:42 +0000] "Setting mode for '/var/www/engine/bin/SCST/tests/test_target.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:40:42 +0000] "'/var/www/engine/bin/SCST/tests/test_device_group.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:40:42 +0000] "Setting mode for '/var/www/engine/bin/SCST/tests/test_device_group.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:40:42 +0000] "'/var/www/engine/bin/SCST/tests/test_target_group.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:40:43 +0000] "Setting mode for '/var/www/engine/bin/SCST/tests/test_target_group.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:40:43 +0000] "'/var/www/engine/bin/SCST/models/scst.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:40:44 +0000] "Setting mode for '/var/www/engine/bin/SCST/models/scst.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:40:44 +0000] "'/var/www/engine/bin/SCST/models/device.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:40:44 +0000] "Setting mode for '/var/www/engine/bin/SCST/models/device.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:40:44 +0000] "'/var/www/engine/bin/SCST/models/target.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:40:45 +0000] "Setting mode for '/var/www/engine/bin/SCST/models/target.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:40:45 +0000] "'/var/www/engine/bin/SCST/models/device_group.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:40:45 +0000] "Setting mode for '/var/www/engine/bin/SCST/models/device_group.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:40:45 +0000] "'/var/www/engine/bin/SCST/models/target_group.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:40:46 +0000] "Setting mode for '/var/www/engine/bin/SCST/models/target_group.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:40:46 +0000] "'/var/www/engine/bin/SCST/controllers/common.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:40:46 +0000] "Setting mode for '/var/www/engine/bin/SCST/controllers/common.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:40:46 +0000] "'/var/www/engine/bin/SCST/controllers/devices.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:40:47 +0000] "Setting mode for '/var/www/engine/bin/SCST/controllers/devices.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:40:47 +0000] "'/var/www/engine/bin/SCST/controllers/targets.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:40:47 +0000] "Setting mode for '/var/www/engine/bin/SCST/controllers/targets.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:40:47 +0000] "'/var/www/engine/bin/SCST/controllers/device_groups.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:40:48 +0000] "Setting mode for '/var/www/engine/bin/SCST/controllers/device_groups.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:40:48 +0000] "'/var/www/engine/bin/SCST/controllers/target_groups.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:40:48 +0000] "Setting mode for '/var/www/engine/bin/SCST/controllers/target_groups.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:42:00 +0000] "'/var/www/engine/bin/LIB/a_sql.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:42:01 +0000] "Setting mode for '/var/www/engine/bin/LIB/a_sql.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:42:01 +0000] "'/var/www/engine/bin/LIB/a_ssh.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:42:01 +0000] "Setting mode for '/var/www/engine/bin/LIB/a_ssh.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:42:01 +0000] "'/var/www/engine/bin/LIB/disks.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:42:01 +0000] "Setting mode for '/var/www/engine/bin/LIB/disks.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:42:01 +0000] "'/var/www/engine/bin/LIB/utils.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:42:02 +0000] "Setting mode for '/var/www/engine/bin/LIB/utils.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:42:02 +0000] "'/var/www/engine/bin/LIB/models.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:42:02 +0000] "Setting mode for '/var/www/engine/bin/LIB/models.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:42:02 +0000] "'/var/www/engine/bin/LIB/__init__.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:42:02 +0000] "Setting mode for '/var/www/engine/bin/LIB/__init__.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:42:02 +0000] "'/var/www/engine/bin/LIB/a_sqlite.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:42:03 +0000] "Setting mode for '/var/www/engine/bin/LIB/a_sqlite.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:42:03 +0000] "'/var/www/engine/bin/LIB/constants.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:42:03 +0000] "Setting mode for '/var/www/engine/bin/LIB/constants.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:42:03 +0000] "'/var/www/engine/bin/LIB/arbitrator.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:42:03 +0000] "Setting mode for '/var/www/engine/bin/LIB/arbitrator.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:42:03 +0000] "'/var/www/engine/bin/LIB/controller.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:42:04 +0000] "Setting mode for '/var/www/engine/bin/LIB/controller.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:42:04 +0000] "'/var/www/engine/bin/LIB/validators.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:42:04 +0000] "Setting mode for '/var/www/engine/bin/LIB/validators.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:42:04 +0000] "'/var/www/engine/bin/LIB/a_functions.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:42:04 +0000] "Setting mode for '/var/www/engine/bin/LIB/a_functions.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:42:04 +0000] "'/var/www/engine/bin/LIB/task_daemon.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:42:05 +0000] "Setting mode for '/var/www/engine/bin/LIB/task_daemon.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:42:05 +0000] "'/var/www/engine/bin/LIB/a_validation.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:42:05 +0000] "Setting mode for '/var/www/engine/bin/LIB/a_validation.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:08:42:05 +0000] "'/var/www/engine/bin/LIB/update_remote_db.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:08:42:05 +0000] "Setting mode for '/var/www/engine/bin/LIB/update_remote_db.py' to 777 ..."
+INFO extension.deploy.reloaded.loadplugins - [21/May/2020:12:06:53 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:46 +0000] "'/var/www/engine/bin/LIB/a_sql.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:42:46 +0000] "Setting mode for '/var/www/engine/bin/LIB/a_sql.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:46 +0000] "'/var/www/engine/bin/LIB/a_ssh.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:42:46 +0000] "Setting mode for '/var/www/engine/bin/LIB/a_ssh.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:46 +0000] "'/var/www/engine/bin/LIB/disks.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:42:46 +0000] "Setting mode for '/var/www/engine/bin/LIB/disks.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:46 +0000] "'/var/www/engine/bin/LIB/utils.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:42:47 +0000] "Setting mode for '/var/www/engine/bin/LIB/utils.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:47 +0000] "'/var/www/engine/bin/LIB/models.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:42:47 +0000] "Setting mode for '/var/www/engine/bin/LIB/models.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:47 +0000] "'/var/www/engine/bin/LIB/__init__.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:42:47 +0000] "Setting mode for '/var/www/engine/bin/LIB/__init__.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:47 +0000] "'/var/www/engine/bin/LIB/a_sqlite.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:42:47 +0000] "Setting mode for '/var/www/engine/bin/LIB/a_sqlite.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:47 +0000] "'/var/www/engine/bin/LIB/constants.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:42:48 +0000] "Setting mode for '/var/www/engine/bin/LIB/constants.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:48 +0000] "'/var/www/engine/bin/LIB/arbitrator.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:42:48 +0000] "Setting mode for '/var/www/engine/bin/LIB/arbitrator.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:48 +0000] "'/var/www/engine/bin/LIB/controller.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:42:48 +0000] "Setting mode for '/var/www/engine/bin/LIB/controller.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:48 +0000] "'/var/www/engine/bin/LIB/validators.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:42:49 +0000] "Setting mode for '/var/www/engine/bin/LIB/validators.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:49 +0000] "'/var/www/engine/bin/LIB/a_functions.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:42:49 +0000] "Setting mode for '/var/www/engine/bin/LIB/a_functions.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:49 +0000] "'/var/www/engine/bin/LIB/task_daemon.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:42:49 +0000] "Setting mode for '/var/www/engine/bin/LIB/task_daemon.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:50 +0000] "'/var/www/engine/bin/LIB/a_validation.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:42:50 +0000] "Setting mode for '/var/www/engine/bin/LIB/a_validation.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:50 +0000] "'/var/www/engine/bin/LIB/update_remote_db.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:42:50 +0000] "Setting mode for '/var/www/engine/bin/LIB/update_remote_db.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:50 +0000] "'/var/www/engine/bin/LIB/__pycache__/a_ssh.cpython-38.pyc' does NOT match with a mode pattern"
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:51 +0000] "'/var/www/engine/bin/LIB/__pycache__/__init__.cpython-38.pyc' does NOT match with a mode pattern"
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:51 +0000] "'/var/www/engine/bin/LIB/__pycache__/constants.cpython-38.pyc' does NOT match with a mode pattern"
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:51 +0000] "'/var/www/engine/bin/LIB/__pycache__/a_functions.cpython-38.pyc' does NOT match with a mode pattern"
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:57 +0000] "'/var/www/engine/bin/SCST/__init__.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:42:57 +0000] "Setting mode for '/var/www/engine/bin/SCST/__init__.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:57 +0000] "'/var/www/engine/bin/SCST/constants.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:42:57 +0000] "Setting mode for '/var/www/engine/bin/SCST/constants.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:57 +0000] "'/var/www/engine/bin/SCST/controller.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:42:57 +0000] "Setting mode for '/var/www/engine/bin/SCST/controller.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:58 +0000] "'/var/www/engine/bin/SCST/tests/__init__.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:42:58 +0000] "Setting mode for '/var/www/engine/bin/SCST/tests/__init__.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:58 +0000] "'/var/www/engine/bin/SCST/tests/conftest.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:42:58 +0000] "Setting mode for '/var/www/engine/bin/SCST/tests/conftest.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:58 +0000] "'/var/www/engine/bin/SCST/tests/fixtures.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:42:58 +0000] "Setting mode for '/var/www/engine/bin/SCST/tests/fixtures.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:58 +0000] "'/var/www/engine/bin/SCST/tests/test_scst.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:42:59 +0000] "Setting mode for '/var/www/engine/bin/SCST/tests/test_scst.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:59 +0000] "'/var/www/engine/bin/SCST/tests/test_common.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:42:59 +0000] "Setting mode for '/var/www/engine/bin/SCST/tests/test_common.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:42:59 +0000] "'/var/www/engine/bin/SCST/tests/test_device.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:43:00 +0000] "Setting mode for '/var/www/engine/bin/SCST/tests/test_device.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:43:00 +0000] "'/var/www/engine/bin/SCST/tests/test_params.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:43:00 +0000] "Setting mode for '/var/www/engine/bin/SCST/tests/test_params.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:43:00 +0000] "'/var/www/engine/bin/SCST/tests/test_target.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:43:00 +0000] "Setting mode for '/var/www/engine/bin/SCST/tests/test_target.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:43:00 +0000] "'/var/www/engine/bin/SCST/tests/test_device_group.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:43:01 +0000] "Setting mode for '/var/www/engine/bin/SCST/tests/test_device_group.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:43:01 +0000] "'/var/www/engine/bin/SCST/tests/test_target_group.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:43:01 +0000] "Setting mode for '/var/www/engine/bin/SCST/tests/test_target_group.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:43:01 +0000] "'/var/www/engine/bin/SCST/models/scst.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:43:01 +0000] "Setting mode for '/var/www/engine/bin/SCST/models/scst.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:43:02 +0000] "'/var/www/engine/bin/SCST/models/device.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:43:02 +0000] "Setting mode for '/var/www/engine/bin/SCST/models/device.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:43:02 +0000] "'/var/www/engine/bin/SCST/models/target.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:43:02 +0000] "Setting mode for '/var/www/engine/bin/SCST/models/target.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:43:02 +0000] "'/var/www/engine/bin/SCST/models/device_group.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:43:02 +0000] "Setting mode for '/var/www/engine/bin/SCST/models/device_group.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:43:02 +0000] "'/var/www/engine/bin/SCST/models/target_group.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:43:03 +0000] "Setting mode for '/var/www/engine/bin/SCST/models/target_group.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:43:03 +0000] "'/var/www/engine/bin/SCST/__pycache__/__init__.cpython-38.pyc' does NOT match with a mode pattern"
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:43:03 +0000] "'/var/www/engine/bin/SCST/controllers/common.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:43:03 +0000] "Setting mode for '/var/www/engine/bin/SCST/controllers/common.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:43:04 +0000] "'/var/www/engine/bin/SCST/controllers/devices.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:43:04 +0000] "Setting mode for '/var/www/engine/bin/SCST/controllers/devices.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:43:04 +0000] "'/var/www/engine/bin/SCST/controllers/targets.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:43:04 +0000] "Setting mode for '/var/www/engine/bin/SCST/controllers/targets.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:43:04 +0000] "'/var/www/engine/bin/SCST/controllers/device_groups.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:43:04 +0000] "Setting mode for '/var/www/engine/bin/SCST/controllers/device_groups.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:43:04 +0000] "'/var/www/engine/bin/SCST/controllers/target_groups.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:43:05 +0000] "Setting mode for '/var/www/engine/bin/SCST/controllers/target_groups.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:43:05 +0000] "'/var/www/engine/bin/SCST/tests/__pycache__/__init__.cpython-38.pyc' does NOT match with a mode pattern"
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:43:05 +0000] "'/var/www/engine/bin/SCST/tests/__pycache__/fixtures.cpython-38.pyc' does NOT match with a mode pattern"
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:43:06 +0000] "'/var/www/engine/bin/SCST/tests/__pycache__/conftest.cpython-38-pytest-5.4.2.pyc' does NOT match with a mode pattern"
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:43:55 +0000] "'/var/www/engine/bin/NETWORK/controllers/bond.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:43:56 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/bond.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:43:56 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:43:56 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:43:56 +0000] "'/var/www/engine/bin/NETWORK/controllers/virt.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:43:56 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/virt.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:43:56 +0000] "'/var/www/engine/bin/NETWORK/controllers/static.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:43:56 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/static.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:44:05 +0000] "'/var/www/engine/bin/NETWORK/constants.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:44:05 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/constants.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:44:05 +0000] "'/var/www/engine/bin/NETWORK/controller.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:44:05 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controller.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:44:17 +0000] "'/var/www/engine/html/assets/js/react.js' does NOT match with a mode pattern"
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:47:13 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:47:13 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:48:04 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:48:04 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:48:44 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:48:44 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+TRACE workspaces.workspace.ondidchangeactivetexteditor(1) - [21/May/2020:12:53:08 +0000] "ENOENT: no such file or directory, lstat '/home/matrix/Documents/aerodisk/engine2/bin/NETWORK/tests/test_net.py'
+
+Stack:
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/log.js:88:52
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:3198:18
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at ActionLogger.logSync (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:113:14)
+    at ActionLogger.trace (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:136:21)
+    at Workspace.onDidChangeActiveTextEditor (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:2008:30)"
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:53:29 +0000] "'/var/www/engine/bin/SCST/tests/test_scst.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:53:29 +0000] "Setting mode for '/var/www/engine/bin/SCST/tests/test_scst.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:54:04 +0000] "'/var/www/engine/bin/SCST/tests/test_scst.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:54:04 +0000] "Setting mode for '/var/www/engine/bin/SCST/tests/test_scst.py' to 777 ..."
+TRACE workspaces.workspace.ondidchangeactivetexteditor(1) - [21/May/2020:12:54:20 +0000] "ENOENT: no such file or directory, lstat '/home/matrix/Documents/aerodisk/engine2/bin/NETWORK/tests/test_net.py'
+
+Stack:
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/log.js:88:52
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:3198:18
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at ActionLogger.logSync (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:113:14)
+    at ActionLogger.trace (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:136:21)
+    at Workspace.onDidChangeActiveTextEditor (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:2008:30)"
+TRACE workspaces.workspace.ondidchangeactivetexteditor(1) - [21/May/2020:12:58:22 +0000] "ENOENT: no such file or directory, lstat '/home/matrix/Documents/aerodisk/engine2/bin/NETWORK/tests/test_net.py'
+
+Stack:
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/log.js:88:52
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:3198:18
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at ActionLogger.logSync (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:113:14)
+    at ActionLogger.trace (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:136:21)
+    at Workspace.onDidChangeActiveTextEditor (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:2008:30)"
+INFO extension.deploy.reloaded.loadplugins - [21/May/2020:12:59:26 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:12:59:54 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:12:59:54 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:13:00:11 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:13:00:11 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:13:03:33 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:13:03:34 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [21/May/2020:13:09:27 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [21/May/2020:13:09:27 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."

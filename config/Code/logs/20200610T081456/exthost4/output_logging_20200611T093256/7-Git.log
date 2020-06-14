@@ -1,0 +1,18 @@
+Looking for git in: git
+Using git 2.25.1 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/matrix/Documents/aerodisk/engine2
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git check-ignore -v -z --stdin
+> git rev-parse SW-483/network_interface_refactoring
+> git rev-parse --symbolic-full-name SW-483/network_interface_refactoring@{u}
+> git rev-list --left-right SW-483/network_interface_refactoring...refs/remotes/origin/SW-483/network_interface_refactoring
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -v -z --stdin
+> git config --get commit.template
+> git show :bin/NETWORK/tests/test_net.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/bin/NETWORK/tests/test_net.py
+> git cat-file -s 2394be37c0d617e75a41a01d46b50d0391d6f697

@@ -1,0 +1,59 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url("/css/settings/OpenSans-SemiBold.ttf");
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Open Sans";
+    src: url("/css/settings/OpenSans-Bold.ttf");
+    font-weight: 700;
+}
+
+#okta_block {
+    border-top: 1px solid black;
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+#okta_user_name_label {
+    margin-top: 15px;
+    padding-left: 15px;
+}
+
+
+.okta-tab{
+    display: none;
+}
+
+#okta-login-container.invisible{
+    display: none;
+}
+
+.okta-error{
+    width: 100%;
+}
+
+.okta .btn-def{
+    width: 316px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #4565b5;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+.okta .btn-def svg{
+    width: 65px;
+    height: 22px;
+    margin-left: 9px;
+}

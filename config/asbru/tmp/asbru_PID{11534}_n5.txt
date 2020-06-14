@@ -1,0 +1,30 @@
+root@192.168.2.10's password: 
+Last login: Thu Jun 11 15:31:52 2020 from 192.168.246.111
+>]0;root@ENGINE-0: /root[root@ENGINE-0 ~]# ls /et
+etc/         et.enp5s0f0  et.enp5s0f1  et.ens11f1   
+[root@ENGINE-0 ~]# ls /etc/
+Display all 248 possibilities? (y or n)
+[root@ENGINE-0 ~]# ls /etc/net/ifaces/
+[0m[01;34mbond1[0m  [01;34mdefault[0m  [01;34menp14s0[0m  [01;34menp15s0[0m  [01;34menp5s0f0[0m  [01;34menp5s0f1[0m  [01;34menp5s0f3[0m  [01;34mlo[0m  [01;34munknown[0m
+]0;root@ENGINE-0: /root[root@ENGINE-0 ~]# ls
+[0m[01;34mbuild[0m   [01;32mdbg.sh[0m         [01;34mfio[0m       [01;32mget_zfslabel[0m  [01;34mgo[0m         [30;43mlabel.bin[0m   [01;34mpip[0m          resolv.conf~  sources.list                [01;34mtest[0m     [01;34mtime[0m  [01;32mupdates.sh[0m    [01;32mutest[0m  wwids   [01;32mzfs_check[0m
+[01;34mbuild1[0m  [01;34mdrbd-9.0.22-1[0m  [01;32mget_bdev[0m  [01;34mgit.old[0m       krb5.conf  [01;31mmaster.zip[0m  resolv.conf  [01;34mrpmbuild[0m      [01;34mSystemdJournal2Gelf-master[0m  [01;34mtesting[0m  [01;34mtmp[0m   [01;32musers.sqlite[0m  [01;34mWork[0m   [01;34mzfsabi[0m
+]0;root@ENGINE-0: /root[root@ENGINE-0 ~]# cd et[K[K/etc/[K[Kc/[K[K[K[K[K[K[K[Kls et[K[K/et
+etc/         et.enp5s0f0  et.enp5s0f1  et.ens11f1   
+[root@ENGINE-0 ~]# ls /et
+etc/         et.enp5s0f0  et.enp5s0f1  et.ens11f1   
+[root@ENGINE-0 ~]# ls /et.enp5s0f0
+/et.enp5s0f0
+]0;root@ENGINE-0: /root[root@ENGINE-0 ~]# cd /
+]0;root@ENGINE-0: /[root@ENGINE-0 /]# ls
+[0m[01;34mbin[0m  [01;34mboot[0m  [01;34mdev[0m  [01;34mdpkgs[0m  [01;34metc[0m  et.enp5s0f0  et.enp5s0f1  et.ens11f1  [01;34mhome[0m  [01;34mlib[0m  [01;34mlib64[0m  [01;34mlibx32[0m  [01;34mlost+found[0m  [01;34mLVM_groups[0m  [01;34mmedia[0m  [01;34mmnt[0m  [01;34mopt[0m  [01;34mproc[0m  [34;42mR00[0m  [01;34mR03[0m  [01;34mR04[0m  [01;34mR06[0m  [01;34mR07[0m  [01;34mR12[0m  [01;34mR14[0m  [01;34mresearch[0m  [01;34mroot[0m  [01;34mrun[0m  [01;34msbin[0m  [01;34mselinux[0m  [01;34msrv[0m  [01;34msys[0m  [01;34mtest[0m  [30;42mtmp[0m  [01;34musr[0m  [01;34mvar[0m
+]0;root@ENGINE-0: /[root@ENGINE-0 /]# ls /sys/ne[K[Kclass/
+backlight/        devfreq/          fc_host/          graphics/         ipmi/             iscsi_transport/  nvme/             power_supply/     regulator/        sas_phy/          scst_user/        vc/               
+bdi/              devfreq-event/    fc_remote_ports/  hidraw/           iscsi_connection/ leds/             nvme-subsystem/   pps/              rtc/              sas_port/         spi_master/       vtconsole/        
+block/            dma/              fc_transport/     hwmon/            iscsi_endpoint/   mdio_bus/         pci_bus/          ptp/              sas_device/       scsi_device/      thermal/          watchdog/         
+bsg/              dmi/              fc_vports/        i2c-adapter/      iscsi_host/       mem/              pci_epc/          pwm/              sas_end_device/   scsi_disk/        tpm/              wmi_bus/          
+dca/              enclosure/        firmware/         input/            iscsi_iface/      misc/             phy/              raid_devices/     sas_expander/     scsi_host/        tpmrm/            
+devcoredump/      extcon/           gpio/             iommu/            iscsi_session/    net/              powercap/         rapidio_port/     sas_host/         scst_event/       tty/              
+[root@ENGINE-0 /]# ls /sys/class/net/
+bond0/           bond1/           bonding_masters  enp14s0/         enp15s0/         enp5s0f0/        enp5s0f1/        enp5s0f2/        enp5s0f3/        ens11f0/         ens11f1/         lo/              
+[root@ENGINE-0 /]# ls /sys/class/net/[Kcd /ls /et.enp5s0f0[K /etc/net/ifaces/client_loop: send disconnect: Broken pipe

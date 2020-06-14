@@ -1,0 +1,342 @@
+<html>
+	<head>
+		<title data-i18n="settings_page_title"></title>
+		<meta charset="utf-8">
+
+		<link rel="stylesheet" type="text/css" href="/libs/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/generic.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/settings/settings.css" />
+		<link rel="stylesheet" type="text/css" href="/css/settings/okta.css" />
+
+
+		<script type="text/javascript" src="/libs/ejs/ejs.js"></script>
+		<script type="text/javascript" src="/scripts/js/OktaBlock.min.js"></script>
+		<script type="text/javascript" src="/scripts/js/settings.min.js"></script>
+
+
+		<!--<script type="text/javascript" src="/libs/ga.js"></script>
+		<script type="text/javascript" src="/libs/jquery/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="/libs/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/libs/ejs/ejs.js"></script>
+		<script type="text/javascript" src="/scripts/generic.js"></script>
+		<script type="text/javascript" src="/scripts/chrome_api/runtime.js"></script>
+		<script type="text/javascript" src="/scripts/services/aws_s3.js"></script>
+		<script type="text/javascript" src="/scripts/chrome_api/notifications.js"></script>
+        <script type="text/javascript" src="/scripts/commons/communication.js"></script>
+        <script type="text/javascript" src="/scripts/commons/ui/ejs.js"></script>
+		<script type="text/javascript" src="/scripts/settings/settings.js"></script>
+		<script type="text/javascript" src="/scripts/settings/general.js"></script>
+		<script type="text/javascript" src="/scripts/settings/accounts.js"></script>
+		<script type="text/javascript" src="/scripts/settings/feedback.js"></script>
+		<script type="text/javascript" src="/scripts/tab_manager.js"></script>-->
+
+	</head>
+	<body>
+		<!-- Top navigation bar -->
+		<ul class="nav nav-pills ms_navigation">
+			<li class="settings_navigation_button" data-context="general">
+				<a href="#" data-i18n="settings_navigation_general"></a>
+			</li>
+			<li class="settings_navigation_button" data-context="accounts">
+				<a href="#" data-i18n="settings_navigation_accounts"></a>
+			</li>
+			<li class="settings_navigation_button" data-context="feedback">
+				<a href="#" data-i18n="settings_navigation_contact_us"></a>
+			</li>
+		</ul>
+
+		<!-- General -->
+		<div class="settings_section" data-context="general">
+			<div class="settings_overlay settings_reset_overlay">
+				<div class="settings_subsection">
+					<h4 data-i18n="settings_reset_header"></h4>
+					<p data-i18n="settings_reset_warning"></p>
+					<button class="btn btn-danger" id="settings_reset_submit" data-i18n="button_ok"></button>
+					<button class="btn" id="settings_reset_dismiss" data-i18n="button_cancel"></button>
+				</div>
+			</div>
+			<div class="settings_subsection">
+				<h5 class="settings_subheader" data-i18n="settings_post_capture_action_header"></h5>
+				<div class="settings_subsection2">
+					<select id="post_capture_action_selector">
+						<option value="edit" data-i18n="settings_post_capture_edit"></option>
+						<option value="save" data-i18n="settings_post_capture_save"></option>
+						<option value="upload" data-i18n="settings_post_capture_upload"></option>
+					</select>
+				</div>
+				<div class="settings_subsection2">
+					<div class="settings_subsection2" style="margin-left: 8px;">
+						<label data-i18n="settings_save_file_default_location"></label>
+						<span id="file_save_default_path" data-i18n="settings_save_file_downloads_folder"></span>
+						<button type="submit" class="btn btn-small btn-primary" id="file_save_browse_button" data-i18n="settings_file_save_specify_path"></button>
+						<input type="file" id="file_save_path_selector">
+					</div>
+                    <div class="settings_subsection2">
+                        <input type="checkbox" id="open_editor_in_window_checkbox">
+                        <label for="open_editor_in_window_checkbox" data-i18n="settings_open_editor_in_a_separate_window"></label>
+                    </div>
+                    <div class="settings_subsection2">
+                        <input type="checkbox" id="apply_default_action_to_local_files">
+                        <label for="apply_default_action_to_local_files" data-i18n="settings_apply_default_action_to_local_files"></label>
+                    </div>
+				</div>
+			</div>
+			<div class="settings_subsection">
+				<h5 class="settings_subheader" data-i18n="settings_output_format_header"></h5>
+				<div class="settings_subsection2">
+					<select id="image_type_selector">
+						<option value="png" data-i18n="settings_output_format_png"></option>
+						<option value="jpeg" data-i18n="settings_output_format_jpeg"></option>
+						<option value="webp" data-i18n="settings_output_format_webp"></option>
+					</select>
+				</div>
+				<div class="settings_subsection2">
+					<label for="image_quality_input" data-i18n="settings_output_format_quality"></label>
+					<input type="number" min="50" max="100" class="ms_range_clamped" id="image_quality_input">
+					<label>%</label>
+				</div>
+			</div>
+			<div class="settings_subsection" id="webpage_hotkeys"></div>
+			<div class="settings_subsection">
+				<h5 class="settings_subheader" data-i18n="settings_video_record_header"></h5>
+				<div class="settings_subsection2">
+					<label for="video_type_selector" data-i18n="settings_video_type"></label>
+					<select id="video_type_selector">
+						<option value="webm">WebM</option>
+						<option value="gif">GIF</option>
+					</select>
+				</div>
+				<div class="settings_subsection2">
+					<label for="gif_quality_input" data-i18n="settings_gif_quality"></label>
+					<!-- TODO: Convert values range to a more reasonable one (e.g. percents) -->
+					<input type="number" min="1" max="20" class="ms_range_clamped" id="gif_quality_input">
+				</div>
+				<div class="settings_subsection2">
+					<label for="gif_frame_rate_input" data-i18n="settings_gif_frame_rate"></label>
+					<input type="number" min="5" max="30" class="ms_range_clamped" id="gif_frame_rate_input">
+				</div>
+				<!--<div class="settings_subsection2">
+					<input type="checkbox" id="record_microphone">
+					<label for="record_microphone" data-i18n="settings_video_record_microphone"></label>
+				</div>-->
+			</div>
+			<div class="settings_subsection">
+				<h5 class="settings_subheader" data-i18n="settings_files_upload_header"></h5>
+				<div class="settings_subsection2">
+					<label data-i18n="settings_default_service"></label>
+					<select id="upload_default_service">
+						<option value="monosnap">Monosnap</option>
+						<option value="amazon_s3">Amazon S3</option>
+					</select>
+				</div>
+				<div class="settings_subsection2">
+					<label data-i18n="settings_post_upload_action"></label>
+					<select id="post_upload_action_selector">
+						<option value="" data-i18n="settings_do_nothing"></option>
+						<option value="copy_direct_link" data-i18n="settings_post_upload_copy_direct_link"></option>
+						<option value="copy_file_page_link" data-i18n="settings_post_upload_copy_site_link"></option>
+					</select>
+				</div>
+				<div class="settings_subsection2">
+					<input type="checkbox" id="open_ms_after_upload">
+					<label for="open_ms_after_upload" data-i18n="settings_post_upload_open_ms_page"></label>
+				</div>
+				<div class="settings_subsection2">
+					<input type="checkbox" id="file_enable_short_links">
+					<label for="file_enable_short_links" data-i18n="settings_enable_short_links"></label>
+				</div>
+				<div class="settings_subsection2">
+					<input type="checkbox" id="post_upload_close_editor">
+					<label for="post_upload_close_editor" data-i18n="settings_close_editor_after_upload"></label>
+				</div>
+			</div>
+			<div class="settings_subsection">
+				<h5 class="settings_subheader" data-i18n="settings_others_header"></h5>
+                <div class="settings_subsection2">
+                    <input type="checkbox" id="file_use_random_generated_name">
+                    <label for="file_use_random_generated_name" data-i18n="settings_generate_random_file_names"></label>
+                </div>
+				<div class="settings_subsection2">
+					<input type="checkbox" id="apply_file_name_template_checkbox">
+					<label for="apply_file_name_template_checkbox" data-i18n="settings_apply_file_name_template"></label>
+					<br>
+					<input type="checkbox" id="apply_to_local">
+					<label class="label_apply_to_local" for="apply_to_local" data-i18n="settings_apply_to_local_files"></label>
+					<br>
+					<label for="file_name_template_input" data-i18n="settings_file_name_template"></label>
+					<input type="text" id="file_name_template_input" data-i18n="tooltip:settings_file_name_template_hint">
+				</div>
+				<div class="settings_subsection2">
+					<input type="checkbox" id="area_capture_show_magnifier_checkbox">
+					<label for="area_capture_show_magnifier_checkbox" data-i18n="settings_show_magnifier_on_area_capture"></label>
+				</div>
+				<div class="settings_subsection2">
+					<label for="pre_capture_delay_selector" data-i18n="settings_screen_pre_capture_delay"></label>
+					<input type="number" min="0" max="8" class="ms_range_clamped" id="pre_capture_delay_selector">
+				</div>
+				<div class="settings_subsection2">
+					<input type="checkbox" id="minimize_chrome_on_screen_capture_checkbox">
+					<label for="minimize_chrome_on_screen_capture_checkbox" data-i18n="settings_minimize_chrome_on_screen_capture"></label>
+				</div>
+				<button class="btn btn-primary" id="settings_reset_to_defaults" data-i18n="settings_reset_to_defaults"></button>
+			</div>
+		</div>
+
+		<!-- Accounts -->
+		<div class="settings_section" data-context="accounts">
+			<div class="settings_overlay accounts_overlay">
+				<form id="accounts_import_form">
+					<input type="text" id="settings_import_password_input" data-i18n="placeholder:settings_accounts_enter_password">
+					<input type="file" hidden id="settings_accounts_import_input">
+					<div>
+						<button type="submit" class="btn btn-primary" id="settings_import_submit" data-i18n="button_ok"></button>
+						<button type="reset" class="btn btn-default" id="settings_import_cancel" data-i18n="button_cancel"></button>
+					</div>
+				</form>
+				<form id="accounts_export_form">
+					<input type="text" id="settings_export_password_input" data-i18n="placeholder:settings_accounts_enter_password">
+					<div id="accounts_to_export_list"></div>
+					<div>
+						<button type="submit" class="btn btn-primary" id="settings_export_submit" data-i18n="button_ok"></button>
+						<button type="reset" class="btn btn-default" id="settings_export_cancel" data-i18n="button_cancel"></button>
+					</div>
+				</form>
+			</div>
+			<div class="accounts_wrapper">
+				<div class="accounts_navigation">
+					<ul class="nav nav-pills nav-stacked">
+						<li class="account_select_button" data-service="monosnap">
+							<a href="#"><span class="account_status_mark"></span>&nbsp;&nbsp;Monosnap</a>
+						</li>
+						<li class="account_select_button" data-service="amazon_s3">
+							<a href="#"><span class="account_status_mark"></span>&nbsp;&nbsp;Amazon S3</a>
+						</li>
+					</ul>
+					<div>
+						<button class="btn btn-small btn-link" id="settings_accounts_import" data-i18n="settings_accounts_import"></button>
+						<button class="btn btn-small btn-link" id="settings_accounts_export" data-i18n="settings_accounts_export"></button>
+					</div>
+				</div>
+				<div style="width:100%;">
+					<div class="account_section" data-service="monosnap">
+						<div id="ms_profile">
+							<div class="ms_table">
+								<div class="ms_td ms_td_vert_center ms_width_filler" style="padding-left:10px;">
+									<span data-i18n="settings_user_logged_as"></span>
+									<br>
+									<span id="ms_profile_name"></span>&nbsp;(<span id="ms_profile_email"></span>)
+									<br>
+									<button class="btn btn-small" id="ms_logout_button" data-i18n="user_account_logout"></button>
+								</div>
+							</div>
+						</div>
+						<div id="ms_login_form">
+							<input type="text" autocomplete="off" id="ms_user_mail_input" data-i18n="placeholder:user_account_mail_input_placeholder">
+							<input type="password" id="ms_user_password_input" data-i18n="placeholder:user_account_password_input_placeholder">
+							<button type="submit" class="btn btn-primary" id="ms_login_submit_button" data-i18n="user_account_login"></button>
+							<!-- TODO: Replace login with FB button -->
+							<div id="ms_login_with_fb_button">
+								<img src="/images/settings/accounts/monosnap/fb_logo.png">
+								<span class="ms_login_with_fb_text">Log in with Facebook</span>
+							</div>
+						</div>
+						<div id="okta_block" class="okta">
+							<div id="okta_user_name_label">
+								<span data-i18n="okta_user_name_label"></span>
+								<span id="okta_user_name"></span>
+							</div>
+							<div class="btn-def ok">
+								<span>Login with</span>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1592.9 537.37">
+									<defs>
+										<style>.a{fill:#fff;}</style>
+									</defs>
+									<title>icn_okta</title>
+									<path class="a"
+										  d="M200.29,136.79C89.67,136.79,0,226.46,0,337.08S89.67,537.37,200.29,537.37s200.28-89.68,200.28-200.29S310.9,136.79,200.29,136.79Zm0,299.28a99,99,0,1,1,99-99A99,99,0,0,1,200.29,436.07Z"/>
+									<path class="a"
+										  d="M837.12,513.26a29.4,29.4,0,0,0-6-9.1L670.85,338.4h0a20.54,20.54,0,0,1-1.12-25.24h0v0c.91-1,106.86-120,127.58-143,13.44-14.95,4.45-25.08-1.47-29.5a12.9,12.9,0,0,0-7.72-2.52c-15.16,0-72.35,0-82.81,0-12.2.07-17.83,7.47-17.83,7.47L583.79,257.23h0a18.29,18.29,0,0,1-14.18,6.59c-8.62,0-15.81-5.74-17.55-13.39l-.41-.09V18.93A16.49,16.49,0,0,0,535.18,2.49h-69a16.5,16.5,0,0,0-16.45,16.44V520.86a16.5,16.5,0,0,0,16.45,16.45h69a16.5,16.5,0,0,0,16.45-16.45V404.77a17.95,17.95,0,0,1,28.73-13.48h0l0,0c2,2,105.65,108.12,120.58,126,18.5,22.17,25.5,20,25.5,20s50.75-.08,91.5,0C837.49,537.34,840.68,521.84,837.12,513.26Z"/>
+									<path class="a"
+										  d="M1096.14,506.83c-1.38-14.2-2.64-23-4.5-46-2.58-31.94-12.5-24-34.66-24.83-77.2-2.9-103.05-64.1-99.54-114.24a16,16,0,0,0,.19-2.31V251.33h0c1.23-7.56,6.78-14,13.51-15.52h93.29a16.49,16.49,0,0,0,16.45-16.44V152.06a16.5,16.5,0,0,0-16.45-16.45H971.14c-8.2-1.34-14.51-9.41-14.51-18.93,0-2.23,1-100.23,1-100.23A16.5,16.5,0,0,0,941.18,0h-69a16.5,16.5,0,0,0-16.45,16.45v303c-1.63,170.88,133,222.88,212,217.55C1099.3,536.05,1097.89,524.78,1096.14,506.83Z"/>
+									<path class="a"
+										  d="M1592.14,503.79c.26-15,.17-34,.42-49,.34-20-7.25-22.33-21.92-22-19.29.44-54-2.67-55.06-63V153a16.49,16.49,0,0,0-16.45-16.44h-69A16.49,16.49,0,0,0,1413.73,153v9.7a199.43,199.43,0,0,0-99-26.14c-110.61,0-200.29,89.67-200.29,200.28s89.68,200.29,200.29,200.29a199.45,199.45,0,0,0,130.34-48.22c11.24,21.2,36.91,40.55,72,45.48,19.53,2.74,27.2,3.42,36.84,2.69C1602,533.46,1592,513.46,1592.14,503.79Zm-277.41-67.94a99,99,0,1,1,99-99A99,99,0,0,1,1314.73,435.85Z"/>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="account_section" data-service="amazon_s3">
+						<div class="ms_table" id="amazon_settings">
+							<div class="ms_tr">
+								<div class="ms_td"><label for="aws_access_key_input" data-i18n="aws_access_key_id"></label></div>
+								<div class="ms_td"><input type="text" id="aws_access_key_input"></div>
+							</div>
+							<div class="ms_tr">
+								<div class="ms_td"><label for="aws_secret_key_input" data-i18n="aws_secret_access_key"></label></div>
+								<div class="ms_td"><input type="password" id="aws_secret_key_input"></div>
+							</div>
+							<div class="ms_tr">
+								<div class="ms_td"><label for="aws_signature_version_selector" data-i18n="aws_signature_version"></label></div>
+								<div class="ms_td">
+									<select disabled id="aws_signature_version_selector">
+										<option value="v2" data-i18n="aws_signature_version_2"></option>
+										<option value="v4" data-i18n="aws_signature_version_4"></option>
+									</select>
+								</div>
+							</div>
+							<div class="ms_tr">
+								<div class="ms_td"><label for="aws_region_selector" data-i18n="aws_region"></label></div>
+								<div class="ms_td"><select id="aws_region_selector"></select></div>
+							</div>
+							<div class="ms_tr">
+								<div class="ms_td"></div>
+								<div class="ms_td">
+									<input type="checkbox" id="aws_ssl_enable_checkbox">
+									<label for="aws_ssl_enable_checkbox" data-i18n="aws_ssl_enable"></label>
+								</div>
+							</div>
+							<div class="ms_tr">
+								<div class="ms_td"></div>
+								<div class="ms_td"><button class="btn btn-primary" id="aws_s3_connect" data-i18n="aws_s3_connect"></button></div>
+							</div>
+							<div class="ms_tr">
+								<div class="ms_td"><label for="aws_s3_bucket_selector" data-i18n="aws_s3_bucket"></label></div>
+								<div class="ms_td"><select id="aws_s3_bucket_selector"></select></div>
+							</div>
+							<div class="ms_tr">
+								<div class="ms_td"><label for="aws_s3_path_input" data-i18n="aws_s3_relative_path"></label></div>
+								<div class="ms_td"><input type="text" placeholder="/" id="aws_s3_path_input"></div>
+							</div>
+							<div class="ms_tr">
+								<div class="ms_td"><label for="aws_s3_base_url_input" data-i18n="aws_s3_base_url"></label></div>
+								<div class="ms_td"><input type="text" placeholder="https://s3.amazonaws.com" id="aws_s3_base_url_input"></div>
+							</div>
+						</div>
+						<div class="error" style="display: none">
+							<div class="head"></div>
+							<div class="description"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Feedback -->
+        <div class="settings_section" data-context="feedback">
+            <div style="margin:0 20px;">
+                <h4 class="settings_subheader" data-i18n="settings_feedback_header"></h4>
+                <div class="settings_subsection2">
+                    <p class="feedback_description" data-i18n="settings_feedback_check_faq"></p>
+                    <!--<p class="feedback_description" data-i18n="settings_feedback_description"></p>-->
+                    <input type="text" id="feedback_email_input" data-i18n="placeholder:settings_feedback_email_input_placeholder">
+                    <textarea rows="5" id="feedback_message_input" data-i18n="placeholder:settings_feedback_message_input_placeholder"></textarea>
+                    <div class="settings_subsection2">
+                        <input type="checkbox" id="feedback_attach_account_info">
+                        <label for="feedback_attach_account_info" data-i18n="settings_feedback_attach_account_info"></label>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="feedback_send" data-i18n="button_send"></button>
+                </div>
+            </div>
+
+        </div>
+	</body>
+</html>

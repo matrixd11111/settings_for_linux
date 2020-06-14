@@ -1,0 +1,138 @@
+User belongs to experiment group 'ShowPlayIcon - start'
+User belongs to experiment group 'DebugAdapterFactory - experiment'
+User belongs to experiment group 'PtvsdWheels37 - experiment'
+User belongs to experiment group 'UseTerminalToGetActivatedEnvVars - control'
+User belongs to experiment group 'LocalZMQKernel - control'
+User belongs to experiment group 'NativeNotebook - control'
+User belongs to experiment group 'CollectLSRequestTiming - control'
+User belongs to experiment group 'CollectNodeLSRequestTiming - experiment'
+User belongs to experiment group 'EnableIPyWidgets - experiment'
+User belongs to experiment group 'RunByLine - control'
+User belongs to experiment group 'CustomEditorSupport - control'
+> conda --version
+> pyenv root
+> python3.7 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> python3.6 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> python2 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> python ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> conda info --json
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import jupyter"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import jupyter"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import notebook"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import notebook"
+Starting Jedi Python language engine.
+Python interpreter path: /usr/bin/python3
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/network-interfaces_valid_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/network-interfaces_valid_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.prefix)"
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.prefix)"
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())"
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())"
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py site --user-site
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py site --user-site
+cwd: ~/Documents/aerodisk/testing
+> conda --version
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/completion.py
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/completion.py
+##########Linting Output - flake8##########
+9,1,E,E302:expected 2 blank lines, found 1
+19,9,E,E265:block comment should start with '# '
+19,80,E,E501:line too long (82 > 79 characters)
+21,36,W,W291:trailing whitespace
+22,80,E,E501:line too long (94 > 79 characters)
+29,80,E,E501:line too long (85 > 79 characters)
+29,86,W,W291:trailing whitespace
+30,45,E,E127:continuation line over-indented for visual indent
+31,45,E,E127:continuation line over-indented for visual indent
+32,45,E,E127:continuation line over-indented for visual indent
+33,45,E,E127:continuation line over-indented for visual indent
+34,80,E,E501:line too long (87 > 79 characters)
+36,80,E,E501:line too long (105 > 79 characters)
+37,37,E,E127:continuation line over-indented for visual indent
+37,80,E,E501:line too long (92 > 79 characters)
+47,80,E,E501:line too long (84 > 79 characters)
+58,80,E,E501:line too long (84 > 79 characters)
+60,41,E,E127:continuation line over-indented for visual indent
+65,30,W,W291:trailing whitespace
+72,80,E,E501:line too long (118 > 79 characters)
+73,49,E,E127:continuation line over-indented for visual indent
+73,80,E,E501:line too long (115 > 79 characters)
+74,80,E,E501:line too long (103 > 79 characters)
+77,80,E,E501:line too long (110 > 79 characters)
+78,37,E,E127:continuation line over-indented for visual indent
+78,80,E,E501:line too long (92 > 79 characters)
+79,80,E,E501:line too long (115 > 79 characters)
+79,116,W,W291:trailing whitespace
+80,41,E,E127:continuation line over-indented for visual indent
+82,80,E,E501:line too long (125 > 79 characters)
+86,34,W,W291:trailing whitespace
+94,80,E,E501:line too long (99 > 79 characters)
+95,80,E,E501:line too long (98 > 79 characters)
+101,34,W,W291:trailing whitespace
+109,80,E,E501:line too long (103 > 79 characters)
+110,53,E,E127:continuation line over-indented for visual indent
+110,80,E,E501:line too long (115 > 79 characters)
+111,80,E,E501:line too long (139 > 79 characters)
+112,80,E,E501:line too long (158 > 79 characters)
+114,80,E,E501:line too long (151 > 79 characters)
+115,80,E,E501:line too long (114 > 79 characters)
+116,41,E,E127:continuation line over-indented for visual indent
+116,80,E,E501:line too long (123 > 79 characters)
+116,124,W,W291:trailing whitespace
+117,49,E,E127:continuation line over-indented for visual indent
+117,80,E,E501:line too long (122 > 79 characters)
+118,80,E,E501:line too long (119 > 79 characters)
+119,45,E,E127:continuation line over-indented for visual indent
+119,80,E,E501:line too long (115 > 79 characters)
+119,116,W,W291:trailing whitespace
+120,53,E,E127:continuation line over-indented for visual indent
+120,80,E,E501:line too long (111 > 79 characters)
+122,80,E,E501:line too long (120 > 79 characters)
+131,80,E,E501:line too long (108 > 79 characters)
+132,80,E,E501:line too long (84 > 79 characters)
+133,80,E,E501:line too long (127 > 79 characters)
+142,80,E,E501:line too long (108 > 79 characters)
+144,80,E,E501:line too long (101 > 79 characters)
+144,102,W,W291:trailing whitespace
+145,37,E,E127:continuation line over-indented for visual indent
+145,80,E,E501:line too long (92 > 79 characters)
+146,80,E,E501:line too long (80 > 79 characters)
+146,81,W,W291:trailing whitespace
+147,41,E,E127:continuation line over-indented for visual indent
+149,80,E,E501:line too long (80 > 79 characters)
+150,29,E,E128:continuation line under-indented for visual indent
+151,37,E,E127:continuation line over-indented for visual indent
+152,37,E,E127:continuation line over-indented for visual indent
+153,9,E,E124:closing bracket does not match visual indentation
+163,80,E,E501:line too long (113 > 79 characters)
+164,80,E,E501:line too long (88 > 79 characters)
+165,80,E,E501:line too long (122 > 79 characters)
+169,80,E,E501:line too long (83 > 79 characters)
+174,80,E,E501:line too long (93 > 79 characters)
+176,80,E,E501:line too long (105 > 79 characters)
+177,41,E,E127:continuation line over-indented for visual indent
+177,80,E,E501:line too long (123 > 79 characters)
+178,49,E,E127:continuation line over-indented for visual indent
+178,80,E,E501:line too long (122 > 79 characters)
+179,80,E,E501:line too long (84 > 79 characters)
+179,85,W,W291:trailing whitespace
+180,45,E,E127:continuation line over-indented for visual indent
+180,80,E,E501:line too long (122 > 79 characters)
+182,80,E,E501:line too long (120 > 79 characters)
+187,80,E,E501:line too long (111 > 79 characters)
+196,1,E,E305:expected 2 blank lines after class or function definition, found 1

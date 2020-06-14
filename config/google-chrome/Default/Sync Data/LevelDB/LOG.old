@@ -1,0 +1,30 @@
+2020/06/11-09:36:14.296 9b6 Reusing MANIFEST /home/matrix/.config/google-chrome/Default/Sync Data/LevelDB/MANIFEST-000001
+2020/06/11-09:36:14.297 9b6 Recovering log #227
+2020/06/11-09:36:14.298 9b6 Reusing old log /home/matrix/.config/google-chrome/Default/Sync Data/LevelDB/000227.log 
+2020/06/11-10:07:52.179 dd0 Level-0 table #232: started
+2020/06/11-10:07:52.188 dd0 Level-0 table #232: 107587 bytes OK
+2020/06/11-10:07:52.195 dd0 Delete type=0 #227
+2020/06/11-12:18:05.892 dd0 Level-0 table #234: started
+2020/06/11-12:18:05.915 dd0 Level-0 table #234: 94011 bytes OK
+2020/06/11-12:18:05.930 dd0 Delete type=0 #231
+2020/06/11-12:57:21.055 dd0 Level-0 table #236: started
+2020/06/11-12:57:21.072 dd0 Level-0 table #236: 107068 bytes OK
+2020/06/11-12:57:21.082 dd0 Delete type=0 #233
+2020/06/11-14:55:42.944 dd0 Level-0 table #238: started
+2020/06/11-14:55:42.956 dd0 Level-0 table #238: 97203 bytes OK
+2020/06/11-14:55:42.965 dd0 Delete type=0 #235
+2020/06/11-14:55:42.966 dd0 Compacting 4@0 + 1@1 files
+2020/06/11-14:55:42.988 dd0 Generated table #239@0: 544 keys, 64395 bytes
+2020/06/11-14:55:42.988 dd0 Compacted 4@0 + 1@1 files => 64395 bytes
+2020/06/11-14:55:43.002 dd0 compacted to: files[ 0 1 1 0 0 0 0 ]
+2020/06/11-14:55:43.003 dd0 Delete type=2 #238
+2020/06/11-14:55:43.003 dd0 Delete type=2 #236
+2020/06/11-14:55:43.003 dd0 Delete type=2 #232
+2020/06/11-14:55:43.003 dd0 Delete type=2 #229
+2020/06/11-14:55:43.003 dd0 Delete type=2 #234
+2020/06/11-16:32:54.985 dd0 Level-0 table #241: started
+2020/06/11-16:32:55.006 dd0 Level-0 table #241: 104692 bytes OK
+2020/06/11-16:32:55.032 dd0 Delete type=0 #237
+2020/06/12-20:14:15.411 dd0 Level-0 table #243: started
+2020/06/12-20:14:15.433 dd0 Level-0 table #243: 106097 bytes OK
+2020/06/12-20:14:15.462 dd0 Delete type=0 #240

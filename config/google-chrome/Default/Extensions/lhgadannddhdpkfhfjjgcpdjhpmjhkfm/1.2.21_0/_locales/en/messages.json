@@ -1,0 +1,605 @@
+{
+   "alert_default_header": {
+      "message": "Warning!"
+   },
+   "alert_error_header": {
+      "message": "Error!"
+   },
+   "alert_info_header": {
+      "message": ""
+   },
+   "alert_sucess_header": {
+      "message": "Done."
+   },
+   "app_default_title": {
+      "message": "Monosnap"
+   },
+   "app_description": {
+      "message": "Capture pages or blocks with the awesome smart screen capture tool!"
+   },
+   "app_name": {
+      "message": "Monosnap"
+   },
+   "aws_access_key_id": {
+      "message": "Access Key ID"
+   },
+   "aws_region": {
+      "message": "Region"
+   },
+   "aws_s3_base_url": {
+      "message": "Base URL"
+   },
+   "aws_s3_bucket": {
+      "message": "Bucket name"
+   },
+   "aws_s3_connect": {
+      "message": "Connect to AWS"
+   },
+   "aws_s3_relative_path": {
+      "message": "Path"
+   },
+   "aws_secret_access_key": {
+      "message": "Secret Access Key"
+   },
+   "aws_signature_version": {
+      "message": "Signature version"
+   },
+   "aws_signature_version_2": {
+      "message": "Version 2 (HMAC-SHA1)"
+   },
+   "aws_signature_version_4": {
+      "message": "Version 4 (HMAC-SHA256)"
+   },
+   "aws_ssl_enable": {
+      "message": "Use SSL"
+   },
+   "button_cancel": {
+      "message": "Cancel"
+   },
+   "button_close": {
+      "message": "Close"
+   },
+   "button_copy": {
+      "message": "Copy"
+   },
+   "button_download": {
+      "message": "Download"
+   },
+   "button_load": {
+      "message": "Load"
+   },
+   "button_ok": {
+      "message": "Ok"
+   },
+   "button_save": {
+      "message": "Save"
+   },
+   "button_send": {
+      "message": "Send"
+   },
+   "button_share": {
+      "message": "Share"
+   },
+   "button_upload": {
+      "message": "Upload"
+   },
+   "capturing_in_progress": {
+      "message": "Capturing, please wait..."
+   },
+   "chrome_hotkey_desktop_screenshot": {
+      "message": "Start fullscreen capture"
+   },
+   "chrome_hotkey_screencast_init": {
+      "message": "Record desktop (screen or application window)"
+   },
+   "chrome_hotkey_screencast_toggle": {
+      "message": "Record desktop start/stop"
+   },
+   "chrome_os_fs_open_image": {
+      "message": "Open in Monosnap"
+   },
+   "chrome_os_fs_upload_file": {
+      "message": "Upload file"
+   },
+   "clipboard_button": {
+      "message": "Copy to clipboard"
+   },
+   "context_menu_main": {
+      "message": "Monosnap"
+   },
+   "context_menu_open_in_editor": {
+      "message": "Open image in the editor"
+   },
+   "context_menu_upload_to_monosnap": {
+      "message": "Upload to the storage"
+   },
+   "context_menu_upload_to_s3": {
+      "message": "Upload to Amazon S3"
+   },
+   "controls_ram_free": {
+      "message": "RAM available"
+   },
+   "controls_ram_used": {
+      "message": "Video size"
+   },
+   "editor_height": {
+      "message": "Height"
+   },
+   "editor_keep_proportion": {
+      "message": "Keep proportion"
+   },
+   "editor_loader_label": {
+      "message": "The page is loading, please wait"
+   },
+   "editor_page_title": {
+      "message": "Monosnap: Screenshot editor"
+   },
+   "editor_redo": {
+      "message": "Redo changes"
+   },
+   "editor_screenshot_title_placeholder": {
+      "message": "File name"
+   },
+   "editor_tool_arrow": {
+      "message": "\u003Cb>Arrow\u003C/b>\u003Cbr>\u003Cp class=\"tool_modes_hint\">Hold \u003Cb>Ctrl\u003C/b> to draw from head to tail\u003C/p>"
+   },
+   "editor_tool_blur": {
+      "message": "\u003Cb>Blur\u003C/b>"
+   },
+   "editor_tool_brush": {
+      "message": "\u003Cb>Brush\u003C/b>\u003Cbr>\u003Cp class=\"tool_modes_hint\">Hold \u003Cb>Ctrl\u003C/b> to draw a highlighter\u003C/p>"
+   },
+   "editor_tool_bubble": {
+      "message": "\u003Cb>Bubble\u003C/b>\u003Cbr>\u003Cp class=\"tool_modes_hint\">Hold \u003Cb>Ctrl\u003C/b> to draw from head to tail\u003C/p>"
+   },
+   "editor_tool_counter": {
+      "message": "\u003Cb>Counter\u003C/b>\u003Cbr>\u003Cp class=\"tool_modes_hint\">\u003Cb>Esc\u003C/b> - cancel\u003Cbr>\u003Cb>Enter\u003C/b> - submit\u003C/p>"
+   },
+   "editor_tool_crop": {
+      "message": "\u003Cb>Crop\u003C/b>"
+   },
+   "editor_tool_ellipse": {
+      "message": "\u003Cb>Ellipse\u003C/b>\u003Cbr>\u003Cp class=\"tool_modes_hint\">Hold \u003Cb>Shift\u003C/b> to draw a circle\u003Cbr>Hold \u003Cb>Ctrl\u003C/b> to draw filled ellipse\u003C/p>"
+   },
+   "editor_tool_line": {
+      "message": "\u003Cb>Line\u003C/b>"
+   },
+   "editor_tool_rectangle": {
+      "message": "\u003Cb>Rectangle\u003C/b>\u003Cbr>\u003Cp class=\"tool_modes_hint\">Hold \u003Cb>Shift\u003C/b> to draw a square\u003Cbr>Hold \u003Cb>Alt\u003C/b> to darken everything except selected area\u003Cbr>Hold \u003Cb>Ctrl\u003C/b> to draw filled rectangle\u003C/p>"
+   },
+   "editor_tool_resize": {
+      "message": "\u003Cb>Resize\u003C/b>"
+   },
+   "editor_tool_settings_outline": {
+      "message": "Text outline"
+   },
+   "editor_tool_settings_shadow": {
+      "message": "Draw shadow"
+   },
+   "editor_tool_text": {
+      "message": "\u003Cb>Text\u003C/b>"
+   },
+   "editor_undo": {
+      "message": "Undo changes"
+   },
+   "editor_width": {
+      "message": "Width"
+   },
+   "editor_wipe_history": {
+      "message": "Reset changes"
+   },
+   "editor_zoom_in": {
+      "message": "Zoom In"
+   },
+   "editor_zoom_out": {
+      "message": "Zoom Out"
+   },
+   "hint_area_capture_mac": {
+      "message": "Click — capture visible area\u003Cbr>Shift — select square area\u003Cbr>⌘ — delayed screenshot\u003Cbr>⌘+C — copy color"
+   },
+   "hint_area_capture_others": {
+      "message": "Click — capture visible area\u003Cbr>Shift — select square area\u003Cbr>Ctrl — delayed screenshot\u003Cbr>Ctrl+C — copy color"
+   },
+   "notification_access_denied": {
+      "message": "Acceess denied! You're not authorized to perform action"
+   },
+   "notification_accounts_export_logged_absent": {
+      "message": "Nothing to export! Sign in to some service first"
+   },
+   "notification_accounts_export_success": {
+      "message": "Accounts data has been successfully saved."
+   },
+   "notification_accounts_import_fail": {
+      "message": "Unable to encrypt the file! Make sure entered password is correct."
+   },
+   "notification_accounts_import_success": {
+      "message": "Your accounts settings has been successfully loaded."
+   },
+   "notification_color_copy_to_clipboard_success": {
+      "message": "Color was successfully copied."
+   },
+   "notification_editor_load_image_fail": {
+      "message": "Can't load image. Exiting..."
+   },
+   "notification_feedback_send_fail": {
+      "message": "Something gone wrong... Try again."
+   },
+   "notification_feedback_send_success_header": {
+      "message": "Thank you!"
+   },
+   "notification_feedback_send_success_message": {
+      "message": "We appreciate your reviews and reports about bugs in the extension."
+   },
+   "notification_file_link_copy_success": {
+      "message": "Link was copied to the clipboard"
+   },
+   "notification_file_open_not_image": {
+      "message": "File must be an image."
+   },
+   "notification_file_open_too_big": {
+      "message": "This file is larger than 30Mb. It can’t be opened."
+   },
+   "notification_file_save_fail": {
+      "message": "Failed to save the file."
+   },
+   "notification_file_save_success": {
+      "message": "File has been successfully saved."
+   },
+   "notification_file_save_to": {
+      "message": "The screenshot has been saved to "
+   },
+   "notification_file_upload_fail": {
+      "message": "File upload failed."
+   },
+   "notification_file_upload_success": {
+      "message": "File has been uploaded."
+   },
+   "notification_gif_already_started_warning": {
+      "message": "Please, wait until video processing will be finished"
+   },
+   "notification_gif_conversion_title": {
+      "message": "Video to GIF conversion"
+   },
+   "notification_gif_frames_processing": {
+      "message": "Step 1: Extracting frames..."
+   },
+   "notification_gif_rendering": {
+      "message": "Step 2: Rendering GIF..."
+   },
+   "notification_hotkey_assign_conflict": {
+      "message": "The shortcut is registered by another application. Please redefine it."
+   },
+   "notification_image_copy_fail": {
+      "message": "Failed to copy the screenshot"
+   },
+   "notification_image_copy_to_clipboard_fail": {
+      "message": "Copy file to clipboard fails"
+   },
+   "notification_image_copy_to_clipboard_success": {
+      "message": "Copy file to clipboard successfully"
+   },
+   "notification_login_to_upload": {
+      "message": "Please, log in first to upload files."
+   },
+   "notification_monosnap_login_invalid_credentials": {
+      "message": "You've entered wrong e-mail/password"
+   },
+   "notification_monosnap_login_success": {
+      "message": "You're logged in as "
+   },
+   "notification_monosnap_wrong_token": {
+      "message": "Your session has expired. Please, log in again."
+   },
+   "notification_network_failure": {
+      "message": "Network failure. Check your connection and try again."
+   },
+   "notification_s3_bucket_not_specified": {
+      "message": "Bucket not specified"
+   },
+   "notification_s3_connection_success": {
+      "message": "Great! You're ready to use S3"
+   },
+   "notification_s3_wrong_credentials": {
+      "message": "Please check your AWS S3 credentials."
+   },
+   "notification_s3_wrong_region": {
+      "message": "Notice: selected bucket located in "
+   },
+   "notification_screencast_low_ram_level": {
+      "message": "[!] Low available RAM level. It may cause recording failure!"
+   },
+   "notification_screencast_microphone_access_denied": {
+      "message": "To record audio allow the extension to use microphone"
+   },
+   "notification_screencast_record_already_initialized": {
+      "message": "Seems like you've already started another recording!"
+   },
+   "notification_short_link_generate_fail": {
+      "message": "Error occured while generating the short link"
+   },
+   "notification_unknown_error": {
+      "message": "Unknown error"
+   },
+   "okta_login_failed__message": {
+      "message": "Something went wrong while authorizing in Okta!"
+   },
+   "okta_login_successfully__message": {
+      "message": "Succesfully authorized in Okta!"
+   },
+   "okta_token__title": {
+      "message": "Okta login"
+   },
+   "okta_user_name_label": {
+      "message": "Your are logged in Okta with email: "
+   },
+   "popup_capture_area": {
+      "message": "Capture page area"
+   },
+   "popup_capture_desktop": {
+      "message": "Capture desktop"
+   },
+   "popup_capture_smart_area": {
+      "message": "Smart capture"
+   },
+   "popup_capture_webpage": {
+      "message": "Capture whole page"
+   },
+   "popup_capture_window": {
+      "message": "Capture visible content"
+   },
+   "popup_open_file": {
+      "message": "Open file..."
+   },
+   "popup_page_title": {
+      "message": "Monosnap: Popup"
+   },
+   "popup_preferences": {
+      "message": "Open preferences"
+   },
+   "popup_recent_uploads": {
+      "message": "Latest uploads"
+   },
+   "popup_record_desktop": {
+      "message": "Record desktop"
+   },
+   "popup_special_page_tip": {
+      "message": "This is a special page. Extension doesn't have access to this page."
+   },
+   "popup_upload_file": {
+      "message": "Upload file"
+   },
+   "recent_uploads_header": {
+      "message": "Latest uploaded files"
+   },
+   "recent_uploads_page_title": {
+      "message": "Monosnap: Latest uploads"
+   },
+   "screencast_player_hint": {
+      "message": "Click and drag — select an area\u003Cbr>Enter — Submit crop"
+   },
+   "settings_accounts_enter_password": {
+      "message": "Enter the password"
+   },
+   "settings_accounts_export": {
+      "message": "Export data"
+   },
+   "settings_accounts_import": {
+      "message": "Import data"
+   },
+   "settings_apply_default_action_to_local_files": {
+      "message": "Apply default action to local files"
+   },
+   "settings_apply_file_name_template": {
+      "message": "Generate screenshot title using template"
+   },
+   "settings_apply_to_local_files": {
+      "message": "Apply filename settings to local files"
+   },
+   "settings_close_editor_after_upload": {
+      "message": "Close the editor after upload"
+   },
+   "settings_default_service": {
+      "message": "Default service"
+   },
+   "settings_do_nothing": {
+      "message": "Do nothing"
+   },
+   "settings_enable_short_links": {
+      "message": "Enable short links"
+   },
+   "settings_feedback_attach_account_info": {
+      "message": "Attach Monosnap account info"
+   },
+   "settings_feedback_check_faq": {
+      "message": "If you have a question check out our \u003Ca href=\"https://monosnap.com/page/faq\">FAQ\u003C/a> first. May be you'll find an answer there."
+   },
+   "settings_feedback_email_input_placeholder": {
+      "message": "Your e-Mail"
+   },
+   "settings_feedback_header": {
+      "message": "Leave a feedback"
+   },
+   "settings_feedback_message_input_placeholder": {
+      "message": "Message text"
+   },
+   "settings_file_name_template": {
+      "message": "Name template"
+   },
+   "settings_file_name_template_hint": {
+      "message": "\u003Cb>Designations\u003C/b>\u003Cp class=\"title_template_hint\">%Y - 4-digit year number\u003Cbr>%y - 2-digit year number\u003Cbr>%m - month number (2-digit)\u003Cbr>%d - day of a month (2-gidit)\u003Cbr>%H - hours (2-digit)\u003Cbr>%M - minutes (2-digit)\u003Cbr>%S - seconds (2-digit)\u003Cbr>%U - UNIX timestamp\u003Cbr>%C - tab title/file name\u003Cbr>%R - sequence of 5 random digits\u003C/p>"
+   },
+   "settings_file_save_specify_path": {
+      "message": "Browse..."
+   },
+   "settings_files_upload_header": {
+      "message": "Files upload"
+   },
+   "settings_generate_random_file_names": {
+      "message": "Use random-generated file names"
+   },
+   "settings_gif_frame_rate": {
+      "message": "Frames per second"
+   },
+   "settings_gif_quality": {
+      "message": "GIF quality"
+   },
+   "settings_hotkeys_capture_page_area": {
+      "message": "Capture page area"
+   },
+   "settings_hotkeys_capture_visible_page_area": {
+      "message": "Capture visible content"
+   },
+   "settings_hotkeys_capture_whole_page": {
+      "message": "Capture whole page"
+   },
+   "settings_hotkeys_configure_global": {
+      "message": "\u003Ca class=\"open_global_hotkeys_page btn btn-primary\">Global Hotkeys\u003C/a>"
+   },
+   "settings_hotkeys_enable": {
+      "message": "Enable hotkeys at webpages"
+   },
+   "settings_hotkeys_ensure_no_collisions": {
+      "message": "[!] Ensure that configured hotkeys are not reserved by the Chrome or other extensions"
+   },
+   "settings_hotkeys_header": {
+      "message": "Hotkeys"
+   },
+   "settings_hotkeys_message_restart": {
+      "message": "Restart browser to apply changes"
+   },
+   "settings_low_ram_level_threshold": {
+      "message": "Show alert when remains less than"
+   },
+   "settings_minimize_chrome_on_screen_capture": {
+      "message": "Minimize Chrome windows while capturing screen"
+   },
+   "settings_navigation_accounts": {
+      "message": "Accounts"
+   },
+   "settings_navigation_contact_us": {
+      "message": "Contact us"
+   },
+   "settings_navigation_general": {
+      "message": "General"
+   },
+   "settings_open_editor_in_a_separate_window": {
+      "message": "Open editor/video preview in a separate window"
+   },
+   "settings_open_images_from_website_in_extension": {
+      "message": "Open (resnap) images from Monosnap in the extension"
+   },
+   "settings_others_header": {
+      "message": "Others"
+   },
+   "settings_output_format_header": {
+      "message": "Output image format"
+   },
+   "settings_output_format_jpeg": {
+      "message": "JPEG (with quality loss)"
+   },
+   "settings_output_format_png": {
+      "message": "PNG (without quality loss)"
+   },
+   "settings_output_format_quality": {
+      "message": "Image quality"
+   },
+   "settings_output_format_webp": {
+      "message": "WebP (with quality loss)"
+   },
+   "settings_page_title": {
+      "message": "Monosnap: Extension settings"
+   },
+   "settings_post_capture_action_header": {
+      "message": "Post-capture action"
+   },
+   "settings_post_capture_edit": {
+      "message": "Open in editor"
+   },
+   "settings_post_capture_save": {
+      "message": "Save on disk (the web page title will be set as the file name)"
+   },
+   "settings_post_capture_upload": {
+      "message": "Upload"
+   },
+   "settings_post_upload_action": {
+      "message": "Post-upload action"
+   },
+   "settings_post_upload_copy_direct_link": {
+      "message": "Copy direct image link"
+   },
+   "settings_post_upload_copy_site_link": {
+      "message": "Copy site link"
+   },
+   "settings_post_upload_open_ms_page": {
+      "message": "Open in browser"
+   },
+   "settings_reset_header": {
+      "message": "Reset to defaults"
+   },
+   "settings_reset_to_defaults": {
+      "message": "Reset to defaults"
+   },
+   "settings_reset_warning": {
+      "message": "WARNING: This action can be undone!\u003C/br>You can export your accounts settings before if needed\u003C/br>\u003C/br>Are you sure?"
+   },
+   "settings_save_file_default_location": {
+      "message": "Default save location: "
+   },
+   "settings_save_file_downloads_folder": {
+      "message": "Downloads"
+   },
+   "settings_screen_pre_capture_delay": {
+      "message": "Fullscreen capture delay (seconds)"
+   },
+   "settings_screencast_gif_framerate": {
+      "message": "GIF frame rate"
+   },
+   "settings_screencast_output_format": {
+      "message": "Export as"
+   },
+   "settings_screencast_recording_header": {
+      "message": "Screencast recording"
+   },
+   "settings_show_magnifier_on_area_capture": {
+      "message": "Show magnifier on area capture"
+   },
+   "settings_user_logged_as": {
+      "message": "You're logged as "
+   },
+   "settings_video_record_header": {
+      "message": "Desktop recording"
+   },
+   "settings_video_record_microphone": {
+      "message": "Record microphone"
+   },
+   "settings_video_type": {
+      "message": "Video type"
+   },
+   "settings_warn_about_low_ram_level": {
+      "message": "Warn me if available RAM level is low"
+   },
+   "uploads_copy_direct_link": {
+      "message": "Copy direct link"
+   },
+   "uploads_copy_short_link": {
+      "message": "Short link"
+   },
+   "uploads_copy_website_link": {
+      "message": "Copy link on Monosnap"
+   },
+   "uploads_go_to_storage": {
+      "message": "Go to storage"
+   },
+   "user_account_login": {
+      "message": "Login"
+   },
+   "user_account_logout": {
+      "message": "Logout"
+   },
+   "user_account_mail_input_placeholder": {
+      "message": "E-mail"
+   },
+   "user_account_password_input_placeholder": {
+      "message": "Password"
+   }
+}

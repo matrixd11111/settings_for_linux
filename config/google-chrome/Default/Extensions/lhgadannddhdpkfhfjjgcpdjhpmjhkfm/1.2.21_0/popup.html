@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+	<head>
+		<title data-i18n="popup_page_title"></title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="/css/generic.css">
+		<link rel="stylesheet" type="text/css" href="/css/popup/popup.css">
+
+		<!--<script type="text/javascript" src="/scripts/.min/popup.min.js"></script>
+-->
+		<script type="text/javascript" src="/libs/jquery/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="/scripts/generic.js"></script>
+		<script type="text/javascript" src="/scripts/background/state/default.js"></script>
+		<script type="text/javascript" src="/libs/ga.js"></script>
+		<script type="text/javascript" src="/scripts/chrome_api/events.js"></script>
+		<script type="text/javascript" src="/scripts/chrome_api/runtime.js"></script>
+		<script type="text/javascript" src="/scripts/chrome_api/tabs.js"></script>
+		<script type="text/javascript" src="/scripts/chrome_api/notifications.js"></script>
+		<script type="text/javascript" src="/scripts/commons/communication.js"></script>
+		<script type="text/javascript" src="/scripts/popup/popup.js"></script>
+	</head>
+	<body>
+		<div id="loader">
+			<img src="/images/loader_circle.gif">
+			<div data-i18n="capturing_in_progress"></div>
+		</div>
+		<div id="special_page_notice"></div>
+		<div class="menu_item screenshot_trigger" data-type="desktop" data-command="capture_fullscreen" style="background-image: url('/images/popup/screen.png');">
+            <span class="button_label" data-i18n="popup_capture_desktop"></span>
+        </div>
+		<div class="menu_item screenshot_trigger" data-type="area" data-command="capture_page_area" style="background-image: url('/images/popup/crop.png');">
+            <span class="button_label" data-i18n="popup_capture_area"></span>
+        </div>
+		<div class="menu_item screenshot_trigger" data-type="window" data-command="capture_visible_area" style="background-image: url('/images/popup/visible.png');">
+            <span class="button_label" data-i18n="popup_capture_window"></span>
+        </div>
+		<div class="menu_item screenshot_trigger" data-type="webpage" data-command="capture_whole_page" style="background-image: url('/images/popup/full.png');">
+            <span class="button_label" data-i18n="popup_capture_webpage"></span>
+        </div>
+		<!--<div class="menu_item screenshot_trigger" data-type="smart_area" data-i18n="popup_capture_smart_area" style="background-image: url('/images/popup/smart.png');"></div>-->
+        <div class="menu_item" data-command="record_desktop" id="record_desktop" style="background-image: url('/images/popup/screencast.png');">
+            <span class="button_label" data-i18n="popup_record_desktop"></span>
+        </div>
+        <div class="menu_item open" id="open_local_file" style="background-image: url('/images/popup/open.png');">
+            <span class="button_label" data-i18n="popup_open_file"></span>
+        </div>
+		<div class="menu_item upload" id="open_local_file" style="background-image: url('/images/popup/open.png');">
+            <span class="button_label" data-i18n="popup_upload_file"></span>
+        </div>
+		<div class="menu_separator"></div>
+		<div class="menu_item utils_trigger" id="show_latest_uploads" style="background-image: url('/images/popup/recent.png');">
+            <span class="button_label" data-i18n="popup_recent_uploads"></span>
+        </div>
+		<div class="menu_item utils_trigger" id="show_options" style="background-image: url('/images/popup/preferences.png');">
+            <span class="button_label" data-i18n="popup_preferences"></span>
+        </div>
+	</body>
+</html>

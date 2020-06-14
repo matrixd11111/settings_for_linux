@@ -1,0 +1,15 @@
+2020/06/02-16:30:54.419 4d0f Reusing MANIFEST /home/matrix/.config/google-chrome/Default/IndexedDB/https_vk.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/06/02-16:30:54.419 4d0f Recovering log #4
+2020/06/02-16:30:54.420 4d0f Reusing old log /home/matrix/.config/google-chrome/Default/IndexedDB/https_vk.com_0.indexeddb.leveldb/000004.log 
+2020/06/02-16:31:26.427 2a9e Level-0 table #8: started
+2020/06/02-16:31:26.430 2a9e Level-0 table #8: 545 bytes OK
+2020/06/02-16:31:26.434 2a9e Delete type=0 #4
+2020/06/02-16:31:26.434 2a9e Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/06/02-16:31:26.435 2a9e Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x0c\x00s\x00w\x00_\x00p\x00u\x00s\x00h\x00_\x00h\x00a\x00s\x00h' @ 75 : 1
+2020/06/02-16:31:26.435 2a9e Compacting 1@1 + 1@2 files
+2020/06/02-16:31:26.439 2a9e Generated table #9@1: 20 keys, 585 bytes
+2020/06/02-16:31:26.440 2a9e Compacted 1@1 + 1@2 files => 585 bytes
+2020/06/02-16:31:26.443 2a9e compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/06/02-16:31:26.444 2a9e Delete type=2 #5
+2020/06/02-16:31:26.444 2a9e Delete type=2 #8
+2020/06/02-16:31:26.444 2a9e Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x0c\x00s\x00w\x00_\x00p\x00u\x00s\x00h\x00_\x00h\x00a\x00s\x00h' @ 75 : 1 .. (end); will stop at (end)

@@ -1,0 +1,165 @@
+/snap/code/33/usr/share/code/resources/app
+[Google Translate]:
+
+//tbody/tr[td/text()="
+[<============================>]:
+//tbody/tr[td/text()="
+
+[Google Translate]:
+
+//tbody/tr/td/div/span[text()="
+[<============================>]:
+//tbody/tr/td/div/span[text()="
+
+[Google Translate]:
+
+//tbody/tr[td/text()="bond11"]/td/div/span[text()="
+[<============================>]:
+//tbody/tr[td/text()="bond11"]/td/div/span[text()="
+
+[Google Translate]:
+
+//tbody/tr[td/text()="bond12"]/td/div/span[text()="
+[<============================>]:
+//tbody/tr[td/text()="bond12"]/td/div/span[text()="
+
+[Google Translate]:
+
+//tbody/tr[td/text()="bond13"]/td/div/span[text()="
+[<============================>]:
+//tbody/tr[td/text()="bond13"]/td/div/span[text()="
+
+[Google Translate]:
+
+192.168.2.180
+[<============================>]:
+192.168.2.180
+
+[Google Translate]:
+
+192.168.555.555
+[<============================>]:
+192.168.555.555
+
+[Google Translate]:
+
+//span[text()="Удалить груповой интерфейс"]
+[<============================>]:
+//span [text () = "Delete the group interface"]
+
+[Google Translate]:
+
+        из const.GENERATOR_NAME_INTERFACE
+[<============================>]:
+из const.GENERATOR_NAME_INTERFACE
+
+[Google Translate]:
+
+192.168.2.181
+[<============================>]:
+192.168.2.181
+
+[Google Translate]:
+
+        Невалидный ввод :
+[<============================>]:
+Invalid input:
+
+[Google Translate]:
+
+        Метод вносит данные в поле input по значению by_xpath
+[<============================>]:
+The method enters data into the input field by by_xpath
+
+[Google Translate]:
+
+ip
+[<============================>]:
+ip
+
+[Google Translate]:
+
+engine
+[<============================>]:
+engine
+
+[Google Translate]:
+Create dict for assert
+[<============================>]:
+Create dict for assert
+
+[Google Translate]:
+
+        :params: str
+[<============================>]:
+:params: str
+
+[Google Translate]:
+
+        Метод выполняет выбор поля option в selected по его индексу
+[<============================>]:
+The method selects the option field in selected at its index
+
+[Google Translate]:
+
+#     element.click_xpath_button(const.XPATH_BUTTON_DELETE, const.XPATH_BUTTON_OK)
+
+[<============================>]:
+#     element.click_xpath_button(const.XPATH_BUTTON_DELETE, const.XPATH_BUTTON_OK)
+
+[Google Translate]:
+
+#     Удаляет(переводит в статус DOWN) виртуальный интерфейс
+
+[<============================>]:
+# Deletes (sets to DOWN status) virtual interface
+
+[Google Translate]:
+
+#     element.context_click_xpath('//tbody/tr/td/div/span[text()="{}"]'.format(const.VIRT_INTERFACE_IP))
+
+[<============================>]:
+#     element.context_click_xpath('//tbody/tr/td/div/span[text()="{}"]'.format(const.VIRT_INTERFACE_IP))
+
+[Google Translate]:
+
+# def click_enter_keys(self, xpath_value_one_field, xpath_value_two_field):
+
+[<============================>]:
+# def click_enter_keys(self, xpath_value_one_field, xpath_value_two_field):
+
+[Google Translate]:
+
+# name_interface_engine0 = [name_interface['name'] for x in self._field_comparison(args)[args[0]] for name_interface in x]
+
+[<============================>]:
+# name_interface_engine0 = [name_interface['name'] for x in self._field_comparison(args)[args[0]] for name_interface in x]
+
+[Google Translate]:
+Select first field
+[<============================>]:
+Select first field
+
+[Google Translate]:
+Args
+[<============================>]:
+Args
+
+[Google Translate]:
+
+//select[@name="engine1"]/option
+[<============================>]:
+//select[@name="engine1"]/option
+
+[Google Translate]:
+
+        Не валидный тест создания статического маршрута
+[<============================>]:
+Invalid test of creating a static route
+
+[Google Translate]:
+
+//select[@name="engine0"]/option
+[<============================>]:
+//select[@name="engine0"]/option
+

@@ -1,0 +1,3687 @@
+"use strict";
+/**
+ * This file is part of the vscode-deploy-reloaded distribution.
+ * Copyright (c) Marcel Joachim Kloubert.
+ *
+ * vscode-deploy-reloaded is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation, version 3.
+ *
+ * vscode-deploy-reloaded is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+const _ = require("lodash");
+const Crypto = require("crypto");
+const deploy_api = require("./api");
+const deploy_buttons = require("./buttons");
+const deploy_code = require("./code");
+const deploy_commands = require("./commands");
+const deploy_contracts = require("./contracts");
+const deploy_delete = require("./delete");
+const deploy_deploy = require("./deploy");
+const deploy_download = require("./download");
+const deploy_files = require("./files");
+const deploy_git = require("./git");
+const deploy_gui = require("./gui");
+const deploy_helpers = require("./helpers");
+const deploy_list = require("./list");
+const deploy_log = require("./log");
+const deploy_output = require("./output");
+const deploy_packages = require("./packages");
+const deploy_plugins = require("./plugins");
+const deploy_proxies = require("./proxies");
+const deploy_pull = require("./pull");
+const deploy_sync = require("./sync");
+const deploy_targets = require("./targets");
+const deploy_tasks = require("./tasks");
+const deploy_values = require("./values");
+const Enumerable = require("node-enumerable");
+const Events = require("events");
+const FastGlob = require('fast-glob');
+const i18 = require("./i18");
+const ip = require("ip");
+const MergeDeep = require('merge-deep');
+const Moment = require("moment");
+const Path = require("path");
+const vscode = require("vscode");
+let activeWorkspaceProvider;
+let allWorkspacesProvider;
+const GLOBAL_DEPLOY_QUEUE = deploy_helpers.createQueue();
+const KEY_AUTO_BTN_DEPLOY_ON_CHANGE = 'deploy_on_change';
+const KEY_AUTO_BTN_DEPLOY_ON_SAVE = 'deploy_on_save';
+const KEY_AUTO_BTN_REMOVE_ON_CHANGE = 'remove_on_change';
+const KEY_TIMEOUT_DEPLOY_ON_CHANGE = 'deploy_on_change';
+const KEY_TIMEOUT_REMOVE_ON_CHANGE = 'remove_on_change';
+const KEY_WORKSPACE_USAGE = 'vscdrLastExecutedWorkspaceActions';
+let nextDeployOnChangeButtonId = Number.MIN_SAFE_INTEGER;
+let nextDeployOnSaveButtonId = Number.MIN_SAFE_INTEGER;
+let nextPackageButtonId = Number.MIN_SAFE_INTEGER;
+let nextRemoveOnChangeButtonId = Number.MIN_SAFE_INTEGER;
+let nextTcpProxyButtonId = Number.MIN_SAFE_INTEGER;
+let nextSwitchButtonId = Number.MIN_SAFE_INTEGER;
+const SWITCH_STATE_REPO_COLLECTION_KEY = 'SwitchStates';
+/**
+ * A workspace.
+ */
+class Workspace extends deploy_helpers.WorkspaceBase {
+    /**
+     * Initializes a new instance of that class.
+     *
+     * @param {any} id The ID.
+     * @param {vscode.WorkspaceFolder} folder The underlying folder.
+     * @param {WorkspaceContext} context the current extension context.
+     */
+    constructor(id, folder, context) {
+        super(folder);
+        this.id = id;
+        this.context = context;
+        this._APIS = [];
+        this._AUTO_DEPLOY_QUEUE = deploy_helpers.createQueue();
+        this._CONFIG_FILE_WATCHERS = [];
+        this._DEACTIVATE_AUTO_DEPLOY_FOR_QUEUE = deploy_helpers.createQueue();
+        this._DEPLOY_QUEUE = deploy_helpers.createQueue();
+        this._isDeployOnChangeFreezed = false;
+        this._isDeployOnSaveFreezed = false;
+        /**
+         * Stores if workspace has been initialized or not.
+         */
+        this._isInitialized = false;
+        /**
+         * Stores if configuration is currently reloaded or not.
+         */
+        this._isReloadingConfig = false;
+        this._isRemoveOnChangeFreezed = false;
+        this._LOGGER = new deploy_log.ActionLogger();
+        this._OLD_ENV_VARS = {};
+        this._PACKAGE_BUTTONS = [];
+        this._QUEUE = deploy_helpers.createQueue();
+        this._SWITCH_BUTTONS = [];
+        /**
+         * The current translation function.
+         */
+        this._TCP_PROXIES = [];
+        this._TCP_PROXY_BUTTONS = [];
+        this._TCP_PROXY_FILTERS = [];
+        this._TCP_PROXY_LOGGERS = [];
+        this._TCP_PROXY_NAMES_AND_DESCS = [];
+        /**
+         * A storage of variables for that object.
+         */
+        this.vars = {};
+        this._OUTPUT_CHANNEL = new deploy_output.OutputChannelWrapper(context.outputChannel);
+        this.state = new WorkspaceMemento(this, context.extension.workspaceState);
+    }
+    /**
+     * Applies values to an object.
+     *
+     * @param {TObj} obj The object to apply the values to.
+     *
+     * @return {TObj} The new object.
+     */
+    applyValuesTo(obj) {
+        const ME = this;
+        return deploy_values.applyValuesTo(obj, () => ME.getValues());
+    }
+    /**
+     * Checks if an object can be handled by that workspace.
+     *
+     * @param {WorkspaceItem|WorkspaceItemFromSettings} obj The object to check.
+     *
+     * @return {boolean} Can be handled or not.
+     */
+    canBeHandledByMe(obj) {
+        if (obj) {
+            const WORKSPACE = obj.__workspace || obj.workspace;
+            if (WORKSPACE instanceof Workspace) {
+                return WORKSPACE.rootPath === this.rootPath;
+            }
+        }
+        return false;
+    }
+    /**
+     * Gets if the workspace can do automatic (background) operations or not.
+     */
+    get canDoAutoOperations() {
+        return !this.isInFinalizeState &&
+            !this.isReloadingConfig &&
+            this.isInitialized;
+    }
+    /**
+     * Lets the user change the option of a switch.
+     *
+     * @param {SwitchTarget} target The target.
+     */
+    async changeSwitchButtonOption(target) {
+        const ME = this;
+        if (!ME.canBeHandledByMe(target)) {
+            return;
+        }
+        const MY_ID = deploy_helpers.toStringSafe(ME.id);
+        const TARGET_ID = deploy_helpers.toStringSafe(target.__id);
+        const TARGET_NAME = deploy_targets.getTargetName(target);
+        const SWITCH_REPO = ME.getSwitchRepository();
+        const QUICK_PICKS = ME.getAllSwitchOptions(target).map(o => {
+            const OPTION_ID = deploy_helpers.toStringSafe(o.__id);
+            const LABEL = ME.getSwitchOptionName(o);
+            const DESCRIPTION = deploy_helpers.toStringSafe(o.description).trim();
+            return {
+                action: async () => {
+                    SWITCH_REPO.repository[TARGET_ID] = OPTION_ID;
+                },
+                description: DESCRIPTION,
+                label: LABEL,
+            };
+        });
+        if (QUICK_PICKS.length < 1) {
+            ME.showWarningMessage(ME.t('plugins.switch.noOptionsDefined', TARGET_NAME));
+            return;
+        }
+        let selectedItem;
+        if (1 === QUICK_PICKS.length) {
+            selectedItem = QUICK_PICKS[0];
+        }
+        else {
+            selectedItem = await vscode.window.showQuickPick(QUICK_PICKS, {
+                placeHolder: ME.t('plugins.switch.selectOption', TARGET_NAME),
+            });
+        }
+        if (!selectedItem) {
+            return;
+        }
+        await Promise.resolve(selectedItem.action());
+        SWITCH_REPO.collection[MY_ID] = SWITCH_REPO.repository;
+        await ME.state.update(SWITCH_STATE_REPO_COLLECTION_KEY, SWITCH_REPO.collection);
+        await ME.updateSwitchButtons();
+    }
+    async checkForRequiredExtensions(loadedCfg) {
+        const ME = this;
+        if (!loadedCfg) {
+            return true;
+        }
+        const REQUIRED_EXTENSIONS = loadedCfg.requiredExtensions;
+        if (!deploy_helpers.isObject(REQUIRED_EXTENSIONS)) {
+            return true;
+        }
+        const ALL_EXTENSIONS = vscode.extensions.all.map(e => {
+            return deploy_helpers.normalizeString(e);
+        });
+        for (const EXT in REQUIRED_EXTENSIONS) {
+            const EXTENSION_ID = deploy_helpers.toStringSafe(EXT).trim();
+            if ('' === EXTENSION_ID) {
+                continue;
+            }
+            const OPEN_IN_MARKETPLACE = () => {
+                deploy_helpers.open(`https://marketplace.visualstudio.com/items?itemName=${encodeURIComponent(EXTENSION_ID)}`).then(() => {
+                }, (err) => {
+                    ME.logger
+                        .trace(err, 'workspaces.Workspace.checkForRequiredExtensions().OPEN_IN_MARKETPLACE()');
+                });
+            };
+            let settings = REQUIRED_EXTENSIONS[EXT];
+            if (!deploy_helpers.isObject(settings)) {
+                settings = {
+                    isMustHave: deploy_helpers.toBooleanSafe(settings),
+                };
+            }
+            if (deploy_helpers.filterPlatformItems(settings).length < 1) {
+                continue; // not for platform
+            }
+            if (deploy_helpers.filterConditionalItems(settings).length < 1) {
+                continue; // condition failed
+            }
+            if (ALL_EXTENSIONS.indexOf(EXTENSION_ID.toLowerCase()) > -1) {
+                // found
+                continue;
+            }
+            if (deploy_helpers.toBooleanSafe(settings.isMustHave)) {
+                // must be installed
+                const SELECTED_ITEM = await ME.showErrorMessage(i18.t('requirements.extensions.mustBeInstalled', EXTENSION_ID), {
+                    isCloseAffordance: true,
+                    title: i18.t('requirements.extensions.openInMarketplace'),
+                    value: 0,
+                });
+                if (SELECTED_ITEM) {
+                    if (0 === SELECTED_ITEM.value) {
+                        OPEN_IN_MARKETPLACE();
+                    }
+                }
+                return false;
+            }
+            const SELECTED_ITEM = await ME.showWarningMessage(i18.t('requirements.extensions.shouldBeInstalled', EXTENSION_ID), {
+                isCloseAffordance: true,
+                title: i18.t('requirements.extensions.openInMarketplace'),
+                value: 0,
+            }, {
+                title: i18.t('continue'),
+                value: 1,
+            });
+            if (SELECTED_ITEM) {
+                if (0 === SELECTED_ITEM.value) {
+                    OPEN_IN_MARKETPLACE();
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    async checkForRequirements(loadedCfg) {
+        if (loadedCfg) {
+            const CHECK_FOR_REQUIREMENTS = deploy_helpers.asArray(loadedCfg.checkForRequirements);
+            let index = -1;
+            const GET_CONDITION_NAME = (settings) => {
+                let name = deploy_helpers.toStringSafe(settings.name);
+                if ('' === name) {
+                    name = i18.t('requirements.conditions.defaultName', index + 1);
+                }
+                return name;
+            };
+            for (const R of CHECK_FOR_REQUIREMENTS) {
+                ++index;
+                let settings = R;
+                if (!deploy_helpers.isObject(settings)) {
+                    settings = {
+                        condition: deploy_helpers.toStringSafe(settings),
+                    };
+                }
+                if (deploy_helpers.filterPlatformItems(settings).length < 1) {
+                    continue; // not for platform
+                }
+                const CONDITION = {
+                    if: settings.condition,
+                };
+                if (deploy_helpers.filterConditionalItems(CONDITION).length > 0) {
+                    continue; // does match
+                }
+                const NAME = GET_CONDITION_NAME(settings);
+                if (deploy_helpers.toBooleanSafe(settings.isMustHave)) {
+                    // must match
+                    await this.showErrorMessage(i18.t('requirements.conditions.mustMatch', NAME), {
+                        isCloseAffordance: true,
+                        title: i18.t('cancel'),
+                        value: 0,
+                    });
+                    return false;
+                }
+                const SELECTED_ITEM = await this.showWarningMessage(i18.t('requirements.conditions.shouldMatch', NAME), {
+                    isCloseAffordance: true,
+                    title: i18.t('cancel'),
+                    value: 0,
+                }, {
+                    title: i18.t('continue'),
+                    value: 1,
+                });
+                if (SELECTED_ITEM) {
+                    if (0 === SELECTED_ITEM.value) {
+                        return false;
+                    }
+                }
+            }
+        }
+        return true;
+    }
+    cleanupPackageButtons() {
+        while (this._PACKAGE_BUTTONS.length > 0) {
+            const PBTN = this._PACKAGE_BUTTONS.shift();
+            deploy_helpers.tryDispose(PBTN.button);
+            deploy_helpers.tryDispose(PBTN.command);
+        }
+    }
+    cleanupSwitchButtons() {
+        while (this._SWITCH_BUTTONS.length > 0) {
+            const SB = this._SWITCH_BUTTONS.shift();
+            deploy_helpers.tryDispose(SB.button);
+            deploy_helpers.tryDispose(SB.command);
+        }
+    }
+    /**
+     * Gets the current configuration.
+     */
+    get config() {
+        return this._config;
+    }
+    /**
+     * Gets the config source.
+     */
+    get configSource() {
+        return this._configSource;
+    }
+    /**
+     * Creates a new git client (if possible).
+     *
+     * @return {Promise<deploy_git.GitClient|false>} The promise with the client or (false) if not found.
+     */
+    async createGitClient() {
+        try {
+            const GIT = await deploy_git.tryFindGitPath();
+            if (false !== GIT) {
+                let gitCwd = this.gitFolder;
+                if (false === gitCwd) {
+                    gitCwd = this.rootPath;
+                }
+                else {
+                    gitCwd = Path.resolve(Path.join(gitCwd, '..'));
+                }
+                return new deploy_git.GitClient(GIT, gitCwd);
+            }
+        }
+        catch (e) {
+            this.logger
+                .trace(e, 'workspaces.Workspace.createGitClient()');
+        }
+        return false;
+    }
+    /**
+     * Creates a (new) logger based of that workspace.
+     *
+     * @return {deploy_log.Logger} The (new) workspace logger.
+     */
+    createLogger() {
+        return this.logger;
+    }
+    createWorkspaceSessionState(newCfg) {
+        const NEW_SESSION_STATE = {};
+        NEW_SESSION_STATE['auto'] = {};
+        NEW_SESSION_STATE['auto']['buttons'] = {};
+        NEW_SESSION_STATE['auto']['deploy'] = {};
+        NEW_SESSION_STATE['auto']['deploy']['on_change_or_save'] = {};
+        NEW_SESSION_STATE['auto']['remove'] = {};
+        NEW_SESSION_STATE['auto']['remove']['on_change'] = {};
+        NEW_SESSION_STATE['auto']['timeouts'] = {};
+        NEW_SESSION_STATE['buttons'] = {};
+        NEW_SESSION_STATE['commands'] = {};
+        NEW_SESSION_STATE['commands']['events'] = new Events.EventEmitter();
+        NEW_SESSION_STATE['list'] = {};
+        NEW_SESSION_STATE['list']['lastDirectories'] = {};
+        NEW_SESSION_STATE['pull'] = {};
+        NEW_SESSION_STATE['pull']['events'] = new Events.EventEmitter();
+        NEW_SESSION_STATE['pull']['states'] = {};
+        NEW_SESSION_STATE['pull']['states']['global'] = {};
+        NEW_SESSION_STATE['pull']['states']['data_transformers'] = {};
+        NEW_SESSION_STATE['sync'] = {};
+        NEW_SESSION_STATE['sync']['whenOpen'] = {};
+        NEW_SESSION_STATE['sync']['whenOpen']['states'] = {};
+        NEW_SESSION_STATE['upload'] = {};
+        NEW_SESSION_STATE['upload']['events'] = new Events.EventEmitter();
+        NEW_SESSION_STATE['upload']['states'] = {};
+        NEW_SESSION_STATE['upload']['states']['global'] = {};
+        NEW_SESSION_STATE['upload']['states']['data_transformers'] = {};
+        NEW_SESSION_STATE['target_operations'] = {};
+        NEW_SESSION_STATE['target_operations']['http'] = {};
+        NEW_SESSION_STATE['target_operations']['http']['events'] = new Events.EventEmitter();
+        NEW_SESSION_STATE['target_operations']['http']['global'] = {};
+        NEW_SESSION_STATE['target_operations']['http']['body_scripts'] = {};
+        NEW_SESSION_STATE['target_operations']['script'] = {};
+        NEW_SESSION_STATE['target_operations']['script']['events'] = new Events.EventEmitter();
+        NEW_SESSION_STATE['target_operations']['script']['global'] = {};
+        NEW_SESSION_STATE['target_operations']['script']['scripts'] = {};
+        NEW_SESSION_STATE['timeouts'] = {};
+        deploy_helpers.applyFuncFor(deploy_buttons.initFinishedButtons, this)(NEW_SESSION_STATE);
+        return NEW_SESSION_STATE;
+    }
+    /**
+     * Deactivates auto deploy operations like 'deploy on change', 'deploy on save' and
+     * 'remove on change' while an action is running.
+     *
+     * @param {Function} action The action to invoke.
+     * @param {DeactivateAutoDeployOperationsForOptions} [opts] Custom options.
+     *
+     * @return {Promise<TResult>} The promise with the result of the action.
+     */
+    deactivateAutoDeployOperationsFor(action, opts) {
+        if (!opts) {
+            opts = {};
+        }
+        const ME = this;
+        return ME._DEACTIVATE_AUTO_DEPLOY_FOR_QUEUE.add(async () => {
+            let oldIsDeployOnChangeFreezed = ME.isDeployOnChangeFreezed;
+            let oldIsDeployOnSaveFreezed = ME.isDeployOnSaveFreezed;
+            let oldIsRemoveOnChangeFreezed = ME.isRemoveOnChangeFreezed;
+            try {
+                if (deploy_helpers.toBooleanSafe(opts.noDeployOnChange, true)) {
+                    ME.isDeployOnChangeFreezed = true;
+                }
+                if (deploy_helpers.toBooleanSafe(opts.noRemoveOnChange, true)) {
+                    ME.isRemoveOnChangeFreezed = true;
+                }
+                if (deploy_helpers.toBooleanSafe(opts.noDeployOnSave, true)) {
+                    ME.isDeployOnSaveFreezed = true;
+                }
+                if (action) {
+                    return Promise.resolve(action());
+                }
+            }
+            finally {
+                ME.isDeployOnChangeFreezed = oldIsDeployOnChangeFreezed;
+                ME.isDeployOnSaveFreezed = oldIsDeployOnSaveFreezed;
+                ME.isRemoveOnChangeFreezed = oldIsRemoveOnChangeFreezed;
+            }
+        });
+    }
+    /**
+     * Deletes a file in a target.
+     *
+     * @param {string} file The file to delete.
+     * @param {deploy_targets.Target} target The target to delete in.
+     * @param {boolean} [askForDeleteLocalFile] Also ask for deleting the local file or not.
+     */
+    async deleteFileIn(file, target, askForDeleteLocalFile = true) {
+        return await deploy_delete.deleteFileIn
+            .apply(this, arguments);
+    }
+    /**
+     * Deletes a package.
+     *
+     * @param {deploy_packages.Package} pkg The package to delete.
+     * @param {deploy_targets.TargetResolver} [targetResolver] A function to receive optional targets.
+     * @param {boolean} [askForDeleteLocalFiles] Also ask for deleting the local files or not.
+     */
+    async deletePackage(pkg, targetResolver, askForDeleteLocalFiles = true) {
+        await deploy_helpers.applyFuncFor(deploy_delete.deletePackage, this)(pkg, targetResolver, askForDeleteLocalFiles);
+    }
+    /**
+     * Deploys a file to a target.
+     *
+     * @param {string} file The file to deploy.
+     * @param {deploy_targets.Target} target The target to deploy to.
+     */
+    async deployFileTo(file, target) {
+        return await deploy_deploy.deployFileTo
+            .apply(this, arguments);
+    }
+    /**
+     * Deploys a files to a target.
+     *
+     * @param {string[]} files The files to deploy.
+     * @param {deploy_targets.Target} target The target to deploy to.
+     * @param {number} [targetNr] The number of the target.
+     */
+    async deployFilesTo(files, target, targetNr) {
+        return await deploy_deploy.deployFilesTo
+            .apply(this, arguments);
+    }
+    /**
+     * Deploys files of a git commit.
+     *
+     * @param {deploy_targets.Target} target The target to deploy to.
+     */
+    async deployGitCommit(target) {
+        if (!this.canBeHandledByMe(target)) {
+            return;
+        }
+        const GIT = await this.createGitClient();
+        if (!GIT) {
+            return;
+        }
+        await deploy_deploy.deployScmCommit
+            .apply(this, [GIT, target]);
+    }
+    /**
+     * Deploys a file when is has been changed.
+     *
+     * @param {string} file The file to check.
+     */
+    async deployOnChange(file) {
+        if (this.isDeployOnChangeFreezed) {
+            return; // freezed
+        }
+        if (!deploy_helpers.toBooleanSafe(this.config.deployOnChange, true)) {
+            return; // deactivated
+        }
+        if (!deploy_helpers.isEmptyString(file)) {
+            if (!this.isFileIgnored(file)) {
+                return await deploy_deploy.deployOnChange
+                    .apply(this, arguments);
+            }
+        }
+    }
+    /**
+     * Deploys a file when is has been saved.
+     *
+     * @param {string} file The file to check.
+     */
+    async deployOnSave(file) {
+        if (this.isDeployOnSaveFreezed) {
+            return; // freezed
+        }
+        if (!deploy_helpers.toBooleanSafe(this.config.deployOnSave, true)) {
+            return; // deactivated
+        }
+        if (!deploy_helpers.isEmptyString(file)) {
+            if (!this.isFileIgnored(file)) {
+                return await deploy_deploy.deployOnSave
+                    .apply(this, arguments);
+            }
+        }
+    }
+    /**
+     * Deploys a package.
+     *
+     * @param {deploy_packages.Package} pkg The package to deploy.
+     * @param {deploy_targets.TargetResolver} [targetResolver] A function to receive optional targets.
+     */
+    async deployPackage(pkg, targetResolver) {
+        await deploy_helpers.applyFuncFor(deploy_deploy.deployPackage, this)(pkg, targetResolver);
+    }
+    /**
+     * Gets the workspace-wide queue for all deploy processes.
+     */
+    get deployQueue() {
+        let queueToUse = this._DEPLOY_QUEUE;
+        const CFG = this.config;
+        if (CFG) {
+            if (deploy_helpers.toBooleanSafe(CFG.useGlobalQueue)) {
+                queueToUse = GLOBAL_DEPLOY_QUEUE;
+            }
+        }
+        return queueToUse;
+    }
+    /**
+     * Deploys uncomitted files of the git repository.
+     *
+     * @param {deploy_targets.Target} target The target to deploy to.
+     */
+    async deployUncomittedGitChanges(target) {
+        if (!this.canBeHandledByMe(target)) {
+            return;
+        }
+        const GIT = await this.createGitClient();
+        if (!GIT) {
+            return;
+        }
+        await deploy_deploy.deployUncommitedScmChanges
+            .apply(this, [GIT, target]);
+    }
+    disposeAutoDeployButtons() {
+        const STATE = this.workspaceSessionState;
+        if (!STATE) {
+            return;
+        }
+        const TIMEOUTS = STATE['auto']['timeouts'];
+        deploy_helpers.tryDisposeAndDelete(TIMEOUTS, KEY_TIMEOUT_DEPLOY_ON_CHANGE);
+        deploy_helpers.tryDisposeAndDelete(TIMEOUTS, KEY_TIMEOUT_REMOVE_ON_CHANGE);
+        const BUTTONS = STATE['auto']['buttons'];
+        deploy_helpers.tryDisposeAndDelete(BUTTONS, KEY_AUTO_BTN_DEPLOY_ON_CHANGE);
+        deploy_helpers.tryDisposeAndDelete(BUTTONS, KEY_AUTO_BTN_DEPLOY_ON_SAVE);
+        deploy_helpers.tryDisposeAndDelete(BUTTONS, KEY_AUTO_BTN_REMOVE_ON_CHANGE);
+        deploy_helpers.tryDisposeAndDelete(STATE['auto'], deploy_packages.KEY_PAUSE_FILES_FOR);
+    }
+    disposeConfigFileWatchers() {
+        while (this._CONFIG_FILE_WATCHERS.length > 0) {
+            deploy_helpers.tryDispose(this._CONFIG_FILE_WATCHERS.pop());
+        }
+    }
+    disposeTcpProxies() {
+        // loggers
+        while (this._TCP_PROXY_LOGGERS.length > 0) {
+            deploy_helpers.tryDispose(this._TCP_PROXY_LOGGERS.pop());
+        }
+        // name and description resolvers
+        while (this._TCP_PROXY_NAMES_AND_DESCS.length > 0) {
+            deploy_helpers.tryDispose(this._TCP_PROXY_NAMES_AND_DESCS.pop());
+        }
+        // buttons
+        while (this._TCP_PROXY_BUTTONS.length > 0) {
+            deploy_helpers.tryDispose(this._TCP_PROXY_BUTTONS.pop());
+        }
+        // proxies
+        while (this._TCP_PROXIES.length > 0) {
+            deploy_helpers.tryDispose(this._TCP_PROXIES.pop());
+        }
+        // filters
+        while (this._TCP_PROXY_FILTERS.length > 0) {
+            deploy_helpers.tryDispose(this._TCP_PROXY_FILTERS.pop());
+        }
+    }
+    /**
+     * Gets the root path of the editor.
+     */
+    get editorRootPath() {
+        return Path.resolve(this.folder.uri.fsPath);
+    }
+    /**
+     * Executes something for that workspace.
+     *
+     * @param {string} command The thing / command to execute.
+     * @param {ChildProcess.ExecOptions} [opts] Custom options.
+     *
+     * @return {Promise<ExecResult>} The promise with the result.
+     */
+    async exec(command, opts) {
+        const DEFAULT_OPTS = {
+            cwd: this.rootPath,
+        };
+        return await deploy_helpers.exec(command, MergeDeep(DEFAULT_OPTS, opts));
+    }
+    async executeOnStartup(cfg) {
+        if (!cfg) {
+            return;
+        }
+        const ME = this;
+        const SHELL_COMMANDS = deploy_helpers.asArray(cfg.executeOnStartup).map(sc => {
+            if (!deploy_helpers.isObject(sc)) {
+                sc = {
+                    command: deploy_helpers.toStringSafe(sc),
+                };
+            }
+            return sc;
+        });
+        for (let sc of SHELL_COMMANDS) {
+            sc = Enumerable.from(ME.filterConditionalItems(sc, true))
+                .singleOrDefault(null);
+            if (!sc) {
+                continue;
+            }
+            let shellCmdToExecute = deploy_helpers.toStringSafe(sc.command);
+            if (!deploy_helpers.toBooleanSafe(sc.noPlaceHolders)) {
+                shellCmdToExecute = ME.replaceWithValues(shellCmdToExecute);
+            }
+            if (deploy_helpers.isEmptyString(shellCmdToExecute)) {
+                continue;
+            }
+            // display name
+            let name = deploy_helpers.toStringSafe(ME.replaceWithValues(sc.name)).trim();
+            if ('' === name) {
+                name = shellCmdToExecute;
+            }
+            // working directory
+            let cwd = ME.replaceWithValues(sc.cwd);
+            if (deploy_helpers.isEmptyString(cwd)) {
+                cwd = this.rootPath;
+            }
+            if (!Path.isAbsolute(cwd)) {
+                cwd = Path.join(this.rootPath, cwd);
+            }
+            cwd = Path.resolve(cwd);
+            const IGNORE_IF_FAIL = deploy_helpers.toBooleanSafe(sc.ignoreIfFail);
+            ME.output.appendLine('');
+            ME.output.append(ME.t('shell.executing', name) + ' ');
+            try {
+                await ME.exec(shellCmdToExecute, {
+                    cwd: cwd,
+                });
+                ME.output.appendLine(`[${ME.t('ok')}]`);
+            }
+            catch (e) {
+                ME.output.appendLine(`[${ME.t('error', e)}]`);
+                if (!IGNORE_IF_FAIL) {
+                    throw e;
+                }
+            }
+        }
+    }
+    /**
+     * Filters items with 'if' code.
+     *
+     * @param {TItem | TItem[]} items The items to filter.
+     * @param {boolean} [throwOnError] Throw on error or not.
+     * @param {any} [errorResult] The custom result when an error occurred.
+     *
+     * @return {TItem[]} The filtered items.
+     */
+    filterConditionalItems(items, throwOnError = false, errorResult = false) {
+        const ME = this;
+        items = deploy_helpers.asArray(items);
+        throwOnError = deploy_helpers.toBooleanSafe(throwOnError);
+        return items.filter(i => {
+            return Enumerable.from(deploy_helpers.asArray(i.if)).all(c => {
+                let res;
+                try {
+                    const IF_CODE = deploy_helpers.toStringSafe(c);
+                    if (!deploy_helpers.isEmptyString(IF_CODE)) {
+                        res = deploy_code.exec({
+                            code: IF_CODE,
+                            context: {
+                                i: i,
+                                ws: ME,
+                            },
+                            values: ME.getValues(),
+                        });
+                    }
+                }
+                catch (e) {
+                    this.logger
+                        .trace(e, 'workspaces.Workspace.filterConditionalItems()');
+                    if (throwOnError) {
+                        throw e;
+                    }
+                    return errorResult;
+                }
+                return deploy_helpers.toBooleanSafe(res, true);
+            });
+        });
+    }
+    /**
+     * Finds files inside that workspace.
+     *
+     * @param {deploy_contracts.FileFilter} filter The filter to use.
+     * @param {Glob.IOptions} [opts] Custom options.
+     *
+     * @return {Promise<string[]>} The promise with the found files.
+     */
+    async findFilesByFilter(filter, opts) {
+        if (!filter) {
+            filter = {};
+        }
+        let patterns = deploy_helpers.asArray(filter.files).map(p => {
+            return deploy_helpers.toStringSafe(p);
+        }).filter(p => !deploy_helpers.isEmptyString(p));
+        let exclude = deploy_helpers.asArray(filter.exclude).map(e => {
+            return deploy_helpers.toStringSafe(e);
+        }).filter(e => !deploy_helpers.isEmptyString(e));
+        if (exclude.length < 1) {
+            exclude = undefined;
+        }
+        const DEFAULT_OPTS = {
+            cwd: this.rootPath,
+            ignore: exclude,
+            root: this.rootPath,
+        };
+        return await deploy_helpers.glob(patterns, MergeDeep(DEFAULT_OPTS, opts));
+    }
+    /**
+     * Finds files inside that workspace.
+     *
+     * @param {deploy_contracts.FileFilter} filter The filter to use.
+     * @param {Glob.IOptions} [opts] Custom options.
+     *
+     * @return {Promise<deploy_helpers.FastGlobEntryItem>} The promise with the found files.
+     */
+    findFilesByFilterFast(filter, opts) {
+        if (!filter) {
+            filter = {};
+        }
+        let patterns = deploy_helpers.asArray(filter.files).map(p => {
+            return deploy_helpers.toStringSafe(p);
+        }).filter(p => !deploy_helpers.isEmptyString(p));
+        let exclude = deploy_helpers.asArray(filter.exclude).map(e => {
+            return deploy_helpers.toStringSafe(e);
+        }).filter(e => !deploy_helpers.isEmptyString(e));
+        const DEFAULT_OPTS = {
+            absolute: true,
+            cwd: this.rootPath,
+            deep: true,
+            followSymlinkedDirectories: true,
+            stats: false,
+            ignore: exclude,
+            onlyFiles: true,
+            unique: true,
+        };
+        return deploy_helpers.fastGlob(patterns, MergeDeep(DEFAULT_OPTS, opts));
+    }
+    getAllSwitchOptions(target) {
+        if (!target) {
+            return target;
+        }
+        return deploy_helpers.asArray(target.options).map((o, i) => {
+            o = deploy_helpers.cloneObject(o);
+            if (!deploy_helpers.isObject(o)) {
+                o = {
+                    __id: undefined,
+                    __index: undefined,
+                    targets: deploy_helpers.asArray(o)
+                        .map(tn => deploy_helpers.normalizeString(tn))
+                        .filter(tn => '' !== tn),
+                };
+            }
+            o['__id'] = `${target.__id}\n` +
+                `${i}`;
+            o['__index'] = i;
+            return o;
+        });
+    }
+    /**
+     * Returns a list of all API hosts handled by that workspace.
+     *
+     * @return {deploy_proxies.ApiHost[]} The list of hosts.
+     */
+    getApiHosts() {
+        return Enumerable.from(this._APIS)
+            .distinct(true)
+            .toArray();
+    }
+    /**
+     * Returns all 'delete' plugins by target.
+     *
+     * @param {deploy_targets.Target} target The target.
+     *
+     * @return {deploy_plugins.Plugin[]} The plugins.
+     */
+    getDeletePlugins(target) {
+        if (!target) {
+            return;
+        }
+        return this.context.plugins.filter(pi => {
+            return deploy_plugins.canDelete(pi, target);
+        });
+    }
+    /**
+     * Returns all download plugins by target.
+     *
+     * @param {deploy_targets.Target} target The target.
+     *
+     * @return {deploy_plugins.Plugin[]} The plugins.
+     */
+    getDownloadPlugins(target) {
+        if (!target) {
+            return;
+        }
+        return this.context.plugins.filter(pi => {
+            return deploy_plugins.canDownload(pi, target);
+        });
+    }
+    /**
+     * Gets all targets that can download.
+     *
+     * @return {deploy_targets.Target[]} The targets.
+     */
+    getDownloadTargets() {
+        const ME = this;
+        return this.getTargets().filter(t => {
+            return ME.getDownloadPlugins(t).length > 0;
+        });
+    }
+    /**
+     * Returns an existing path based on the settings folder.
+     *
+     * @param {string} path The path.
+     *
+     * @return {Promise<string|boolean>} The promise with the existing, full normalized path or (false) if path does not exist.
+     */
+    async getExistingSettingPath(path) {
+        const ME = this;
+        path = deploy_helpers.toStringSafe(path);
+        if (!Path.isAbsolute(path)) {
+            const SCOPES = ME.getSettingScopes();
+            const FROM_HOMEDIR = Path.resolve(Path.join(SCOPES[0], path) // SCOPES[0] => home directory
+            );
+            if (await deploy_helpers.exists(FROM_HOMEDIR)) {
+                return FROM_HOMEDIR;
+            }
+            const FROM_SETTINGS = Path.resolve(Path.join(SCOPES[1], path) // SCOPES[1] => settings folder
+            );
+            if (await deploy_helpers.exists(FROM_SETTINGS)) {
+                return FROM_SETTINGS;
+            }
+            return false;
+        }
+        path = Path.resolve(path);
+        if (await deploy_helpers.exists(path)) {
+            return path;
+        }
+        return false;
+    }
+    /**
+     * Returns the list of files of that workspace for deployment from an active document.
+     *
+     * @return {Promise<string[]|false>} The promise with the file list or (false) if not possible.
+     */
+    async getFileListFromActiveDocumentForDeployment() {
+        const ME = this;
+        let activeDocument;
+        const ACTIVE_EDITOR = vscode.window.activeTextEditor;
+        if (ACTIVE_EDITOR) {
+            activeDocument = ACTIVE_EDITOR.document;
+        }
+        if (!activeDocument) {
+            ME.showWarningMessage(ME.t('editors.active.noOpen'));
+            return false;
+        }
+        let range;
+        const SELECTION = ACTIVE_EDITOR.selection;
+        if (SELECTION) {
+            range = new vscode.Range(SELECTION.end, SELECTION.start);
+        }
+        if (range) {
+            if (_.isNil(range.start) && _.isNil(range.end)) {
+                range = undefined;
+            }
+        }
+        if (range) {
+            if (_.isNil(range.start) && !_.isNil(range.end)) {
+                range = new vscode.Range(SELECTION.end, SELECTION.end);
+            }
+            else if (!_.isNil(range.start) && _.isNil(range.end)) {
+                range = new vscode.Range(SELECTION.start, SELECTION.start);
+            }
+        }
+        if (range) {
+            if (range.start.isEqual(range.end)) {
+                range = undefined;
+            }
+        }
+        const LINES = deploy_helpers.toStringSafe(activeDocument.getText(range)).split("\n").map(l => {
+            return l.trim();
+        }).filter(l => {
+            return '' !== l;
+        });
+        const FILES = [];
+        for (const L of LINES) {
+            const FILE_OR_FOLDER = Path.resolve(Path.join(ME.rootPath, L));
+            if (!(await deploy_helpers.exists(FILE_OR_FOLDER))) {
+                continue;
+            }
+            if (!ME.isPathOf(FILE_OR_FOLDER)) {
+                continue;
+            }
+            const STATS = await deploy_helpers.lstat(FILE_OR_FOLDER);
+            if (STATS.isDirectory()) {
+                Enumerable.from(await deploy_helpers.glob('**', {
+                    cwd: FILE_OR_FOLDER,
+                    root: FILE_OR_FOLDER,
+                })).pushTo(FILES);
+            }
+            else if (STATS.isFile()) {
+                FILES.push(FILE_OR_FOLDER);
+            }
+        }
+        return Enumerable.from(FILES)
+            .where(f => !ME.isFileIgnored(f))
+            .select(f => Path.resolve(f))
+            .distinct()
+            .orderBy(f => Path.dirname(f).length)
+            .thenBy(f => deploy_helpers.normalizeString(Path.dirname(f)))
+            .thenBy(f => Path.basename(f).length)
+            .thenBy(f => deploy_helpers.normalizeString(Path.basename(f)))
+            .toArray();
+    }
+    /**
+     * Returns a status bar button, that shows if a deploy operation has been finished.
+     *
+     * @param {deploy_contracts.DeployOperation} operation The operation type.
+     *
+     * @return {vscode.StatusBarItem} The button.
+     */
+    getFinishedButton(operation) {
+        return deploy_helpers.applyFuncFor(deploy_buttons.getFinishedButton, this)(operation);
+    }
+    /**
+     * Returns all 'list directory' plugins by target.
+     *
+     * @param {deploy_targets.Target} target The target.
+     *
+     * @return {deploy_plugins.Plugin[]} The plugins.
+     */
+    getListPlugins(target) {
+        if (!target) {
+            return;
+        }
+        return this.context.plugins.filter(pi => {
+            return deploy_plugins.canList(pi, target);
+        });
+    }
+    /**
+     * Returns the ID of a package.
+     *
+     * @param {deploy_packages.Package} package The package.
+     *
+     * @return {string|false} The ID or (false) if package is invalid.
+     */
+    getPackageId(pkg) {
+        if (!pkg) {
+            return;
+        }
+        if (!this.canBeHandledByMe(pkg)) {
+            return false;
+        }
+        return `${this.id}\n` +
+            `${pkg.__index}\n` +
+            `${deploy_helpers.normalizeString(deploy_packages.getPackageName(pkg))}\n` +
+            `${this.configSource.resource.fsPath}`;
+    }
+    /**
+     * Returns the list of packages as defined in the settings.
+     */
+    getPackages() {
+        let packages = this._packages;
+        packages = this.filterConditionalItems(packages);
+        return packages;
+    }
+    getPopupPrefix() {
+        const PREFIXES = [];
+        const CFG = this.config;
+        if (CFG) {
+            let showWorkspaceName = deploy_helpers.toBooleanSafe(CFG.showWorkspaceNameInPopups, true);
+            if (showWorkspaceName && (this.context.workspaces.length < 1)) {
+                showWorkspaceName = deploy_helpers.toBooleanSafe(CFG.alwaysShowWorkspaceNameInPopups);
+            }
+            if (showWorkspaceName) {
+                PREFIXES.push(`[${this.name}]`);
+            }
+        }
+        return PREFIXES.length > 0 ? (PREFIXES.join('::') + ' ')
+            : '';
+    }
+    /**
+     * Returns all plugins which can remove folders by target.
+     *
+     * @param {deploy_targets.Target} target The target.
+     *
+     * @return {deploy_plugins.Plugin[]} The plugins.
+     */
+    getRemoveFolderPlugins(target) {
+        if (!target) {
+            return;
+        }
+        return this.context.plugins.filter(pi => {
+            return deploy_plugins.canRemoveFolders(pi, target);
+        });
+    }
+    /**
+     * Returns the selected option of a switch (target),
+     *
+     * @param {SwitchTarget} target The target.
+     *
+     * @return {SwitchTargetOption|false} The option or (false) if not found.
+     */
+    getSelectedSwitchOption(target) {
+        const ME = this;
+        if (ME.canBeHandledByMe(target)) {
+            const ALL_OPTIONS = ME.getAllSwitchOptions(target);
+            if (ALL_OPTIONS.length > 0) {
+                const SWITCH_REPO = ME.getSwitchRepository();
+                const TARGET_ID = deploy_helpers.toStringSafe(target.__id);
+                const SELECTED_TARGET_OPTION_ID = SWITCH_REPO.repository[TARGET_ID];
+                return Enumerable.from(ALL_OPTIONS).orderBy(o => {
+                    if (deploy_helpers.toStringSafe(o.__id) === SELECTED_TARGET_OPTION_ID) {
+                        return Number.MIN_SAFE_INTEGER;
+                    }
+                    if (deploy_helpers.toBooleanSafe(o.isDefault)) {
+                        return 0;
+                    }
+                    return Number.MAX_SAFE_INTEGER;
+                }).first();
+            }
+        }
+        return false;
+    }
+    /**
+     * Returns the scope directories for settings.
+     *
+     * @return {string[]} The list of scope directories.
+     */
+    getSettingScopes() {
+        return [
+            deploy_helpers.getExtensionDirInHome(),
+            this.settingFolder,
+        ];
+    }
+    getSwitchOptionName(option) {
+        if (!option) {
+            return option;
+        }
+        let name = deploy_helpers.toStringSafe(option.name).trim();
+        if ('' === name) {
+            name = this.t('plugins.switch.defaultOptionName', option.__index + 1);
+        }
+        return name;
+    }
+    getSwitchRepository() {
+        const MY_ID = deploy_helpers.toStringSafe(this.id);
+        const REPO_COLL = this.state.get(SWITCH_STATE_REPO_COLLECTION_KEY) || {};
+        const REPO = REPO_COLL[MY_ID] || {};
+        return {
+            collection: REPO_COLL,
+            repository: REPO,
+        };
+    }
+    /**
+     * Returns a list of all available 'switch' targets of that workspace.
+     *
+     * @return {SwitchTarget[]} The targets.
+     */
+    getSwitchTargets() {
+        return this.getTargets().filter(t => {
+            return isSwitchTarget(t);
+        });
+    }
+    /**
+     * Returns the state key for 'sync when open'.
+     *
+     * @param {deploy_targets.Target} target The target.
+     *
+     * @return {string|false} The key or (false) when failed.
+     */
+    getSyncWhenOpenKey(target) {
+        if (!target) {
+            return;
+        }
+        if (!this.canBeHandledByMe(target)) {
+            return false;
+        }
+        const TARGET_NAME = deploy_targets.getTargetName(target);
+        return `${target.__id}\n` +
+            `${deploy_helpers.normalizeString(TARGET_NAME)}`;
+    }
+    /**
+     * Returns the ID of a target.
+     *
+     * @param {deploy_targets.Target} target The target.
+     *
+     * @return {string|false} The ID or (false) if target is invalid.
+     */
+    getTargetId(target) {
+        if (!target) {
+            return;
+        }
+        if (!this.canBeHandledByMe(target)) {
+            return false;
+        }
+        return `${this.id}\n` +
+            `${target.__index}\n` +
+            `${deploy_helpers.normalizeString(deploy_targets.getTargetName(target))}` +
+            `${this.configSource.resource.fsPath}`;
+    }
+    /**
+     * Returns the list of targets as defined in the settings.
+     */
+    getTargets() {
+        let targets = this._targets;
+        targets = this.filterConditionalItems(targets);
+        return targets;
+    }
+    /**
+     * Returns the targets of a package.
+     *
+     * @param {deploy_packages.Package} pkg The package.
+     * @param {deploy_targets.TargetResolver} targetResolver A function to receive optional targets.
+     *
+     * @return {deploy_targets.Target[]|false} The targets or (false) if at least one target could not be found
+     *                                         or (false) if package cannot be handled by that workspace.
+     */
+    getTargetsOfPackage(pkg, targetResolver) {
+        if (!pkg) {
+            return;
+        }
+        if (!this.canBeHandledByMe(pkg)) {
+            return false;
+        }
+        let targetNames = false;
+        if (targetResolver) {
+            targetNames = deploy_helpers.asArray(targetResolver())
+                .map(t => deploy_helpers.toStringSafe(t))
+                .filter(t => !deploy_helpers.isEmptyString(t));
+        }
+        if (false === targetNames || targetNames.length < 1) {
+            targetNames = deploy_helpers.asArray(pkg.targets).map(tn => {
+                return deploy_helpers.normalizeString(tn);
+            }).filter(tn => {
+                return '' !== tn;
+            });
+        }
+        if (targetNames.length < 1) {
+            return [];
+        }
+        return deploy_targets.getTargetsByName(targetNames, this.getTargets());
+    }
+    /**
+     * Returns the children of a switch target.
+     *
+     * @param {SwitchTarget} switchTarget The switch target.
+     *
+     * @return {deploy_targets.Target[]|false} The targets or (false) if failed.
+     */
+    getTargetsOfSwitch(switchTarget) {
+        const ME = this;
+        const OPTION = ME.getSelectedSwitchOption(switchTarget);
+        if (false === OPTION) {
+            ME.showWarningMessage(ME.t('plugins.switch.noOptionSelected2'));
+            return false;
+        }
+        const TARGETS = deploy_targets.getTargetsByName(OPTION.targets, ME.getTargets());
+        if (false === TARGETS) {
+            return false;
+        }
+        deploy_targets.throwOnRecurrence(switchTarget, TARGETS);
+        return TARGETS;
+    }
+    /**
+     * Returns a list of all TCP proxies handled by that workspace.
+     *
+     * @return {deploy_proxies.TcpProxy[]} The list of proxies.
+     */
+    getTcpProxies() {
+        return Enumerable.from(this._TCP_PROXIES)
+            .select(x => x.proxy)
+            .distinct(true)
+            .toArray();
+    }
+    /**
+     * Returns all upload plugins by target.
+     *
+     * @param {deploy_targets.Target} target The target.
+     *
+     * @return {deploy_plugins.Plugin[]} The plugins.
+     */
+    getUploadPlugins(target) {
+        if (!target) {
+            return;
+        }
+        return this.context.plugins.filter(pi => {
+            return deploy_plugins.canUpload(pi, target);
+        });
+    }
+    /**
+     * Gets all targets that can upload.
+     *
+     * @return {deploy_targets.Target[]} The targets.
+     */
+    getUploadTargets() {
+        const ME = this;
+        return this.getTargets().filter(t => {
+            return ME.getUploadPlugins(t).length > 0;
+        });
+    }
+    /**
+     * Returns the list of values.
+     */
+    getValues() {
+        const ME = this;
+        const CFG = ME.config;
+        let values = [];
+        // pre defined values
+        values = values.concat(deploy_values.getPredefinedValues());
+        // ${editorRoot}
+        values.push(new deploy_values.FunctionValue(() => {
+            return ME.editorRootPath;
+        }, 'editorRoot'));
+        // ${workspace}
+        values.push(new deploy_values.FunctionValue(() => {
+            return ME.name;
+        }, 'workspace'));
+        // ${workspaceRoot}
+        values.push(new deploy_values.FunctionValue(() => {
+            return ME.rootPath;
+        }, 'workspaceRoot'));
+        // process's environment variables
+        try {
+            let importEnvVars = true;
+            if (CFG) {
+                if (CFG.env) {
+                    importEnvVars = deploy_helpers.toBooleanSafe(CFG.env.importVarsAsPlaceholders, true);
+                }
+            }
+            if (importEnvVars) {
+                values = values.concat(deploy_values.getEnvVars());
+            }
+        }
+        catch (e) {
+            ME.logger
+                .trace(e, 'workspaces.Workspace.getValues(1)');
+        }
+        const WORKSPACE_VALUES = values.map(v => v);
+        values = values.concat(deploy_values.loadFromItems(CFG, {
+            conditialFilter: (i, o) => {
+                let doesMatch;
+                try {
+                    doesMatch = Enumerable.from(deploy_helpers.asArray(i.if)).all(c => {
+                        let res;
+                        const IF_CODE = deploy_helpers.toStringSafe(c);
+                        if (!deploy_helpers.isEmptyString(IF_CODE)) {
+                            res = deploy_code.exec({
+                                code: IF_CODE,
+                                context: {
+                                    i: i,
+                                    ws: ME,
+                                },
+                                values: WORKSPACE_VALUES.concat(o),
+                            });
+                        }
+                        return deploy_helpers.toBooleanSafe(res, true);
+                    });
+                }
+                catch (e) {
+                    ME.logger
+                        .trace('workspaces.Workspace.getValues(2)');
+                    doesMatch = false;
+                }
+                return doesMatch;
+            },
+            directoryScopeProvider: () => {
+                return ME.getSettingScopes();
+            },
+            prefixValuesProvider: () => {
+                return WORKSPACE_VALUES;
+            },
+        }));
+        return values;
+    }
+    /**
+     * Gets the path to the '.git' folder (if available).
+     */
+    get gitFolder() {
+        return this._gitFolder;
+    }
+    /**
+     * Global data as defined in the settings.
+     */
+    get globals() {
+        return deploy_helpers.cloneObject(this.config.globals);
+    }
+    async initBower(cfg) {
+        if (!cfg) {
+            return;
+        }
+        if (!deploy_helpers.toBooleanSafe(cfg.initBower)) {
+            return;
+        }
+        const ME = this;
+        try {
+            const BOWER_JSON = Path.resolve(Path.join(ME.rootPath, 'bower.json'));
+            const BOWER_COMPONENTS = Path.resolve(Path.join(ME.rootPath, 'bower_components'));
+            if (!(await deploy_helpers.exists(BOWER_JSON))) {
+                return; // no 'bower.json'
+            }
+            if (await deploy_helpers.exists(BOWER_COMPONENTS)) {
+                return; // 'bower_components' already exist
+            }
+            ME.output.appendLine('');
+            ME.output.append(ME.t('workspaces.bower.install.running', ME.rootPath) + ' ');
+            try {
+                await ME.exec('bower install');
+                ME.output.appendLine(`[${ME.t('ok')}]`);
+            }
+            catch (e) {
+                ME.output.appendLine(`[${ME.t('error', e)}]`);
+            }
+        }
+        catch (e) {
+            ME.showErrorMessage(ME.t('workspaces.bower.install.errors.failed', e));
+        }
+    }
+    async initComposer(cfg) {
+        if (!cfg) {
+            return;
+        }
+        if (!deploy_helpers.toBooleanSafe(cfg.initComposer)) {
+            return;
+        }
+        const ME = this;
+        try {
+            const COMPOSER_JSON = Path.resolve(Path.join(ME.rootPath, 'composer.json'));
+            const VENDOR = Path.resolve(Path.join(ME.rootPath, 'vendor'));
+            if (!(await deploy_helpers.exists(COMPOSER_JSON))) {
+                return; // no 'composer.json'
+            }
+            if (await deploy_helpers.exists(VENDOR)) {
+                return; // 'vendor' already exist
+            }
+            ME.output.appendLine('');
+            ME.output.append(ME.t('workspaces.composer.install.running', ME.rootPath) + ' ');
+            try {
+                await ME.exec('composer install');
+                ME.output.appendLine(`[${ME.t('ok')}]`);
+            }
+            catch (e) {
+                ME.output.appendLine(`[${ME.t('error', e)}]`);
+            }
+        }
+        catch (e) {
+            ME.showErrorMessage(ME.t('workspaces.composer.install.errors.failed', e));
+        }
+    }
+    async initConfigFileWatchers(files) {
+        const ME = this;
+        Enumerable.from(files).select(f => Path.resolve(f)).distinct().forEach(f => {
+            const FILE_URI = vscode.Uri.file(f);
+            const HANDLE_FILE_CHANGE = async (type) => {
+                switch (type) {
+                    case deploy_contracts.FileChangeType.Changed:
+                    case deploy_contracts.FileChangeType.Created:
+                        await ME.reloadConfiguration();
+                        break;
+                }
+            };
+            const TRIGGER_CONFIG_FILE_CHANGE = (e, type) => {
+                try {
+                    if (ME.isInFinalizeState) {
+                        return;
+                    }
+                    if (!ME.isInitialized) {
+                        return;
+                    }
+                    if (Path.resolve(e.fsPath) === Path.resolve(FILE_URI.fsPath)) {
+                        HANDLE_FILE_CHANGE(type).then(() => {
+                        }, (err) => {
+                            ME.logger
+                                .trace(e, 'workspaces.Workspace.initConfigFileWatchers(4)');
+                        });
+                    }
+                }
+                catch (e) {
+                    ME.logger
+                        .trace(e, 'workspaces.Workspace.initConfigFileWatchers(3)');
+                }
+            };
+            let newWatcher;
+            try {
+                const BASE = vscode.Uri.file(Path.dirname(f));
+                const PATTERN = Path.basename(f);
+                newWatcher = vscode.workspace.createFileSystemWatcher(new vscode.RelativePattern(BASE.fsPath, PATTERN), false, false, false);
+                newWatcher.onDidChange((e) => {
+                    TRIGGER_CONFIG_FILE_CHANGE(e, deploy_contracts.FileChangeType.Changed);
+                });
+                newWatcher.onDidCreate((e) => {
+                    TRIGGER_CONFIG_FILE_CHANGE(e, deploy_contracts.FileChangeType.Created);
+                });
+                newWatcher.onDidDelete((e) => {
+                    TRIGGER_CONFIG_FILE_CHANGE(e, deploy_contracts.FileChangeType.Deleted);
+                });
+                ME._CONFIG_FILE_WATCHERS.push(newWatcher);
+            }
+            catch (e) {
+                ME.logger
+                    .trace(e, 'workspaces.Workspace.initConfigFileWatchers(2)');
+                deploy_helpers.tryDispose(newWatcher);
+            }
+        });
+    }
+    /**
+     * Initializes that workspace.
+     *
+     * @return {Promise<boolean>} The promise that indicates if operation was successful or not.
+     */
+    async initialize() {
+        const ME = this;
+        if (ME.isInitialized) {
+            return false;
+        }
+        ME.setupLogger();
+        ME.setupOutputChannel();
+        ME._rootPath = false;
+        ME.vars[deploy_api.WS_VAR_APIS] = [];
+        // settings file
+        {
+            const DEFAULT_DIR = this.folder.uri.fsPath;
+            const DEFAULT_FILENAME = './.vscode/settings.json';
+            const ALTERNATIVE_FILENAME = './deploy.json';
+            const DEFAULT_FILE = Path.join(DEFAULT_DIR, DEFAULT_FILENAME);
+            const DEFAULT_SECTION_NAME = 'deploy.reloaded';
+            let settingsData = false;
+            let searchForNextFile;
+            searchForNextFile = async (dir) => {
+                try {
+                    dir = Path.resolve(dir);
+                    const POSSIBLE_FILES = [
+                        // deploy.json
+                        /* TODO: implement later */
+                        {
+                            section: DEFAULT_SECTION_NAME,
+                            file: Path.resolve(Path.join(dir, ALTERNATIVE_FILENAME))
+                        },
+                        // settings.json
+                        {
+                            section: DEFAULT_SECTION_NAME,
+                            file: Path.resolve(Path.join(dir, DEFAULT_FILENAME))
+                        }
+                    ];
+                    for (const ITEM of POSSIBLE_FILES) {
+                        if (await deploy_helpers.exists(ITEM.file)) {
+                            if ((await deploy_helpers.lstat(ITEM.file)).isFile()) {
+                                return ITEM; // found
+                            }
+                        }
+                    }
+                    const PARENT_DIR = Path.resolve(Path.join(dir, '../'));
+                    if (dir !== PARENT_DIR && !deploy_helpers.isEmptyString(PARENT_DIR)) {
+                        return await searchForNextFile(PARENT_DIR);
+                    }
+                }
+                catch (e) {
+                    ME.logger
+                        .trace(e, 'workspaces.Workspace.initialize(1)');
+                }
+                return false;
+            };
+            settingsData = await searchForNextFile(DEFAULT_DIR);
+            if (false === settingsData) {
+                // use default
+                settingsData = {
+                    file: DEFAULT_FILE,
+                    section: DEFAULT_SECTION_NAME,
+                };
+            }
+            else {
+                this._rootPath = Path.resolve(Path.join(Path.dirname(settingsData.file), '..'));
+            }
+            ME._configSource = {
+                section: settingsData.section,
+                resource: vscode.Uri.file(settingsData.file),
+            };
+        }
+        // git folder
+        {
+            ME._gitFolder = false;
+            let searchForNextFolder;
+            searchForNextFolder = async (dir) => {
+                try {
+                    dir = Path.resolve(dir);
+                    const GIT_FOLDER = Path.resolve(Path.join(dir, '.git'));
+                    if (await deploy_helpers.exists(GIT_FOLDER)) {
+                        if ((await deploy_helpers.lstat(GIT_FOLDER)).isDirectory()) {
+                            return GIT_FOLDER; // found
+                        }
+                    }
+                    const PARENT_DIR = Path.resolve(Path.join(dir, '../'));
+                    if (dir !== PARENT_DIR && !deploy_helpers.isEmptyString(PARENT_DIR)) {
+                        return await searchForNextFolder(PARENT_DIR);
+                    }
+                }
+                catch (e) {
+                    ME.logger
+                        .trace(e, 'workspaces.Workspace.initialize(2)');
+                }
+                return false;
+            };
+            ME._gitFolder = await searchForNextFolder(ME.folder.uri.fsPath);
+        }
+        await ME.reloadConfiguration();
+        // file system watcher
+        {
+            const TRIGGER_FILE_CHANGE_EVENT = (e, type) => {
+                ME.onDidFileChange(e, type).then(() => {
+                }, (err) => {
+                    ME.logger
+                        .trace(err, 'workspaces.Workspace.initialize(3)');
+                });
+            };
+            this.context.fileWatcher.onDidChange((e) => {
+                TRIGGER_FILE_CHANGE_EVENT(e, deploy_contracts.FileChangeType.Changed);
+            });
+            this.context.fileWatcher.onDidCreate((e) => {
+                TRIGGER_FILE_CHANGE_EVENT(e, deploy_contracts.FileChangeType.Created);
+            });
+            this.context.fileWatcher.onDidDelete((e) => {
+                TRIGGER_FILE_CHANGE_EVENT(e, deploy_contracts.FileChangeType.Deleted);
+            });
+        }
+        ME._startTime = Moment();
+        ME._isInitialized = true;
+        return true;
+    }
+    async initNodeModules(cfg) {
+        if (!cfg) {
+            return;
+        }
+        const USE_YARN = deploy_helpers.toBooleanSafe(cfg.initYarn);
+        if (!deploy_helpers.toBooleanSafe(cfg.initNodeModules) && !USE_YARN) {
+            return;
+        }
+        const ME = this;
+        let langErrId;
+        if (USE_YARN) {
+            langErrId = 'workspaces.yarn.install.errors.failed';
+        }
+        else {
+            langErrId = 'workspaces.npm.install.errors.failed';
+        }
+        try {
+            const PACKAGE_JSON = Path.resolve(Path.join(ME.rootPath, 'package.json'));
+            const NODE_MODULES = Path.resolve(Path.join(ME.rootPath, 'node_modules'));
+            if (!(await deploy_helpers.exists(PACKAGE_JSON))) {
+                return; // no 'package.json'
+            }
+            if (await deploy_helpers.exists(NODE_MODULES)) {
+                return; // 'node_modules' already exist
+            }
+            let cmd;
+            let langId;
+            if (USE_YARN) {
+                cmd = 'yarn install';
+                langId = 'workspaces.yarn.install.running';
+            }
+            else {
+                cmd = 'npm install';
+                langId = 'workspaces.npm.install.running';
+            }
+            ME.output.appendLine('');
+            ME.output.append(ME.t(langId, ME.rootPath) + ' ');
+            try {
+                await ME.exec(cmd);
+                ME.output.appendLine(`[${ME.t('ok')}]`);
+            }
+            catch (e) {
+                ME.output.appendLine(`[${ME.t('error', e)}]`);
+            }
+        }
+        catch (e) {
+            ME.showErrorMessage(ME.t(langErrId, e));
+        }
+    }
+    /**
+     * Invokes an action for a status bar button that is shown after a deploy operation.
+     *
+     * @param {deploy_contracts.DeployOperation} operation The operation type.
+     * @param {Function} action The action to invoke.
+     *
+     * @return {Promise<boolean>} The promise that indicates if operation was successful or not.
+     */
+    async invokeForFinishedButton(operation, action) {
+        try {
+            const BTN = this.getFinishedButton(operation);
+            if (BTN) {
+                if (action) {
+                    await Promise.resolve(action(BTN));
+                }
+            }
+            return true;
+        }
+        catch (e) {
+            this.logger
+                .trace(e, 'workspaces.Workspace.invokeForFinishedButton(1)');
+        }
+        return false;
+    }
+    /**
+     * Gets if the workspace is active or not.
+     */
+    get isActive() {
+        return getActiveWorkspaces().map(aws => aws.id)
+            .indexOf(this.id) > -1;
+    }
+    /**
+     * Gets or sets if 'deploy on change' is currently freezed or not.
+     */
+    get isDeployOnChangeFreezed() {
+        return this._isDeployOnChangeFreezed;
+    }
+    set isDeployOnChangeFreezed(newValue) {
+        this._isDeployOnChangeFreezed = deploy_helpers.toBooleanSafe(newValue);
+        this.updateAutoDeployButtons();
+    }
+    /**
+     * Gets or sets if 'deploy on change' is currently freezed or not.
+     */
+    get isDeployOnSaveFreezed() {
+        return this._isDeployOnSaveFreezed;
+    }
+    set isDeployOnSaveFreezed(newValue) {
+        this._isDeployOnSaveFreezed = deploy_helpers.toBooleanSafe(newValue);
+        this.updateAutoDeployButtons();
+    }
+    /**
+     * Checks if a file is ignored by that workspace.
+     *
+     * @param {string} file The file to check.
+     *
+     * @return {boolean} Is ignored or not.
+     */
+    isFileIgnored(file) {
+        file = deploy_helpers.toStringSafe(file);
+        if (deploy_helpers.isEmptyString(file)) {
+            return true; // no (valid) file path
+        }
+        if (deploy_helpers.toBooleanSafe(this.config.ignoreSettingsFolder, true)) {
+            if (this.isInSettingsFolder(file)) {
+                return true; // not from settings folder
+            }
+        }
+        if (deploy_helpers.toBooleanSafe(this.config.ignoreGitFolder, true)) {
+            if (this.isInGitFolder(file)) {
+                return true; // not from Git folder
+            }
+        }
+        if (deploy_helpers.toBooleanSafe(this.config.ignoreSvnFolder, true)) {
+            if (this.isInSvnFolder(file)) {
+                return true; // not from SVN folder
+            }
+        }
+        const RELATIVE_PATH = this.toRelativePath(file);
+        if (false === RELATIVE_PATH) {
+            return true; // is not part of that workspace
+        }
+        const IGNORE_PATTERNS = deploy_helpers.asArray(this.config.ignore).map(i => {
+            return deploy_helpers.toStringSafe(i);
+        }).filter(i => {
+            return !deploy_helpers.isEmptyString(i);
+        });
+        if (IGNORE_PATTERNS.length < 1) {
+            return false;
+        }
+        const FILTER = {
+            files: IGNORE_PATTERNS,
+        };
+        return deploy_helpers.checkIfDoesMatchByFileFilter('/' + RELATIVE_PATH, deploy_helpers.toMinimatchFileFilter(FILTER));
+    }
+    isInFolder(folder, pathToCheck) {
+        folder = deploy_helpers.toStringSafe(folder);
+        if (!Path.isAbsolute(pathToCheck)) {
+            folder = Path.join(this.rootPath, folder);
+        }
+        folder = Path.resolve(folder);
+        pathToCheck = deploy_helpers.toStringSafe(pathToCheck);
+        if (!Path.isAbsolute(pathToCheck)) {
+            return true;
+        }
+        pathToCheck = Path.resolve(pathToCheck);
+        return (folder === pathToCheck) ||
+            (pathToCheck + Path.sep).startsWith(folder + Path.sep);
+    }
+    /**
+     * Checks if a path is inside the Git folder.
+     *
+     * @param {string} path The path to check.
+     *
+     * @return {boolean} Is in Git folder or not.
+     */
+    isInGitFolder(path) {
+        return this.isInFolder(Path.join(this.rootPath, '.git'), path);
+    }
+    /**
+     * Gets if the workspace has been initialized or not.
+     */
+    get isInitialized() {
+        return this._isInitialized;
+    }
+    /**
+     * Checks if a path is inside the settings folder.
+     *
+     * @param {string} path The path to check.
+     *
+     * @return {boolean} Is in settings folder or not.
+     */
+    isInSettingsFolder(path) {
+        return this.isInFolder(Path.dirname(this.configSource.resource.fsPath), path);
+    }
+    /**
+     * Checks if a path is inside the Git folder.
+     *
+     * @param {string} path The path to check.
+     *
+     * @return {boolean} Is in Git folder or not.
+     */
+    isInSvnFolder(path) {
+        return this.isInFolder(Path.join(this.rootPath, '.svn'), path);
+    }
+    /**
+     * Checks if a path is part of that workspace.
+     *
+     * @param {string} path The path to check.
+     *
+     * @return {boolean} Is part of that workspace or not.
+     */
+    isPathOf(path) {
+        return false !== this.toFullPath(path);
+    }
+    /**
+     * Gets if the configuration for that workspace is currently reloaded or not.
+     */
+    get isReloadingConfig() {
+        return this._isReloadingConfig;
+    }
+    /**
+     * Gets or sets if 'remove on change' is currently freezed or not.
+     */
+    get isRemoveOnChangeFreezed() {
+        return this._isRemoveOnChangeFreezed;
+    }
+    set isRemoveOnChangeFreezed(newValue) {
+        this._isRemoveOnChangeFreezed = deploy_helpers.toBooleanSafe(newValue);
+        this.updateAutoDeployButtons();
+    }
+    /**
+     * Gets the last config update timestamp.
+     */
+    get lastConfigUpdate() {
+        return this._lastConfigUpdate;
+    }
+    /**
+     * List the root directory on a target.
+     *
+     * @param {deploy_targets.Target} target The target from where to get the list.
+     *
+     * @return {Promise<deploy_plugins.ListDirectoryResult<TTarget>>} The promise with the result.
+     */
+    async listDirectory(target) {
+        return await deploy_list.listDirectory
+            .apply(this, [target]);
+    }
+    /**
+     * Lists the files and folders inside that workspace.
+     *
+     * @param {string} [dir] The directory inside that workspace.
+     *
+     * @return {WorkspaceListDirectoryResult|false} The result or (false) if directory is invalid.
+     */
+    async listWorkspaceDirectory(dir = '') {
+        dir = deploy_helpers.toStringSafe(dir);
+        if (deploy_helpers.isEmptyString(dir)) {
+            dir = './';
+        }
+        if (!Path.isAbsolute(dir)) {
+            dir = Path.join(this.rootPath, dir);
+        }
+        dir = Path.resolve(dir);
+        const REL_PATH = this.toRelativePath(dir);
+        if (false === REL_PATH) {
+            return false;
+        }
+        const GET_TYPE = (stats) => {
+            let type;
+            if (stats) {
+                if (stats.isDirectory()) {
+                    type = deploy_files.FileSystemType.Directory;
+                }
+                else if (stats.isFile()) {
+                    type = deploy_files.FileSystemType.File;
+                }
+            }
+            return type;
+        };
+        const MY_STATS = await deploy_helpers.lstat(dir);
+        const RESULT = {
+            dirs: [],
+            files: [],
+            info: {
+                exportPath: dir,
+                name: Path.basename(dir),
+                path: deploy_helpers.normalizePath(REL_PATH),
+                size: GET_TYPE(MY_STATS) === deploy_files.FileSystemType.File ? MY_STATS.size : undefined,
+                time: Moment(MY_STATS.mtime),
+                type: GET_TYPE(MY_STATS),
+            },
+            others: [],
+            workspace: this,
+        };
+        const CREATE_DOWNLOAD_METHOD = (f) => {
+            return async () => {
+                return deploy_helpers.readFile(f);
+            };
+        };
+        const FILES_AND_FOLDERS = Enumerable.from(await deploy_helpers.readDir(dir)).orderBy(f => {
+            return deploy_helpers.normalizeString(f);
+        });
+        for (const F of FILES_AND_FOLDERS) {
+            const FULL_PATH = Path.resolve(Path.join(dir, F));
+            const ITEM_PATH = deploy_helpers.normalizePath(deploy_helpers.normalizePath(REL_PATH) +
+                '/' +
+                RESULT.info.name);
+            const FILE_STATS = await deploy_helpers.lstat(FULL_PATH);
+            const TIME = Moment(FILE_STATS.mtime);
+            if (FILE_STATS.isDirectory()) {
+                const DI = {
+                    exportPath: FULL_PATH,
+                    name: F,
+                    path: ITEM_PATH,
+                    size: undefined,
+                    time: TIME,
+                    type: deploy_files.FileSystemType.Directory,
+                };
+                RESULT.dirs.push(DI);
+            }
+            else if (FILE_STATS.isFile()) {
+                const FI = {
+                    download: CREATE_DOWNLOAD_METHOD(FULL_PATH),
+                    exportPath: FULL_PATH,
+                    name: F,
+                    path: ITEM_PATH,
+                    size: FILE_STATS.size,
+                    time: TIME,
+                    type: deploy_files.FileSystemType.File,
+                };
+                RESULT.files.push(FI);
+            }
+            else {
+                const FSI = {
+                    exportPath: FULL_PATH,
+                    name: F,
+                    path: ITEM_PATH,
+                    size: undefined,
+                    time: TIME,
+                    type: undefined,
+                };
+                RESULT.others.push(FSI);
+            }
+        }
+        return RESULT;
+    }
+    /**
+     * Loads a data transformer for an object.
+     *
+     * @param {deploy_transformers.CanTransformData} transformable An object that can transform data.
+     *
+     * @return {Promise<deploy_transformers.DataTransformer|false>} The loaded transformer or (false) if script could not be loaded.
+     */
+    async loadDataTransformer(transformable) {
+        const ME = this;
+        if (!transformable) {
+            return null;
+        }
+        const SCRIPT = deploy_helpers.toStringSafe(transformable.transformer);
+        if (deploy_helpers.isEmptyString(SCRIPT)) {
+            return;
+        }
+        const SCRIPT_FILE = await ME.getExistingSettingPath(SCRIPT);
+        if (false === SCRIPT_FILE) {
+            return false;
+        }
+        delete require.cache[SCRIPT_FILE];
+        const SCRIPT_MODULE = require(SCRIPT_FILE);
+        if (SCRIPT_MODULE) {
+            const TRANSFORMER = SCRIPT_MODULE.transform;
+            if (TRANSFORMER) {
+                return async function () {
+                    return await TRANSFORMER.apply(SCRIPT_MODULE, arguments);
+                };
+            }
+            else {
+                return TRANSFORMER;
+            }
+        }
+    }
+    /**
+     * Gets the logger of that workspace.
+     */
+    get logger() {
+        return this._LOGGER;
+    }
+    /**
+     * Is invoked when the active text editor changed.
+     *
+     * @param {vscode.TextEditor} editor The new editor.
+     */
+    async onDidChangeActiveTextEditor(editor) {
+        if (!this.canDoAutoOperations) {
+            return;
+        }
+        if (editor) {
+            const DOC = editor.document;
+            if (DOC) {
+                // sync when open
+                if (deploy_helpers.toBooleanSafe(this.config.syncWhenOpen, true)) {
+                    try {
+                        const FILE_TO_CHECK = DOC.fileName;
+                        if (!deploy_helpers.isEmptyString(FILE_TO_CHECK)) {
+                            if (!this.isFileIgnored(FILE_TO_CHECK)) {
+                                await deploy_sync.syncDocumentWhenOpen
+                                    .apply(this, [editor.document]);
+                            }
+                        }
+                    }
+                    catch (e) {
+                        this.logger
+                            .trace(e, 'workspaces.Workspace.onDidChangeActiveTextEditor(1)');
+                    }
+                }
+            }
+        }
+    }
+    /**
+     * Is invoked when configuration changes.
+     *
+     * @param {vscode.ConfigurationChangeEvent} e The event data.
+     */
+    async onDidChangeConfiguration(e) {
+        await this.reloadConfiguration();
+    }
+    async onDidFileChange(e, type, retry = true) {
+        const ME = this;
+        try {
+            if (!ME.canDoAutoOperations) {
+                return;
+            }
+            if (!ME.isPathOf(e.fsPath)) {
+                return;
+            }
+            let action;
+            switch (type) {
+                case deploy_contracts.FileChangeType.Changed:
+                case deploy_contracts.FileChangeType.Created:
+                    action = async () => {
+                        await ME.deployOnChange(e.fsPath);
+                    };
+                    break;
+                case deploy_contracts.FileChangeType.Deleted:
+                    action = async () => {
+                        await ME.removeOnChange(e.fsPath);
+                    };
+                    break;
+            }
+            if (action) {
+                await ME._AUTO_DEPLOY_QUEUE.add(async () => {
+                    if (ME.canDoAutoOperations) {
+                        await action();
+                    }
+                });
+            }
+        }
+        catch (e) {
+            ME.logger
+                .trace(e, 'workspaces.Workspace.onDidFileChange(1)');
+        }
+    }
+    /**
+     * Is invoked when a text document has been changed.
+     *
+     * @param {vscode.TextDocument} e The underlying text document.
+     */
+    async onDidSaveTextDocument(e) {
+        if (!this.canDoAutoOperations) {
+            return;
+        }
+        if (!e) {
+            return;
+        }
+        await this.deployOnSave(e.fileName);
+    }
+    /** @inheritdoc */
+    onDispose() {
+        deploy_helpers.applyFuncFor(deploy_api.disposeApiHosts, this)();
+        this.disposeTcpProxies();
+        // file system watchers
+        this.disposeConfigFileWatchers();
+        deploy_helpers.tryDispose(this.context.fileWatcher);
+        // dispose buttons
+        deploy_helpers.applyFuncFor(deploy_buttons.disposeButtons, this)();
+        deploy_helpers.applyFuncFor(deploy_buttons.disposeFinishedButtons, this)();
+        this.disposeAutoDeployButtons();
+        // output channel
+        deploy_helpers.tryDispose(this._OUTPUT_CHANNEL);
+        // and last but not least:
+        // dispose logger
+        try {
+            this._LOGGER.clear();
+        }
+        catch (e) {
+            deploy_log.CONSOLE
+                .trace(e, 'workspaces.Workspace.onDispose(1)');
+        }
+    }
+    /**
+     * Gets the name of that workspace.
+     */
+    get name() {
+        return Path.basename(this.rootPath);
+    }
+    /**
+     * Gets the output channel of that workspace.
+     */
+    get output() {
+        return this._OUTPUT_CHANNEL;
+    }
+    /**
+     * Prepares a target for deployment.
+     *
+     * @param {TTarget} target The target to prepare.
+     *
+     * @return {TTarget} The prepared target.
+     */
+    prepareTarget(target) {
+        const ME = this;
+        target = deploy_helpers.cloneObjectFlat(target);
+        if (target) {
+            if (isSwitchTarget(target)) {
+                const CHILD_TARGETS = ME.getTargetsOfSwitch(target);
+                if (false !== CHILD_TARGETS) {
+                    // collect 'before delete' operations
+                    const BEFORE_DELETE_OF_CHILDREN = Enumerable.from(deploy_helpers.asArray(CHILD_TARGETS)).selectMany(ct => {
+                        return deploy_helpers.asArray(ct.beforeDelete);
+                    }).toArray();
+                    const MY_BEFORE_DELETE = deploy_helpers.asArray(target.beforeDelete);
+                    // collect 'before deploy' operations
+                    const BEFORE_DEPLOY_OF_CHILDREN = Enumerable.from(deploy_helpers.asArray(CHILD_TARGETS)).selectMany(ct => {
+                        return deploy_helpers.asArray(ct.beforeDeploy);
+                    }).toArray();
+                    const MY_BEFORE_DEPLOY = deploy_helpers.asArray(target.beforeDeploy);
+                    // collect 'before pull' operations
+                    const BEFORE_PULL_OF_CHILDREN = Enumerable.from(deploy_helpers.asArray(CHILD_TARGETS)).selectMany(ct => {
+                        return deploy_helpers.asArray(ct.beforePull);
+                    }).toArray();
+                    const MY_BEFORE_PULL = deploy_helpers.asArray(target.beforePull);
+                    // collect 'after deleted' operations
+                    const DELETED_OF_CHILDREN = Enumerable.from(deploy_helpers.asArray(CHILD_TARGETS)).reverse().selectMany(ct => {
+                        return deploy_helpers.asArray(ct.deleted);
+                    }).toArray(); // in reverse target order
+                    const MY_DELETED = deploy_helpers.asArray(target.deleted);
+                    // collect 'after deployed' operations
+                    const DEPLOYED_OF_CHILDREN = Enumerable.from(deploy_helpers.asArray(CHILD_TARGETS)).reverse().selectMany(ct => {
+                        return deploy_helpers.asArray(ct.deployed);
+                    }).toArray(); // in reverse target order
+                    const MY_DEPLOYED = deploy_helpers.asArray(target.deployed);
+                    // collect 'after pulled' operations
+                    const PULLED_OF_CHILDREN = Enumerable.from(deploy_helpers.asArray(CHILD_TARGETS)).reverse().selectMany(ct => {
+                        return deploy_helpers.asArray(ct.pulled);
+                    }).toArray(); // in reverse target order
+                    const MY_PULLED = deploy_helpers.asArray(target.pulled);
+                    // collect 'prepare' operations
+                    const PREPARE_OF_CHILDREN = Enumerable.from(deploy_helpers.asArray(CHILD_TARGETS)).selectMany(ct => {
+                        return deploy_helpers.asArray(ct.prepare);
+                    }).toArray();
+                    const MY_PREPARE = deploy_helpers.asArray(target.prepare);
+                    // prepare
+                    target.prepare = MY_PREPARE.concat(PREPARE_OF_CHILDREN);
+                    // before
+                    target.beforeDelete = MY_BEFORE_DELETE.concat(BEFORE_DELETE_OF_CHILDREN);
+                    target.beforeDeploy = MY_BEFORE_DEPLOY.concat(BEFORE_DEPLOY_OF_CHILDREN);
+                    target.beforePull = MY_BEFORE_PULL.concat(BEFORE_PULL_OF_CHILDREN);
+                    // after
+                    target.deleted = DELETED_OF_CHILDREN.concat(MY_DELETED);
+                    target.deployed = DEPLOYED_OF_CHILDREN.concat(MY_DEPLOYED);
+                    target.pulled = PULLED_OF_CHILDREN.concat(MY_PULLED);
+                }
+            }
+        }
+        return target;
+    }
+    /**
+     * Pulls a file from a target.
+     *
+     * @param {string} file The file to pull.
+     * @param {deploy_targets.Target} target The target from where to pull from.
+     */
+    async pullFileFrom(file, target) {
+        return await deploy_pull.pullFileFrom
+            .apply(this, arguments);
+    }
+    /**
+     * Pulls files from a target.
+     *
+     * @param {string[]} files The files to pull.
+     * @param {deploy_targets.Target} target The target to pull from.
+     * @param {number} [targetNr] The number of the target.
+     */
+    async pullFilesFrom(files, target, targetNr) {
+        return await deploy_pull.pullFilesFrom
+            .apply(this, arguments);
+    }
+    /**
+     * Pulls a package.
+     *
+     * @param {deploy_packages.Package} pkg The package to pull.
+     * @param {deploy_targets.TargetResolver} [targetResolver] A function to receive optional targets.
+     */
+    async pullPackage(pkg, targetResolver) {
+        await deploy_helpers.applyFuncFor(deploy_pull.pullPackage, this)(pkg, targetResolver);
+    }
+    /**
+     * Gets the workspace-wide queue.
+     */
+    get queue() {
+        return this._QUEUE;
+    }
+    async reloadAutoDeployButtons() {
+        const ME = this;
+        if (ME.isInFinalizeState) {
+            return;
+        }
+        const CFG = ME.config;
+        if (!CFG) {
+            return;
+        }
+        const STATE = ME.workspaceSessionState;
+        if (!STATE) {
+            return;
+        }
+        const BUTTONS = STATE['auto']['buttons'];
+        const CREATE_BTN = async (settings, key, idResolver, action) => {
+            if (_.isNil(settings)) {
+                return;
+            }
+            if (!deploy_helpers.isObject(settings)) {
+                settings = {
+                    enabled: settings,
+                };
+            }
+            if (!deploy_helpers.toBooleanSafe(settings.enabled, true)) {
+                return;
+            }
+            let btn;
+            let cmd;
+            try {
+                const ID = idResolver();
+                btn = await deploy_helpers.createButton(settings);
+                const CMD_ID = `extension.deploy.reloaded.buttons.autoDeploy.${key}${ID}`;
+                cmd = vscode.commands.registerCommand(CMD_ID, async () => {
+                    btn.command = undefined;
+                    try {
+                        await Promise.resolve(action(btn));
+                    }
+                    catch (e) {
+                        deploy_log.CONSOLE
+                            .trace(e, CMD_ID);
+                    }
+                    finally {
+                        ME.updateAutoDeployButtons();
+                        btn.command = CMD_ID;
+                    }
+                });
+                const NEW_BTN = {
+                    button: btn,
+                    command: cmd,
+                    dispose: function () {
+                        deploy_helpers.tryDispose(this.button);
+                        deploy_helpers.tryDispose(this.command);
+                    },
+                    settings: settings,
+                };
+                BUTTONS[key] = NEW_BTN;
+                btn.command = CMD_ID;
+                btn.show();
+            }
+            catch (e) {
+                deploy_helpers.tryDispose(btn);
+                deploy_helpers.tryDispose(cmd);
+                deploy_log.CONSOLE
+                    .trace(e, 'workspaces.Workspace.reloadAutoDeployButtons(2)');
+            }
+        };
+        try {
+            // deploy on change
+            await CREATE_BTN(CFG.deployOnChangeButton, KEY_AUTO_BTN_DEPLOY_ON_CHANGE, () => nextDeployOnChangeButtonId++, () => {
+                deploy_helpers.tryDisposeAndDelete(STATE['auto']['timeouts'], KEY_TIMEOUT_DEPLOY_ON_CHANGE);
+                ME.isDeployOnChangeFreezed = !ME.isDeployOnChangeFreezed;
+            });
+            // deploy on save
+            await CREATE_BTN(CFG.deployOnSaveButton, KEY_AUTO_BTN_DEPLOY_ON_SAVE, () => nextDeployOnSaveButtonId++, () => {
+                ME.isDeployOnSaveFreezed = !ME.isDeployOnSaveFreezed;
+            });
+            // remove on change
+            await CREATE_BTN(CFG.removeOnChangeButton, KEY_AUTO_BTN_REMOVE_ON_CHANGE, () => nextRemoveOnChangeButtonId++, () => {
+                deploy_helpers.tryDisposeAndDelete(STATE['auto']['timeouts'], KEY_TIMEOUT_REMOVE_ON_CHANGE);
+                ME.isRemoveOnChangeFreezed = !ME.isRemoveOnChangeFreezed;
+            });
+            ME.updateAutoDeployButtons();
+        }
+        catch (e) {
+            deploy_log.CONSOLE
+                .trace(e, 'workspaces.Workspace.reloadAutoDeployButtons(1)');
+        }
+    }
+    /**
+     * Reloads the current configuration for that workspace.
+     *
+     * @param {boolean} [retry] Retry when busy or not.
+     */
+    async reloadConfiguration(retry = true) {
+        const ME = this;
+        const MY_ARGS = arguments;
+        if (ME.isReloadingConfig) {
+            if (retry) {
+                await deploy_helpers.invokeAfter(async () => {
+                    ME.reloadConfiguration
+                        .apply(ME, MY_ARGS);
+                });
+            }
+            return;
+        }
+        ME._isReloadingConfig = true;
+        this.disposeConfigFileWatchers();
+        // dispose buttons
+        deploy_helpers.applyFuncFor(deploy_buttons.disposeButtons, ME)();
+        this.disposeAutoDeployButtons();
+        const SCOPES = ME.getSettingScopes();
+        let finalizer;
+        try {
+            ME.cleanupTimeouts();
+            deploy_helpers.applyFuncFor(deploy_commands.cleanupCommands, ME)();
+            ME.isDeployOnChangeFreezed = false;
+            ME.isDeployOnSaveFreezed = false;
+            ME.isRemoveOnChangeFreezed = false;
+            const IMPORTED_LOCAL_FILES = [];
+            let loadedCfg = vscode.workspace.getConfiguration(ME.configSource.section, ME.configSource.resource) || {};
+            loadedCfg = deploy_helpers.cloneObjectFlat(loadedCfg);
+            if (ME.editorRootPath !== ME.rootPath) {
+                if (await deploy_helpers.exists(ME.configSource.resource.fsPath)) {
+                    const CONFIG_TO_MERGE = JSON.parse((await deploy_helpers.readFile(ME.configSource.resource.fsPath)).toString('utf8'));
+                    if (CONFIG_TO_MERGE) {
+                        loadedCfg = MergeDeep(loadedCfg, CONFIG_TO_MERGE[ME.configSource.section]);
+                    }
+                }
+            }
+            // runGitPullOnStartup
+            await deploy_tasks.runGitPullOnStartup
+                .apply(ME, [loadedCfg]);
+            // imports
+            try {
+                let allImports = deploy_helpers.asArray(loadedCfg.imports);
+                for (const IE of allImports) {
+                    let importFile;
+                    if (deploy_helpers.isObject(IE)) {
+                        let doesMatch = false;
+                        const PI = deploy_helpers.filterPlatformItems(IE);
+                        if (PI.length > 0) {
+                            doesMatch = Enumerable.from(IE.if).all(c => {
+                                let res;
+                                const IF_CODE = deploy_helpers.toStringSafe(c);
+                                if (!deploy_helpers.isEmptyString(IF_CODE)) {
+                                    res = deploy_code.exec({
+                                        code: IF_CODE,
+                                        context: {
+                                            i: IE,
+                                            ws: ME,
+                                        },
+                                        values: [].concat(deploy_values.getPredefinedValues())
+                                            .concat(deploy_values.getEnvVars()),
+                                    });
+                                }
+                                return deploy_helpers.toBooleanSafe(res, true);
+                            });
+                        }
+                        if (doesMatch) {
+                            importFile = deploy_helpers.toStringSafe(IE.from);
+                        }
+                    }
+                    else {
+                        importFile = deploy_helpers.toStringSafe(IE);
+                    }
+                    if (deploy_helpers.isEmptyString(importFile)) {
+                        continue;
+                    }
+                    const DOWNLOAD_RESULT = {};
+                    const DATA = await deploy_download.download(importFile, SCOPES, DOWNLOAD_RESULT);
+                    deploy_helpers.asArray(JSON.parse(DATA.toString('utf8')))
+                        .filter(c => deploy_helpers.isObject(c))
+                        .forEach(c => {
+                        const SUB_SUBSETTINGS = c[ME.configSource.section];
+                        if (!deploy_helpers.isObject(SUB_SUBSETTINGS)) {
+                            return;
+                        }
+                        loadedCfg = MergeDeep(loadedCfg, SUB_SUBSETTINGS);
+                    });
+                    if (deploy_download.DownloadSourceType.Local === DOWNLOAD_RESULT.source) {
+                        IMPORTED_LOCAL_FILES.push(DOWNLOAD_RESULT.fullPath);
+                    }
+                }
+            }
+            finally {
+                loadedCfg.packages = deploy_helpers.mergeByName(loadedCfg.packages);
+                loadedCfg.targets = deploy_helpers.mergeByName(loadedCfg.targets);
+                delete loadedCfg.imports;
+            }
+            // check for requirements
+            if (!(await ME.checkForRequiredExtensions(loadedCfg))) {
+                return; // failed
+            }
+            if (!(await ME.checkForRequirements(loadedCfg))) {
+                return; // failed
+            }
+            await deploy_helpers.applyFuncFor(deploy_commands.reloadCommands, ME)(loadedCfg);
+            await ME.reloadTargets(loadedCfg);
+            await ME.reloadPackages(loadedCfg);
+            const NEW_STATE = ME.createWorkspaceSessionState(loadedCfg);
+            const OLD_CFG = ME._config;
+            ME._config = loadedCfg;
+            ME._workspaceSessionState = NEW_STATE;
+            ME._lastConfigUpdate = Moment();
+            try {
+                ME.emit(deploy_contracts.EVENT_CONFIG_RELOADED, ME, loadedCfg, OLD_CFG);
+            }
+            catch (e) {
+                ME.logger
+                    .trace(e, 'workspaces.reloadConfiguration(1)');
+            }
+            ME._translator = null;
+            try {
+                ME._translator = await deploy_helpers.applyFuncFor(i18.initForWorkspace, ME)();
+            }
+            catch (e) {
+                ME.logger
+                    .trace(e, 'workspaces.reloadConfiguration(2)');
+            }
+            if (deploy_helpers.toBooleanSafe(loadedCfg.clearOutputOnStartup)) {
+                ME.output.clear();
+            }
+            if (deploy_helpers.toBooleanSafe(loadedCfg.openOutputOnStartup)) {
+                ME.output.show();
+            }
+            finalizer = async () => {
+                await ME.executeOnStartup(loadedCfg);
+                await ME.initNodeModules(loadedCfg);
+                await ME.initBower(loadedCfg);
+                await ME.initComposer(loadedCfg);
+                // runBuildTaskOnStartup
+                try {
+                    await deploy_tasks.runBuildTaskOnStartup
+                        .apply(ME, []);
+                }
+                catch (e) {
+                    ME.logger
+                        .trace(e, 'workspaces.reloadConfiguration(7)');
+                }
+                // timeToWaitBeforeActivateDeployOnChange
+                try {
+                    const TIME_TO_WAIT_BEFORE_ACTIVATE_DEPLOY_ON_CHANGE = parseInt(deploy_helpers.toStringSafe(loadedCfg.timeToWaitBeforeActivateDeployOnChange).trim());
+                    if (!isNaN(TIME_TO_WAIT_BEFORE_ACTIVATE_DEPLOY_ON_CHANGE)) {
+                        // deactivate 'deploy on change'
+                        // for a while
+                        ME.isDeployOnChangeFreezed = true;
+                        ME.output.appendLine('');
+                        ME.output.appendLine(`💤 ` +
+                            ME.t('deploy.onChange.waitingBeforeActivate', Math.round(TIME_TO_WAIT_BEFORE_ACTIVATE_DEPLOY_ON_CHANGE / 1000.0), ME.rootPath));
+                        NEW_STATE['auto']['timeouts'][KEY_TIMEOUT_DEPLOY_ON_CHANGE] = deploy_helpers.createTimeout(() => {
+                            ME.isDeployOnChangeFreezed = false;
+                            ME.output.appendLine('');
+                            ME.output.appendLine(`▶️ ` +
+                                ME.t('deploy.onChange.activated', ME.rootPath));
+                        }, TIME_TO_WAIT_BEFORE_ACTIVATE_DEPLOY_ON_CHANGE);
+                    }
+                }
+                catch (e) {
+                    ME.logger
+                        .trace(e, 'workspaces.reloadConfiguration(5)');
+                    ME.isDeployOnChangeFreezed = false;
+                }
+                // timeToWaitBeforeActivateRemoveOnChange
+                try {
+                    const TIME_TO_WAIT_BEFORE_ACTIVATE_REMOVE_ON_CHANGE = parseInt(deploy_helpers.toStringSafe(loadedCfg.timeToWaitBeforeActivateRemoveOnChange).trim());
+                    if (!isNaN(TIME_TO_WAIT_BEFORE_ACTIVATE_REMOVE_ON_CHANGE)) {
+                        // deactivate 'remove on change'
+                        // for a while
+                        ME.isRemoveOnChangeFreezed = true;
+                        ME.output.appendLine('');
+                        ME.output.appendLine(`💤 ` +
+                            ME.t('DELETE.onChange.waitingBeforeActivate', Math.round(TIME_TO_WAIT_BEFORE_ACTIVATE_REMOVE_ON_CHANGE / 1000.0), ME.rootPath));
+                        NEW_STATE['auto']['timeouts'][KEY_TIMEOUT_REMOVE_ON_CHANGE] = deploy_helpers.createTimeout(() => {
+                            ME.isRemoveOnChangeFreezed = false;
+                            ME.output.appendLine('');
+                            ME.output.appendLine(`▶️ ` +
+                                ME.t('DELETE.onChange.activated', ME.rootPath));
+                        }, TIME_TO_WAIT_BEFORE_ACTIVATE_REMOVE_ON_CHANGE);
+                    }
+                }
+                catch (e) {
+                    ME.logger
+                        .trace(e, 'workspaces.reloadConfiguration(6)');
+                    ME.isRemoveOnChangeFreezed = false;
+                }
+                await ME.reloadPackageButtons();
+                await ME.reloadSwitches();
+                // executeStartupCommands
+                await deploy_helpers.applyFuncFor(deploy_commands.executeStartupCommands, ME)();
+                // reloadApiHosts
+                await deploy_helpers.applyFuncFor(deploy_api.reloadApiHosts, ME)();
+                await ME.reloadTcpProxies();
+                // buttons
+                await deploy_helpers.applyFuncFor(deploy_buttons.reloadButtons, ME)();
+                await ME.reloadAutoDeployButtons();
+                await ME.initConfigFileWatchers(IMPORTED_LOCAL_FILES);
+            };
+        }
+        catch (e) {
+            ME.logger
+                .trace(e, 'workspaces.reloadConfiguration(3)');
+            finalizer = async () => {
+                // DO NOT TRANSLATE
+                // BECAUSE IT IS NOT GARANTEED THAT
+                // A TRANSLATOR HAS BEEN LOADED YET!
+                const BUTTONS = [
+                    {
+                        title: 'Yes',
+                        value: 1,
+                    },
+                    {
+                        title: 'No',
+                        value: 2,
+                    }
+                ];
+                const SELECTED_ITEM = await ME.showErrorMessage.apply(ME, [`The settings could not be loaded! Do you want to try it again?`].concat(BUTTONS));
+                if (SELECTED_ITEM) {
+                    if (1 === SELECTED_ITEM.value) {
+                        ME._isReloadingConfig = false;
+                        ME.reloadConfiguration
+                            .apply(ME, MY_ARGS);
+                    }
+                }
+            };
+        }
+        finally {
+            if (finalizer) {
+                try {
+                    await Promise.resolve(finalizer());
+                }
+                catch (e) {
+                    ME.logger
+                        .trace(e, 'workspaces.reloadConfiguration(4)');
+                }
+            }
+            ME._isReloadingConfig = false;
+        }
+    }
+    /**
+     * Reloads the environment variables as defined in the settings.
+     */
+    reloadEnvVars() {
+        const CFG = this.config;
+        if (!CFG) {
+            return;
+        }
+        try {
+            // restore old values
+            const OLD_VARS = [];
+            for (const OV in this._OLD_ENV_VARS) {
+                OLD_VARS.push(OV);
+            }
+            for (const OV of OLD_VARS) {
+                process.env[OV] = this._OLD_ENV_VARS[OV];
+                delete this._OLD_ENV_VARS[OV];
+            }
+            if (CFG.env) {
+                const VARS = CFG.env.vars;
+                if (VARS) {
+                    // set own
+                    for (const OV in VARS) {
+                        this._OLD_ENV_VARS[OV] = process.env[OV];
+                        process.env[OV] = deploy_helpers.toStringSafe(VARS[OV]);
+                    }
+                }
+            }
+        }
+        catch (e) {
+            this.logger
+                .trace(e, 'workspaces.Workspace.reloadEnvVars()');
+        }
+    }
+    async reloadPackageButtons() {
+        const ME = this;
+        ME.cleanupPackageButtons();
+        for (const P of ME.getPackages()) {
+            let buttonDesc;
+            const DEFAULT_BTN_TEXT = ME.t('packages.buttons.defaultText', deploy_packages.getPackageName(P));
+            const DEFAULT_BTN_TOOLTIP = ME.t('packages.buttons.defaultTooltip');
+            if (!_.isNil(P.button)) {
+                if (deploy_helpers.isObject(P.button)) {
+                    buttonDesc = P.button;
+                }
+                else if (_.isBoolean(P.button)) {
+                    if (true === P.button) {
+                        buttonDesc = {
+                            text: DEFAULT_BTN_TEXT,
+                            tooltip: DEFAULT_BTN_TOOLTIP,
+                        };
+                    }
+                }
+                else {
+                    let btnText = deploy_helpers.toStringSafe(P.button);
+                    if (deploy_helpers.isEmptyString(btnText)) {
+                        btnText = DEFAULT_BTN_TEXT;
+                    }
+                    buttonDesc = {
+                        text: btnText,
+                        tooltip: DEFAULT_BTN_TOOLTIP,
+                    };
+                }
+            }
+            if (!buttonDesc) {
+                continue;
+            }
+            if (!deploy_helpers.toBooleanSafe(buttonDesc.enabled, true)) {
+                continue;
+            }
+            let newBtn;
+            let newBtnCommand;
+            try {
+                newBtn = await deploy_helpers.createButton(buttonDesc, async (b, pb) => {
+                    const PACKAGE_TO_HANDLE = P;
+                    const PACKAGE_NAME = deploy_packages.getPackageName(PACKAGE_TO_HANDLE);
+                    // additional values
+                    const VALUES = [
+                        new deploy_values.StaticValue({
+                            value: pb
+                        }, 'options'),
+                        new deploy_values.StaticValue({
+                            value: PACKAGE_NAME
+                        }, 'package'),
+                    ];
+                    let newCmdId = deploy_helpers.toStringSafe(pb.command);
+                    if (deploy_helpers.isEmptyString(newCmdId)) {
+                        newCmdId = `extension.deploy.reloaded.buttons.deployPackage${nextPackageButtonId++}`;
+                    }
+                    const TARGET_RESOLVER = () => buttonDesc.targets;
+                    if ((await vscode.commands.getCommands()).indexOf(newCmdId) < 0) {
+                        newBtnCommand = vscode.commands.registerCommand(newCmdId, async () => {
+                            let deployAction = false;
+                            try {
+                                let promptMsg;
+                                const DEPLOY_TYPE = deploy_helpers.normalizeString(pb.type);
+                                switch (DEPLOY_TYPE) {
+                                    case "":
+                                    case "deploy":
+                                        deployAction = async () => {
+                                            await ME.deployPackage(PACKAGE_TO_HANDLE, TARGET_RESOLVER);
+                                        };
+                                        promptMsg = 'askBeforeDeploy';
+                                        break;
+                                    case "delete":
+                                        deployAction = async () => {
+                                            await ME.deletePackage(PACKAGE_TO_HANDLE, TARGET_RESOLVER);
+                                        };
+                                        promptMsg = 'askBeforeDelete';
+                                        break;
+                                    case "pull":
+                                        deployAction = async () => {
+                                            await ME.pullPackage(PACKAGE_TO_HANDLE, TARGET_RESOLVER);
+                                        };
+                                        promptMsg = 'askBeforePull';
+                                        break;
+                                }
+                                if (false === deployAction) {
+                                    await ME.showWarningMessage(ME.t('packages.buttons.unknownOperationType', DEPLOY_TYPE));
+                                    return;
+                                }
+                                if (deploy_helpers.toBooleanSafe(pb.showPrompt)) {
+                                    const SELECTED_ITEM = await vscode.window.showWarningMessage(ME.t(`packages.buttons.prompts.${promptMsg}`, PACKAGE_NAME), {
+                                        title: ME.t('no'),
+                                        isCloseAffordance: true,
+                                        value: 0,
+                                    }, {
+                                        title: ME.t('yes'),
+                                        value: 1,
+                                    });
+                                    let selectedValue;
+                                    if (SELECTED_ITEM) {
+                                        selectedValue = SELECTED_ITEM.value;
+                                    }
+                                    if (1 !== selectedValue) {
+                                        return;
+                                    }
+                                }
+                                await deployAction();
+                            }
+                            catch (e) {
+                                await ME.showErrorMessage(ME.t('packages.deploymentFailed', deploy_packages.getPackageName(PACKAGE_TO_HANDLE)));
+                            }
+                        });
+                        ME.logger
+                            .info(`Registrated command '${newCmdId}' for button of package '${PACKAGE_NAME}'.`, 'workspaces.Workspace.reloadPackageButtons()');
+                    }
+                    else {
+                        ME.logger
+                            .warn(`Button of package '${PACKAGE_NAME}' will use the existing command '${newCmdId}'.`, 'workspaces.Workspace.reloadPackageButtons()');
+                    }
+                    if (deploy_helpers.isEmptyString(b.text)) {
+                        b.text = DEFAULT_BTN_TEXT;
+                    }
+                    else {
+                        b.text = ME.replaceWithValues(b.text, VALUES);
+                    }
+                    if (deploy_helpers.isEmptyString(b.tooltip)) {
+                        b.tooltip = DEFAULT_BTN_TOOLTIP;
+                    }
+                    else {
+                        b.tooltip = ME.replaceWithValues(b.tooltip);
+                    }
+                    b.command = newCmdId;
+                    ME._PACKAGE_BUTTONS.push({
+                        button: b,
+                        command: newBtnCommand,
+                        package: PACKAGE_TO_HANDLE,
+                    });
+                    b.show();
+                });
+            }
+            catch (e) {
+                ME.logger
+                    .trace(e, 'workspaces.Workspace.reloadPackageButtons()');
+                deploy_helpers.tryDispose(newBtn);
+                deploy_helpers.tryDispose(newBtnCommand);
+            }
+        }
+    }
+    async reloadPackages(cfg) {
+        const ME = this;
+        if (!cfg) {
+            return;
+        }
+        let packages = Enumerable.from(deploy_helpers.asArray(cfg.packages)).where(p => {
+            return 'object' === typeof p;
+        }).select(p => {
+            return deploy_helpers.cloneObject(p);
+        }).toArray();
+        packages = deploy_helpers.filterPlatformItems(packages);
+        let index = -1;
+        packages = Enumerable.from(packages).select(p => {
+            return ME.applyValuesTo(p);
+        }).pipe(p => {
+            ++index;
+            p['__index'] = index;
+            p['__workspace'] = ME;
+            // can only be defined AFTER '__workspace'!
+            p['__id'] = ME.getPackageId(p);
+            p['__searchValue'] = deploy_helpers.normalizeString(deploy_packages.getPackageName(p));
+            p['__cache'] = new deploy_helpers.MemoryCache();
+            Object.defineProperty(p, '__button', {
+                enumerable: true,
+                get: () => {
+                    return Enumerable.from(ME._PACKAGE_BUTTONS).where(pwb => {
+                        return pwb.package.__id === p.__id;
+                    }).select(pwb => pwb.button)
+                        .singleOrDefault(undefined);
+                }
+            });
+        }).toArray();
+        ME._packages = packages;
+    }
+    async reloadTcpProxies() {
+        const ME = this;
+        ME.disposeTcpProxies();
+        const CFG = ME.config;
+        if (!CFG) {
+            return;
+        }
+        const PROXY_LIST = CFG.proxies;
+        if (!PROXY_LIST) {
+            return;
+        }
+        const SETUP_LOGGING = (proxy) => {
+            ME._TCP_PROXY_LOGGERS.push(deploy_proxies.registerLoggingForTcpProxy(proxy, () => ME.logger));
+        };
+        const ADD_PROXY_FILTER = (proxy, settings) => {
+            const ALLOWED = deploy_helpers.asArray(settings.allowed).map(a => {
+                return deploy_helpers.toStringSafe(a)
+                    .trim();
+            }).filter(a => '' !== a).map(a => {
+                if (a.indexOf('/') < 0) {
+                    if (ip.isV4Format(a)) {
+                        a += "/32";
+                    }
+                    else {
+                        a += "/128";
+                    }
+                }
+                return a;
+            });
+            ME._TCP_PROXY_FILTERS.push(proxy.addFilter((addr, port) => {
+                if (ALLOWED.length > 0) {
+                    if (!ip.isLoopback(addr)) {
+                        return Enumerable.from(ALLOWED)
+                            .any(a => ip.cidrSubnet(a)
+                            .contains(addr));
+                    }
+                }
+                return true;
+            }));
+        };
+        const SET_NAME_AND_DESC_RESOLVER = (proxy, settings) => {
+            proxy.setNameAndDescriptionResolver(ME, () => {
+                const ADDITIONAL_VALUES = [
+                    new deploy_values.FunctionValue(() => {
+                        return deploy_helpers.toStringSafe(proxy.port);
+                    }, 'proxyPort')
+                ];
+                let name = deploy_helpers.toStringSafe(ME.replaceWithValues(settings.name, ADDITIONAL_VALUES)).trim();
+                if ('' === name) {
+                    name = undefined;
+                }
+                let desc = deploy_helpers.toStringSafe(ME.replaceWithValues(settings.description, ADDITIONAL_VALUES)).trim();
+                if ('' === desc) {
+                    desc = undefined;
+                }
+                return {
+                    description: desc,
+                    name: name,
+                };
+            });
+        };
+        const SETUP_PROXY_BUTTON = async (proxy, settings) => {
+            const BTN_ID = nextTcpProxyButtonId++;
+            let btn;
+            if (_.isNil(settings.button)) {
+                btn = {};
+            }
+            else {
+                if (deploy_helpers.isObject(settings.button)) {
+                    btn = settings.button;
+                }
+                else if (_.isBoolean(settings.button)) {
+                    btn = {
+                        enabled: settings.button,
+                    };
+                }
+                else {
+                    btn = {
+                        text: deploy_helpers.toStringSafe(settings.button),
+                    };
+                }
+            }
+            if (!btn || !deploy_helpers.toBooleanSafe(btn.enabled, true)) {
+                return;
+            }
+            const GET_PROXY_NAME = () => {
+                return proxy.getNameAndDescriptionFor(ME).name;
+            };
+            const GET_STATE_ICON = () => {
+                return '$(' + (proxy.isRunning ? 'triangle-right' : 'primitive-square') + ')';
+            };
+            const ADDITIONAL_BTN_VALUES = [
+                new deploy_values.FunctionValue(() => {
+                    return GET_PROXY_NAME();
+                }, 'proxy'),
+                new deploy_values.FunctionValue(() => {
+                    return deploy_helpers.toStringSafe(proxy.port);
+                }, 'proxyPort'),
+                new deploy_values.FunctionValue(() => {
+                    return GET_STATE_ICON();
+                }, 'proxyStateIcon'),
+            ];
+            let guiBtn;
+            let btnCmd;
+            let defaultColor;
+            const DISPOSE_BUTTON = () => {
+                deploy_helpers.tryDispose(guiBtn);
+                deploy_helpers.tryDispose(btnCmd);
+            };
+            const UPDATE_BUTTON = () => {
+                const GB = guiBtn;
+                if (!GB) {
+                    return;
+                }
+                try {
+                    let text = deploy_helpers.toStringSafe(ME.replaceWithValues(btn.text, ADDITIONAL_BTN_VALUES)).trim();
+                    if ('' === text) {
+                        text = GET_STATE_ICON() + '  ' + ME.t('proxies.buttons.defaultText', GET_PROXY_NAME());
+                    }
+                    let tooltip = deploy_helpers.toStringSafe(ME.replaceWithValues(btn.tooltip, ADDITIONAL_BTN_VALUES)).trim();
+                    if ('' === tooltip) {
+                        tooltip = ME.t('proxies.buttons.defaultTooltip');
+                    }
+                    let newColor = defaultColor;
+                    if (!proxy.isRunning) {
+                        if (deploy_helpers.isEmptyString(btn.stopColor)) {
+                            newColor = new vscode.ThemeColor('panelTitle.inactiveForeground');
+                        }
+                        else {
+                            newColor = deploy_helpers.normalizeString(btn.stopColor);
+                        }
+                    }
+                    if (GB.text !== text) {
+                        GB.text = text;
+                    }
+                    if (GB.tooltip !== tooltip) {
+                        GB.tooltip = tooltip;
+                    }
+                    if (GB.color !== newColor) {
+                        GB.color = newColor;
+                    }
+                }
+                catch (e) {
+                    this.logger
+                        .trace(e, 'workspaces.Workspace.reloadTcpProxies.SETUP_PROXY_BUTTON.UPDATE_BUTTON(1)');
+                }
+            };
+            const START_STOP_EVENT_LISTENER = () => {
+                UPDATE_BUTTON();
+            };
+            const REMOVE_EVENT_LISTENERS = () => {
+                proxy.removeListener(deploy_proxies.EVENT_STARTED, START_STOP_EVENT_LISTENER);
+                proxy.removeListener(deploy_proxies.EVENT_STOPPED, START_STOP_EVENT_LISTENER);
+            };
+            try {
+                const CMD_NAME = `extension.deploy.reloaded.buttons.tcpProxy${BTN_ID}`;
+                btnCmd = vscode.commands.registerCommand(CMD_NAME, async () => {
+                    try {
+                        await proxy.toggle();
+                    }
+                    catch (e) {
+                        ME.showErrorMessage(ME.t('proxies.errors.couldNotToggleRunningState', proxy.getNameAndDescriptionFor(ME).name, e));
+                    }
+                    finally {
+                        UPDATE_BUTTON();
+                    }
+                });
+                guiBtn = await deploy_helpers.createButton(btn, (b) => {
+                    b.command = CMD_NAME;
+                });
+                defaultColor = guiBtn.color;
+                proxy.on(deploy_proxies.EVENT_STARTED, START_STOP_EVENT_LISTENER);
+                proxy.on(deploy_proxies.EVENT_STOPPED, START_STOP_EVENT_LISTENER);
+                ME._TCP_PROXY_BUTTONS.push({
+                    button: guiBtn,
+                    command: btnCmd,
+                    dispose: function () {
+                        REMOVE_EVENT_LISTENERS();
+                        DISPOSE_BUTTON();
+                    },
+                    proxy: proxy,
+                    proxySettings: settings,
+                    settings: btn,
+                });
+                UPDATE_BUTTON();
+                guiBtn.show();
+            }
+            catch (e) {
+                DISPOSE_BUTTON();
+                throw e;
+            }
+        };
+        for (const P in PROXY_LIST) {
+            const PROXY_ENTRY = PROXY_LIST[P];
+            if (deploy_helpers.filterPlatformItems(PROXY_ENTRY).length < 1) {
+                continue; // not for platform
+            }
+            if (ME.filterConditionalItems(PROXY_ENTRY).length < 1) {
+                continue; // filter does not match
+            }
+            const PORT = parseInt(deploy_helpers.toStringSafe(P));
+            const ADDITIONAL_PROXY_VALUES = [
+                new deploy_values.FunctionValue(() => {
+                    return deploy_helpers.toStringSafe(PORT);
+                }, 'proxyPort'),
+            ];
+            try {
+                const PROXY = deploy_proxies.getTcpProxy(PORT);
+                if (deploy_helpers.toBooleanSafe(PROXY_ENTRY.debug)) {
+                    SETUP_LOGGING(PROXY);
+                }
+                if (!_.isNil(PROXY_ENTRY.destination)) {
+                    const DV = PROXY_ENTRY.destination;
+                    let d;
+                    if (deploy_helpers.isObject(DV)) {
+                        d = DV;
+                    }
+                    else if (_.isNumber(DV)) {
+                        d = {
+                            port: DV,
+                        };
+                    }
+                    else {
+                        let addr;
+                        let port;
+                        const ADDR_AND_PORT = deploy_helpers.toStringSafe(ME.replaceWithValues(DV, ADDITIONAL_PROXY_VALUES));
+                        const SEP = ADDR_AND_PORT.indexOf(':');
+                        if (SEP > -1) {
+                            addr = addr.substr(0, SEP);
+                            port = parseInt(addr.substr(SEP + 1).trim());
+                        }
+                        else {
+                            addr = ADDR_AND_PORT;
+                        }
+                        d = {
+                            address: addr.trim(),
+                            port: port,
+                        };
+                    }
+                    if (deploy_helpers.filterPlatformItems(d).length > 0) {
+                        if (ME.filterConditionalItems(d).length > 0) {
+                            // filters match
+                            ADD_PROXY_FILTER(PROXY, PROXY_ENTRY);
+                            SET_NAME_AND_DESC_RESOLVER(PROXY, PROXY_ENTRY);
+                            ME._TCP_PROXIES.push(PROXY.addDestination(d.address, d.port));
+                        }
+                    }
+                }
+                if (deploy_helpers.toBooleanSafe(PROXY_ENTRY.autoStart, true)) {
+                    if (!PROXY.isRunning) {
+                        await PROXY.start();
+                    }
+                }
+                await SETUP_PROXY_BUTTON(PROXY, PROXY_ENTRY);
+            }
+            catch (e) {
+                ME.showErrorMessage(ME.t('proxies.errors.couldNotRegister', PORT, e));
+            }
+        }
+    }
+    async reloadSwitches() {
+        const ME = this;
+        try {
+            ME.cleanupSwitchButtons();
+            const TARGETS = ME.getSwitchTargets();
+            const CREATE_AND_ADD_BUTTON = async (b, t) => {
+                const CMD_ID = `extension.deploy.reloaded.buttons.changeSwitchOption${nextSwitchButtonId++}`;
+                let newBtn;
+                let newCmd;
+                let newSwitchBtn;
+                try {
+                    newCmd = vscode.commands.registerCommand(CMD_ID, async () => {
+                        try {
+                            await ME.changeSwitchButtonOption(newSwitchBtn.target);
+                        }
+                        catch (e) {
+                            ME.logger
+                                .trace(e, 'workspaces.Workspace.reloadSwitches().CREATE_AND_ADD_BUTTON()');
+                        }
+                    });
+                    newBtn = await deploy_helpers.createButton(b, (nb) => {
+                        nb.command = CMD_ID;
+                        nb.text = undefined;
+                        nb.tooltip = undefined;
+                        nb.show();
+                    });
+                    ME._SWITCH_BUTTONS.push(newSwitchBtn = {
+                        button: newBtn,
+                        command: newCmd,
+                        settings: b,
+                        target: t,
+                    });
+                }
+                catch (e) {
+                    deploy_helpers.tryDispose(newBtn);
+                    deploy_helpers.tryDispose(newCmd);
+                    throw e;
+                }
+            };
+            for (const T of TARGETS) {
+                let btn = T.button;
+                if (deploy_helpers.isNullOrUndefined(btn)) {
+                    btn = true;
+                }
+                if (deploy_helpers.isBool(btn)) {
+                    // boolean
+                    btn = {
+                        enabled: btn
+                    };
+                }
+                else if (!deploy_helpers.isObject(btn)) {
+                    // button text
+                    btn = {
+                        enabled: true,
+                        text: deploy_helpers.toStringSafe(btn)
+                    };
+                }
+                if (!deploy_helpers.toBooleanSafe(btn.enabled, true)) {
+                    continue;
+                }
+                await CREATE_AND_ADD_BUTTON(btn, T);
+            }
+        }
+        catch (e) {
+            ME.logger
+                .trace(e, 'workspaces.Workspace.reloadSwitches()');
+        }
+        finally {
+            await ME.updateSwitchButtons();
+        }
+    }
+    async reloadTargets(cfg) {
+        const ME = this;
+        if (!cfg) {
+            return;
+        }
+        let targets = Enumerable.from(deploy_helpers.asArray(cfg.targets)).where(t => {
+            return 'object' === typeof t;
+        }).select(t => {
+            return deploy_helpers.cloneObject(t);
+        }).toArray();
+        targets = deploy_helpers.filterPlatformItems(targets);
+        let index = -1;
+        targets = Enumerable.from(targets).select(t => {
+            return ME.applyValuesTo(t);
+        }).pipe(t => {
+            ++index;
+            t['__index'] = index;
+            t['__workspace'] = ME;
+            // can only be defined AFTER '__workspace'!
+            t['__id'] = ME.getTargetId(t);
+            t['__searchValue'] = deploy_helpers.normalizeString(deploy_targets.getTargetName(t));
+            t['__cache'] = new deploy_helpers.MemoryCache();
+        }).toArray();
+        ME._targets = targets;
+    }
+    /**
+     * Handles a file for "remove on change" feature.
+     *
+     * @param {string} file The file to check.
+     */
+    async removeOnChange(file) {
+        if (this.isRemoveOnChangeFreezed) {
+            return; // freezed
+        }
+        if (!deploy_helpers.toBooleanSafe(this.config.removeOnChange, true)) {
+            return; // deactivated
+        }
+        if (!deploy_helpers.isEmptyString(file)) {
+            if (!this.isFileIgnored(file)) {
+                await deploy_helpers.applyFuncFor(deploy_packages.removeOnChange, this)(file);
+            }
+        }
+    }
+    /**
+     * Handles a value as string and replaces placeholders.
+     *
+     * @param {any} val The value to parse.
+     * @param {deploy_values.Value|deploy_values.Value[]|boolean} [additionalValuesOrThrowOnError] Additional values or if less than 3 arguments are defined: it
+     *                                                                                             does the work of 'throwOnError'
+     * @param {boolean} [throwOnError] Throw on error or not.
+     *
+     * @return {string} The parsed value.
+     */
+    replaceWithValues(val, additionalValuesOrThrowOnError = true, throwOnError = true) {
+        if (deploy_helpers.isObject(additionalValuesOrThrowOnError) ||
+            Array.isArray(additionalValuesOrThrowOnError)) {
+            additionalValuesOrThrowOnError = deploy_helpers.asArray(additionalValuesOrThrowOnError);
+            throwOnError = deploy_helpers.toBooleanSafe(throwOnError, true);
+        }
+        else {
+            throwOnError = deploy_helpers.toBooleanSafe(additionalValuesOrThrowOnError, true) &&
+                deploy_helpers.toBooleanSafe(throwOnError, true);
+            additionalValuesOrThrowOnError = [];
+        }
+        return deploy_values.replaceWithValues(this.getValues()
+            .concat(additionalValuesOrThrowOnError), val, throwOnError);
+    }
+    /**
+     * Gets the root path of that workspace.
+     */
+    get rootPath() {
+        let rp = this._rootPath;
+        if (false === rp) {
+            rp = this.folder.uri.fsPath;
+        }
+        if (!Path.isAbsolute(rp)) {
+            rp = Path.join(this.folder.uri.fsPath, rp);
+        }
+        return Path.resolve(rp);
+    }
+    /**
+     * Gets the repository of selected switches.
+     */
+    get selectedSwitches() {
+        return this._selectedSwitches;
+    }
+    /**
+     * Sets a timeout for a "finished button".
+     *
+     * @param {deploy_contracts.DeployOperation} operation The type of deploy operation.
+     * @param {Function} callback The callback.
+     * @param {number} [ms] The custom number of milliseconds.
+     *
+     * @return {boolean} Operation was successful or not.
+     */
+    setTimeoutForFinishedButton(operation, callback, ms = 60000) {
+        return deploy_helpers.applyFuncFor(deploy_buttons.setTimeoutForFinishedButton, this)(operation, callback, ms);
+    }
+    /**
+     * Gets the full path of a settings folder.
+     */
+    get settingFolder() {
+        return Path.resolve(Path.dirname(this.configSource.resource.fsPath));
+    }
+    setupLogger() {
+        // console
+        this._LOGGER.addAction((ctx) => {
+            deploy_log.CONSOLE
+                .log(ctx.type, ctx.message, ctx.tag);
+        });
+        //TODO: add actions from config
+    }
+    setupOutputChannel() {
+        //TODO: add writers from config
+    }
+    /**
+     * Promise (and safe) version of 'vscode.window.showErrorMessage()' function.
+     *
+     * @param {any} msg The message to display.
+     * @param {TItem[]} [items] The optional items.
+     *
+     * @return {Promise<TItem>} The promise with the selected item.
+     */
+    async showErrorMessage(msg, ...items) {
+        try {
+            msg = deploy_helpers.toStringSafe(msg);
+            return await vscode.window.showErrorMessage
+                .apply(null, [`${this.getPopupPrefix()}${msg}`.trim()].concat(items));
+        }
+        catch (e) {
+            this.logger
+                .trace(e, 'workspaces.Workspace.showErrorMessage()');
+        }
+    }
+    /**
+     * Shows a "finished button".
+     *
+     * @param {deploy_contracts.DeployOperation} operation The type of deploy operation.
+     *
+     * @return {boolean} Operation was successful or not.
+     */
+    showFinishedButton(operation) {
+        const CFG = this.config;
+        if (!CFG) {
+            return;
+        }
+        const BTN = this.getFinishedButton(operation);
+        if (BTN) {
+            const SHOW_STATUS_WHEN_FINISHED = CFG.showStatusWhenFinished;
+            let showButton = !_.isUndefined(SHOW_STATUS_WHEN_FINISHED);
+            let hideAfter;
+            if (showButton) {
+                if (null !== SHOW_STATUS_WHEN_FINISHED) {
+                    if (_.isBoolean(SHOW_STATUS_WHEN_FINISHED)) {
+                        showButton = SHOW_STATUS_WHEN_FINISHED;
+                        hideAfter = 60000;
+                    }
+                    else {
+                        hideAfter = parseInt(deploy_helpers.toStringSafe(SHOW_STATUS_WHEN_FINISHED).trim());
+                    }
+                }
+            }
+            if (showButton) {
+                BTN.show();
+                if (!isNaN(hideAfter)) {
+                    this.setTimeoutForFinishedButton(operation, (b) => b.hide(), hideAfter);
+                }
+            }
+            return true;
+        }
+        return false;
+    }
+    /**
+     * Promise (and safe) version of 'vscode.window.showErrorMessage()' function.
+     *
+     * @param {any} msg The message to display.
+     * @param {TItem[]} [items] The optional items.
+     *
+     * @return {Promise<TItem>} The promise with the selected item.
+     */
+    async showInformationMessage(msg, ...items) {
+        try {
+            msg = deploy_helpers.toStringSafe(msg);
+            return await vscode.window.showInformationMessage
+                .apply(null, [`${this.getPopupPrefix()}${msg}`.trim()].concat(items));
+        }
+        catch (e) {
+            this.logger
+                .trace(e, 'workspaces.Workspace.showInformationMessage()');
+        }
+    }
+    /**
+     * Shows a quick pick for a list of targets of that workspace.
+     *
+     * @param {vscode.QuickPickOptions} [opts] Custom options for the quick picks.
+     *
+     * @return {Promise<Target|false>} The promise that contains the selected target (if selected)
+     *                                 or (false) if no target is available.
+     */
+    async showTargetQuickPick(opts) {
+        const DEFAULT_OPTS = {
+            placeHolder: this.t('workspaces.selectTarget', this.name)
+        };
+        return await deploy_targets.showTargetQuickPick(this.context.extension, this.getTargets(), MergeDeep(DEFAULT_OPTS, opts));
+    }
+    /**
+     * Promise (and safe) version of 'vscode.window.showWarningMessage()' function.
+     *
+     * @param {any} msg The message to display.
+     * @param {TItem[]} [items] The optional items.
+     *
+     * @return {Promise<TItem>} The promise with the selected item.
+     */
+    async showWarningMessage(msg, ...items) {
+        try {
+            msg = deploy_helpers.toStringSafe(msg);
+            return await vscode.window.showWarningMessage
+                .apply(null, [`${this.getPopupPrefix()}${msg}`.trim()].concat(items));
+        }
+        catch (e) {
+            this.logger
+                .trace(e, 'workspaces.Workspace.showWarningMessage()');
+        }
+    }
+    /**
+     * Starts a deployment of files from the file list of an active document.
+     *
+     * @param {Function} deployAction The deploy action.
+     *
+     * @return {Promise<boolean>} The promise that indicates if action has been invoked or not.
+     */
+    async startDeploymentOfFilesFromActiveDocument(deployAction) {
+        const ME = this;
+        const FILES_TO_DEPLOY = await ME.getFileListFromActiveDocumentForDeployment();
+        if (!FILES_TO_DEPLOY) {
+            return false;
+        }
+        const TARGET = await deploy_targets.showTargetQuickPick(ME.context.extension, ME.getTargets(), {
+            placeHolder: ME.t('targets.selectTarget'),
+        });
+        if (!TARGET) {
+            return false;
+        }
+        if (deployAction) {
+            await Promise.resolve(deployAction(TARGET, FILES_TO_DEPLOY));
+        }
+        return true;
+    }
+    /**
+     * Gets the start time.
+     */
+    get startTime() {
+        return this._startTime;
+    }
+    /**
+     * Gets the states for 'sync when open'.
+     */
+    get syncWhenOpenStates() {
+        return this.workspaceSessionState['sync']['whenOpen']['states'];
+    }
+    /** @inheritdoc */
+    t(key, ...args) {
+        const MY_ARGS = deploy_helpers.toArray(arguments);
+        const ARGS = [
+            this._translator,
+            () => {
+                // global translations are the fallback
+                return i18.t
+                    .apply(null, MY_ARGS);
+            }
+        ].concat(MY_ARGS);
+        return i18.translateWith
+            .apply(null, ARGS);
+    }
+    /**
+     * Extracts the name and (relative) path from a file.
+     *
+     * @param {string} file The file (path).
+     *
+     * @return {deploy_contracts.WithNameAndPath|false} The extracted data or (false) if file path is invalid.
+     */
+    toNameAndPath(file) {
+        if (deploy_helpers.isEmptyString(file)) {
+            return;
+        }
+        let workspaceDir = this.rootPath;
+        workspaceDir = deploy_helpers.replaceAllStrings(workspaceDir, Path.sep, '/');
+        if (!Path.isAbsolute(file)) {
+            file = Path.join(workspaceDir, file);
+        }
+        file = Path.resolve(file);
+        file = deploy_helpers.replaceAllStrings(file, Path.sep, '/');
+        if (!file.startsWith(workspaceDir)) {
+            return false;
+        }
+        const NAME = Path.basename(file);
+        let relativePath = Path.dirname(file).substr(workspaceDir.length);
+        while (relativePath.startsWith('/')) {
+            relativePath = relativePath.substr(1);
+        }
+        while (relativePath.endsWith('/')) {
+            relativePath = relativePath.substr(0, relativePath.length - 1);
+        }
+        if ('' === relativePath.trim()) {
+            relativePath = '';
+        }
+        return {
+            name: NAME,
+            path: relativePath,
+        };
+    }
+    /**
+     * Converts to a full path.
+     *
+     * @param {string} path The path to convert.
+     *
+     * @return {string|false} The pull path or (false) if 'path' could not be converted.
+     */
+    toFullPath(path) {
+        const RELATIVE_PATH = this.toRelativePath(path);
+        if (false === RELATIVE_PATH) {
+            return false;
+        }
+        return Path.resolve(Path.join(this.rootPath, RELATIVE_PATH));
+    }
+    /**
+     * Converts to a relative path.
+     *
+     * @param {string} path The path to convert.
+     *
+     * @return {string|false} The relative path or (false) if 'path' could not be converted.
+     */
+    toRelativePath(path) {
+        path = deploy_helpers.toStringSafe(path);
+        path = deploy_helpers.replaceAllStrings(Path.resolve(path), Path.sep, '/');
+        const WORKSPACE_DIR = deploy_helpers.replaceAllStrings(this.rootPath, Path.sep, '/');
+        if (!path.startsWith(WORKSPACE_DIR)) {
+            return false;
+        }
+        let relativePath = path.substr(WORKSPACE_DIR.length);
+        while (relativePath.startsWith('/')) {
+            relativePath = relativePath.substr(1);
+        }
+        while (relativePath.endsWith('/')) {
+            relativePath = relativePath.substr(0, relativePath.length - 1);
+        }
+        return relativePath;
+    }
+    updateAutoDeployButtons() {
+        const ME = this;
+        if (ME.isInFinalizeState) {
+            return;
+        }
+        const STATE = ME.workspaceSessionState;
+        if (!STATE) {
+            return;
+        }
+        const BUTTONS = STATE['auto']['buttons'];
+        if (!BUTTONS) {
+            return;
+        }
+        const UPDATE_BTN = (btn, isFreezed, lang) => {
+            if (!btn) {
+                return;
+            }
+            try {
+                const IS_FREEZED = isFreezed();
+                const ICON = IS_FREEZED ? `💤` : `▶️`;
+                const LANG_KEY_TEXT = `${lang}.button.text`;
+                const LANG_KEY_TOOLTIP = `${lang}.button.tooltip`;
+                let color = deploy_helpers.normalizeString(btn.settings.color);
+                if ('' === color) {
+                    color = new vscode.ThemeColor("button.foreground");
+                }
+                let text = ME.replaceWithValues(btn.settings.text);
+                if (deploy_helpers.isEmptyString(text)) {
+                    text = ME.t(LANG_KEY_TEXT);
+                }
+                btn.button.text = `${ICON} ${text}`;
+                btn.button.tooltip = ME.replaceWithValues(btn.settings.tooltip);
+                if (deploy_helpers.isEmptyString(btn.button.tooltip)) {
+                    btn.button.tooltip = ME.t(LANG_KEY_TOOLTIP);
+                }
+                btn.button.color = color;
+            }
+            catch (e) {
+                deploy_log.CONSOLE
+                    .trace(e, 'workspaces.Workspace.updateAutoDeployButtons(2)');
+            }
+        };
+        UPDATE_BTN(BUTTONS[KEY_AUTO_BTN_DEPLOY_ON_CHANGE], () => ME.isDeployOnChangeFreezed, 'deploy.onChange');
+        UPDATE_BTN(BUTTONS[KEY_AUTO_BTN_DEPLOY_ON_SAVE], () => ME.isDeployOnSaveFreezed, 'deploy.onSave');
+        UPDATE_BTN(BUTTONS[KEY_AUTO_BTN_REMOVE_ON_CHANGE], () => ME.isRemoveOnChangeFreezed, 'DELETE.onChange');
+    }
+    async updateSwitchButtons() {
+        const ME = this;
+        try {
+            for (const SB of ME._SWITCH_BUTTONS) {
+                const SWITCH_NAME = deploy_targets.getTargetName(SB.target);
+                const OPTION = ME.getSelectedSwitchOption(SB.target);
+                const ADDITIONAL_VALUES = [
+                    // switch
+                    new deploy_values.FunctionValue(() => {
+                        return SWITCH_NAME;
+                    }, 'switch'),
+                    // switch option
+                    new deploy_values.FunctionValue(() => {
+                        return false === OPTION ? undefined
+                            : ME.getSwitchOptionName(OPTION);
+                    }, 'switchOption'),
+                ];
+                let color = deploy_helpers.normalizeString(ME.replaceWithValues(SB.settings.color, ADDITIONAL_VALUES));
+                if ('' === color) {
+                    color = false === OPTION ? '#ffff00' : '#ffff00';
+                }
+                let text = deploy_helpers.toStringSafe(ME.replaceWithValues(SB.settings.text, ADDITIONAL_VALUES)).trim();
+                if ('' === text) {
+                    // default text
+                    text = i18.t('plugins.switch.button.text', SWITCH_NAME);
+                }
+                let tooltip = deploy_helpers.toStringSafe(ME.replaceWithValues(SB.settings.tooltip, ADDITIONAL_VALUES)).trim();
+                if ('' === tooltip) {
+                    // default tooltip
+                    if (false === OPTION) {
+                        tooltip = i18.t('plugins.switch.button.tooltip', i18.t('plugins.switch.noOptionSelected'));
+                    }
+                    else {
+                        tooltip = i18.t('plugins.switch.button.tooltip', ME.getSwitchOptionName(OPTION));
+                    }
+                }
+                SB.button.text = text;
+                SB.button.tooltip = tooltip;
+            }
+        }
+        catch (e) {
+            ME.logger
+                .trace(e, 'workspaces.Workspace.updateSwitchButtons()');
+        }
+    }
+    /**
+     * Gets the current session data storage.
+     */
+    get workspaceSessionState() {
+        return this._workspaceSessionState;
+    }
+}
+exports.Workspace = Workspace;
+/**
+ * A memento of a workspace.
+ */
+class WorkspaceMemento {
+    /**
+     * Initializes a new instance of that class.
+     *
+     * @param {Workspace} workspace The underlying workspace.
+     * @param {vscode.Memento} _MEMENTO The memento to use.
+     */
+    constructor(workspace, _MEMENTO) {
+        this.workspace = workspace;
+        this._MEMENTO = _MEMENTO;
+    }
+    /** @inheritdoc */
+    get(key, defaultValue) {
+        return this._MEMENTO.get(this.normalizeKey(key), defaultValue);
+    }
+    normalizeKey(key) {
+        return `vscdr${deploy_helpers.toStringSafe(key)}`;
+    }
+    /** @inheritdoc */
+    async update(key, value) {
+        await this._MEMENTO.update(this.normalizeKey(key), value);
+    }
+}
+exports.WorkspaceMemento = WorkspaceMemento;
+/**
+ * Returns a list of active workspaces.
+ *
+ * @return {Workspace[]} The list of active workspaces.
+ */
+function getActiveWorkspaces() {
+    const PROVIDER = activeWorkspaceProvider;
+    if (PROVIDER) {
+        return sortWorkspaces(PROVIDER());
+    }
+}
+exports.getActiveWorkspaces = getActiveWorkspaces;
+/**
+ * Returns a list of all workspaces.
+ *
+ * @return {Workspace[]} The list of all workspaces.
+ */
+function getAllWorkspaces() {
+    const PROVIDER = allWorkspacesProvider;
+    if (PROVIDER) {
+        return sortWorkspaces(PROVIDER());
+    }
+}
+exports.getAllWorkspaces = getAllWorkspaces;
+/**
+ * Checks if a target is a switch or not.
+ *
+ * @param {deploy_targets.Target} target The target to check.
+ *
+ * @return {boolean} Is switch or not.
+ */
+function isSwitchTarget(target) {
+    if (target) {
+        return [
+            'switch'
+        ].indexOf(deploy_helpers.normalizeString(target.type)) > -1;
+    }
+    return false;
+}
+exports.isSwitchTarget = isSwitchTarget;
+/**
+ * Resets the workspace usage statistics.
+ *
+ * @param {vscode.ExtensionContext} context The extension context.
+ */
+function resetWorkspaceUsage(context) {
+    context.workspaceState.update(KEY_WORKSPACE_USAGE, undefined).then(() => {
+    }, (err) => {
+        deploy_log.CONSOLE
+            .trace(err, 'workspaces.resetWorkspaceUsage()');
+    });
+}
+exports.resetWorkspaceUsage = resetWorkspaceUsage;
+/**
+ * Sets the global function for providing the list of active workspaces.
+ *
+ * @param {WorkspaceProvider} newProvider The new function.
+ */
+function setActiveWorkspaceProvider(newProvider) {
+    activeWorkspaceProvider = newProvider;
+}
+exports.setActiveWorkspaceProvider = setActiveWorkspaceProvider;
+/**
+ * Sets the global function for providing the list of all workspaces.
+ *
+ * @param {WorkspaceProvider} newProvider The new function.
+ */
+function setAllWorkspacesProvider(newProvider) {
+    allWorkspacesProvider = newProvider;
+}
+exports.setAllWorkspacesProvider = setAllWorkspacesProvider;
+/**
+ * Shows a quick pick for a list of packages.
+ *
+ * @param {vscode.ExtensionContext} context The extension context.
+ * @param {Workspace|Workspace[]} workspaces One or more workspaces.
+ * @param {vscode.QuickPickOptions} [opts] Custom options for the quick picks.
+ *
+ * @return {Promise<Workspace|false>} The promise that contains the selected workspace (if selected)
+ *                                    or (false) if no package is available.
+ */
+async function showWorkspaceQuickPick(context, workspaces, opts) {
+    const QUICK_PICKS = deploy_helpers.asArray(workspaces).map(ws => {
+        return {
+            action: () => {
+                return ws;
+            },
+            label: '$(file-directory)  ' + ws.name,
+            description: '',
+            detail: ws.rootPath,
+            state: Crypto.createHash('sha256')
+                .update(new Buffer(deploy_helpers.toStringSafe(ws.id), 'utf8'))
+                .digest('hex'),
+        };
+    });
+    if (QUICK_PICKS.length < 1) {
+        deploy_helpers.showWarningMessage(i18.t('workspaces.noneFound'));
+        return false;
+    }
+    let selectedItem;
+    if (1 === QUICK_PICKS.length) {
+        selectedItem = QUICK_PICKS[0];
+    }
+    else {
+        selectedItem = await vscode.window.showQuickPick(deploy_gui.sortQuickPicksByUsage(QUICK_PICKS, context.globalState, KEY_WORKSPACE_USAGE, (i) => {
+            // remove icon
+            return i.label
+                .substr(i.label.indexOf(' '))
+                .trim();
+        }), opts);
+    }
+    if (selectedItem) {
+        return selectedItem.action();
+    }
+}
+exports.showWorkspaceQuickPick = showWorkspaceQuickPick;
+function sortWorkspaces(workspaces) {
+    return deploy_helpers.asArray(workspaces).sort((x, y) => {
+        return deploy_helpers.compareValuesBy(x, y, ws => {
+            return ws.folder.index;
+        });
+    });
+}
+//# sourceMappingURL=workspaces.js.map

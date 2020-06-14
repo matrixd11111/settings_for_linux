@@ -1,0 +1,180 @@
+/* ;) */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
+}
+
+button:focus {
+    outline: none;
+}
+
+.unselectable {
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.ms_hidden {
+    display: none !important;
+}
+
+.ms_content_wrapper {
+    margin: 0 auto;
+    padding: 0 12px;
+    width: 1024px;
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-corner {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    opacity: 0.7;
+}
+
+.default_scrollbar::-webkit-scrollbar {
+    background: initial;
+}
+
+.default_scrollbar::-webkit-scrollbar-track {
+    background: initial;
+}
+
+.default_scrollbar::-webkit-scrollbar-corner {
+    background: initial;
+}
+
+.default_scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.4) !important;
+    border: initial;
+}
+
+.dark_scrollbar::-webkit-scrollbar {
+    background: #222;
+}
+
+.dark_scrollbar::-webkit-scrollbar-track {
+    background: #222;
+}
+
+.dark_scrollbar::-webkit-scrollbar-corner {
+    background: #222;
+}
+
+.dark_scrollbar::-webkit-scrollbar-thumb {
+    background: #333;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* CSS tables */
+.ms_table {
+    display: table;
+    border-collapse: collapse;
+}
+
+.ms_tr {
+    display: table-row;
+}
+
+.ms_td {
+    display: table-cell;
+    position: relative;
+}
+
+.ms_td_vert_center {
+    vertical-align: middle;
+}
+
+.ms_width_filler {
+    width: 100%
+}
+
+.ms_height_filler {
+    height: 100%
+}
+
+/* Flexbox */
+.ms_flex {
+    display: flex;
+}
+
+.ms_flex_column {
+    flex-direction: column;
+}
+
+.ms_flex_horiz_center {
+    justify-content: center;
+}
+
+.ms_flex_vert_center {
+    align-items: center;
+}
+
+.ms_flex_child_center {
+    align-self: center;
+}
+
+/* Top & bottom panels */
+.ms_panel_separator {
+    margin-left: 10px;
+    height: 100%;
+}
+
+.ms_panel_wrapper {
+    position: fixed;
+    left: 0;
+    z-index: 200;
+    padding: 0 0.5%;
+    width: 100%;
+    min-width: inherit;
+    box-sizing: border-box;
+}
+
+.ms_panel_content {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+/* Image in containers */
+.wide {
+    height: 100%;
+    width: auto;
+}
+
+.tall {
+    width: 100%;
+    height: auto;
+}
+
+/* Others */
+.tooltip .tooltip-inner {
+    font-size: 12px;
+    text-align: left;
+}
+
+.alert {
+    position: absolute;
+    width: 50%;
+    top: 15px;
+    left: 25%;
+    min-width: 450px;
+
+}

@@ -1,0 +1,1 @@
+[2020-06-07 23:16:26.147] [renderer1] [warning] UNRESPONSIVE extension host, 'mkloubert.vscode-deploy-reloaded' took 99% of 7030.379ms, saved PROFILE here: '/tmp/exthost-e0bd91.cpuprofile' [{"id":"gc","total":39881,"percentage":1},{"id":"mkloubert.vscode-deploy-reloaded","total":6989959,"percentage":99}]

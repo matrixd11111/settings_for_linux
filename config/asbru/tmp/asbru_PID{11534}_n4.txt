@@ -1,0 +1,382 @@
+root@192.168.2.10's password: 
+Last login: Thu Jun 11 15:19:51 2020 from 192.168.246.111
+>]0;root@ENGINE-0: /root[root@ENGINE-0 ~]# ssh r[KENGINE-1
+root@engine-1's password: 
+Last login: Thu Jun 11 15:21:21 2020 from 10.0.0.1
+>]0;root@ENGINE-1: /root[root@ENGINE-1 ~]# tail -f /var/lof[Kg/python.log
+FileNotFoundError: [Errno 2] No such file or directory: '/etc/net/ifaces/enp5s0f0/iplink'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/engine/bin/LIB/controller.py", line 28, in controller
+    out = actions[data['action']](data)
+  File "/var/www/engine/bin/NETWORK/controllers/phys.py", line 79, in edit_interface
+    raise AeroException({msg})
+LIB.a_functions.AeroException: {'Не удалось настроить интерфейс enp5s0f0. Желаемый адрес:192.168.2.180/255.255.255.0, MTU: 1500 [FAIL]'}
+
+2020-06-11 16:03:52,625 - Python3.5 - ERROR: 
+ARGS: {"mtu": "1500", "state": "DOWN", "mac": "00:24:ec:f0:a5:da", "ip": "192.168.2.180", "mask": "255.255.255.0", "name": "enp5s0f0", "engine": "ENGINE-1", "slot": "0000:05:00.0", "max_speed": "1Gbit/s", "current_speed": "-1", "duplex": "unknown", "pip": "192.168.2.182", "mac_adr": "00:24:ec:f0:a5:da", "action": "edit_interface"}
+Traceback (most recent call last):
+  File "/var/www/engine/bin/NETWORK/controllers/phys.py", line 70, in edit_interface
+    (file_interface / 'iplink').write_text('mtu {}'.format(mtu))
+  File "/usr/lib64/python3.8/pathlib.py", line 1248, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors) as f:
+  File "/usr/lib64/python3.8/pathlib.py", line 1215, in open
+    return io.open(self, mode, buffering, encoding, errors, newline,
+  File "/usr/lib64/python3.8/pathlib.py", line 1071, in _opener
+    return self._accessor.open(self, flags, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/etc/net/ifaces/enp5s0f0/iplink'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/engine/bin/LIB/controller.py", line 28, in controller
+    out = actions[data['action']](data)
+  File "/var/www/engine/bin/NETWORK/controllers/phys.py", line 79, in edit_interface
+    raise AeroException({msg})
+LIB.a_functions.AeroException: {'Не удалось настроить интерфейс enp5s0f0. Желаемый адрес:192.168.2.182/255.255.255.0, MTU: 1500 [FAIL]'}
+
+2020-06-11 16:05:35,036 - Python3.5 - ERROR: 
+ARGS: {"mtu": "1500", "state": "DOWN", "mac": "00:24:ec:f0:a5:da", "ip": "192.168.2.182", "mask": "255.255.255.0", "name": "enp5s0f0", "engine": "ENGINE-1", "slot": "0000:05:00.0", "max_speed": "1Gbit/s", "current_speed": "-1", "duplex": "unknown", "pip": "192.168.2.181", "mac_adr": "00:24:ec:f0:a5:da", "action": "edit_interface"}
+Traceback (most recent call last):
+  File "/var/www/engine/bin/NETWORK/controllers/phys.py", line 70, in edit_interface
+    (file_interface / 'iplink').write_text('mtu {}'.format(mtu))
+  File "/usr/lib64/python3.8/pathlib.py", line 1248, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors) as f:
+  File "/usr/lib64/python3.8/pathlib.py", line 1215, in open
+    return io.open(self, mode, buffering, encoding, errors, newline,
+  File "/usr/lib64/python3.8/pathlib.py", line 1071, in _opener
+    return self._accessor.open(self, flags, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/etc/net/ifaces/enp5s0f0/iplink'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/engine/bin/LIB/controller.py", line 28, in controller
+    out = actions[data['action']](data)
+  File "/var/www/engine/bin/NETWORK/controllers/phys.py", line 79, in edit_interface
+    raise AeroException({msg})
+LIB.a_functions.AeroException: {'Не удалось настроить интерфейс enp5s0f0. Желаемый адрес:192.168.2.181/255.255.255.0, MTU: 1500 [FAIL]'}
+
+2020-06-11 16:08:25,439 - Python3.5 - ERROR: 
+ARGS: {"mtu": "1500", "state": "DOWN", "mac": "00:24:ec:f0:a5:da", "ip": "192.168.2.181", "mask": "255.255.255.0", "name": "enp5s0f0", "engine": "ENGINE-1", "slot": "0000:05:00.0", "max_speed": "1Gbit/s", "current_speed": "-1", "duplex": "unknown", "pip": "192.168.2.182", "mac_adr": "00:24:ec:f0:a5:da", "action": "edit_interface"}
+Traceback (most recent call last):
+  File "/var/www/engine/bin/NETWORK/controllers/phys.py", line 70, in edit_interface
+    (file_interface / 'iplink').write_text('mtu {}'.format(mtu))
+  File "/usr/lib64/python3.8/pathlib.py", line 1248, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors) as f:
+  File "/usr/lib64/python3.8/pathlib.py", line 1215, in open
+    return io.open(self, mode, buffering, encoding, errors, newline,
+  File "/usr/lib64/python3.8/pathlib.py", line 1071, in _opener
+    return self._accessor.open(self, flags, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/etc/net/ifaces/enp5s0f0/iplink'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/engine/bin/LIB/controller.py", line 28, in controller
+    out = actions[data['action']](data)
+  File "/var/www/engine/bin/NETWORK/controllers/phys.py", line 79, in edit_interface
+    raise AeroException({msg})
+LIB.a_functions.AeroException: {'Не удалось настроить интерфейс enp5s0f0. Желаемый адрес:192.168.2.182/255.255.255.0, MTU: 1500 [FAIL]'}
+^C
+]0;root@ENGINE-1: /root[root@ENGINE-1 ~]# cd [K[K[Kls /ne[K[Ketc/in[K[Knet/ifaces/enp1
+enp14s0/ enp15s0/ 
+[root@ENGINE-1 ~]# ls /etc/net/ifaces/enp1[K[K[K[K[K/
+default/ enp14s0/ enp15s0/ lo/      unknown/ 
+[root@ENGINE-1 ~]# ls /etc/net/ifaces/
+[0m[01;34mdefault[0m  [01;34menp14s0[0m  [01;34menp15s0[0m  [01;34mlo[0m  [01;34munknown[0m
+]0;root@ENGINE-1: /root[root@ENGINE-1 ~]# lsb_release -a
+-bash: lsb_release: command not found
+]0;root@ENGINE-1: /root[root@ENGINE-1 ~]# cat /etc/lsb_release
+cat: /etc/lsb_release: No such file or directory
+]0;root@ENGINE-1: /root[root@ENGINE-1 ~]# cat /etc/*version
+cat: '/etc/*version': No such file or directory
+]0;root@ENGINE-1: /root[root@ENGINE-1 ~]# cat /proc/version 
+Linux version 4.19.102-std-def-alt1 (builder@localhost.localdomain) (gcc version 8.3.1 20190507 (ALT p9 8.3.1-alt5) (GCC)) #1 SMP Wed Feb 5 21:23:53 UTC 2020
+]0;root@ENGINE-1: /root[root@ENGINE-1 ~]# e[Kls /etc//[Knet/ifaces/
+[0m[01;34mdefault[0m  [01;34menp14s0[0m  [01;34menp15s0[0m  [01;34mlo[0m  [01;34munknown[0m
+]0;root@ENGINE-1: /root[root@ENGINE-1 ~]# ls /etv/netw[K[K[K[K[K[Kc//[Knetw[K
+net/       netconfig  
+[root@ENGINE-1 ~]# ls /etc/netconfig 
+/etc/netconfig
+]0;root@ENGINE-1: /root[root@ENGINE-1 ~]# ls /etc/netconfig [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P s y s/ c l a ss/ n e t/ 
+bond0/           bonding_masters  enp14s0/         enp15s0/         enp5s0f0/        enp5s0f1/        enp5s0f2/        enp5s0f3/        ens11f0/         ens11f1/         lo/              
+[root@ENGINE-1 ~]# ls /sys/class/net/ D [1P D [1P D [1P etc/net/ifaces/[1Pcat /proc/version [1Petc/*versionlsb_release[6Plsb_release -a /etc/net/ifaces/tail -f /var/log/python.log[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Creboot[Ktail -f /var/log/python.log
+FileNotFoundError: [Errno 2] No such file or directory: '/etc/net/ifaces/enp5s0f0/ipv4address'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/engine/bin/LIB/controller.py", line 28, in controller
+    out = actions[data['action']](data)
+  File "/var/www/engine/bin/NETWORK/controllers/phys.py", line 111, in delete_phys_interface
+    raise AeroException("Ошибка удаления интерфейса. [FAIL]")
+LIB.a_functions.AeroException: Ошибка удаления интерфейса. [FAIL]
+
+2020-06-11 16:55:58,846 - Python3.5 - ERROR: 
+ARGS: {"mtu":"1500","state":"DOWN","mac":"00:24:ec:f0:a5:da","ip":null,"mask":"255.255.255.0","name":"enp5s0f0","engine":"ENGINE-1","hostname":"ENGINE-1","slot":"0000:05:00.0","max_speed":"1Gbit\/s","current_speed":"-1","duplex":"none","pip":"192.168.2.180","mac_adr":"00:24:ec:f0:a5:da","action":"edit_interface"}
+Traceback (most recent call last):
+  File "/var/www/engine/bin/NETWORK/controllers/phys.py", line 70, in edit_interface
+    (file_interface / 'iplink').write_text('mtu {}'.format(mtu))
+  File "/usr/lib64/python3.8/pathlib.py", line 1248, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors) as f:
+  File "/usr/lib64/python3.8/pathlib.py", line 1215, in open
+    return io.open(self, mode, buffering, encoding, errors, newline,
+  File "/usr/lib64/python3.8/pathlib.py", line 1071, in _opener
+    return self._accessor.open(self, flags, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/etc/net/ifaces/enp5s0f0/iplink'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/engine/bin/LIB/controller.py", line 28, in controller
+    out = actions[data['action']](data)
+  File "/var/www/engine/bin/NETWORK/controllers/phys.py", line 79, in edit_interface
+    raise AeroException({msg})
+LIB.a_functions.AeroException: {'Не удалось настроить интерфейс enp5s0f0. Желаемый адрес:192.168.2.180/255.255.255.0, MTU: 1500 [FAIL]'}
+^C
+]0;root@ENGINE-1: /root[root@ENGINE-1 ~]# ls /var/[K[K[K[Ksys/class/net/
+bond0/           bonding_masters  enp14s0/         enp15s0/         enp5s0f0/        enp5s0f1/        enp5s0f2/        enp5s0f3/        ens11f0/         ens11f1/         lo/              
+[root@ENGINE-1 ~]# ls /sys/class/net/enp5s0f0
+addr_assign_type  addr_len   carrier          carrier_down_count  [0m[01;36mdevice[0m  dev_port  duplex  gro_flush_timeout  ifindex  link_mode  name_assign_type  operstate     phys_port_name  [01;34mpower[0m       [01;34mqueues[0m  [01;34mstatistics[0m  tx_queue_len  uevent
+address           broadcast  carrier_changes  carrier_up_count    dev_id  dormant   flags   ifalias            iflink   mtu        netdev_group      phys_port_id  phys_switch_id  proto_down  speed   [01;36msubsystem[0m   type
+]0;root@ENGINE-1: /root[root@ENGINE-1 ~]# ls /sys/class/net/enp5s0f0[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctail -f /var/log/python.log[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pls /sys/class/net/ tail -f /var/log/python.log
+FileNotFoundError: [Errno 2] No such file or directory: '/etc/net/ifaces/enp5s0f0/iplink'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/engine/bin/LIB/controller.py", line 28, in controller
+    out = actions[data['action']](data)
+  File "/var/www/engine/bin/NETWORK/controllers/phys.py", line 79, in edit_interface
+    raise AeroException({msg})
+LIB.a_functions.AeroException: {'Не удалось настроить интерфейс enp5s0f0. Желаемый адрес:192.168.2.181/255.255.255.0, MTU: 1500 [FAIL]'}
+
+2020-06-11 17:19:01,057 - Python3.5 - ERROR: 
+ARGS: {"mtu": "1500", "state": "UP", "mac": "00:24:ec:f0:a5:da", "ip": "192.168.2.181", "mask": "24", "name": "enp5s0f0", "engine": "ENGINE-1", "slot": "0000:05:00.0", "max_speed": "1Gbit/s", "current_speed": "1Gbit/s", "duplex": "full", "action": "delete_phys_interface"}
+Traceback (most recent call last):
+  File "/var/www/engine/bin/NETWORK/controllers/phys.py", line 105, in delete_phys_interface
+    Path("{}/{}/ipv4address".format(STATIC_ROUTE, interface) if IS_ALT else "{}/{}/ipv4address".format(NETWORK_UBUNTU_PATH, interface)).unlink()
+  File "/usr/lib64/python3.8/pathlib.py", line 1318, in unlink
+    self._accessor.unlink(self)
+FileNotFoundError: [Errno 2] No such file or directory: '/etc/net/ifaces/enp5s0f0/ipv4address'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/engine/bin/LIB/controller.py", line 28, in controller
+    out = actions[data['action']](data)
+  File "/var/www/engine/bin/NETWORK/controllers/phys.py", line 111, in delete_phys_interface
+    raise AeroException("Ошибка удаления интерфейса. [FAIL]")
+LIB.a_functions.AeroException: Ошибка удаления интерфейса. [FAIL]
+
+2020-06-11 17:19:21,603 - Python3.5 - ERROR: 
+ARGS: {"mtu": "1500", "state": "DOWN", "mac": "00:24:ec:f0:a5:da", "ip": null, "mask": "255.255.255.0", "name": "enp5s0f0", "engine": "ENGINE-1", "slot": "0000:05:00.0", "max_speed": "1Gbit/s", "current_speed": "-1", "duplex": "none", "pip": "192.168.2.180", "mac_adr": "00:24:ec:f0:a5:da", "action": "edit_interface"}
+Traceback (most recent call last):
+  File "/var/www/engine/bin/NETWORK/controllers/phys.py", line 70, in edit_interface
+    (file_interface / 'iplink').write_text('mtu {}'.format(mtu))
+  File "/usr/lib64/python3.8/pathlib.py", line 1248, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors) as f:
+  File "/usr/lib64/python3.8/pathlib.py", line 1215, in open
+    return io.open(self, mode, buffering, encoding, errors, newline,
+  File "/usr/lib64/python3.8/pathlib.py", line 1071, in _opener
+    return self._accessor.open(self, flags, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/etc/net/ifaces/enp5s0f0/iplink'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/engine/bin/LIB/controller.py", line 28, in controller
+    out = actions[data['action']](data)
+  File "/var/www/engine/bin/NETWORK/controllers/phys.py", line 79, in edit_interface
+    raise AeroException({msg})
+LIB.a_functions.AeroException: {'Не удалось настроить интерфейс enp5s0f0. Желаемый адрес:192.168.2.180/255.255.255.0, MTU: 1500 [FAIL]'}
+^C
+]0;root@ENGINE-1: /root[root@ENGINE-1 ~]# ls[K[Kcd /var/www/engine/
+]0;root@ENGINE-1: /var/www/engine[root@ENGINE-1 engine]# ls
+[0m[34;42mbin[0m  [01;32mcomposer.json[0m  [01;32mcomposer.lock[0m  [01;32mcomposer.phar[0m  [34;42mexport[0m  [34;42mfuel[0m  [34;42mhtml[0m  [01;32moil[0m  [34;42mreact[0m  [01;32mREADME.md[0m  [34;42msetup[0m  [34;42msnmp[0m  [34;42mupdates[0m  [01;34mvar[0m
+]0;root@ENGINE-1: /var/www/engine[root@ENGINE-1 engine]# cd bin/NETWORK/
+]0;root@ENGINE-1: /var/www/engine/bin/NETWORK[root@ENGINE-1 NETWORK]# nano controllers/phys.py 
+[?1049h[22;0;0t[1;60r(B[m[4l[?7h[39;49m[?1h=[?1h=[?1h=[?25l[39;49m(B[m[H[2J[58;115H(B[0;7m[ Reading File ](B[m[58;114H(B[0;7m[ Read 241 lin	s ](B[m[H(B[0;7m  GNU nano 4.0                                                                                                    controllers/phys.py                                                                                                               [1;243H(B[m[59d(B[0;7m^G(B[m Get Help	 (B[0;7m^O(B[m Write Out     (B[0;7m^W(B[m Where Is	   (B[0;7m^K(B[m Cut Text[69G(B[0;7m^J(B[m Justify[86G(B[0;7m^C(B[m Cur Pos[103G(B[0;7mM-U(B[m Undo[59;120H(B[0;7mM-A(B[m Mark Text    (B[0;7mM-](B[m To Bracket   (B[0;7mM-Q(B[m Previous     (B[0;7m^B(B[m Back[59;188H(B[0;7m^◀(B[m Prev Word     (B[0;7m^A(B[m Home[59;222H(B[0;7m^P(B[m Prev Line[60d(B[0;7m^X(B[m Exit[60;18H(B[0;7m^R(B[m Read File     (B[0;7m^\(B[m Replace	   (B[0;7m^U(B[m Paste Text    (B[0;7m^T(B[m To Spell[86G(B[0;7m^_(B[m Go To Line    (B[0;7mM-E(B[m Redo[60;120H(B[0;7mM-6(B[m Copy Text    (B[0;7m^Q(B[m Where Was     (B[0;7mM-W(B[m Next[60;171H(B[0;7m^F(B[m Forward	   (B[0;7m^▶(B[m Next Word     (B[0;7m^E(B[m End[60;222H(B[0;7m^N(B[m Next Line[58d[2d(B[0;1m[31m#! /usr/bin/env python3[5d[36mfrom[39m(B[m json (B[0;1m[36mimport[39m(B[m loads, dumps[6d(B[0;1m[36mfrom[39m(B[m re (B[0;1m[36mimport[39m(B[m search[7d(B[0;1m[36mfrom[39m(B[m LIB.utils (B[0;1m[36mimport[39m(B[m execute, PrintBuffer (B[0;1m[36mas[39m(B[m pb[8d(B[0;1m[36mfrom[39m(B[m LIB.constants (B[0;1m[36mimport[39m(B[m ALL_HOSTS, HOSTNAME, IS_ALT[9d(B[0;1m[36mfrom[39m(B[m LIB.a_functions (B[0;1m[36mimport[39m(B[m AeroResponse, writeLog, python_logger[10d(B[0;1m[36mfrom[39m(B[m LIB.controller (B[0;1m[36mimport[39m(B[m send_action_v2[11d(B[0;1m[36mfrom[39m(B[m LIB.a_functions (B[0;1m[36mimport[39m(B[m AeroResponse, writeLog, mask_convert, python_logger, AeroException[12d(B[0;1m[36mfrom[39m(B[m NETWORK.constants (B[0;1m[36mimport[39m(B[m NETWORK_PATH, NETWORK_INTERFACE_PATH, \[13;5HSTATIC_ROUTE, EXCLUSION_FROM_LIST, NETWORK_INTERFACE_NAME[14d(B[0;1m[36mfrom[39m(B[m typing (B[0;1m[36mimport[39m(B[m Generator[15d(B[0;1m[36mfrom[39m(B[m pathlib (B[0;1m[36mimport[39m(B[m Path[18d(B[0;1m[36mdef[34m value_on_except[39m(B[m(default_value):[19;5H(B[0;1m[36mdef[34m try_except_decorator[39m(B[m(function):[20;9H(B[0;1m[36mdef[34m wrapper[39m(B[m(args):[21;13H(B[0;1m[36mtry[39m(B[m:[22d(B[0;1m[36mreturn[39m(B[m function(args)[23;13H(B[0;1m[36mexcept[39m(B[m:[24;17H(B[0;1m[36mreturn[39m(B[m default_value[25;9H(B[0;1m[36mreturn[39m(B[m wrapper[26;5H(B[0;1m[36mreturn[39m(B[m try_except_decorator[29d(B[0;1m[36mdef[34m edit_interface[39m(B[m(data: dict) -> AeroResponse:[30;5H(B[0;1m[32m"""[31d    Метод редактирует физический интерфейс[32d    :params: dict[33;8H[1K	ip: str[34;8H[1K	pip: str[35;8H[1K	mask: str[36;8H[1K	name: str[37;8H[1K	mac: str[38;8H[1K	engine: str[39;8H[1K	mtu: str[40d    :return: AeroResponse[41;8H[1K	list: str[42d    """[43;5H[39m(B[mpython_logger(msg=(B[0;1m[32m"{}"[39m(B[m.format(dumps(data)), info=(B[0;1m[35mTrue[39m(B[m)[44;5Hip = data[(B[0;1m[32m'pip'[39m(B[m][45;5Hmask = data[(B[0;1m[32m'mask'[39m(B[m][46;5Hinterface = data[(B[0;1m[32m'name'[39m(B[m][47;5Hmtu = data[(B[0;1m[32m'mtu'[39m(B[m][48;5H(B[0;1m[36mtry[39m(B[m:[49dexecute((B[0;1m[32m"sudo ip link set {} down"[39m(B[m.format(interface))[50;9Hpb.add((B[0;1m[32m"Сетевой интерфейс {} успешно деактивирован [OK]"[39m(B[m.format(interface))[51;9Hexecute((B[0;1m[32m"sudo ip link set mtu {} dev {} "[39m(B[m.format(mtu, interface))[52;9Hpb.add((B[0;1m[32m"Установлен MTU, в размере {} для сетевого интерфейса {} [OK]"[39m(B[m.format(mtu, interface))[53;9Hexecute((B[0;1m[32m"sudo ip link set {} up"[39m(B[m.format(interface))[54;9Hpb.add((B[0;1m[32m"Сетевой интерфейс {} успешно сконфигурирован. [OK]"[39m(B[m.format(interface))[55;9Hold_net = execute((B[0;1m[32m"ip a show {} |grep link -a1 |grep inet |nawk '{{print $2}}'"[39m(B[m.format(interface)).split((B[0;1m[32m"\n"[39m(B[m)[0][56;9Hexecute((B[0;1m[32m"sudo ip a flush dev {}"[39m(B[m.format(interface))[2d[?12l[?25h[?25l[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[5d[?12l[?25h[?25l[6d[?12l[?25h[?25l[7d[?12l[?25h[?25l[8d[?12l[?25h[?25l[9d[?12l[?25h[?25l[10d[?12l[?25h[?25l[11d[?12l[?25h[?25l[12d[?12l[?25h[?25l[13d[?12l[?25h[?25l[14d[?12l[?25h[?25l[15d[?12l[?25h[?25l[16d[?12l[?25h[?25l[17d[?12l[?25h[?25l[18d[?12l[?25h[?25l[19d[?12l[?25h[?25l[20d[?12l[?25h[?25l[21d[?12l[?25h[?25l[22d[?12l[?25h[?25l[23d[?12l[?25h[?25l[24d[?12l[?25h[?25l[25d[?12l[?25h[?25l[26d[?12l[?25h[?25l[27d[?12l[?25h[?25l[58d[K[28d[?12l[?25h[?25l[29d[?12l[?25h[?25l[30d[?12l[?25h[?25l[31d[?12l[?25h[?25l[32d[?12l[?25h[?25l[33d[?12l[?25h[?25l[34d[?12l[?25h[?25l[36d[?12l[?25h[?25l[37d[?12l[?25h[?25l[38d[?12l[?25h[?25l[39d[?12l[?25h[?25l[41d[?12l[?25h[?25l[42d[?12l[?25h[?25l[43d[?12l[?25h[?25l[44d[?12l[?25h[?25l[45d[?12l[?25h[?25l[46d[?12l[?25h[?25l[47d[?12l[?25h[?25l[54d[?12l[?25h[?25l[55d[?12l[?25h[?25l[56d[?12l[?25h[?25l[57d[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;9Hstat = execute((B[0;1m[32m"sudo ip a add {}/{} dev {}"[39m(B[m.format(ip, mask, interface))[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;9H(B[0;1m[36mif[39m(B[m (B[0;1m[32m"Error"[39m(B[m (B[0;1m[36min[39m(B[m stat:[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;13Hexecute((B[0;1m[32m"sudo ip a add {} dev {}"[39m(B[m.format(old_net, interface))[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;13HMSG = (B[0;1m[32m"Ошибка конфигурации интерфейса {}!"[39m(B[m.format(interface)[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;13Hmsg = (B[0;1m[32m"{} [FAIL]"[39m(B[m.format(MSG)[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;13HwriteLog((B[0;1m[32m'NETWORK-0022|{}|ERROR'[39m(B[m.format(MSG))[?12l[?25h[?25l7[2;58r8[58d[3S[1;60r[55;13H(B[0;1m[36mreturn[39m(B[m AeroException(msg)[57;9Hpb.add((B[0;1m[32m"Для сетевого интерфейса {}, назначен IP-адрес {}, маска подсети {}. Интерфейс переключен в активное состояние. [OK] "[39m(B[m.format(interface, ip, mask))[?12l[?25h[?25l7[2;58r8[58d[2S[1;60r[56;9Hexecute((B[0;1m[32m"sudo echo {} netmask {} up > /et.{}"[39m(B[m.format(ip, mask, interface))[57;9Hpb.add((B[0;1m[32m"Сетевой интерфейс успешно сконфигурирован. [OK]"[39m(B[m)[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;9Hcfg = (B[0;1m[32m"{}/{}\n"[39m(B[m.format(ip, mask_convert(mask, reverse=(B[0;1m[35mTrue[39m(B[m)) (B[0;1m[36mif[39m(B[m IS_ALT (B[0;1m[36melse[39m(B[m (B[0;1m[32m"allow-hotplug {}\niface {} inet static\naddress {}\nnetmask {}\nmtu {}"[39m(B[m.format(interface, ip, mask, mtu)[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;9Hfile_interface = Path((B[0;1m[32m'{}/{}'[39m(B[m.format(STATIC_ROUTE, interface) (B[0;1m[36mif[39m(B[m IS_ALT (B[0;1m[36melse[39m(B[m (B[0;1m[32m'{}/{}'[39m(B[m.format(NETWORK_PATH, interface))[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;9H(file_interface / (B[0;1m[32m'iplink'[39m(B[m).write_text((B[0;1m[32m'mtu {}'[39m(B[m.format(mtu))[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;9H(file_interface / (B[0;1m[32m'ipv4address'[39m(B[m).write_text(cfg)[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;9HwriteLog((B[0;1m[32m"NETWORK-0007|Интерфейс {} настроен. Адрес:{}/{}, MTU: {}|OK"[39m(B[m.format(interface, ip, mask, mtu))[?12l[?25h[?25l7[2;58r8[58d[2S[1;60r[56;9Hpb.add((B[0;1m[32m"Конфигурационный файл записан. [OK]"[39m(B[m)[57;9H(B[0;1m[36mreturn[39m(B[m AeroResponse((B[0;1m[35mTrue[39m(B[m, data=pb.out())[?12l[?25h[?25l7[2;58r8[58d[2S[1;60r[56;5H(B[0;1m[36mexcept[39m(B[m:[57d	MSG = (B[0;1m[32m"Не удалось настроить интерфейс {}. Желаемый адрес:{}/{}, MTU: {}"[39m(B[m.format(interface, ip, mask, mtu)[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;9Hmsg = (B[0;1m[32m"{} [FAIL]"[39m(B[m.format(MSG)[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;9HwriteLog((B[0;1m[32m"NETWORK-0008|{}|ERROR"[39m(B[m.format(MSG))[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;9H(B[0;1m[36mraise[39m(B[m AeroException({msg})[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[59d[J[60;244H[?12l[?25h[60;1H[?1049l[23;0;0t[?1l>]0;root@ENGINE-1: /var/www/engine/bin/NETWORK[root@ENGINE-1 NETWORK]# ls va[K[K[K[K[Knano controllers/phys.py [10Pcd bin/NETWORK/nano controllers/phys.py [Kls
+[0m[01;32madapters.py[0m          [01;32mchange-network.py[0m         [01;32mconstants.py[0m   [34;42mcontrollers[0m          [01;32mdeconfig_vip.py[0m  [01;32mgetifaddrs.c[0m  [01;32mrdg_ha_local.py[0m  [01;32mrefresh.py[0m            [01;32mshow_vip.py[0m            [01;32mstatic_route.py[0m  [01;32mvip_manager.py[0m
+[01;32mbonding-adapters.py[0m  [01;32mconfig_dns_and_domain.py[0m  [01;32mcontroller.py[0m  [01;32mdeconfig-network.py[0m  [01;32mgetifaddrs[0m       [01;34m__pycache__[0m   [01;32mrdg_ha.py[0m        [01;32mshow_ha_resources.py[0m  [01;32mshow_vip_resources.py[0m  [01;32mvip_actions.py[0m   [34;42mVLAN[0m
+]0;root@ENGINE-1: /var/www/engine/bin/NETWORK[root@ENGINE-1 NETWORK]# cd ../
+]0;root@ENGINE-1: /var/www/engine/bin[root@ENGINE-1 bin]# ls
+[0m[34;42mAD[0m    [34;42mBED[0m     [34;42mCLUSTER[0m   [34;42mDDP[0m   [34;42mENGINE[0m        [34;42mLIB[0m  [34;42mLUN[0m  [34;42mMAIL[0m     [34;42mMETRO[0m   [34;42mNETWORK[0m  [34;42mPERF[0m  [34;42mRDG[0m          [34;42mRREPL[0m  [34;42mSCST[0m     [34;42mSMB[0m       [34;42mSNMP[0m     [34;42mSTATISTICS[0m
+[34;42mAUTH[0m  [34;42mCHARTS[0m  [34;42mDATABASE[0m  [34;42mDISK[0m  [34;42mFIBRECHANNEL[0m  [34;42mLOG[0m  [34;42mLVM[0m  [34;42mMAPPING[0m  [34;42mMODULE[0m  [34;42mNFS[0m      [34;42mQOS[0m   [34;42mREPLICATION[0m  [34;42mSCSI[0m   [34;42mSERVICE[0m  [34;42mSNAPSHOT[0m  [34;42mSOCKETS[0m  [34;42mSYSUTILS[0m
+]0;root@ENGINE-1: /var/www/engine/bin[root@ENGINE-1 bin]# cd ../
+]0;root@ENGINE-1: /var/www/engine[root@ENGINE-1 engine]# ls
+[0m[34;42mbin[0m  [01;32mcomposer.json[0m  [01;32mcomposer.lock[0m  [01;32mcomposer.phar[0m  [34;42mexport[0m  [34;42mfuel[0m  [34;42mhtml[0m  [01;32moil[0m  [34;42mreact[0m  [01;32mREADME.md[0m  [34;42msetup[0m  [34;42msnmp[0m  [34;42mupdates[0m  [01;34mvar[0m
+]0;root@ENGINE-1: /var/www/engine[root@ENGINE-1 engine]# rm -r var/
+rm: descend into directory 'var/'? 
+]0;root@ENGINE-1: /var/www/engine[root@ENGINE-1 engine]# ls
+[0m[34;42mbin[0m  [01;32mcomposer.json[0m  [01;32mcomposer.lock[0m  [01;32mcomposer.phar[0m  [34;42mexport[0m  [34;42mfuel[0m  [34;42mhtml[0m  [01;32moil[0m  [34;42mreact[0m  [01;32mREADME.md[0m  [34;42msetup[0m  [34;42msnmp[0m  [34;42mupdates[0m  [01;34mvar[0m
+]0;root@ENGINE-1: /var/www/engine[root@ENGINE-1 engine]# cd NET[K[K[Kbin/NETWORK/
+]0;root@ENGINE-1: /var/www/engine/bin/NETWORK[root@ENGINE-1 NETWORK]# cd bin/NETWORK/ls[Krm -r var/ls[Kcd ../[4Plscd ../[4Plsnano controllers/phys.py 
+[?1049h[22;0;0t[1;60r(B[m[4l[?7h[39;49m[?1h=[?1h=[?1h=[?25l[39;49m(B[m[H[2J[58;115H(B[0;7m[ Reading File ](B[m[58;114H(B[0;7m[ Read 242 lin	s ](B[m[H(B[0;7m  GNU nano 4.0                                                                                                    controllers/phys.py                                                                                                               [1;243H(B[m[59d(B[0;7m^G(B[m Get Help	 (B[0;7m^O(B[m Write Out     (B[0;7m^W(B[m Where Is	   (B[0;7m^K(B[m Cut Text[69G(B[0;7m^J(B[m Justify[86G(B[0;7m^C(B[m Cur Pos[103G(B[0;7mM-U(B[m Undo[59;120H(B[0;7mM-A(B[m Mark Text    (B[0;7mM-](B[m To Bracket   (B[0;7mM-Q(B[m Previous     (B[0;7m^B(B[m Back[59;188H(B[0;7m^◀(B[m Prev Word     (B[0;7m^A(B[m Home[59;222H(B[0;7m^P(B[m Prev Line[60d(B[0;7m^X(B[m Exit[60;18H(B[0;7m^R(B[m Read File     (B[0;7m^\(B[m Replace	   (B[0;7m^U(B[m Paste Text    (B[0;7m^T(B[m To Spell[86G(B[0;7m^_(B[m Go To Line    (B[0;7mM-E(B[m Redo[60;120H(B[0;7mM-6(B[m Copy Text    (B[0;7m^Q(B[m Where Was     (B[0;7mM-W(B[m Next[60;171H(B[0;7m^F(B[m Forward	   (B[0;7m^▶(B[m Next Word     (B[0;7m^E(B[m End[60;222H(B[0;7m^N(B[m Next Line[58d[2d(B[0;1m[31m#! /usr/bin/env python3[5d[36mfrom[39m(B[m json (B[0;1m[36mimport[39m(B[m loads, dumps[6d(B[0;1m[36mfrom[39m(B[m re (B[0;1m[36mimport[39m(B[m search[7d(B[0;1m[36mfrom[39m(B[m LIB.utils (B[0;1m[36mimport[39m(B[m execute, PrintBuffer (B[0;1m[36mas[39m(B[m pb[8d(B[0;1m[36mfrom[39m(B[m LIB.constants (B[0;1m[36mimport[39m(B[m ALL_HOSTS, HOSTNAME, IS_ALT[9d(B[0;1m[36mfrom[39m(B[m LIB.a_functions (B[0;1m[36mimport[39m(B[m AeroResponse, writeLog, python_logger[10d(B[0;1m[36mfrom[39m(B[m LIB.controller (B[0;1m[36mimport[39m(B[m send_action_v2[11d(B[0;1m[36mfrom[39m(B[m LIB.a_functions (B[0;1m[36mimport[39m(B[m AeroResponse, writeLog, mask_convert, python_logger, AeroException[12d(B[0;1m[36mfrom[39m(B[m NETWORK.constants (B[0;1m[36mimport[39m(B[m NETWORK_PATH, NETWORK_INTERFACE_PATH, \[13;5HSTATIC_ROUTE, EXCLUSION_FROM_LIST, NETWORK_INTERFACE_NAME[14d(B[0;1m[36mfrom[39m(B[m typing (B[0;1m[36mimport[39m(B[m Generator[15d(B[0;1m[36mfrom[39m(B[m pathlib (B[0;1m[36mimport[39m(B[m Path[18d(B[0;1m[36mdef[34m value_on_except[39m(B[m(default_value):[19;5H(B[0;1m[36mdef[34m try_except_decorator[39m(B[m(function):[20;9H(B[0;1m[36mdef[34m wrapper[39m(B[m(args):[21;13H(B[0;1m[36mtry[39m(B[m:[22d(B[0;1m[36mreturn[39m(B[m function(args)[23;13H(B[0;1m[36mexcept[39m(B[m:[24;17H(B[0;1m[36mreturn[39m(B[m default_value[25;9H(B[0;1m[36mreturn[39m(B[m wrapper[26;5H(B[0;1m[36mreturn[39m(B[m try_except_decorator[29d(B[0;1m[36mdef[34m edit_interface[39m(B[m(data: dict) -> AeroResponse:[30;5H(B[0;1m[32m"""[31d    Метод редактирует физический интерфейс[32d    :params: dict[33;8H[1K	ip: str[34;8H[1K	pip: str[35;8H[1K	mask: str[36;8H[1K	name: str[37;8H[1K	mac: str[38;8H[1K	engine: str[39;8H[1K	mtu: str[40d    :return: AeroResponse[41;8H[1K	list: str[42d    """[43;5H[39m(B[mpython_logger(msg=(B[0;1m[32m"{}"[39m(B[m.format(dumps(data)), info=(B[0;1m[35mTrue[39m(B[m)[44;5Hip = data[(B[0;1m[32m'pip'[39m(B[m][45;5Hmask = data[(B[0;1m[32m'mask'[39m(B[m][46;5Hinterface = data[(B[0;1m[32m'name'[39m(B[m][47;5Hmtu = data[(B[0;1m[32m'mtu'[39m(B[m][48;5H(B[0;1m[36mtry[39m(B[m:[49dexecute((B[0;1m[32m"sudo ip link set {} down"[39m(B[m.format(interface))[50;9Hpb.add((B[0;1m[32m"Сетевой интерфейс {} успешно деактивирован [OK]"[39m(B[m.format(interface))[51;9Hexecute((B[0;1m[32m"sudo ip link set mtu {} dev {} "[39m(B[m.format(mtu, interface))[52;9Hpb.add((B[0;1m[32m"Установлен MTU, в размере {} для сетевого интерфейса {} [OK]"[39m(B[m.format(mtu, interface))[53;9Hexecute((B[0;1m[32m"sudo ip link set {} up"[39m(B[m.format(interface))[54;9Hpb.add((B[0;1m[32m"Сетевой интерфейс {} успешно сконфигурирован. [OK]"[39m(B[m.format(interface))[55;9Hold_net = execute((B[0;1m[32m"ip a show {} |grep link -a1 |grep inet |nawk '{{print $2}}'"[39m(B[m.format(interface)).split((B[0;1m[32m"\n"[39m(B[m)[0][56;9Hexecute((B[0;1m[32m"sudo ip a flush dev {}"[39m(B[m.format(interface))[2d[?12l[?25h[?25l[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[5d[?12l[?25h[?25l[6d[?12l[?25h[?25l[7d[?12l[?25h[?25l[8d[?12l[?25h[?25l[9d[?12l[?25h[?25l[10d[?12l[?25h[?25l[11d[?12l[?25h[?25l[13d[?12l[?25h[?25l[14d[?12l[?25h[?25l[15d[?12l[?25h[?25l[16d[?12l[?25h[?25l[17d[?12l[?25h[?25l[18d[?12l[?25h[?25l[19d[?12l[?25h[?25l[20d[?12l[?25h[?25l[21d[?12l[?25h[?25l[22d[?12l[?25h[?25l[23d[?12l[?25h[?25l[24d[?12l[?25h[?25l[25d[?12l[?25h[?25l[26d[?12l[?25h[?25l[27d[?12l[?25h[?25l[58d[K[28d[?12l[?25h[?25l[29d[?12l[?25h[?25l[30d[?12l[?25h[?25l[31d[?12l[?25h[?25l[32d[?12l[?25h[?25l[33d[?12l[?25h[?25l[34d[?12l[?25h[?25l[35d[?12l[?25h[?25l[36d[?12l[?25h[?25l[37d[?12l[?25h[?25l[38d[?12l[?25h[?25l[39d[?12l[?25h[?25l[40d[?12l[?25h[?25l[44d[?12l[?25h[?25l[45d[?12l[?25h[?25l[46d[?12l[?25h[?25l[47d[?12l[?25h[?25l[48d[?12l[?25h[?25l[49d[?12l[?25h[?25l[50d[?12l[?25h[?25l[51d[?12l[?25h[?25l[52d[?12l[?25h[?25l[53d[?12l[?25h[?25l[54d[?12l[?25h[?25l[55d[?12l[?25h[?25l[56d[?12l[?25h[?25l[57d[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;9Hstat = execute((B[0;1m[32m"sudo ip a add {}/{} dev {}"[39m(B[m.format(ip, mask, interface))[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;9H(B[0;1m[36mif[39m(B[m (B[0;1m[32m"Error"[39m(B[m (B[0;1m[36min[39m(B[m stat:[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;13Hexecute((B[0;1m[32m"sudo ip a add {} dev {}"[39m(B[m.format(old_net, interface))[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;13HMSG = (B[0;1m[32m"Ошибка конфигурации интерфейса {}!"[39m(B[m.format(interface)[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;13Hmsg = (B[0;1m[32m"{} [FAIL]"[39m(B[m.format(MSG)[?12l[?25h[?25l7[2;58r8[58d[2S[1;60r[56;13HwriteLog((B[0;1m[32m'NETWORK-0022|{}|ERROR'[39m(B[m.format(MSG))[57;13H(B[0;1m[36mreturn[39m(B[m AeroException(msg)[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;1H[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;9Hpb.add((B[0;1m[32m"Для сетевого интерфейса {}, назначен IP-адрес {}, маска подсети {}. Интерфейс переключен в активное состояние. [OK] "[39m(B[m.format(interface, ip, mask))[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;9Hexecute((B[0;1m[32m"sudo echo {} netmask {} up > /etc/hostname.{}"[39m(B[m.format(ip, mask, interface))[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;9Hpb.add((B[0;1m[32m"Сетевой интерфейс успешно сконфигурирован. [OK]"[39m(B[m)[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;9Hcfg = (B[0;1m[32m"{}/{}\n"[39m(B[m.format(ip, mask_convert(mask, reverse=(B[0;1m[35mTrue[39m(B[m)) (B[0;1m[36mif[39m(B[m IS_ALT (B[0;1m[36melse[39m(B[m (B[0;1m[32m"allow-hotplug {}\niface {} inet static\naddress {}\nnetmask {}\nmtu {}"[39m(B[m.format(interface, ip, mask, mtu)[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;9Hfile_interface = Path((B[0;1m[32m'{}/{}'[39m(B[m.format(STATIC_ROUTE, interface) (B[0;1m[36mif[39m(B[m IS_ALT (B[0;1m[36melse[39m(B[m (B[0;1m[32m'{}/{}'[39m(B[m.format(NETWORK_PATH, interface))[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;9H(B[0;1m[36mif[39m(B[m (B[0;1m[36mnot[39m(B[m file_interface.exists():[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;13Hfile_interface.parent.mkdir(interface)[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;13Hfile_interface.touch((B[0;1m[32m'iplink'[39m(B[m)[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;13Hfile_interface.touch((B[0;1m[32m'ipv4address'[39m(B[m)[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;9H(file_interface / (B[0;1m[32m'iplink'[39m(B[m).write_text((B[0;1m[32m'mtu {}'[39m(B[m.format(mtu))[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;9H(file_interface / (B[0;1m[32m'ipv4address'[39m(B[m).write_text(cfg)[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;9HwriteLog((B[0;1m[32m"NETWORK-0007|Интерфейс {} настроен. Адрес:{}/{}, MTU: {}|OK"[39m(B[m.format(interface, ip, mask, mtu))[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;9Hpb.add((B[0;1m[32m"Конфигурационный файл записан. [OK]"[39m(B[m)[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;9H(B[0;1m[36mreturn[39m(B[m AeroResponse((B[0;1m[35mTrue[39m(B[m, data=pb.out())[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;5H(B[0;1m[36mexcept[39m(B[m:[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;9HMSG = (B[0;1m[32m"Не удалось настроить интерфейс {}. Желаемый адрес:{}/{}, MTU: {}"[39m(B[m.format(interface, ip, mask, mtu)[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;9Hmsg = (B[0;1m[32m"{} [FAIL]"[39m(B[m[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;9HwriteLog((B[0;1m[32m"NETWORK-0008|{}|ERROR"[39m(B[m.format(MSG))[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;9H(B[0;1m[36mraise[39m(B[m AeroException(msg)[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;1H[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;1H[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;1H(B[0;1m[36mdef[34m delete_phys_interface[39m(B[m(data: dict) -> AeroResponse:[?12l[?25h[?25l7[2;58r8[58d
+[1;60r[57;5H(B[0;1m[32m"""[39m(B[m[?12l[?25h[?25l[59d[J[60;244H[?12l[?25h[60;1H[?1049l[23;0;0t[?1l>]0;root@ENGINE-1: /var/www/engine/bin/NETWORK[root@ENGINE-1 NETWORK]# cd /////[K[K[K[K[K~/
+]0;root@ENGINE-1: /root[root@ENGINE-1 ~]# cd ~/nano controllers/phys.py [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[10Pcd bin/NETWORK/ls[Krm -r var/ls[Kcd ../[4Plscd ../[4Plsnano controllers/phys.py [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[10Pcd bin/NETWORK/ls[Kcd /var/www/engine/tail -f /var/log/python.log[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pls /sys/class/net/enp5s0f0[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctail -f /var/log/python.log
+TypeError: an integer is required (got type str)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/engine/bin/LIB/controller.py", line 28, in controller
+    out = actions[data['action']](data)
+  File "/var/www/engine/bin/NETWORK/controllers/phys.py", line 83, in edit_interface
+    raise AeroException(msg)
+LIB.a_functions.AeroException: {} [FAIL]
+
+2020-06-11 17:28:18,215 - Python3.5 - ERROR: 
+ARGS: {"mtu": "1500", "state": "DOWN", "mac": "00:24:ec:f0:a5:da", "ip": "192.168.2.180", "mask": "24", "name": "enp5s0f0", "engine": "ENGINE-1", "slot": "0000:05:00.0", "max_speed": "1Gbit/s", "current_speed": "-1", "duplex": "unknown", "action": "delete_phys_interface"}
+Traceback (most recent call last):
+  File "/var/www/engine/bin/NETWORK/controllers/phys.py", line 109, in delete_phys_interface
+    Path("{}/{}/ipv4address".format(STATIC_ROUTE, interface) if IS_ALT else "{}/{}/ipv4address".format(NETWORK_UBUNTU_PATH, interface)).unlink()
+  File "/usr/lib64/python3.8/pathlib.py", line 1318, in unlink
+    self._accessor.unlink(self)
+FileNotFoundError: [Errno 2] No such file or directory: '/etc/net/ifaces/enp5s0f0/ipv4address'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/engine/bin/LIB/controller.py", line 28, in controller
+    out = actions[data['action']](data)
+  File "/var/www/engine/bin/NETWORK/controllers/phys.py", line 115, in delete_phys_interface
+    raise AeroException("Ошибка удаления интерфейса. [FAIL]")
+LIB.a_functions.AeroException: Ошибка удаления интерфейса. [FAIL]
+
+2020-06-11 17:28:41,513 - Python3.5 - ERROR: 
+ARGS: {"mtu": "1500", "state": "DOWN", "mac": "00:24:ec:f0:a5:da", "ip": null, "mask": "255.255.255.0", "name": "enp5s0f0", "engine": "ENGINE-1", "slot": "0000:05:00.0", "max_speed": "1Gbit/s", "current_speed": "-1", "duplex": "none", "pip": "192.168.2.180", "mac_adr": "00:24:ec:f0:a5:da", "action": "edit_interface"}
+Traceback (most recent call last):
+  File "/var/www/engine/bin/NETWORK/controllers/phys.py", line 71, in edit_interface
+    file_interface.parent.mkdir(interface)
+  File "/usr/lib64/python3.8/pathlib.py", line 1281, in mkdir
+    self._accessor.mkdir(self, mode)
+TypeError: an integer is required (got type str)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/engine/bin/LIB/controller.py", line 28, in controller
+    out = actions[data['action']](data)
+  File "/var/www/engine/bin/NETWORK/controllers/phys.py", line 83, in edit_interface
+    raise AeroException(msg)
+LIB.a_functions.AeroException: Не удалось настроить интерфейс enp5s0f0. Желаемый адрес:192.168.2.180/255.255.255.0, MTU: 1500 [FAIL]
+
+2020-06-11 17:30:39,881 - Python3.5 - ERROR: 
+ARGS: {"mtu": "1500", "state": "DOWN", "mac": "00:24:ec:f0:a5:da", "ip": "192.168.2.180", "mask": "24", "name": "enp5s0f0", "engine": "ENGINE-1", "slot": "0000:05:00.0", "max_speed": "1Gbit/s", "current_speed": "-1", "duplex": "unknown", "action": "delete_phys_interface"}
+Traceback (most recent call last):
+  File "/var/www/engine/bin/NETWORK/controllers/phys.py", line 109, in delete_phys_interface
+    Path("{}/{}/ipv4address".format(STATIC_ROUTE, interface) if IS_ALT else "{}/{}/ipv4address".format(NETWORK_UBUNTU_PATH, interface)).unlink()
+  File "/usr/lib64/python3.8/pathlib.py", line 1318, in unlink
+    self._accessor.unlink(self)
+FileNotFoundError: [Errno 2] No such file or directory: '/etc/net/ifaces/enp5s0f0/ipv4address'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/engine/bin/LIB/controller.py", line 28, in controller
+    out = actions[data['action']](data)
+  File "/var/www/engine/bin/NETWORK/controllers/phys.py", line 115, in delete_phys_interface
+    raise AeroException("Ошибка удаления интерфейса. [FAIL]")
+LIB.a_functions.AeroException: Ошибка удаления интерфейса. [FAIL]
+
+2020-06-11 17:31:17,359 - Python3.5 - ERROR: 
+ARGS: {"mtu": "1500", "state": "DOWN", "mac": "00:24:ec:f0:a5:da", "ip": null, "mask": "255.255.255.0", "name": "enp5s0f0", "engine": "ENGINE-1", "slot": "0000:05:00.0", "max_speed": "1Gbit/s", "current_speed": "-1", "duplex": "none", "pip": "192.168.2.180", "mac_adr": "00:24:ec:f0:a5:da", "action": "edit_interface"}
+Traceback (most recent call last):
+  File "/var/www/engine/bin/NETWORK/controllers/phys.py", line 71, in edit_interface
+    file_interface.mkdir(interface)
+  File "/usr/lib64/python3.8/pathlib.py", line 1281, in mkdir
+    self._accessor.mkdir(self, mode)
+TypeError: an integer is required (got type str)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/engine/bin/LIB/controller.py", line 28, in controller
+    out = actions[data['action']](data)
+  File "/var/www/engine/bin/NETWORK/controllers/phys.py", line 83, in edit_interface
+    raise AeroException(msg)
+LIB.a_functions.AeroException: Не удалось настроить интерфейс enp5s0f0. Желаемый адрес:192.168.2.180/255.255.255.0, MTU: 1500 [FAIL]
+^C
+]0;root@ENGINE-1: /root[root@ENGINE-1 ~]# ls /etc/net/ifaces/
+[0m[01;34mdefault[0m  [01;34menp14s0[0m  [01;34menp15s0[0m  [01;34mlo[0m  [01;34munknown[0m
+]0;root@ENGINE-1: /root[root@ENGINE-1 ~]# ls /etc/net/ifaces/
+[0m[01;34mdefault[0m  [01;34menp14s0[0m  [01;34menp15s0[0m  [01;34mlo[0m  [01;34munknown[0m
+]0;root@ENGINE-1: /root[root@ENGINE-1 ~]# ls /etc/net/ifaces/tail -f /var/log/python.log
+TypeError: an integer is required (got type str)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/engine/bin/LIB/controller.py", line 28, in controller
+    out = actions[data['action']](data)
+  File "/var/www/engine/bin/NETWORK/controllers/phys.py", line 83, in edit_interface
+    raise AeroException(msg)
+LIB.a_functions.AeroException: Не удалось настроить интерфейс enp5s0f0. Желаемый адрес:192.168.2.180/255.255.255.0, MTU: 1500 [FAIL]
+
+2020-06-11 17:37:05,984 - Python3.5 - ERROR: 
+ARGS: {"mtu": "1500", "state": "DOWN", "mac": "00:24:ec:f0:a5:da", "ip": "192.168.2.180", "mask": "255.255.255.0", "name": "enp5s0f0", "engine": "ENGINE-1", "slot": "0000:05:00.0", "max_speed": "1Gbit/s", "current_speed": "-1", "duplex": "unknown", "pip": "192.168.2.180", "mac_adr": "00:24:ec:f0:a5:da", "action": "edit_interface"}
+Traceback (most recent call last):
+  File "/var/www/engine/bin/NETWORK/controllers/phys.py", line 71, in edit_interface
+    file_interface.mkdir(interface)
+  File "/usr/lib64/python3.8/pathlib.py", line 1281, in mkdir
+    self._accessor.mkdir(self, mode)
+TypeError: an integer is required (got type str)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/engine/bin/LIB/controller.py", line 28, in controller
+    out = actions[data['action']](data)
+  File "/var/www/engine/bin/NETWORK/controllers/phys.py", line 83, in edit_interface
+    raise AeroException(msg)
+LIB.a_functions.AeroException: Не удалось настроить интерфейс enp5s0f0. Желаемый адрес:192.168.2.180/255.255.255.0, MTU: 1500 [FAIL]
+^C
+]0;root@ENGINE-1: /root[root@ENGINE-1 ~]# tail -f /var/log/python.log[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pls /etc/net/ifaces/
+[0m[01;34mdefault[0m  [01;34menp14s0[0m  [01;34menp15s0[0m  [01;34menp5s0f0[0m  [01;34mlo[0m  [01;34munknown[0m
+]0;root@ENGINE-1: /root[root@ENGINE-1 ~]# client_loop: send disconnect: Broken pipe

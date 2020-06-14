@@ -1,0 +1,15 @@
+/snap/code/33/usr/share/code/resources/app
+[Google Translate]:
+
+#     click_two_tr.click(self.find_element(LocatorValue.by_xpath(xpath_value_one_field))
+
+[<============================>]:
+#     click_two_tr.click(self.find_element(LocatorValue.by_xpath(xpath_value_one_field))
+
+[Google Translate]:
+
+# def click_enter_keys(self, xpath_value_one_field, xpath_value_two_field):
+
+[<============================>]:
+# def click_enter_keys(self, xpath_value_one_field, xpath_value_two_field):
+

@@ -1,0 +1,192 @@
+INFO extension.deploy.reloaded.loadplugins - [03/Jun/2020:06:24:48 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+INFO extension.deploy.reloaded.loadplugins - [03/Jun/2020:06:25:11 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+INFO extension.deploy.reloaded.loadplugins - [03/Jun/2020:06:28:28 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+INFO extension.deploy.reloaded.loadplugins - [03/Jun/2020:06:30:41 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+INFO extension.deploy.reloaded.loadplugins - [03/Jun/2020:06:30:42 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+INFO extension.deploy.reloaded.loadplugins - [03/Jun/2020:08:58:51 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+INFO extension.deploy.reloaded.loadplugins - [03/Jun/2020:10:56:42 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+TRACE workspaces.workspace.ondidchangeactivetexteditor(1) - [03/Jun/2020:14:02:37 +0000] "ENOENT: no such file or directory, lstat '/home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/page.py'
+
+Stack:
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/log.js:88:52
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:3198:18
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at ActionLogger.logSync (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:113:14)
+    at ActionLogger.trace (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:136:21)
+    at Workspace.onDidChangeActiveTextEditor (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:2008:30)"
+TRACE workspaces.workspace.ondidchangeactivetexteditor(1) - [03/Jun/2020:14:06:20 +0000] "ENOENT: no such file or directory, lstat '/home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/test.py'
+
+Stack:
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/log.js:88:52
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:3198:18
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at ActionLogger.logSync (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:113:14)
+    at ActionLogger.trace (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:136:21)
+    at Workspace.onDidChangeActiveTextEditor (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:2008:30)"
+INFO extension.deploy.reloaded.loadplugins - [03/Jun/2020:14:11:41 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"

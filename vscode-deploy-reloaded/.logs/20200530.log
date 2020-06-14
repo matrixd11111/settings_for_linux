@@ -1,0 +1,21 @@
+INFO extension.deploy.reloaded.loadplugins - [30/May/2020:20:41:21 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"

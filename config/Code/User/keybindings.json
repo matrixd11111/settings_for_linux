@@ -1,0 +1,35 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "ctrl+x ctrl+i",
+        "command": "extension.deploy.reloaded.currentFileOrFolder"
+    },
+    {
+        "key": "ctrl+c ctrl+q",
+        "command": "workbench.action.navigateToLastEditLocation"
+    },
+    {
+        "key": "ctrl+k ctrl+q",
+        "command": "-workbench.action.navigateToLastEditLocation"
+    },
+    {
+        "key": "alt+w",
+        "command": "editor.action.clipboardCopyAction",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "-editor.action.clipboardCopyAction",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "workbench.action.closeWindow",
+        "when": "!editorIsOpen && !multipleEditorGroups"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeWindow",
+        "when": "!editorIsOpen && !multipleEditorGroups"
+    }
+]

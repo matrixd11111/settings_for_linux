@@ -1,0 +1,5 @@
+2020/06/09-10:11:49.765 2b34 Reusing MANIFEST /home/matrix/.config/google-chrome/Default/IndexedDB/https_ria.ru_0.indexeddb.leveldb/MANIFEST-000001
+2020/06/09-10:13:58.952 2b99 Level-0 table #5: started
+2020/06/09-10:13:58.955 2b99 Level-0 table #5: 1921 bytes OK
+2020/06/09-10:13:58.958 2b99 Delete type=0 #3
+2020/06/09-10:13:58.959 2b99 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

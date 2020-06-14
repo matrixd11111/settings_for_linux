@@ -1,0 +1,23 @@
+<h5 class="settings_subheader" data-i18n="settings_hotkeys_header"></h5>
+
+<% hotkeys.forEach(function(hotkey) { %>
+    <div class="settings_subsection2">
+        <label data-i18n="<%= hotkey.header %>"></label>
+        <% hotkey.allowed_keys.forEach(function(keys) { %>
+            <select class="hotkey_part" data-command="<%= hotkey.id %>">
+                <% keys.forEach(function(key) { %>
+                    <option value="<%= key %>"><%= key.capitalize() %></option>
+                <% }); %>
+            </select>
+        <% }); %>
+    </div>
+<% }); %>
+
+<div class="settings_subsection2">
+    <input type="checkbox" id="webpage_enable_hotkeys_checkbox">
+    <label for="webpage_enable_hotkeys_checkbox" data-i18n="settings_hotkeys_enable"></label>
+</div>
+
+<div class="settings_subsection2" style="margin-left: 8px;">
+    <span data-i18n="settings_hotkeys_configure_global"></span>
+</div>

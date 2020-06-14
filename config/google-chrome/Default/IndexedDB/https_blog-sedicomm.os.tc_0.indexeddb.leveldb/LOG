@@ -1,0 +1,7 @@
+2020/05/25-19:03:12.571 b4d Reusing MANIFEST /home/matrix/.config/google-chrome/Default/IndexedDB/https_blog-sedicomm.os.tc_0.indexeddb.leveldb/MANIFEST-000001
+2020/05/25-19:03:12.571 b4d Recovering log #3
+2020/05/25-19:03:12.575 b4d Reusing old log /home/matrix/.config/google-chrome/Default/IndexedDB/https_blog-sedicomm.os.tc_0.indexeddb.leveldb/000003.log 
+2020/05/25-20:19:02.367 104f Level-0 table #5: started
+2020/05/25-20:19:02.371 104f Level-0 table #5: 25982 bytes OK
+2020/05/25-20:19:02.375 104f Delete type=0 #3
+2020/05/25-20:19:02.376 104f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

@@ -1,0 +1,15 @@
+2020/06/12-22:35:18.570 c3f Reusing MANIFEST /home/matrix/.config/google-chrome/Default/Local Storage/leveldb/MANIFEST-000001
+2020/06/12-22:35:18.571 c3f Recovering log #490
+2020/06/12-22:35:18.574 c3f Reusing old log /home/matrix/.config/google-chrome/Default/Local Storage/leveldb/000490.log 
+2020/06/12-22:52:57.237 3a86 Level-0 table #494: started
+2020/06/12-22:52:57.247 3a86 Level-0 table #494: 26114 bytes OK
+2020/06/12-22:52:57.256 3a86 Delete type=0 #490
+2020/06/12-22:52:57.257 3a86 Compacting 4@0 + 1@1 files
+2020/06/12-22:52:57.333 3a86 Generated table #495@0: 1703 keys, 1673669 bytes
+2020/06/12-22:52:57.333 3a86 Compacted 4@0 + 1@1 files => 1673669 bytes
+2020/06/12-22:52:57.341 3a86 compacted to: files[ 0 1 0 0 0 0 0 ]
+2020/06/12-22:52:57.342 3a86 Delete type=2 #494
+2020/06/12-22:52:57.342 3a86 Delete type=2 #485
+2020/06/12-22:52:57.342 3a86 Delete type=2 #487
+2020/06/12-22:52:57.342 3a86 Delete type=2 #491
+2020/06/12-22:52:57.342 3a86 Delete type=2 #489

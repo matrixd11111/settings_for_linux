@@ -1,0 +1,12 @@
+TRACE workspaces.workspace.ondidchangeactivetexteditor(1) - [31/May/2020:08:06:03 +0000] "ENOENT: no such file or directory, lstat '/home/matrix/Documents/aerodisk/engine2/bin/NETWORK/tests/test_net.py'
+
+Stack:
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/log.js:88:52
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:3198:18
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at ActionLogger.logSync (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:113:14)
+    at ActionLogger.trace (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:136:21)
+    at Workspace.onDidChangeActiveTextEditor (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:2008:30)"

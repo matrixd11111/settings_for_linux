@@ -1,0 +1,22 @@
+/snap/code/34/usr/share/code/resources/app
+[Error - 1:39:13 PM] Request textDocument/hover failed.
+  Message: Request textDocument/hover failed with message: 105,110,118,97,108,105,100,32,99,111,100,101,32,112,111,105,110,116,32,118,97,108,117,101
+  Code: -32603 
+[Error - 1:39:14 PM] Request textDocument/hover failed.
+  Message: Request textDocument/hover failed with message: 105,110,118,97,108,105,100,32,99,111,100,101,32,112,111,105,110,116,32,118,97,108,117,101
+  Code: -32603 
+[Error - 1:39:15 PM] Request textDocument/hover failed.
+  Message: Request textDocument/hover failed with message: 105,110,118,97,108,105,100,32,99,111,100,101,32,112,111,105,110,116,32,118,97,108,117,101
+  Code: -32603 
+[Error - 1:39:15 PM] Request textDocument/hover failed.
+  Message: Request textDocument/hover failed with message: 105,110,118,97,108,105,100,32,99,111,100,101,32,112,111,105,110,116,32,118,97,108,117,101
+  Code: -32603 
+[Error - 1:39:17 PM] Request textDocument/hover failed.
+  Message: Request textDocument/hover failed with message: 105,110,118,97,108,105,100,32,99,111,100,101,32,112,111,105,110,116,32,118,97,108,117,101
+  Code: -32603 
+[Error - 1:39:17 PM] Request textDocument/hover failed.
+  Message: Request textDocument/hover failed with message: 105,110,118,97,108,105,100,32,99,111,100,101,32,112,111,105,110,116,32,118,97,108,117,101
+  Code: -32603 
+[Error - 1:39:18 PM] Request textDocument/hover failed.
+  Message: Request textDocument/hover failed with message: 105,110,118,97,108,105,100,32,99,111,100,101,32,112,111,105,110,116,32,118,97,108,117,101
+  Code: -32603 

@@ -1,0 +1,22 @@
+<div class="upload_item">
+    <div style="background-image:url('<%= (file.preview) ? get_image_src(file.preview) : '/images/defaults/file_preview.png' %>');" class="item_preview">
+        <img src="<%= file.service_icon_url %>" alt="<%= file.service %>" class="item_upload_service_icon">
+    </div>
+    <div style="padding-left:10px;">
+        <p class="item_upload_time"><%= file.date %></p>
+        <p class="item_title">
+            <a href="<%= file.main_link %>" target="_blank" title="<%= file.title %>"><%= file.title.truncate(80) %></a>
+        </p>
+        <p style="margin:0; color:#999; font-size:13px;">
+            &#x1f517;&nbsp;<span class="item_copy_link" data-link="<%= file.direct_link %>" data-i18n="uploads_copy_direct_link"></span>
+            (<span class="item_copy_link short" data-link="<%= file.direct_link %>" data-i18n="uploads_copy_short_link"></span>)
+            &nbsp;&nbsp;&nbsp;
+            <% if (file.service === 'monosnap') { %>
+                &#x1f517;&nbsp;<span class="item_copy_link" data-link="<%= file.website_link %>" data-i18n="uploads_copy_website_link"></span>
+                (<span class="item_copy_link short" data-link="<%= file.website_link %>" data-i18n="uploads_copy_short_link"></span>)
+                &nbsp;&nbsp;
+            <% } %>
+        </p>
+    </div>
+    <button class="item_download" data-id="<%= file.id %>" data-i18n="title:button_download"></button>
+</div>

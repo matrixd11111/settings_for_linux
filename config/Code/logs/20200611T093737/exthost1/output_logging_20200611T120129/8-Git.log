@@ -1,0 +1,231 @@
+Looking for git in: git
+Using git 2.25.1 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/matrix/Documents/aerodisk/engine2
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-747/implement-mapping-of-bond-interfaces
+> git rev-parse --symbolic-full-name SW-747/implement-mapping-of-bond-interfaces@{u}
+fatal: no upstream configured for branch 'SW-747/implement-mapping-of-bond-interfaces'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show :bin/NETWORK/controllers/phys.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/bin/NETWORK/controllers/phys.py
+> git cat-file -s 359d445a355f266f813debdea5a7e71a5495341e
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-747/implement-mapping-of-bond-interfaces
+> git rev-parse --symbolic-full-name SW-747/implement-mapping-of-bond-interfaces@{u}
+fatal: no upstream configured for branch 'SW-747/implement-mapping-of-bond-interfaces'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-747/implement-mapping-of-bond-interfaces
+> git rev-parse --symbolic-full-name SW-747/implement-mapping-of-bond-interfaces@{u}
+fatal: no upstream configured for branch 'SW-747/implement-mapping-of-bond-interfaces'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-747/implement-mapping-of-bond-interfaces
+> git rev-parse --symbolic-full-name SW-747/implement-mapping-of-bond-interfaces@{u}
+fatal: no upstream configured for branch 'SW-747/implement-mapping-of-bond-interfaces'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-747/implement-mapping-of-bond-interfaces
+> git rev-parse --symbolic-full-name SW-747/implement-mapping-of-bond-interfaces@{u}
+fatal: no upstream configured for branch 'SW-747/implement-mapping-of-bond-interfaces'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-747/implement-mapping-of-bond-interfaces
+> git rev-parse --symbolic-full-name SW-747/implement-mapping-of-bond-interfaces@{u}
+fatal: no upstream configured for branch 'SW-747/implement-mapping-of-bond-interfaces'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-747/implement-mapping-of-bond-interfaces
+> git rev-parse --symbolic-full-name SW-747/implement-mapping-of-bond-interfaces@{u}
+fatal: no upstream configured for branch 'SW-747/implement-mapping-of-bond-interfaces'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-747/implement-mapping-of-bond-interfaces
+> git rev-parse --symbolic-full-name SW-747/implement-mapping-of-bond-interfaces@{u}
+fatal: no upstream configured for branch 'SW-747/implement-mapping-of-bond-interfaces'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :react/src/components/net/phys.js
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/react/src/components/net/phys.js
+> git cat-file -s 17c1314148f5b5b7721518c55200aa4ef53e1465
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-747/implement-mapping-of-bond-interfaces
+> git rev-parse --symbolic-full-name SW-747/implement-mapping-of-bond-interfaces@{u}
+fatal: no upstream configured for branch 'SW-747/implement-mapping-of-bond-interfaces'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :react/src/components/net/createBondForm.js
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/react/src/components/net/createBondForm.js
+> git cat-file -s 7d6f5415b2a203266d952058a6ab8f60df709290
+> git show :react/src/components/net/phys.js
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/react/src/components/net/phys.js
+> git cat-file -s 17c1314148f5b5b7721518c55200aa4ef53e1465
+> git check-ignore -v -z --stdin
+> git show HEAD:react/package.json
+> git ls-tree -l HEAD -- /home/matrix/Documents/aerodisk/engine2/react/package.json
+> git ls-tree -l HEAD -- /home/matrix/Documents/aerodisk/engine2/react/package.json
+> git checkout -q -- /home/matrix/Documents/aerodisk/engine2/react/package.json
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-747/implement-mapping-of-bond-interfaces
+> git rev-parse --symbolic-full-name SW-747/implement-mapping-of-bond-interfaces@{u}
+fatal: no upstream configured for branch 'SW-747/implement-mapping-of-bond-interfaces'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git ls-tree -l HEAD -- /home/matrix/Documents/aerodisk/engine2/react/package.json
+> git show HEAD:react/package.json
+> git status -z -u
+> git show HEAD:react/package-lock.json
+> git ls-tree -l HEAD -- /home/matrix/Documents/aerodisk/engine2/react/package-lock.json
+> git symbolic-ref --short HEAD
+> git rev-parse SW-747/implement-mapping-of-bond-interfaces
+> git rev-parse --symbolic-full-name SW-747/implement-mapping-of-bond-interfaces@{u}
+fatal: no upstream configured for branch 'SW-747/implement-mapping-of-bond-interfaces'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git ls-tree -l HEAD -- /home/matrix/Documents/aerodisk/engine2/react/package-lock.json
+> git checkout -q -- /home/matrix/Documents/aerodisk/engine2/react/package-lock.json
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-747/implement-mapping-of-bond-interfaces
+> git rev-parse --symbolic-full-name SW-747/implement-mapping-of-bond-interfaces@{u}
+fatal: no upstream configured for branch 'SW-747/implement-mapping-of-bond-interfaces'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git ls-tree -l HEAD -- /home/matrix/Documents/aerodisk/engine2/react/package-lock.json
+> git show HEAD:react/package-lock.json
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-747/implement-mapping-of-bond-interfaces
+> git rev-parse --symbolic-full-name SW-747/implement-mapping-of-bond-interfaces@{u}
+fatal: no upstream configured for branch 'SW-747/implement-mapping-of-bond-interfaces'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :react/src/components/net/phys.js
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/react/src/components/net/phys.js
+> git cat-file -s 17c1314148f5b5b7721518c55200aa4ef53e1465
+> git show :bin/NETWORK/controllers/phys.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/bin/NETWORK/controllers/phys.py
+> git cat-file -s 359d445a355f266f813debdea5a7e71a5495341e
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-747/implement-mapping-of-bond-interfaces
+> git rev-parse --symbolic-full-name SW-747/implement-mapping-of-bond-interfaces@{u}
+fatal: no upstream configured for branch 'SW-747/implement-mapping-of-bond-interfaces'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git add -A -- .
+> git commit --quiet --allow-empty-message --file -
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-747/implement-mapping-of-bond-interfaces
+> git rev-parse --symbolic-full-name SW-747/implement-mapping-of-bond-interfaces@{u}
+fatal: no upstream configured for branch 'SW-747/implement-mapping-of-bond-interfaces'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git config --get commit.template
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/bin/NETWORK/controllers/phys.py
+> git cat-file -s b385461c51ffda484ec0252eac8a4940e85f1394
+> git show :bin/NETWORK/controllers/phys.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-747/implement-mapping-of-bond-interfaces
+> git rev-parse --symbolic-full-name SW-747/implement-mapping-of-bond-interfaces@{u}
+fatal: no upstream configured for branch 'SW-747/implement-mapping-of-bond-interfaces'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git push
+fatal: The current branch SW-747/implement-mapping-of-bond-interfaces has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin SW-747/implement-mapping-of-bond-interfaces
+> git push -u origin SW-747/implement-mapping-of-bond-interfaces
+remote: 
+remote: To create a merge request for SW-747/implement-mapping-of-bond-interfaces, visit:        
+remote:   http://git.aerodisk.local/AERODISK/engine2/merge_requests/new?merge_request%5Bsource_branch%5D=SW-747%2Fimplement-mapping-of-bond-interfaces        
+remote: 
+To http://192.168.1.32/AERODISK/engine2.git
+ * [new branch]        SW-747/implement-mapping-of-bond-interfaces -> SW-747/implement-mapping-of-bond-interfaces
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-747/implement-mapping-of-bond-interfaces
+> git rev-parse --symbolic-full-name SW-747/implement-mapping-of-bond-interfaces@{u}
+> git rev-list --left-right SW-747/implement-mapping-of-bond-interfaces...refs/remotes/origin/SW-747/implement-mapping-of-bond-interfaces
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/bin/NETWORK/controllers/phys.py
+> git cat-file -s b385461c51ffda484ec0252eac8a4940e85f1394
+> git show :bin/NETWORK/controllers/phys.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-747/implement-mapping-of-bond-interfaces
+> git rev-parse --symbolic-full-name SW-747/implement-mapping-of-bond-interfaces@{u}
+> git rev-list --left-right SW-747/implement-mapping-of-bond-interfaces...refs/remotes/origin/SW-747/implement-mapping-of-bond-interfaces
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git pull --tags origin SW-483/network_interface_refactoring
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/bin/NETWORK/controllers/phys.py
+> git cat-file -s b385461c51ffda484ec0252eac8a4940e85f1394
+> git show :bin/NETWORK/controllers/phys.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/bin/NETWORK/controllers/phys.py
+> git show :bin/NETWORK/controllers/phys.py
+From http://192.168.1.32/AERODISK/engine2
+ * branch              SW-483/network_interface_refactoring -> FETCH_HEAD
+   9777c62f..3c22028c  SW-483/network_interface_refactoring -> origin/SW-483/network_interface_refactoring
+> git status -z -u
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/bin/NETWORK/controllers/phys.py
+> git show :bin/NETWORK/controllers/phys.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/matrix/Documents/aerodisk/engine2/bin/NETWORK/controllers/phys.py
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/bin/NETWORK/controllers/phys.py
+> git show :bin/NETWORK/controllers/phys.py
+> git checkout -q SW-483/network_interface_refactoring
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/bin/NETWORK/controllers/phys.py
+> git cat-file -s 359d445a355f266f813debdea5a7e71a5495341e
+> git show :bin/NETWORK/controllers/phys.py
+> git rev-list --count c3c385104a34d9d5a0377b01bdcbe479bdc0f02a.. -- /home/matrix/Documents/aerodisk/engine2/bin/NETWORK/controllers/phys.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/matrix/Documents/aerodisk/engine2/bin/NETWORK/controllers/phys.py
+> git check-ignore -v -z --stdin

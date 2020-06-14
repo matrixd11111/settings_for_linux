@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<title data-i18n="">Recording controls</title>-->
+        <title>Recording controls</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="/css/generic.css">
+        <link rel="stylesheet" type="text/css" href="/css/recording/controls.css">
+
+        <script type="text/javascript" src="/scripts/js/recording_controls.min.js"></script>
+
+        <!-- <script type="text/javascript" src="/libs/jquery/jquery-1.12.4.min.js"></script>
+         <script type="text/javascript" src="/libs/ga.js"></script>
+         <script type="text/javascript" src="/scripts/chrome_api/hardware.js"></script>
+         <script type="text/javascript" src="/scripts/background/device.js"></script>
+         <script type="text/javascript" src="/scripts/generic.js"></script>
+         <script type="text/javascript" src="/scripts/tab_manager.js"></script>
+         <script type="text/javascript" src="/scripts/chrome_api/runtime.js"></script>
+         <script type="text/javascript" src="/scripts/commons/communication.js"></script>
+         <script type="text/javascript" src="/scripts/recording/controls.js"></script>-->
+    </head>
+    <body>
+        <div class="ms_table" id="controls_wrapper">
+            <div class="ms_td">
+                <div class="rec_button" id="start_button">&bull;</div>
+                <div class="rec_button" id="pause_button">
+                    <img src="/images/recording/pause.png">
+                </div>
+            </div>
+            <div class="ms_td" id="record_progress">
+                <p id="rec_duration"></p>
+                <p id="progress_indicator">
+                    <span>&bull;</span>&nbsp;REC
+                </p>
+                <div class="ms_table" id="memory_status">
+                    <div class="ms_td">
+                        <span class="ms_label" data-i18n="title:controls_ram_used">U</span>
+                        <span class="ms_value" id="rec_size"></span>
+                    </div>
+                    <div class="ms_td" style="display:none;">
+                        <span class="ms_label" data-i18n="title:controls_ram_free">F</span>
+                        <span class="ms_value" id="free_ram"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <hr class="separator">
+        <div class="enabler">
+            <input id="enabler-control" type="checkbox" >
+            <label for="enabler-control"> Enable audio recording </label>
+            <span class="no_permission_icon"></span>
+        </div>
+        <div class="audio-controls">
+            <label >Audio</label>
+            <select>
+            </select>
+        </div>
+        <!--<div>
+            <input type="checkbox" id="capture_audio_checkbox">
+            <label for="capture_audio_checkbox" data-i18n="settings_video_record_microphone"></label>
+        </div>-->
+    </body>
+</html>

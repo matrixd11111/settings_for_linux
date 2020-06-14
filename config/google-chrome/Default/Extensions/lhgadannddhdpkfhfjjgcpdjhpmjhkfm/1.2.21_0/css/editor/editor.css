@@ -1,0 +1,316 @@
+* {
+	margin: 0;
+	padding: 0;
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+body {
+	/*overflow-x: hidden;*/
+	/*overflow-y: hidden;*/
+    min-width: 1024px;
+	background: gray url('/images/editor/dark_checker_bg.png');
+}
+
+label {
+	display: inline-block;
+	margin: 0;
+	vertical-align: top;
+}
+
+input[type="checkbox"] {
+	margin: 0 5px;
+}
+
+/* Top panel */
+#history_edit_toolbar {
+
+}
+
+#edit_zoom_scale,
+#edit_zoom_scale:hover,
+#edit_zoom_scale:active {
+	cursor: default;
+	min-width: 32px;
+	background: #2b2b2b;
+	background: -moz-linear-gradient(top, #2b2b2b 0%, #3b3b3b 99%);
+	background: -webkit-linear-gradient(top, #2b2b2b 0%, #3b3b3b 99%);
+	background: -ms-linear-gradient(top, #2b2b2b 0%, #3b3b3b 99%);
+	background: linear-gradient(top, #2b2b2b 0%, #3b3b3b 99%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2b2b2b', endColorstr='#3b3b3b', GradientType=0);
+	text-decoration: none;
+	text-align: right;
+}
+
+/* Bottom panel */
+#bottom_panel {
+	bottom: 0;
+	height: 36px;
+    background: #353535; /* Old browsers */
+    background: -ms-linear-gradient(top, #353535 0%, #282828 50%, #1c1c1c 100%); /* IE10 preview */
+    background: linear-gradient(to bottom, #353535 0%, #282828 50%, #1c1c1c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#353535', endColorstr='#1c1c1c', GradientType=0); /* IE6-9 */
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.tool_modes_hint {
+	margin: 3px auto 0;
+    color: #999999;
+    line-height: 1.3;
+}
+
+#tool_settings_toolbar {
+	position: relative;
+}
+
+#toggle_palette_button {
+	padding: 4px 5px;
+	border-radius: 3px;
+}
+
+#tool_settings_popup {
+	display: none;
+	position: absolute;
+	bottom: 39px;
+	left: 0;
+	z-index: 201;
+	padding: 5px;
+	background: rgba(0, 0, 0, 0.6);
+	border-radius: 3px;
+	color: white;
+	font-size: 12px;
+}
+
+#tool_settings_popup label {
+	vertical-align: -2px;
+}
+
+#colors_palette {
+	margin: 0 auto;
+	border-collapse: collapse;
+	vertical-align: middle;
+}
+
+#colors_palette .ms_td {
+	border: 4px solid transparent;
+	vertical-align: top;
+}
+
+.color_selector {
+	display: inline-block;
+	padding: 4px 5px;
+	border-radius: 3px;
+	text-align: center;
+}
+
+.default_color {
+
+}
+
+.custom_color {
+	padding: 3px 8px;
+}
+
+.color_preview {
+	display: inline-block;
+	width: 22px;
+	height: 14px;
+	border-radius: 2px;
+}
+
+#tool_color_picker {
+	overflow: hidden;
+
+	display: none;
+	position: fixed;
+	bottom: 157px;
+	left: 2px;
+	z-index: 201;
+	width: 356px;
+	border-radius: 3px;
+	color: white;
+	font-size: 12px;
+}
+
+#extra_settings {
+	display: block;
+	margin: 3px auto;
+}
+
+#tool_size_selector {
+	position: relative;
+	margin: 0 6px;
+	width: 72px;
+	height: 5px;
+	background: #212121;
+	border-radius: 10px;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.6),
+				inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+}
+
+#tool_size_selector .slider_handle {
+	position: absolute;
+	top: 0;
+	right: auto;
+	left: 0;
+	margin: -4px 0 0 -5px;
+	width: 10px;
+	height: 10px;
+	background: #aaaaab;
+	background: -moz-linear-gradient(top,  #AAAAAB 0%, #777778 100%);
+	background: -webkit-linear-gradient(top,  #AAAAAB 0%, #777778 100%);
+	background: linear-gradient(to bottom,  #AAAAAB 0%, #777778 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aaaaab', endColorstr='#777778',GradientType=0);
+	border: 1px solid rgba(49, 49, 49, 0.9);
+	border-radius: 20px;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+#tool_size_selector .slider_handle > div {
+	margin: 3px auto 0;
+	width: 4px;
+	height: 4px;
+	background-color: black;
+	border-radius: 20px;
+	box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.4);
+}
+
+.set_default_tool_size {
+	padding: 0;
+	background: #aaaaab;
+	background: -moz-linear-gradient(top,  #aaaaab 0%, #777778 100%);
+	background: -webkit-linear-gradient(top,  #aaaaab 0%, #777778 100%);
+	background: linear-gradient(to bottom,  #aaaaab 0%, #777778 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aaaaab', endColorstr='#777778',GradientType=0);
+	border: 1px solid rgba(49, 49, 49, 0.8);
+	border-radius: 300px;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.set_default_tool_size.min {
+	width: 8px;
+	height: 8px;
+
+}
+.set_default_tool_size.max {
+	width: 14px;
+	height: 14px;
+}
+
+/* Text & bubble tool */
+#text_tool_input {
+	-webkit-user-select: text;
+	-khtml-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+
+	position: fixed;
+	top: 0;
+	left: -1000px;
+	z-index: 10000;
+	width: 200px;
+	height: 100px;
+}
+
+/* Crop tool */
+#crop_area_toolbar {
+	padding: 0 10px;
+	height: 37px;
+}
+
+#crop_submit_button {
+	margin-right: 4px;
+}
+
+#crop_cancel_button {
+
+}
+
+/* Image edit */
+#editor_canvas_wrapper {
+	position: relative;
+	overflow: scroll;
+    margin: auto;
+	width: 100%;
+	height: 100%;
+}
+
+#image_edit_area {
+	position: relative;
+
+    margin: 0 auto;
+}
+
+#image_resize_preview,
+#canvas1, #canvas2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#image_resize_preview {
+	display: none;
+	z-index: 1;
+}
+
+#canvas1 {
+	cursor: crosshair;
+	z-index: 2;
+}
+#canvas2 {
+	cursor: none;
+	z-index: 3;
+}
+
+#loading {
+	position: fixed;
+	top: 50%;
+	left: 47%;
+	padding: 5px 7px 5px 31px;
+	background-color: rgba(0, 0, 0, 0.7);
+	background-image: url('/images/loader_fb_white.gif');
+	background-position: 8px center;
+	background-repeat: no-repeat;
+	border-radius: 5px;
+	color: white;
+	font-size: 13px;
+}
+
+#edit_area_overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+}
+
+#image_sizes {
+	padding: 4px 8px;
+	width: 210px;
+	max-height: 70px;
+	background: rgba(0, 0, 0, 0.7);
+	border-radius: 4px;
+	color: white;
+}
+
+#image_sizes > div {
+	display: flex;
+	margin: 0 0 5px;
+	justify-content: space-between;
+	align-items: center;
+}
+#image_sizes > div:last-child {
+	margin: 0;
+}
+
+#image_width_input,
+#image_height_input {
+	margin: 0;
+	width: 45%;
+	height: 24px;
+}

@@ -1,0 +1,145 @@
+.ms_unselectable * {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently not supported by any browser */
+}
+.ms_unselectable:hover * {
+    cursor: none;
+}
+
+.ms_no_scrollbar::-webkit-scrollbar {
+    width: 0;
+}
+
+/* Crop area screenshot */
+#ms_capture_area {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999998;
+    border: 4000px solid rgba(0, 0, 0, 0.3);
+}
+
+#ms_countdown {
+    display: none;
+    position: absolute;
+    bottom: 7px;
+    left: 7px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: center;
+}
+
+#ms_capture_overlay {
+    display: none;
+
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+    width: 100%;
+    height: 100%;
+}
+
+#ms_capture_overlay:hover {
+    cursor: none;
+}
+
+#ms_capture_crosshair {
+    position: relative;
+    width: 1px;
+    height: 1px;
+}
+
+#ms_capture_crosshair .crosshair_line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+#ms_capture_crosshair .crosshair_line.vertical {
+    top: -4000px;
+    height: 8000px;
+}
+
+#ms_capture_crosshair .crosshair_line.horizontal {
+    left: -4000px;
+    width: 8000px;
+}
+
+#ms_magnifier_tooltip,
+#ms_pixel_info {
+    font-family: 'Helvetica-Neue', Helvetica, Sans-Serif;
+}
+
+#ms_magnifier_tooltip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3px;
+    width: 225px;
+    height: 72px;
+    box-sizing: content-box;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+#ms_magnifier_wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    box-sizing: content-box;
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    border-radius: 3px;
+}
+
+#ms_magnifier {
+    /*width: inherit;*/
+    /*height: inherit;*/
+}
+
+#ms_pixel_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 120px;
+    height: 13px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 10px;
+    font-weight: 200;
+    line-height: 14px;
+}
+
+#ms_pixel_coordinates {
+    flex-grow: 1;
+    padding-left: 1px;
+}
+
+#ms_pixel_color {
+    flex-grow: 1;
+    padding-right: 1px;
+    text-align: right;
+}

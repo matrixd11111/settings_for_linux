@@ -1,0 +1,3 @@
+[2020-06-07 11:23:35.367] [renderer1] [warning] {}
+[2020-06-07 11:23:45.688] [renderer1] [warning] UNRESPONSIVE extension host, 'mkloubert.vscode-deploy-reloaded' took 99% of 7238.754ms, saved PROFILE here: '/tmp/exthost-6abcb4.cpuprofile' [{"id":"gc","total":36817,"percentage":1},{"id":"mkloubert.vscode-deploy-reloaded","total":7201560,"percentage":99}]
+[2020-06-07 11:24:04.242] [renderer1] [warning] UNRESPONSIVE extension host, 'mkloubert.vscode-deploy-reloaded' took 97% of 6568.44ms, saved PROFILE here: '/tmp/exthost-89877d.cpuprofile' [{"id":"gc","total":104136,"percentage":2},{"id":"mkloubert.vscode-deploy-reloaded","total":6367050,"percentage":97},{"id":"self","total":95372,"percentage":1}]

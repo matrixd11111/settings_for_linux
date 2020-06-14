@@ -1,0 +1,133 @@
+body {
+    min-width: 1024px;
+}
+
+a {
+    color: #1BA6FF;
+}
+a:hover {
+    color: #1B86D2;
+}
+
+#uploads_header {
+    margin: 20px 0 0;
+    font-size: 22px;
+    text-align: center;
+}
+
+#uploads_wrapper {
+    margin: 5px auto 0;
+    width: 800px;
+}
+
+.upload_item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 0 6px;
+    padding: 6px;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 8px;
+}
+.upload_item:hover {
+    /*background: rgba(0, 0, 0, 0.025);*/
+}
+
+.item_preview {
+    overflow: hidden;
+    position: relative;
+    width: 70px;
+    max-width: 70px;
+    height: 70px;
+    max-height: 70px;
+    background-color: white;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);
+}
+
+.item_upload_service_icon {
+    display: block;
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    width: 24px;
+    height: auto;
+}
+
+.item_upload_time {
+    margin: 0;
+    color: #777;
+    font-size: 13px;
+    font-weight: 200;
+}
+
+.item_title a {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+.item_title a:hover {
+    text-decoration: none;
+}
+
+.item_upload_service {
+    display: inline-block;
+    margin: 0 6px 0 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.item_copy_link {
+    cursor: pointer;
+
+    display: inline-block;
+    color: inherit;
+    text-decoration: underline;
+}
+.item_copy_link:hover {
+    color: #777;
+    text-decoration: none;
+}
+
+.item_download {
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 28px;
+    height: 28px;
+    background: white;
+    border: 1px solid #1BA6FF;
+    border-radius: 3px;
+    color: #1BA6FF;
+    text-align: center;
+}
+.item_download:hover {
+    background: #1BA6FF;
+    color: white !important;
+    text-decoration: none;
+}
+.item_download::before {
+    content: '⬇';
+    display: inline-block;
+    position: relative;
+    background: transparent;
+    color: inherit;
+    line-height: 26px;
+}
+
+#open_monosnap_storage {
+    cursor: pointer;
+    display: block;
+    margin: 15px auto 50px;
+    padding: 5px 10px;
+    width: 180px;
+    background: white;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}

@@ -1,0 +1,62 @@
+{
+	"name": "full-react-snippets",
+	"displayName": "Fullstack React/React Native snippets",
+	"description": "Code snippets for React/React Native and extra libs",
+	"version": "1.4.1",
+	"icon": "images/logo.png",
+	"publisher": "walter-ribeiro",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/walteribeiro/full-react-snippets"
+	},
+	"bugs": {
+		"url": "https://github.com/walteribeiro/full-react-snippets/issues"
+	},
+	"engines": {
+		"vscode": "^1.12.0"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"keywords": [
+		"snippets",
+		"react/react-native",
+		"react-router",
+		"Redux",
+		"GraphQL",
+		"React Hooks",
+		"Reactotron",
+		"styled components"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/snippets.json"
+			}
+		]
+	},
+	"devDependencies": {
+		"json-concat": "^0.0.1"
+	},
+	"scripts": {
+		"concat": "node_modules\\.bin\\json-concat snippets/types/ snippets/snippets.json"
+	},
+	"__metadata": {
+		"id": "b50dfe0a-e906-4a90-853b-ffd40ec2b865",
+		"publisherId": "6c02b9ca-b0c8-4cf7-a7ad-95d526ab1c27",
+		"publisherDisplayName": "Walter Ribeiro"
+	}
+}

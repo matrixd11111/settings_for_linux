@@ -1,0 +1,15 @@
+2020/06/08-15:17:32.600 638e Reusing MANIFEST /home/matrix/.config/google-chrome/Default/IndexedDB/https_napolke.ru_0.indexeddb.leveldb/MANIFEST-000001
+2020/06/08-15:17:32.601 638e Recovering log #4
+2020/06/08-15:17:32.601 638e Reusing old log /home/matrix/.config/google-chrome/Default/IndexedDB/https_napolke.ru_0.indexeddb.leveldb/000004.log 
+2020/06/08-17:06:21.936 1dde Level-0 table #8: started
+2020/06/08-17:06:21.939 1dde Level-0 table #8: 1041 bytes OK
+2020/06/08-17:06:21.942 1dde Delete type=0 #4
+2020/06/08-17:06:21.943 1dde Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/06/08-17:06:21.943 1dde Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x0b\x00V\x00i\x00s\x00i\x00t\x00s\x00C\x00o\x00u\x00n\x00t' @ 61 : 1
+2020/06/08-17:06:21.943 1dde Compacting 1@1 + 1@2 files
+2020/06/08-17:06:21.946 1dde Generated table #9@1: 26 keys, 787 bytes
+2020/06/08-17:06:21.946 1dde Compacted 1@1 + 1@2 files => 787 bytes
+2020/06/08-17:06:21.948 1dde compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/06/08-17:06:21.949 1dde Delete type=2 #5
+2020/06/08-17:06:21.949 1dde Delete type=2 #8
+2020/06/08-17:06:21.949 1dde Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x0b\x00V\x00i\x00s\x00i\x00t\x00s\x00C\x00o\x00u\x00n\x00t' @ 61 : 1 .. (end); will stop at (end)

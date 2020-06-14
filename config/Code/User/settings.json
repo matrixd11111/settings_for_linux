@@ -1,0 +1,12 @@
+{
+    "http.proxyAuthorization": null,
+    "keyboard.dispatch": "keyCode",
+    "python.autoComplete.extraPaths": [
+    "python.autoComplete.extraPaths"
+    ],
+    "oneDarkPro.editorTheme": "vscode",
+    "workbench.colorTheme": "Sublime Material Theme - Dark",
+    "python.analysis.diagnosticPublishDelay": 500,
+    "python.analysis.cachingLevel": "Library",
+    "window.zoomLevel": 0
+}

@@ -1,0 +1,64 @@
+[2020-06-10 15:23:32.619] [exthost] [info] extension host started
+[2020-06-10 15:23:32.685] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"extensionId":{"value":"vscode.debug-auto-launch","_lower":"vscode.debug-auto-launch"},"activationEvent":"*"}
+[2020-06-10 15:23:32.686] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2020-06-10 15:23:32.697] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"extensionId":{"value":"vscode.emmet","_lower":"vscode.emmet"},"activationEvent":"*"}
+[2020-06-10 15:23:32.698] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/emmet/dist/extension
+[2020-06-10 15:23:32.826] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"extensionId":{"value":"vscode.git","_lower":"vscode.git"},"activationEvent":"*"}
+[2020-06-10 15:23:32.826] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/git/dist/main
+[2020-06-10 15:23:33.041] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication {"startup":true,"extensionId":{"value":"vscode.github-authentication","_lower":"vscode.github-authentication"},"activationEvent":"*"}
+[2020-06-10 15:23:33.041] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/github-authentication/dist/extension.js
+[2020-06-10 15:23:33.081] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"extensionId":{"value":"vscode.merge-conflict","_lower":"vscode.merge-conflict"},"activationEvent":"*"}
+[2020-06-10 15:23:33.081] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/merge-conflict/dist/extension
+[2020-06-10 15:23:33.094] [exthost] [info] ExtensionService#_doActivateExtension vscode.search-result {"startup":true,"extensionId":{"value":"vscode.search-result","_lower":"vscode.search-result"},"activationEvent":"*"}
+[2020-06-10 15:23:33.094] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/search-result/dist/extension.js
+[2020-06-10 15:23:33.099] [exthost] [info] ExtensionService#_doActivateExtension vscode.vscode-account {"startup":true,"extensionId":{"value":"vscode.vscode-account","_lower":"vscode.vscode-account"},"activationEvent":"*"}
+[2020-06-10 15:23:33.099] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/vscode-account/dist/extension.js
+[2020-06-10 15:23:33.122] [exthost] [info] ExtensionService#_doActivateExtension eamodio.gitlens {"startup":true,"extensionId":{"value":"eamodio.gitlens","_lower":"eamodio.gitlens"},"activationEvent":"*"}
+[2020-06-10 15:23:33.122] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/matrix/.vscode/extensions/eamodio.gitlens-10.2.1/dist/extension
+[2020-06-10 15:23:33.296] [exthost] [info] ExtensionService#_doActivateExtension hbenl.vscode-test-explorer {"startup":true,"extensionId":{"value":"hbenl.vscode-test-explorer","_lower":"hbenl.vscode-test-explorer"},"activationEvent":"*"}
+[2020-06-10 15:23:33.297] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/matrix/.vscode/extensions/hbenl.vscode-test-explorer-2.19.1/out/main.js
+[2020-06-10 15:23:33.372] [exthost] [info] ExtensionService#_doActivateExtension hiro-sun.vscode-emacs {"startup":true,"extensionId":{"value":"hiro-sun.vscode-emacs","_lower":"hiro-sun.vscode-emacs"},"activationEvent":"*"}
+[2020-06-10 15:23:33.372] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/matrix/.vscode/extensions/hiro-sun.vscode-emacs-0.1.1/out/src/extension
+[2020-06-10 15:23:33.389] [exthost] [info] ExtensionService#_doActivateExtension intellsmi.comment-translate {"startup":true,"extensionId":{"value":"intellsmi.comment-translate","_lower":"intellsmi.comment-translate"},"activationEvent":"*"}
+[2020-06-10 15:23:33.390] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/matrix/.vscode/extensions/intellsmi.comment-translate-1.4.2/client/out/extension
+[2020-06-10 15:23:33.528] [exthost] [info] ExtensionService#_doActivateExtension mkloubert.vscode-deploy-reloaded {"startup":true,"extensionId":{"value":"mkloubert.vscode-deploy-reloaded","_lower":"mkloubert.vscode-deploy-reloaded"},"activationEvent":"*"}
+[2020-06-10 15:23:33.528] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/extension
+[2020-06-10 15:23:40.124] [exthost] [info] eager extensions activated
+[2020-06-10 15:23:45.190] [exthost] [info] extension host started
+[2020-06-10 15:23:45.684] [exthost] [info] ExtensionService#_doActivateExtension vscode.php-language-features {"startup":false,"extensionId":{"value":"vscode.php-language-features","_lower":"vscode.php-language-features"},"activationEvent":"onLanguage:php"}
+[2020-06-10 15:23:45.685] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/php-language-features/dist/phpMain
+[2020-06-10 15:23:45.761] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"extensionId":{"value":"vscode.debug-auto-launch","_lower":"vscode.debug-auto-launch"},"activationEvent":"*"}
+[2020-06-10 15:23:45.767] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2020-06-10 15:23:45.803] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"extensionId":{"value":"vscode.emmet","_lower":"vscode.emmet"},"activationEvent":"*"}
+[2020-06-10 15:23:45.804] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/emmet/dist/extension
+[2020-06-10 15:23:45.982] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"extensionId":{"value":"vscode.git","_lower":"vscode.git"},"activationEvent":"*"}
+[2020-06-10 15:23:45.982] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/git/dist/main
+[2020-06-10 15:23:46.155] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication {"startup":true,"extensionId":{"value":"vscode.github-authentication","_lower":"vscode.github-authentication"},"activationEvent":"*"}
+[2020-06-10 15:23:46.156] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/github-authentication/dist/extension.js
+[2020-06-10 15:23:46.204] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"extensionId":{"value":"vscode.merge-conflict","_lower":"vscode.merge-conflict"},"activationEvent":"*"}
+[2020-06-10 15:23:46.205] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/merge-conflict/dist/extension
+[2020-06-10 15:23:46.222] [exthost] [info] ExtensionService#_doActivateExtension vscode.search-result {"startup":true,"extensionId":{"value":"vscode.search-result","_lower":"vscode.search-result"},"activationEvent":"*"}
+[2020-06-10 15:23:46.223] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/search-result/dist/extension.js
+[2020-06-10 15:23:46.228] [exthost] [info] ExtensionService#_doActivateExtension vscode.vscode-account {"startup":true,"extensionId":{"value":"vscode.vscode-account","_lower":"vscode.vscode-account"},"activationEvent":"*"}
+[2020-06-10 15:23:46.228] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/vscode-account/dist/extension.js
+[2020-06-10 15:23:46.260] [exthost] [info] ExtensionService#_doActivateExtension eamodio.gitlens {"startup":true,"extensionId":{"value":"eamodio.gitlens","_lower":"eamodio.gitlens"},"activationEvent":"*"}
+[2020-06-10 15:23:46.261] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/matrix/.vscode/extensions/eamodio.gitlens-10.2.1/dist/extension
+[2020-06-10 15:23:46.639] [exthost] [info] ExtensionService#_doActivateExtension hbenl.vscode-test-explorer {"startup":true,"extensionId":{"value":"hbenl.vscode-test-explorer","_lower":"hbenl.vscode-test-explorer"},"activationEvent":"*"}
+[2020-06-10 15:23:46.639] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/matrix/.vscode/extensions/hbenl.vscode-test-explorer-2.19.1/out/main.js
+[2020-06-10 15:23:46.689] [exthost] [info] ExtensionService#_doActivateExtension hiro-sun.vscode-emacs {"startup":true,"extensionId":{"value":"hiro-sun.vscode-emacs","_lower":"hiro-sun.vscode-emacs"},"activationEvent":"*"}
+[2020-06-10 15:23:46.696] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/matrix/.vscode/extensions/hiro-sun.vscode-emacs-0.1.1/out/src/extension
+[2020-06-10 15:23:46.705] [exthost] [info] ExtensionService#_doActivateExtension intellsmi.comment-translate {"startup":true,"extensionId":{"value":"intellsmi.comment-translate","_lower":"intellsmi.comment-translate"},"activationEvent":"*"}
+[2020-06-10 15:23:46.706] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/matrix/.vscode/extensions/intellsmi.comment-translate-1.4.2/client/out/extension
+[2020-06-10 15:23:46.843] [exthost] [info] ExtensionService#_doActivateExtension mkloubert.vscode-deploy-reloaded {"startup":true,"extensionId":{"value":"mkloubert.vscode-deploy-reloaded","_lower":"mkloubert.vscode-deploy-reloaded"},"activationEvent":"*"}
+[2020-06-10 15:23:46.843] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/extension
+[2020-06-10 15:23:51.946] [exthost] [info] eager extensions activated
+[2020-06-10 15:24:00.794] [exthost] [info] ExtensionService#_doActivateExtension vscode.python {"startup":false,"extensionId":{"value":"vscode.python","_lower":"vscode.python"},"activationEvent":"onLanguage:python"}
+[2020-06-10 15:24:00.794] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/python/dist/pythonMain
+[2020-06-10 15:24:00.806] [exthost] [info] ExtensionService#_doActivateExtension ms-python.python {"startup":false,"extensionId":{"value":"ms-python.python","_lower":"ms-python.python"},"activationEvent":"onLanguage:python"}
+[2020-06-10 15:24:00.806] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/matrix/.vscode/extensions/ms-python.python-2020.5.86398/out/client/extension
+[2020-06-10 15:24:02.435] [exthost] [info] ExtensionService#_doActivateExtension littlefoxteam.vscode-python-test-adapter {"startup":false,"extensionId":{"value":"littlefoxteam.vscode-python-test-adapter","_lower":"littlefoxteam.vscode-python-test-adapter"},"activationEvent":"onLanguage:python"}
+[2020-06-10 15:24:02.435] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/matrix/.vscode/extensions/littlefoxteam.vscode-python-test-adapter-0.4.2/out/src/main.js
+[2020-06-10 15:25:13.993] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"extensionId":{"value":"vscode.typescript-language-features","_lower":"vscode.typescript-language-features"},"activationEvent":"onLanguage:javascript"}
+[2020-06-10 15:25:13.996] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/typescript-language-features/dist/extension
+[2020-06-10 15:25:28.657] [exthost] [info] ExtensionService#_doActivateExtension vscode.extension-editing {"startup":false,"extensionId":{"value":"vscode.extension-editing","_lower":"vscode.extension-editing"},"activationEvent":"onLanguage:typescript"}
+[2020-06-10 15:25:28.658] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/extension-editing/dist/extension

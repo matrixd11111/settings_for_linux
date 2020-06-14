@@ -1,0 +1,197 @@
+<html>
+	<head>
+		<title>Monosnap</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta http-equiv="Cache-Control" content="no-cache">
+
+		<link rel="stylesheet" type="text/css" href="/libs/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/libs/imgAreaSelect/css/imgareaselect.css" />
+		<link rel="stylesheet" type="text/css" href="/libs/colorpicker/css/colorpicker.css" />
+		<link rel="stylesheet" type="text/css" href="/css/generic.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/commons/top_export_panel.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/commons/buttons.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/editor/editor.css"/>
+
+        <script type="text/javascript" src="/libs/ejs/ejs.js"></script>
+		<script type="text/javascript" src="/scripts/js/editor.min.js"></script>
+
+	</head>
+	<body class="dark_scrollbar">
+        <div class="ms_panel_wrapper" id="top_panel">
+            <div class="ms_panel_content">
+                <div class="ms_flex ms_flex_vert_center panel_left_section" id="history_edit_toolbar">
+                    <div class="button button_first tool" id="edit_zoom_scale">
+                        <span class="button_text">&percnt;</span>
+                    </div>
+                    <div class="button tool" data-i18n="tooltip:editor_zoom_out" id="edit_zoom_out">
+                        <img src="/images/editor/button_tool_zoom_out.png" class="button_icon">
+                    </div>
+                    <div class="button button_last tool" data-i18n="tooltip:editor_zoom_in" id="edit_zoom_in">
+                        <img src="/images/editor/button_tool_zoom_in.png" class="button_icon">
+                    </div>
+
+                    <div class="ms_panel_separator"></div>
+                    <div class="button button_first tool" data-i18n="tooltip:editor_undo" id="edit_history_undo">
+                        <img src="/images/editor/button_undo.png" class="button_icon">
+                    </div>
+                    <div class="button tool" data-i18n="tooltip:editor_redo" id="edit_history_redo">
+                        <img src="/images/editor/button_redo.png" class="button_icon">
+                    </div>
+                    <div class="button button_last tool" data-i18n="tooltip:editor_wipe_history" id="edit_history_wipe">
+                        <span class="button_text" data-i18n="editor_wipe_history"></span>
+                    </div>
+                </div>
+                <div id="file_header">
+                    <div class="ms_table">
+                        <div class="ms_td">
+                            <input type="text" id="file_title_input" data-i18n="placeholder:editor_screenshot_title_placeholder">
+                        </div>
+                        <div class="ms_td">
+                            <div class="dropdown" id="file_type_dropdown">
+                                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">.png</a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" style="max-width:100px;">
+                                    <li><a tabindex="-1" href="#" class="ms_file_format" data-type="png">png</a></li>
+                                    <li><a tabindex="-1" href="#" class="ms_file_format" data-type="jpeg">jpg</a></li>
+                                    <li><a tabindex="-1" href="#" class="ms_file_format" data-type="webp">webp</a></li>
+                                    <li><a tabindex="-1" href="#" class="ms_file_format" data-type="">auto</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ms_flex ms_flex_vert_center" id="file_export_toolbar">
+                    <div class="button button_only top_panel_button" id="copy_to_clipboard_button">
+                        <span class="button_text" data-i18n="clipboard_button"></span>
+                    </div>
+                    <div class="button button_only top_panel_button" id="file_save_button">
+                        <span class="button_text" data-i18n="button_save"></span>
+                    </div>
+                    <div class="btn-group ms_flex" style="position:relative">
+                        <div class="button blue button_first" id="file_upload_button">
+                            <span class="button_text" data-i18n="button_upload"></span>
+                        </div>
+                        <div class="button blue button_last" data-toggle="dropdown" id="file_upload_menu">
+                            <img src="./images/editor/button_upload_hamburger.png" class="button_icon">
+                        </div>
+                        <ul class="dropdown-menu pull-right default_scrollbar" role="menu" aria-labelledby="dropdownMenu">
+                            <li class="dropdown-submenu pull-left upload_to" data-service="monosnap">
+                                <a tabindex="-1" href="#" class="with_icon">Monosnap</a>
+                                <ul class="dropdown-menu default_scrollbar" id="ms_user_folders_list">
+                                    <img src="/images/loader_fb_dark.gif" class="service_loader">
+                                </ul>
+                            </li>
+                            <li class="upload_to" data-service="amazon_s3">
+                                <a tabindex="-1" href="#" class="with_icon">Amazon S3</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ms_table" id="editor_canvas_wrapper">
+            <div class="ms_td" style="vertical-align:middle;">
+                <div id="image_edit_area">
+                    <span id="loading">Loading</span>
+                    <img id="image_resize_preview" src>
+                    <canvas id="canvas1"></canvas>
+                    <canvas id="canvas2"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="ms_flex ms_flex_vert_center ms_flex_horiz_center ms_hidden" id="edit_area_overlay">
+            <div id="image_sizes">
+                <div>
+                    <input type="text" id="image_width_input" data-i18n="placeholder:editor_width">
+                    &Cross;
+                    <input type="text" id="image_height_input" data-i18n="placeholder:editor_height">
+                </div>
+                <div>
+                    <div>
+                        <input type="checkbox" id="image_keep_proportion" style="margin: 0 0 2px;">
+                        <label for="image_keep_proportion" data-i18n="editor_keep_proportion" style="margin: 0;"></label>
+                    </div>
+                    <div class="btn btn-small btn-inverse" id="resize_submit_button" data-i18n="button_ok"></div>
+                </div>
+            </div>
+        </div>
+		<div class="ms_panel_wrapper" id="bottom_panel">
+			<div class="ms_panel_content">
+                <div class="ms_flex ms_flex_vert_center" id="tool_settings_toolbar">
+                    <div class="button" id="toggle_palette_button">
+                        <div class="color_preview"></div>
+                    </div>
+                    <div id="tool_settings_popup"></div>
+                    <div id="tool_color_picker"></div>
+
+                    <div class="ms_panel_separator"></div>
+                    <div class="set_default_tool_size min" data-size="4"></div>
+                    <div id="tool_size_selector">
+                        <div class="slider_handle">
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="set_default_tool_size max" data-size="14"></div>
+                </div>
+                <div class="ms_panel_separator"></div>
+                <div class="ms_panel_separator"></div>
+                <div class="ms_flex ms_flex_vert_center" id="tool_selector_toolbar">
+                    <div class="button button_first tool" data-action="arrow" data-i18n="tooltip:editor_tool_arrow">
+                        <img src="/images/editor/button_tool_arrow.png" class="button_icon">
+                    </div>
+                    <div class="button tool" data-action="rectangle" data-i18n="tooltip:editor_tool_rectangle">
+                        <img src="/images/editor/button_tool_rectangle.png" class="button_icon">
+                    </div>
+                    <div class="button tool" data-action="line" data-i18n="tooltip:editor_tool_line">
+                        <img src="/images/editor/button_tool_line.png" class="button_icon">
+                    </div>
+                    <div class="button tool" data-action="ellipse" data-i18n="tooltip:editor_tool_ellipse">
+                        <img src="/images/editor/button_tool_ellipse.png" class="button_icon">
+                    </div>
+                    <div class="button button_last tool" data-action="brush" data-i18n="tooltip:editor_tool_brush">
+                        <img src="./images/editor/button_tool_pencil.png" class="button_icon">
+                    </div>
+
+                    <div class="ms_panel_separator"></div>
+                    <div class="button button_first tool" data-action="text" data-i18n="tooltip:editor_tool_text">
+                        <img src="/images/editor/button_tool_text.png" class="button_icon">
+                    </div>
+                    <div class="button button_last tool" data-action="bubble" data-i18n="tooltip:editor_tool_bubble">
+                        <img src="/images/editor/button_tool_bubble.png" class="button_icon">
+                    </div>
+                    <!--<div class="button tool" data-action="bubble" data-i18n="tooltip:editor_tool_bubble">-->
+                        <!--<img src="/images/editor/button_tool_bubble.png" class="button_icon">-->
+                    <!--</div>-->
+                    <!--<div class="button button_last tool" data-action="counter" data-i18n="tooltip:editor_tool_counter">-->
+                        <!--<img src="/images/editor/button_tool_bubble.png" class="button_icon">-->
+                    <!--</div>-->
+
+                    <div class="ms_panel_separator"></div>
+                    <div class="button button_first tool" data-action="blur" data-i18n="tooltip:editor_tool_blur">
+                        <img src="/images/editor/button_tool_blur.png" class="button_icon">
+                    </div>
+                    <div class="button tool" data-action="crop" data-i18n="tooltip:editor_tool_crop">
+                        <img src="/images/editor/button_tool_crop.png" class="button_icon">
+                    </div>
+                    <div class="button button_last tool" data-action="resize" data-i18n="tooltip:editor_tool_resize">
+                        <img src="/images/editor/button_tool_resize.png" class="button_icon">
+                    </div>
+                </div>
+                <div class="ms_flex ms_flex_vert_center ms_hidden" id="crop_area_toolbar">
+                    <div class="button button_only blue" id="crop_submit_button">
+                        <span class="button_text" data-i18n="button_ok"></span>
+                    </div>
+                    <div class="button button_only" id="crop_cancel_button">
+                        <span class="button_text" data-i18n="button_cancel"></span>
+                    </div>
+                </div>
+			</div>
+		</div>
+
+		<textarea id="text_tool_input"></textarea>
+
+		<div class="alert alert-block hide fade in">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			<h4 class="alert-header"></h4><span class="alert-text"></span>
+		</div>
+	</body>
+</html>

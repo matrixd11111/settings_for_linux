@@ -1,0 +1,15 @@
+2020/06/08-08:20:31.823 1d66 Reusing MANIFEST /home/matrix/.config/google-chrome/Default/IndexedDB/https_automated-testing.info_0.indexeddb.leveldb/MANIFEST-000001
+2020/06/08-08:20:31.824 1d66 Recovering log #23
+2020/06/08-08:20:31.824 1d66 Reusing old log /home/matrix/.config/google-chrome/Default/IndexedDB/https_automated-testing.info_0.indexeddb.leveldb/000023.log 
+2020/06/08-08:21:06.844 1dde Level-0 table #28: started
+2020/06/08-08:21:06.856 1dde Level-0 table #28: 103214 bytes OK
+2020/06/08-08:21:06.860 1dde Delete type=0 #23
+2020/06/08-08:21:06.861 1dde Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/06/08-08:21:06.861 1dde Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01 \x03\x00\xd0\xbd\xf8%)wB\x00\x012\x00d\x00i\x00s\x00c\x00o\x00u\x00r\x00s\x00e\x00-\x001\x00|\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00m\x00y\x00.\x00h\x00e\x00l\x00l\x00o\x00b\x00a\x00r\x00.\x00c\x00o\x00m\x00/\x00m\x00o\x00d\x00u\x00l\x00e\x00s\x00-\x00v\x005\x009\x00.\x00j\x00s' @ 7083 : 1
+2020/06/08-08:21:06.861 1dde Compacting 1@1 + 1@2 files
+2020/06/08-08:21:06.872 1dde Generated table #29@1: 474 keys, 79389 bytes
+2020/06/08-08:21:06.872 1dde Compacted 1@1 + 1@2 files => 79389 bytes
+2020/06/08-08:21:06.876 1dde compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/06/08-08:21:06.877 1dde Delete type=2 #28
+2020/06/08-08:21:06.877 1dde Delete type=2 #25
+2020/06/08-08:21:06.877 1dde Manual compaction at level-1 from '\x00\x01\x01 \x03\x00\xd0\xbd\xf8%)wB\x00\x012\x00d\x00i\x00s\x00c\x00o\x00u\x00r\x00s\x00e\x00-\x001\x00|\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00m\x00y\x00.\x00h\x00e\x00l\x00l\x00o\x00b\x00a\x00r\x00.\x00c\x00o\x00m\x00/\x00m\x00o\x00d\x00u\x00l\x00e\x00s\x00-\x00v\x005\x009\x00.\x00j\x00s' @ 7083 : 1 .. (end); will stop at (end)

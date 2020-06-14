@@ -1,0 +1,67 @@
+NOTICE clients.sftp.uploadfile(3) - [23/May/2020:17:49:17 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [23/May/2020:17:49:17 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [23/May/2020:17:50:02 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [23/May/2020:17:50:03 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [23/May/2020:17:52:38 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [23/May/2020:17:52:38 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [23/May/2020:17:53:07 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [23/May/2020:17:53:07 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [23/May/2020:17:53:19 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [23/May/2020:17:53:19 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [23/May/2020:17:54:42 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [23/May/2020:17:54:42 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [23/May/2020:17:55:58 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [23/May/2020:17:55:59 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [23/May/2020:17:57:23 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [23/May/2020:17:57:24 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [23/May/2020:17:58:03 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [23/May/2020:17:58:03 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [23/May/2020:17:58:49 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [23/May/2020:17:58:49 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [23/May/2020:18:00:55 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [23/May/2020:18:00:56 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [23/May/2020:18:01:25 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [23/May/2020:18:01:25 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [23/May/2020:18:02:28 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [23/May/2020:18:02:28 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [23/May/2020:18:02:44 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [23/May/2020:18:02:44 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [23/May/2020:18:03:14 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [23/May/2020:18:03:14 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+INFO extension.deploy.reloaded.loadplugins - [23/May/2020:18:56:27 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+NOTICE clients.sftp.uploadfile(3) - [23/May/2020:18:58:43 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [23/May/2020:18:58:43 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [23/May/2020:19:10:44 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [23/May/2020:19:10:44 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [23/May/2020:19:11:20 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [23/May/2020:19:11:20 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [23/May/2020:19:11:39 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [23/May/2020:19:11:39 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [23/May/2020:19:12:40 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [23/May/2020:19:12:40 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [23/May/2020:19:13:20 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [23/May/2020:19:13:20 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [23/May/2020:19:13:45 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [23/May/2020:19:13:45 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [23/May/2020:19:17:33 +0000] "'/var/www/engine/bin/NETWORK/tests/test_net.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [23/May/2020:19:17:33 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/tests/test_net.py' to 777 ..."

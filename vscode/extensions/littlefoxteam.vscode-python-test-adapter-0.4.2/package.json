@@ -1,0 +1,130 @@
+{
+	"name": "vscode-python-test-adapter",
+	"displayName": "Python Test Explorer for Visual Studio Code",
+	"description": "Run your Python tests in the Sidebar of Visual Studio Code",
+	"icon": "img/icon.png",
+	"author": "Nikolay Kondratyev",
+	"publisher": "littlefoxteam",
+	"version": "0.4.2",
+	"license": "MIT",
+	"homepage": "https://github.com/kondratyev-nv/vscode-python-test-adapter",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kondratyev-nv/vscode-python-test-adapter.git"
+	},
+	"bugs": {
+		"url": "https://github.com/kondratyev-nv/vscode-python-test-adapter/issues"
+	},
+	"badges": [
+		{
+			"url": "https://travis-ci.com/kondratyev-nv/vscode-python-test-adapter.svg?branch=master",
+			"href": "https://travis-ci.com/kondratyev-nv/vscode-python-test-adapter",
+			"description": "Continuous integration (Travis)"
+		},
+		{
+			"url": "https://dev.azure.com/kondratyev-nv/Python%20Test%20Explorer%20for%20Visual%20Studio%20Code/_apis/build/status/Python%20Test%20Explorer%20for%20Visual%20Studio%20Code%20CI?branchName=master",
+			"href": "https://dev.azure.com/kondratyev-nv/Python%20Test%20Explorer%20for%20Visual%20Studio%20Code/_build/latest?definitionId=1?branchName=master",
+			"description": "Continuous integration (Azure Pipelines)"
+		},
+		{
+			"url": "https://david-dm.org/kondratyev-nv/vscode-python-unittest-adapter/status.svg",
+			"href": "https://david-dm.org/kondratyev-nv/vscode-python-unittest-adapter",
+			"description": "Dependencies status (David)"
+		}
+	],
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"python",
+		"test",
+		"testing",
+		"unittest",
+		"pytest"
+	],
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"clean": "rimraf out *.vsix **/*.pyc **/__pycache__ **/.pytest_cache",
+		"build": "tsc",
+		"watch": "tsc -w",
+		"lint": "tslint --project tsconfig.json",
+		"pretest": "npm run build",
+		"test": "cross-env SOME_PROCESS_VARIABLE=HelloFromProcessEnv cross-env CODE_TESTS_WORKSPACE=./test/test_samples/samples-workspace.code-workspace node ./node_modules/vscode/bin/test --silent",
+		"vscode:prepublish": "npm run build",
+		"package": "vsce package",
+		"publish": "vsce publish"
+	},
+	"extensionDependencies": [
+		"ms-python.python",
+		"hbenl.vscode-test-explorer"
+	],
+	"dependencies": {
+		"argparse": "^1.0.10",
+		"dotenv": "^8.2.0",
+		"iconv-lite": "^0.5.1",
+		"js-base64": "^2.5.2",
+		"tmp": "^0.2.0",
+		"tslib": "^1.11.1",
+		"untildify": "^4.0.0",
+		"vscode-test-adapter-api": "^1.8.0",
+		"xml2js": "^0.4.23"
+	},
+	"devDependencies": {
+		"@types/argparse": "^1.0.38",
+		"@types/chai": "^4.2.11",
+		"@types/js-base64": "^2.3.1",
+		"@types/mocha": "^7.0.2",
+		"@types/node": "^13.13.4",
+		"@types/tmp": "^0.1.0",
+		"@types/xml2js": "^0.4.5",
+		"chai": "^4.2.0",
+		"cross-env": "^7.0.2",
+		"mocha": "^7.1.2",
+		"rimraf": "^3.0.2",
+		"tslint": "^6.1.2",
+		"typescript": "^3.8.3",
+		"vsce": "^1.75.0",
+		"vscode": "^1.1.37"
+	},
+	"main": "out/src/main.js",
+	"engines": {
+		"vscode": "^1.23.0"
+	},
+	"activationEvents": [
+		"onLanguage:python",
+		"onView:test-explorer",
+		"onCommand:test-explorer.reload",
+		"onCommand:test-explorer.run-all",
+		"onCommand:test-explorer.run-file",
+		"onCommand:test-explorer.run-test-at-cursor",
+		"onCommand:test-explorer.rerun",
+		"onCommand:test-explorer.debug-test-at-cursor",
+		"onCommand:test-explorer.redebug",
+		"onCommand:test-explorer.cancel"
+	],
+	"contributes": {
+		"configuration": {
+			"properties": {
+				"pythonTestExplorer.testFramework": {
+					"type": [
+						"string",
+						"null"
+					],
+					"enum": [
+						"unittest",
+						"pytest",
+						null
+					],
+					"default": null,
+					"description": "Test framework to use for Python Test Explorer (default is null and Python extension settings are used)",
+					"scope": "resource"
+				}
+			}
+		}
+	},
+	"__metadata": {
+		"id": "912fd5ae-d9f2-4c31-8a0b-d7fb669afbb4",
+		"publisherId": "5feb6684-05d9-4255-a37a-8409861d22f2",
+		"publisherDisplayName": "Little Fox Team"
+	}
+}

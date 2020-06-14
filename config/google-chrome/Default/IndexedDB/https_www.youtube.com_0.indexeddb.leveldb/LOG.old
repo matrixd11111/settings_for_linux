@@ -1,0 +1,8 @@
+2020/06/08-13:09:48.244 4e76 Reusing MANIFEST /home/matrix/.config/google-chrome/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/06/08-13:09:48.245 4e76 Recovering log #19
+2020/06/08-13:09:48.245 4e76 Reusing old log /home/matrix/.config/google-chrome/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000019.log 
+2020/06/08-13:11:54.743 1dde Level-0 table #24: started
+2020/06/08-13:11:54.744 1dde Level-0 table #24: 0 bytes OK
+2020/06/08-13:11:54.749 1dde Delete type=0 #19
+2020/06/08-13:11:54.749 1dde Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/06/08-13:11:54.749 1dde Manual compaction at level-1 from (begin) .. (end); will stop at (end)

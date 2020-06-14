@@ -1,0 +1,22 @@
+{
+   "background": {
+      "scripts": [ "bg.js", "analytics.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon-enabled.png",
+      "default_popup": "popup/popup.html"
+   },
+   "description": "Расширение позволяет беспрепятственно заходить на заблокированные сайты.",
+   "homepage_url": "http://fastproxy.online",
+   "icons": {
+      "128": "icon-128-enabled.png",
+      "32": "icon-enabled.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAphRmBDcQ64PuTpatamAbU1qbJR21V80Bk6nNWAMC4JYl+ZSoRD+dHL+9gFADhyNyGexVqoYtmMOxMQvx0E8ov+GRH/RJAICdpmXRjcXQdYtETHzT4+7WfKfhJt0veGHidCyMfhKb1RwURFJmMZr0j1tHGaXdD+v326ngi6qJqwCkgXqWPR4o6IRV9lR3Y2tXmvrH337XFq4GKmeHjyOHUQmfzl7z667dLi1DK8kyJ1Sw09eYshrm0oDSkLshArL2pLhhRJj9xqzXeNr4EZp12Q3sly4y1QlhiFGOqYvn863Igg9uPldqaqrVbgILceoux+Oi9ev6Bei+5P9LGc/HRQIDAQAB",
+   "manifest_version": 2,
+   "name": "FastProxy - обход блокировки сайтов",
+   "permissions": [ "proxy", "tabs", "webRequest", "\u003Call_urls>", "storage" ],
+   "short_name": "FastProxy",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "6.0.3"
+}

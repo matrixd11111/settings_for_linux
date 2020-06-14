@@ -1,0 +1,8 @@
+2020/06/02-09:46:48.483 aef3 Reusing MANIFEST /home/matrix/.config/google-chrome/Default/IndexedDB/https_selenium-python.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/06/02-09:46:48.483 aef3 Recovering log #4
+2020/06/02-09:46:48.484 aef3 Reusing old log /home/matrix/.config/google-chrome/Default/IndexedDB/https_selenium-python.com_0.indexeddb.leveldb/000004.log 
+2020/06/02-11:09:00.481 156e Level-0 table #8: started
+2020/06/02-11:09:00.481 156e Level-0 table #8: 0 bytes OK
+2020/06/02-11:09:00.485 156e Delete type=0 #4
+2020/06/02-11:09:00.485 156e Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/06/02-11:09:00.485 156e Manual compaction at level-1 from (begin) .. (end); will stop at (end)

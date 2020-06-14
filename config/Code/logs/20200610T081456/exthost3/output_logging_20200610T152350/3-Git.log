@@ -1,0 +1,61 @@
+Looking for git in: git
+Using git 2.25.1 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/matrix/Documents/aerodisk/engine2
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-483/network_interface_refactoring
+> git rev-parse --symbolic-full-name SW-483/network_interface_refactoring@{u}
+> git show :fuel/app/views/leftmenu.php
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/fuel/app/views/leftmenu.php
+> git check-ignore -v -z --stdin
+> git cat-file -s 96ba6468988b4a2e80a575f644327bb2eb00af3b
+> git rev-list --left-right SW-483/network_interface_refactoring...refs/remotes/origin/SW-483/network_interface_refactoring
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :bin/NETWORK/tests/test_net.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/bin/NETWORK/tests/test_net.py
+> git cat-file -s 2394be37c0d617e75a41a01d46b50d0391d6f697
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-483/network_interface_refactoring
+> git rev-parse --symbolic-full-name SW-483/network_interface_refactoring@{u}
+> git rev-list --left-right SW-483/network_interface_refactoring...refs/remotes/origin/SW-483/network_interface_refactoring
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/matrix/Documents/aerodisk/engine2/bin/NETWORK/tests/test_net.py
+> git check-ignore -v -z --stdin
+> git show :react/src/components/net/phys.js
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/react/src/components/net/phys.js
+> git cat-file -s 17c1314148f5b5b7721518c55200aa4ef53e1465
+> git show :react/src/components/net/createBondForm.js
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/react/src/components/net/createBondForm.js
+> git cat-file -s 7d6f5415b2a203266d952058a6ab8f60df709290
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-483/network_interface_refactoring
+> git rev-parse --symbolic-full-name SW-483/network_interface_refactoring@{u}
+> git rev-list --left-right SW-483/network_interface_refactoring...refs/remotes/origin/SW-483/network_interface_refactoring
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :react/src/components/net/phys.js
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/react/src/components/net/phys.js
+> git cat-file -s 17c1314148f5b5b7721518c55200aa4ef53e1465
+> git check-ignore -v -z --stdin
+> git show :bin/NETWORK/tests/test_net.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/bin/NETWORK/tests/test_net.py
+> git cat-file -s 2394be37c0d617e75a41a01d46b50d0391d6f697
+> git check-ignore -v -z --stdin
+> git show HEAD:fuel/app/views/leftmenu.php
+> git ls-tree -l HEAD -- /home/matrix/Documents/aerodisk/engine2/fuel/app/views/leftmenu.php
+> git ls-tree -l HEAD -- /home/matrix/Documents/aerodisk/engine2/fuel/app/views/leftmenu.php

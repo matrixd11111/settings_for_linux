@@ -1,0 +1,36 @@
+.content {
+	width: 720px;
+	margin: 0 auto 30px;
+}
+.article {
+	font-size: 19px;
+	font-family: PT Serif,serif;
+	color: rgba(0,0,0,.86);
+}
+.title {
+	font-size: 38px;
+    font-weight: 700;
+	font-family: Museo,sans-serif;
+	text-align: center;
+}
+.figure {
+	max-width: 100%;
+}
+.empty {
+	margin-top: 24px;
+}
+.text {
+	font-size: 19px;
+    font-family: PT Serif,serif;
+	color: rgba(0,0,0,.86);
+	line-height: 1.5em;
+}
+.blockquote {
+	font-size: 19px;
+    font-family: PT Serif,serif;
+	color: rgba(0,0,0,.86);
+	font-style: italic;
+	border-left: 2px solid rgba(0,0,0,.86);
+	margin: 0;
+	padding-left: 18px;
+}

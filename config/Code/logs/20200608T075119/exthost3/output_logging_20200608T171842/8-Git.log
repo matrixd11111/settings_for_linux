@@ -1,0 +1,36 @@
+Looking for git in: git
+Using git 2.25.1 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/matrix/Documents/aerodisk/engine2
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git check-ignore -v -z --stdin
+> git rev-parse SW-483/network_interface_refactoring
+> git rev-parse --symbolic-full-name SW-483/network_interface_refactoring@{u}
+> git check-ignore -v -z --stdin
+> git show :bin/NETWORK/tests/test_net.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/bin/NETWORK/tests/test_net.py
+> git rev-list --left-right SW-483/network_interface_refactoring...refs/remotes/origin/SW-483/network_interface_refactoring
+> git cat-file -s 2394be37c0d617e75a41a01d46b50d0391d6f697
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :fuel/app/views/leftmenu.php
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/fuel/app/views/leftmenu.php
+> git cat-file -s 96ba6468988b4a2e80a575f644327bb2eb00af3b
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-483/network_interface_refactoring
+> git rev-parse --symbolic-full-name SW-483/network_interface_refactoring@{u}
+> git rev-list --left-right SW-483/network_interface_refactoring...refs/remotes/origin/SW-483/network_interface_refactoring
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template

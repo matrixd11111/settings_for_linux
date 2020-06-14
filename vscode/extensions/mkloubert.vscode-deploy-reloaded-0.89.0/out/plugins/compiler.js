@@ -1,0 +1,272 @@
+"use strict";
+/**
+ * This file is part of the vscode-deploy-reloaded distribution.
+ * Copyright (c) Marcel Joachim Kloubert.
+ *
+ * vscode-deploy-reloaded is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation, version 3.
+ *
+ * vscode-deploy-reloaded is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+const deploy_compilers = require("../compilers");
+const deploy_files = require("../files");
+const deploy_helpers = require("../helpers");
+const deploy_plugins = require("../plugins");
+const FSExtra = require("fs-extra");
+const MergeDeep = require('merge-deep');
+const Moment = require("moment");
+const Path = require("path");
+class CompilerPlugin extends deploy_plugins.PluginBase {
+    get canDelete() {
+        return true;
+    }
+    get canList() {
+        return true;
+    }
+    get canRemoveFolders() {
+        return true;
+    }
+    async createCompilerContext(target) {
+        const ME = this;
+        let context = false;
+        const COMPILER = deploy_helpers.normalizeString(ME.replaceWithValues(target, target.compiler));
+        switch (COMPILER) {
+            case 'coffee':
+            case 'coffeescript':
+                context = {
+                    compiler: deploy_compilers.Compiler.CoffeeScript,
+                    sourceExtension: 'coffee',
+                    targetExtension: 'js',
+                };
+                break;
+            case 'html-min':
+            case 'html-minifier':
+            case 'htmlmin':
+            case 'htmlminifier':
+                context = {
+                    compiler: deploy_compilers.Compiler.HtmlMinifier,
+                    sourceExtension: 'html',
+                    targetExtension: 'min.html',
+                };
+                break;
+            case 'less':
+                context = {
+                    compiler: deploy_compilers.Compiler.Less,
+                    sourceExtension: 'less',
+                    targetExtension: 'css',
+                };
+                break;
+            case 'pug':
+                context = {
+                    compiler: deploy_compilers.Compiler.Pug,
+                    sourceExtension: 'pug',
+                    targetExtension: 'html',
+                };
+                break;
+            case 'uglify-js':
+            case 'uglifyjs':
+                context = {
+                    compiler: deploy_compilers.Compiler.UglifyJS,
+                    sourceExtension: 'js',
+                    targetExtension: 'min.js',
+                };
+                break;
+        }
+        if (false === context) {
+            throw new Error(ME.t(target, 'compilers.notSupported', COMPILER));
+        }
+        context.target = target;
+        context.workspace = target.__workspace;
+        if (!deploy_helpers.isEmptyString(target.dir)) {
+            context.outputDirectory = ME.replaceWithValues(target, target.dir);
+            if (!Path.isAbsolute(context.outputDirectory)) {
+                context.outputDirectory = Path.join(context.workspace.rootPath, context.outputDirectory);
+            }
+            context.outputDirectory = Path.resolve(context.outputDirectory);
+        }
+        if (deploy_helpers.isEmptyString(context.outputDirectory)) {
+            context.outputDirectory = context.workspace.rootPath;
+        }
+        return context;
+    }
+    async deleteFiles(context) {
+        const ME = this;
+        const COMPILER = await ME.createCompilerContext(context.target);
+        for (const F of context.files) {
+            if (context.isCancelling) {
+                break;
+            }
+            try {
+                const TARGET_DIR = Path.resolve(Path.join(COMPILER.outputDirectory, F.path));
+                await F.onBeforeDelete(TARGET_DIR);
+                const FILENAME = Path.basename(F.file, Path.extname(F.file));
+                const TARGET_FILE = Path.resolve(Path.join(COMPILER.outputDirectory, F.path + '/' + FILENAME + '.' + COMPILER.targetExtension));
+                await deploy_helpers.unlink(TARGET_FILE);
+                await F.onDeleteCompleted(null, false);
+            }
+            catch (e) {
+                await F.onDeleteCompleted(e);
+            }
+        }
+    }
+    async listDirectory(context) {
+        const ME = this;
+        const COMPILER = await ME.createCompilerContext(context.target);
+        let targetDir = Path.join(COMPILER.outputDirectory, context.dir);
+        targetDir = Path.resolve(targetDir);
+        if (!targetDir.startsWith(COMPILER.outputDirectory)) {
+            throw new Error(ME.t(context.target, 'plugins.compiler.invalidDirectory', context.dir));
+        }
+        let relativePath = targetDir.substr(COMPILER.outputDirectory.length);
+        relativePath = deploy_helpers.replaceAllStrings(relativePath, Path.sep, '/');
+        while (relativePath.startsWith('/')) {
+            relativePath = relativePath.substr(1);
+        }
+        while (relativePath.endsWith('/')) {
+            relativePath = relativePath.substr(0, relativePath.length - 1);
+        }
+        if (deploy_helpers.isEmptyString(relativePath)) {
+            relativePath = '';
+        }
+        const RESULT = {
+            dirs: [],
+            files: [],
+            info: deploy_files.createDefaultDirectoryInfo(context.dir, {
+                exportPath: targetDir,
+            }),
+            others: [],
+            target: context.target,
+        };
+        if (context.isCancelling) {
+            return;
+        }
+        const FILES_AND_FOLDERS = await deploy_helpers.readDir(targetDir);
+        for (const F of FILES_AND_FOLDERS) {
+            let fullPath = Path.join(targetDir, F);
+            const STATS = await deploy_helpers.lstat(fullPath);
+            let time;
+            if (STATS.mtime) {
+                time = Moment(STATS.mtime);
+                if (time.isValid() && !time.isUTC()) {
+                    time = time.utc();
+                }
+            }
+            const SIZE = STATS.size;
+            if (STATS.isDirectory()) {
+                const DI = {
+                    exportPath: Path.resolve(Path.join(targetDir, F)),
+                    name: F,
+                    path: relativePath,
+                    size: SIZE,
+                    time: time,
+                    type: deploy_files.FileSystemType.Directory,
+                };
+                RESULT.dirs.push(DI);
+            }
+            else if (STATS.isFile()) {
+                const FI = {
+                    download: async () => {
+                        return deploy_helpers.readFile(fullPath);
+                    },
+                    exportPath: Path.resolve(Path.join(targetDir, F)),
+                    name: F,
+                    path: relativePath,
+                    size: SIZE,
+                    time: time,
+                    type: deploy_files.FileSystemType.File,
+                };
+                RESULT.files.push(FI);
+            }
+            else {
+                const FSI = {
+                    exportPath: Path.resolve(Path.join(targetDir, F)),
+                    name: F,
+                    path: relativePath,
+                    size: SIZE,
+                    time: time,
+                };
+                RESULT.others.push(FSI);
+            }
+        }
+        return RESULT;
+    }
+    async removeFolders(context) {
+        const TARGET = context.target;
+        const OUT_DIR = Path.resolve((await this.createCompilerContext(TARGET)).outputDirectory);
+        for (const F of context.folders) {
+            try {
+                await F.onBeforeRemove(deploy_helpers.toDisplayablePath(F.path));
+                const TARGET_DIR = Path.resolve(Path.join(OUT_DIR, F.path));
+                const TARGET_FOLDER = Path.resolve(Path.join(TARGET_DIR, F.name));
+                if (!this.isPathOf(TARGET, TARGET_FOLDER) || (OUT_DIR === TARGET_FOLDER)) {
+                    throw new Error(this.t(TARGET, 'plugins.compiler.invalidDirectory', TARGET_FOLDER));
+                }
+                if (!(await deploy_helpers.isDirectory(TARGET_FOLDER))) {
+                    throw new Error(this.t(TARGET, 'isNo.directory', TARGET_FOLDER));
+                }
+                await FSExtra.remove(TARGET_FOLDER);
+                await F.onRemoveCompleted();
+            }
+            catch (e) {
+                await F.onRemoveCompleted(e);
+            }
+        }
+    }
+    async uploadFiles(context) {
+        const COMPILER = await this.createCompilerContext(context.target);
+        const FILES_TO_COMPILERS = [];
+        for (const F of context.files) {
+            if (context.isCancelling) {
+                break;
+            }
+            try {
+                const TARGET_DIR = Path.resolve(Path.join(COMPILER.outputDirectory, F.path));
+                await F.onBeforeUpload(TARGET_DIR);
+                await F.read();
+                FILES_TO_COMPILERS.push('/' + deploy_helpers.normalizePath(F.path + '/' + F.name));
+                await F.onUploadCompleted();
+            }
+            catch (e) {
+                await F.onUploadCompleted(e);
+            }
+        }
+        const DEFAULT_OPTS = {
+            files: FILES_TO_COMPILERS,
+            options: deploy_helpers.cloneObject(COMPILER.target.options),
+            outDirectory: COMPILER.outputDirectory,
+            workspace: COMPILER.workspace,
+        };
+        const RESULT = await deploy_compilers.compile(COMPILER.compiler, MergeDeep(DEFAULT_OPTS, COMPILER.target.options));
+        //TODO: show result messages
+        if (RESULT) {
+            for (const MSG of deploy_helpers.asArray(RESULT.messages)) {
+                switch (MSG.category) {
+                    case deploy_compilers.CompileResultMessageCategory.Error:
+                        throw new Error(MSG.message);
+                    case deploy_compilers.CompileResultMessageCategory.Warning:
+                        break;
+                }
+            }
+        }
+    }
+}
+/**
+ * Creates a new instance of that plugin.
+ *
+ * @param {deploy_plugins.PluginContext} context The context for the plugin.
+ *
+ * @return {deploy_plugins.Plugin} The new plugin.
+ */
+function createPlugins(context) {
+    return new CompilerPlugin(context);
+}
+exports.createPlugins = createPlugins;
+//# sourceMappingURL=compiler.js.map

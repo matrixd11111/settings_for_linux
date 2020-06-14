@@ -1,0 +1,605 @@
+{
+   "alert_default_header": {
+      "message": "Внимание."
+   },
+   "alert_error_header": {
+      "message": "Ошибка."
+   },
+   "alert_info_header": {
+      "message": ""
+   },
+   "alert_sucess_header": {
+      "message": "Готово!"
+   },
+   "app_default_title": {
+      "message": "Monosnap"
+   },
+   "app_description": {
+      "message": "Продуманное приложение для создания скриншотов"
+   },
+   "app_name": {
+      "message": "Monosnap"
+   },
+   "aws_access_key_id": {
+      "message": "Access Key ID"
+   },
+   "aws_region": {
+      "message": "Регион"
+   },
+   "aws_s3_base_url": {
+      "message": "Базовый URL"
+   },
+   "aws_s3_bucket": {
+      "message": "Бакет"
+   },
+   "aws_s3_connect": {
+      "message": "Подключиться к AWS"
+   },
+   "aws_s3_relative_path": {
+      "message": "Путь"
+   },
+   "aws_secret_access_key": {
+      "message": "Secret Access Key"
+   },
+   "aws_signature_version": {
+      "message": "Версия подписи"
+   },
+   "aws_signature_version_2": {
+      "message": "Версия 2 (HMAC-SHA1)"
+   },
+   "aws_signature_version_4": {
+      "message": "Версия 4 (HMAC-SHA256)"
+   },
+   "aws_ssl_enable": {
+      "message": "Использовать SSL"
+   },
+   "button_cancel": {
+      "message": "Отмена"
+   },
+   "button_close": {
+      "message": "Закрыть"
+   },
+   "button_copy": {
+      "message": "Копировать"
+   },
+   "button_download": {
+      "message": "Скачать"
+   },
+   "button_load": {
+      "message": "Загрузить"
+   },
+   "button_ok": {
+      "message": "Ок"
+   },
+   "button_save": {
+      "message": "Сохранить"
+   },
+   "button_send": {
+      "message": "Отправить"
+   },
+   "button_share": {
+      "message": "Поделиться"
+   },
+   "button_upload": {
+      "message": "Загрузить"
+   },
+   "capturing_in_progress": {
+      "message": "Идет захват, подождите..."
+   },
+   "chrome_hotkey_desktop_screenshot": {
+      "message": "Снимок экрана"
+   },
+   "chrome_hotkey_screencast_init": {
+      "message": "Запись экрана (рабочего стола/окна приложения)"
+   },
+   "chrome_hotkey_screencast_toggle": {
+      "message": "Старт/стоп записи экрана"
+   },
+   "chrome_os_fs_open_image": {
+      "message": "Открыть в Monosnap"
+   },
+   "chrome_os_fs_upload_file": {
+      "message": "Загрузить файл"
+   },
+   "clipboard_button": {
+      "message": "Копировать"
+   },
+   "context_menu_main": {
+      "message": "Monosnap"
+   },
+   "context_menu_open_in_editor": {
+      "message": "Открыть изображение в редакторе"
+   },
+   "context_menu_upload_to_monosnap": {
+      "message": "Загрузить в хранилище"
+   },
+   "context_menu_upload_to_s3": {
+      "message": "Загрузить в Amazon S3"
+   },
+   "controls_ram_free": {
+      "message": "Доступно оперативной памяти"
+   },
+   "controls_ram_used": {
+      "message": "Размер видеофайла"
+   },
+   "editor_height": {
+      "message": "Высота"
+   },
+   "editor_keep_proportion": {
+      "message": "Сохранить пропорции"
+   },
+   "editor_loader_label": {
+      "message": "Идет загрузка, подождите..."
+   },
+   "editor_page_title": {
+      "message": "Monosnap: Редактирование скриншота"
+   },
+   "editor_redo": {
+      "message": "Вернуть последнее изменение"
+   },
+   "editor_screenshot_title_placeholder": {
+      "message": "Название файла"
+   },
+   "editor_tool_arrow": {
+      "message": "\u003Cb>Стрелка\u003C/b>\u003Cbr>\u003Cp class=\"tool_modes_hint\">Зажмите \u003Cb>Ctrl\u003C/b>, чтобы нарисовать стрелку задом наперед\u003C/p>"
+   },
+   "editor_tool_blur": {
+      "message": "\u003Cb>Размытие\u003C/b>"
+   },
+   "editor_tool_brush": {
+      "message": "\u003Cb>Ручка\u003C/b>\u003Cbr>\u003Cp class=\"tool_modes_hint\">Зажмите \u003Cb>Ctrl\u003C/b>, чтобы превратить ручку в маркер!\u003C/p>"
+   },
+   "editor_tool_bubble": {
+      "message": "\u003Cb>Указатель с текстом\u003C/b>\u003Cbr>\u003Cp class=\"tool_modes_hint\">Зажмите \u003Cb>Ctrl\u003C/b>, чтобы нарисовать стрелку задом наперед\u003C/p>"
+   },
+   "editor_tool_counter": {
+      "message": "\u003Cb>Счетчик\u003C/b>\u003Cbr>\u003Cp class=\"tool_modes_hint\">\u003Cb>Esc\u003C/b> - отмена\u003Cbr>\u003Cb>Enter\u003C/b> - подтвердить\u003C/p>"
+   },
+   "editor_tool_crop": {
+      "message": "\u003Cb>Обрезка\u003Cbr>изображения\u003C/b>"
+   },
+   "editor_tool_ellipse": {
+      "message": "\u003Cb>Эллипс\u003C/b>\u003Cbr>\u003Cp class=\"tool_modes_hint\">Зажмите \u003Cb>Shift\u003C/b>, чтобы нарисовать круг\u003Cbr>Зажмите \u003Cb>Ctrl\u003C/b>, чтобы нарисовать заполненный эллипс\u003C/p>"
+   },
+   "editor_tool_line": {
+      "message": "\u003Cb>Линия\u003C/b>"
+   },
+   "editor_tool_rectangle": {
+      "message": "\u003Cb>Прямоугольник\u003C/b>\u003Cbr>\u003Cp class=\"tool_modes_hint\">Зажмите \u003Cb>Shift\u003C/b>, чтобы нарисовать квадрат\u003Cbr>Зажмите \u003Cb>Alt\u003C/b>, чтобы затемнить все, кроме выделенной области\u003Cbr>Зажмите \u003Cb>Ctrl\u003C/b>, чтобы нарисовать заполненный прямоугольник\u003C/p>"
+   },
+   "editor_tool_resize": {
+      "message": "\u003Cb>Изменить\u003Cbr>размер\u003C/b>"
+   },
+   "editor_tool_settings_outline": {
+      "message": "Обводка надписей"
+   },
+   "editor_tool_settings_shadow": {
+      "message": "Рисовать тень"
+   },
+   "editor_tool_text": {
+      "message": "\u003Cb>Надпись\u003C/b>"
+   },
+   "editor_undo": {
+      "message": "Отменить последнее изменение"
+   },
+   "editor_width": {
+      "message": "Ширина"
+   },
+   "editor_wipe_history": {
+      "message": "Очистить"
+   },
+   "editor_zoom_in": {
+      "message": "Приблизить"
+   },
+   "editor_zoom_out": {
+      "message": "Отдалить"
+   },
+   "hint_area_capture_mac": {
+      "message": "Клик — снимок видимой части\u003Cbr>Shift — выделить квадратную область\u003Cbr>⌘ — снимок с задержкой\u003Cbr>⌘+C — скопировать цвет"
+   },
+   "hint_area_capture_others": {
+      "message": "Клик — снимок видимой части\u003Cbr>Shift — выделить квадратную область\u003Cbr>Ctrl — снимок с задержкой\u003Cbr>Ctrl+C — скопировать цвет"
+   },
+   "notification_access_denied": {
+      "message": "Доступ запрещен! Недостаточно прав для совершения действия."
+   },
+   "notification_accounts_export_logged_absent": {
+      "message": "Для экспорта данных войдите хотя бы в один из аккаунтов"
+   },
+   "notification_accounts_export_success": {
+      "message": "Настройки аккаунтов сохранены на диск"
+   },
+   "notification_accounts_import_fail": {
+      "message": "Не удается расшифровать файл! Убедитесь в правильности введеного пароля."
+   },
+   "notification_accounts_import_success": {
+      "message": "Данные аккаунтов успешно загружены"
+   },
+   "notification_color_copy_to_clipboard_success": {
+      "message": "Цвет был успешно скопирован в буфер."
+   },
+   "notification_editor_load_image_fail": {
+      "message": "Не получается загрузить изображение"
+   },
+   "notification_feedback_send_fail": {
+      "message": "Хм... Что-то пошло не так... Попробуйте снова."
+   },
+   "notification_feedback_send_success_header": {
+      "message": "Спасибо!"
+   },
+   "notification_feedback_send_success_message": {
+      "message": "Мы очень ценим Ваши отзывы и сообщения об ошибках, обнаруженных в работе расширения."
+   },
+   "notification_file_link_copy_success": {
+      "message": "Ссылка скопирована в буфер обмена"
+   },
+   "notification_file_open_not_image": {
+      "message": "Пожалуйста, выберите изображение."
+   },
+   "notification_file_open_too_big": {
+      "message": "Не удается открыть файл. Размер файла превышает 30 Мб."
+   },
+   "notification_file_save_fail": {
+      "message": "Не удалось сохранить файл на диск"
+   },
+   "notification_file_save_success": {
+      "message": "Файл сохранен"
+   },
+   "notification_file_save_to": {
+      "message": "Скриншот сохранен в "
+   },
+   "notification_file_upload_fail": {
+      "message": "Во время загрузки файла произошла ошибка."
+   },
+   "notification_file_upload_success": {
+      "message": "Файл успешно загружен."
+   },
+   "notification_gif_already_started_warning": {
+      "message": "Пожалуйста, подождите. Идет обработка видео"
+   },
+   "notification_gif_conversion_title": {
+      "message": "Конвертация в GIF"
+   },
+   "notification_gif_frames_processing": {
+      "message": "Этап 1: раскадровка"
+   },
+   "notification_gif_rendering": {
+      "message": "Этап 2: рендеринг GIF"
+   },
+   "notification_hotkey_assign_conflict": {
+      "message": "Данная комбинация клавиш уже используется. Укажите другую."
+   },
+   "notification_image_copy_fail": {
+      "message": "Не удалось скопировать скриншот в буфер обмена"
+   },
+   "notification_image_copy_to_clipboard_fail": {
+      "message": "Ошибка при сохранении в буфер"
+   },
+   "notification_image_copy_to_clipboard_success": {
+      "message": "Сохранено в буфер успешно"
+   },
+   "notification_login_to_upload": {
+      "message": "Пожалуйста, войдите для загрузки файлов"
+   },
+   "notification_monosnap_login_invalid_credentials": {
+      "message": "Вы ввели неверные e-mail/пароль"
+   },
+   "notification_monosnap_login_success": {
+      "message": "Вы вошли в Monosnap как "
+   },
+   "notification_monosnap_wrong_token": {
+      "message": "Ваша сессия истекла. Пожалуйста, повторно войдите в Monosnap."
+   },
+   "notification_network_failure": {
+      "message": "Проблемы с сетью. Проверьте Ваше соединение и попробуйте снова."
+   },
+   "notification_s3_bucket_not_specified": {
+      "message": "Выберите бакет в настройках"
+   },
+   "notification_s3_connection_success": {
+      "message": "Соединение с Amazon S3 успешно установлено."
+   },
+   "notification_s3_wrong_credentials": {
+      "message": "Неверные данные! Проверьте Ваши Access Key/Secret Key."
+   },
+   "notification_s3_wrong_region": {
+      "message": "Обратите внимание, что выбранный бакет находится в регионе "
+   },
+   "notification_screencast_low_ram_level": {
+      "message": "[!] Низкий уровень оперативной памяти. Возможно прекращение записи"
+   },
+   "notification_screencast_microphone_access_denied": {
+      "message": "Для записи аудио дайте расширению доступ к микрофон"
+   },
+   "notification_screencast_record_already_initialized": {
+      "message": "Для продолжения завершите текущую запись экрана"
+   },
+   "notification_short_link_generate_fail": {
+      "message": "Возникла ошибка при сокращении ссылки"
+   },
+   "notification_unknown_error": {
+      "message": "Неизвестная ошибка"
+   },
+   "okta_login_failed__message": {
+      "message": "Что-то пошло не так при авторизации в Okta!"
+   },
+   "okta_login_successfully__message": {
+      "message": "Авторизация в Okta прошла успешно!"
+   },
+   "okta_token__title": {
+      "message": "Авторизация в Okta"
+   },
+   "okta_user_name_label": {
+      "message": "Вы зашли в Okta используя email: "
+   },
+   "popup_capture_area": {
+      "message": "Снимок области страницы"
+   },
+   "popup_capture_desktop": {
+      "message": "Снимок экрана"
+   },
+   "popup_capture_smart_area": {
+      "message": "Умное выделение"
+   },
+   "popup_capture_webpage": {
+      "message": "Снимок всей страницы"
+   },
+   "popup_capture_window": {
+      "message": "Снимок видимой части страницы"
+   },
+   "popup_open_file": {
+      "message": "Открыть файл..."
+   },
+   "popup_page_title": {
+      "message": "Monosnap: Popup"
+   },
+   "popup_preferences": {
+      "message": "Настройки"
+   },
+   "popup_recent_uploads": {
+      "message": "Последние загрузки"
+   },
+   "popup_record_desktop": {
+      "message": "Запись рабочего стола"
+   },
+   "popup_special_page_tip": {
+      "message": "Это специальная страница. К сожалению, захват экрана не может быть осуществлен."
+   },
+   "popup_upload_file": {
+      "message": "Загрузить файл"
+   },
+   "recent_uploads_header": {
+      "message": "Последние загруженные файлы"
+   },
+   "recent_uploads_page_title": {
+      "message": "Monosnap: Последние загрузки"
+   },
+   "screencast_player_hint": {
+      "message": "Кликните и потяните, чтобы выделить область\u003Cbr>Enter — Обрезать кадр"
+   },
+   "settings_accounts_enter_password": {
+      "message": "Введите пароль"
+   },
+   "settings_accounts_export": {
+      "message": "Экспорт настроек"
+   },
+   "settings_accounts_import": {
+      "message": "Импорт настроек"
+   },
+   "settings_apply_default_action_to_local_files": {
+      "message": "Применять действие по умолчанию к локальным файлам"
+   },
+   "settings_apply_file_name_template": {
+      "message": "Формировать название скриншота, используя шаблон"
+   },
+   "settings_apply_to_local_files": {
+      "message": "Применять настройки имени к локальным файлам"
+   },
+   "settings_close_editor_after_upload": {
+      "message": "Закрывать редактор после завершения загрузки"
+   },
+   "settings_default_service": {
+      "message": "Сервис по умолчанию"
+   },
+   "settings_do_nothing": {
+      "message": "Ничего не делать"
+   },
+   "settings_enable_short_links": {
+      "message": "Сокращать ссылки"
+   },
+   "settings_feedback_attach_account_info": {
+      "message": "Прикрепить информацию об аккаунте Monosnap"
+   },
+   "settings_feedback_check_faq": {
+      "message": "Если у Вас есть вопросы, ознакомьтесь с нашим \u003Ca href=\"https://monosnap.com/page/faq\">FAQ\u003C/a>. Возможно, мы уже ответили на него ;)"
+   },
+   "settings_feedback_email_input_placeholder": {
+      "message": "Ваша эл. почта"
+   },
+   "settings_feedback_header": {
+      "message": "Оставьте отзыв"
+   },
+   "settings_feedback_message_input_placeholder": {
+      "message": "Текст сообщения"
+   },
+   "settings_file_name_template": {
+      "message": "Шаблон имени"
+   },
+   "settings_file_name_template_hint": {
+      "message": "\u003Cb>Обозначения\u003C/b>\u003Cp class=\"title_template_hint\">%Y — год (полный формат)\u003Cbr>%y — год (сокращенная форма)\u003Cbr>%m — номер месяца\u003Cbr>%d — день месяца\u003Cbr>%H — часы\u003Cbr>%M — минуты\u003Cbr>%S — секунды\u003Cbr>%U — UNIX-время\u003Cbr>%C — имя вкладки/файла\u003Cbr>%R — случайные 5 чисел\u003C/p>"
+   },
+   "settings_file_save_specify_path": {
+      "message": "Обзор..."
+   },
+   "settings_files_upload_header": {
+      "message": "Настройки загрузки"
+   },
+   "settings_generate_random_file_names": {
+      "message": "Генерировать имена файлов случайным образом"
+   },
+   "settings_gif_frame_rate": {
+      "message": "Кадров в секунду"
+   },
+   "settings_gif_quality": {
+      "message": "Качество GIF"
+   },
+   "settings_hotkeys_capture_page_area": {
+      "message": "Снимок области страницы"
+   },
+   "settings_hotkeys_capture_visible_page_area": {
+      "message": "Снимок видимой части страницы"
+   },
+   "settings_hotkeys_capture_whole_page": {
+      "message": "Снимок всей страницы"
+   },
+   "settings_hotkeys_configure_global": {
+      "message": "\u003Ca class=\"open_global_hotkeys_page btn btn-primary\">Глобальные Сочетания\u003C/a>"
+   },
+   "settings_hotkeys_enable": {
+      "message": "Включить горячие клавиши"
+   },
+   "settings_hotkeys_ensure_no_collisions": {
+      "message": "[!] Убедитесь, что данные сочетания клавиш не используются браузером или другими расширениями"
+   },
+   "settings_hotkeys_header": {
+      "message": "Горячие клавиши"
+   },
+   "settings_hotkeys_message_restart": {
+      "message": "Перезапустите браузер, чтобы изменения вступили в силу"
+   },
+   "settings_low_ram_level_threshold": {
+      "message": "Показывать уведомление, если осталось меньше"
+   },
+   "settings_minimize_chrome_on_screen_capture": {
+      "message": "Сворачивать окна Chrome при снимке экрана"
+   },
+   "settings_navigation_accounts": {
+      "message": "Аккаунты"
+   },
+   "settings_navigation_contact_us": {
+      "message": "Обратная связь"
+   },
+   "settings_navigation_general": {
+      "message": "Основные"
+   },
+   "settings_open_editor_in_a_separate_window": {
+      "message": "Открывать редактор/видео в отдельном окне"
+   },
+   "settings_open_images_from_website_in_extension": {
+      "message": "Открывать изображения с сайта Monosnap в расширении"
+   },
+   "settings_others_header": {
+      "message": "Другие"
+   },
+   "settings_output_format_header": {
+      "message": "Формат изображения"
+   },
+   "settings_output_format_jpeg": {
+      "message": "JPEG (с потерей качества)"
+   },
+   "settings_output_format_png": {
+      "message": "PNG (без потери качества)"
+   },
+   "settings_output_format_quality": {
+      "message": "Качество изображения"
+   },
+   "settings_output_format_webp": {
+      "message": "WebP (с потерей качества)"
+   },
+   "settings_page_title": {
+      "message": "Monosnap: Настройки расширения"
+   },
+   "settings_post_capture_action_header": {
+      "message": "Действие по умолчанию (после создания скриншота)"
+   },
+   "settings_post_capture_edit": {
+      "message": "Открыть в редакторе"
+   },
+   "settings_post_capture_save": {
+      "message": "Сохранить на диск (с названием веб-страницы в качестве имени файла)"
+   },
+   "settings_post_capture_upload": {
+      "message": "Загрузить"
+   },
+   "settings_post_upload_action": {
+      "message": "По окончании загрузки"
+   },
+   "settings_post_upload_copy_direct_link": {
+      "message": "Скопировать прямую ссылку"
+   },
+   "settings_post_upload_copy_site_link": {
+      "message": "Скопировать ссылку на сайт"
+   },
+   "settings_post_upload_open_ms_page": {
+      "message": "Открывать в браузере"
+   },
+   "settings_reset_header": {
+      "message": "Удаление настроек"
+   },
+   "settings_reset_to_defaults": {
+      "message": "Сбросить настройки"
+   },
+   "settings_reset_warning": {
+      "message": "ВНИМАНИЕ: Данное действие не может быть отменено!\u003C/br>При необходимости вы можете предварительно экспортировать данные своих аккаунтов\u003C/br>\u003C/br>Продолжить?"
+   },
+   "settings_save_file_default_location": {
+      "message": "Папка для сохранения по умолчанию: "
+   },
+   "settings_save_file_downloads_folder": {
+      "message": "Загрузки"
+   },
+   "settings_screen_pre_capture_delay": {
+      "message": "Задержка при полноэкранном скриншоте (секунды)"
+   },
+   "settings_screencast_gif_framerate": {
+      "message": "Кадров в секунду"
+   },
+   "settings_screencast_output_format": {
+      "message": "Сохранять как"
+   },
+   "settings_screencast_recording_header": {
+      "message": "Запись скринкастов"
+   },
+   "settings_show_magnifier_on_area_capture": {
+      "message": "Показывать лупу при скриншоте области страницы"
+   },
+   "settings_user_logged_as": {
+      "message": "Вы вошли как "
+   },
+   "settings_video_record_header": {
+      "message": "Запись видео"
+   },
+   "settings_video_record_microphone": {
+      "message": "Записывать аудио"
+   },
+   "settings_video_type": {
+      "message": "Формат видео"
+   },
+   "settings_warn_about_low_ram_level": {
+      "message": "Предупреждать при низком уровне свободной памяти (ОЗУ)"
+   },
+   "uploads_copy_direct_link": {
+      "message": "Копировать прямую ссылку"
+   },
+   "uploads_copy_short_link": {
+      "message": "короткая ссылка"
+   },
+   "uploads_copy_website_link": {
+      "message": "Копировать ссылку на Monosnap"
+   },
+   "uploads_go_to_storage": {
+      "message": "Перейти к хранилищу"
+   },
+   "user_account_login": {
+      "message": "Войти"
+   },
+   "user_account_logout": {
+      "message": "Выйти"
+   },
+   "user_account_mail_input_placeholder": {
+      "message": "E-mail"
+   },
+   "user_account_password_input_placeholder": {
+      "message": "Ваш пароль"
+   }
+}

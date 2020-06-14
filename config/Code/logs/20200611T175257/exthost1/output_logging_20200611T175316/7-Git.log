@@ -1,0 +1,590 @@
+Looking for git in: git
+Using git 2.25.1 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/matrix/Documents/aerodisk/engine2
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git rev-parse --symbolic-full-name SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller@{u}
+> git rev-list --left-right SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller...refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show :var/www/engine/bin/NETWORK/controllers/phys.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/controllers/phys.py
+> git cat-file -s 53d3e3e215f4c2eb1e73e48079a39cee98158b3b
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/controllers/phys.py
+> git show :var/www/engine/bin/NETWORK/controllers/bond.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/controllers/bond.py
+> git cat-file -s e30a82cac9d62b9fd588db8ecd621c8a4eeaa674
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git rev-parse --symbolic-full-name SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller@{u}
+> git rev-list --left-right SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller...refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git rev-parse --symbolic-full-name SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller@{u}
+> git rev-list --left-right SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller...refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :var/www/engine/bin/NETWORK/controllers/phys.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/controllers/phys.py
+> git cat-file -s 53d3e3e215f4c2eb1e73e48079a39cee98158b3b
+> git show :var/www/engine/bin/NETWORK/change-network.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/change-network.py
+> git cat-file -s e77e5fabec29acc2784f37227e63e4179c607578
+> git show :var/www/engine/bin/NETWORK/controllers/phys.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/controllers/phys.py
+> git cat-file -s 53d3e3e215f4c2eb1e73e48079a39cee98158b3b
+> git show :var/www/engine/bin/NETWORK/change-network.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/change-network.py
+> git cat-file -s e77e5fabec29acc2784f37227e63e4179c607578
+> git show :var/www/engine/bin/NETWORK/controllers/phys.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/controllers/phys.py
+> git cat-file -s 53d3e3e215f4c2eb1e73e48079a39cee98158b3b
+> git show :var/www/engine/bin/NETWORK/change-network.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/change-network.py
+> git cat-file -s e77e5fabec29acc2784f37227e63e4179c607578
+> git show :var/www/engine/bin/NETWORK/controllers/phys.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/controllers/phys.py
+> git cat-file -s 53d3e3e215f4c2eb1e73e48079a39cee98158b3b
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git rev-parse --symbolic-full-name SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller@{u}
+> git rev-list --left-right SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller...refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :var/www/engine/bin/NETWORK/change-network.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/change-network.py
+> git cat-file -s e77e5fabec29acc2784f37227e63e4179c607578
+> git show :var/www/engine/bin/NETWORK/constants.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/constants.py
+> git cat-file -s ca31e55957c5681a76e55f3b29bed6cb88aa8548
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git rev-parse --symbolic-full-name SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller@{u}
+> git rev-list --left-right SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller...refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git rev-parse --symbolic-full-name SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller@{u}
+> git rev-list --left-right SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller...refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :var/www/engine/bin/NETWORK/change-network.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/change-network.py
+> git cat-file -s e77e5fabec29acc2784f37227e63e4179c607578
+> git show :var/www/engine/bin/NETWORK/controllers/phys.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/controllers/phys.py
+> git cat-file -s 53d3e3e215f4c2eb1e73e48079a39cee98158b3b
+> git show :var/www/engine/bin/NETWORK/change-network.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/change-network.py
+> git cat-file -s e77e5fabec29acc2784f37227e63e4179c607578
+> git show :var/www/engine/bin/NETWORK/controllers/phys.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/controllers/phys.py
+> git cat-file -s 53d3e3e215f4c2eb1e73e48079a39cee98158b3b
+> git show :var/www/engine/bin/NETWORK/change-network.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/change-network.py
+> git cat-file -s e77e5fabec29acc2784f37227e63e4179c607578
+> git show :var/www/engine/bin/NETWORK/constants.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/constants.py
+> git cat-file -s ca31e55957c5681a76e55f3b29bed6cb88aa8548
+> git show :var/www/engine/bin/NETWORK/change-network.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/change-network.py
+> git cat-file -s e77e5fabec29acc2784f37227e63e4179c607578
+> git show :var/www/engine/bin/NETWORK/controllers/phys.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/controllers/phys.py
+> git cat-file -s 53d3e3e215f4c2eb1e73e48079a39cee98158b3b
+> git show :var/www/engine/bin/NETWORK/constants.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/constants.py
+> git cat-file -s ca31e55957c5681a76e55f3b29bed6cb88aa8548
+> git show :var/www/engine/bin/NETWORK/controllers/phys.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/controllers/phys.py
+> git cat-file -s 53d3e3e215f4c2eb1e73e48079a39cee98158b3b
+> git show :var/www/engine/bin/NETWORK/change-network.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/change-network.py
+> git cat-file -s e77e5fabec29acc2784f37227e63e4179c607578
+> git show :var/www/engine/bin/NETWORK/controllers/phys.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/controllers/phys.py
+> git cat-file -s 53d3e3e215f4c2eb1e73e48079a39cee98158b3b
+> git show :var/www/engine/bin/NETWORK/change-network.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/change-network.py
+> git cat-file -s e77e5fabec29acc2784f37227e63e4179c607578
+> git show :var/www/engine/bin/NETWORK/controllers/phys.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/controllers/phys.py
+> git cat-file -s 53d3e3e215f4c2eb1e73e48079a39cee98158b3b
+> git show :var/www/engine/bin/NETWORK/change-network.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/change-network.py
+> git cat-file -s e77e5fabec29acc2784f37227e63e4179c607578
+> git show :var/www/engine/bin/NETWORK/controllers/phys.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/controllers/phys.py
+> git cat-file -s 53d3e3e215f4c2eb1e73e48079a39cee98158b3b
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git rev-parse --symbolic-full-name SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller@{u}
+> git rev-list --left-right SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller...refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git rev-parse --symbolic-full-name SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller@{u}
+> git rev-list --left-right SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller...refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git rev-parse --symbolic-full-name SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller@{u}
+> git rev-list --left-right SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller...refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git add -A -- .
+> git commit --quiet --allow-empty-message --file -
+Auto packing the repository in background for optimum performance.
+See "git help gc" for manual housekeeping.
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git rev-parse --symbolic-full-name SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller@{u}
+> git rev-list --left-right SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller...refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+Failed to watch ref '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller', is most likely packed.
+Error: ENOENT: no such file or directory, watch '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller'
+    at FSWatcher.start (internal/fs/watchers.js:165:26)
+    at Object.watch (fs.js:1270:11)
+    at Object.t.watch (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:606659)
+    at T.updateTransientWatchers (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:84393)
+    at e.fire (/snap/code/34/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:242)
+    at e.updateModelState (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:103799)
+
+> git config --get commit.template
+> git config --get commit.template
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/controllers/phys.py
+> git cat-file -s 4fadb52bea3cb5923f379f9e077fcc90e87e30c5
+> git show :var/www/engine/bin/NETWORK/controllers/phys.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git rev-parse --symbolic-full-name SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller@{u}
+> git rev-list --left-right SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller...refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+Failed to watch ref '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller', is most likely packed.
+Error: ENOENT: no such file or directory, watch '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller'
+    at FSWatcher.start (internal/fs/watchers.js:165:26)
+    at Object.watch (fs.js:1270:11)
+    at Object.t.watch (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:606659)
+    at T.updateTransientWatchers (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:84393)
+    at e.fire (/snap/code/34/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:242)
+    at e.updateModelState (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:103799)
+
+> git config --get commit.template
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/controllers/phys.py
+> git cat-file -s 4fadb52bea3cb5923f379f9e077fcc90e87e30c5
+> git show :var/www/engine/bin/NETWORK/controllers/phys.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git rev-parse --symbolic-full-name SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller@{u}
+> git rev-list --left-right SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller...refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+Failed to watch ref '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller', is most likely packed.
+Error: ENOENT: no such file or directory, watch '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller'
+    at FSWatcher.start (internal/fs/watchers.js:165:26)
+    at Object.watch (fs.js:1270:11)
+    at Object.t.watch (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:606659)
+    at T.updateTransientWatchers (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:84393)
+    at e.fire (/snap/code/34/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:242)
+    at e.updateModelState (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:103799)
+
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git rev-parse --symbolic-full-name SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller@{u}
+> git rev-list --left-right SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller...refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+Failed to watch ref '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller', is most likely packed.
+Error: ENOENT: no such file or directory, watch '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller'
+    at FSWatcher.start (internal/fs/watchers.js:165:26)
+    at Object.watch (fs.js:1270:11)
+    at Object.t.watch (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:606659)
+    at T.updateTransientWatchers (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:84393)
+    at e.fire (/snap/code/34/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:242)
+    at e.updateModelState (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:103799)
+
+> git config --get commit.template
+> git push origin SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller:SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+remote: 
+remote: View merge request for SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller:        
+remote:   http://git.aerodisk.local/AERODISK/engine2/merge_requests/194        
+remote: 
+To http://192.168.1.32/AERODISK/engine2.git
+   2ef95456..acb9cadb  SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller -> SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git rev-parse --symbolic-full-name SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller@{u}
+> git rev-list --left-right SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller...refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git rev-parse --symbolic-full-name SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller@{u}
+> git rev-list --left-right SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller...refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git rev-parse --symbolic-full-name SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller@{u}
+> git rev-list --left-right SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller...refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git rev-parse --symbolic-full-name SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller@{u}
+> git rev-list --left-right SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller...refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git rev-parse --symbolic-full-name SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller@{u}
+> git rev-list --left-right SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller...refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git rev-parse --symbolic-full-name SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller@{u}
+> git rev-list --left-right SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller...refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git rev-parse --symbolic-full-name SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller@{u}
+> git rev-list --left-right SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller...refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git rev-parse --symbolic-full-name SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller@{u}
+> git rev-list --left-right SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller...refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show :var/www/engine/react/src/components/net/phys.js
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/react/src/components/net/phys.js
+> git cat-file -s 17c1314148f5b5b7721518c55200aa4ef53e1465
+> git checkout -q SW-747/implement-mapping-of-bond-interfaces
+error: Your local changes to the following files would be overwritten by checkout:
+	var/www/engine/bin/NETWORK/controllers/phys.py
+Please commit your changes or stash them before you switch branches.
+Aborting
+> git add -A -- .
+> git commit --quiet --allow-empty-message --file -
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git rev-parse --symbolic-full-name SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller@{u}
+> git rev-list --left-right SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller...refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git config --get commit.template
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/react/src/components/net/phys.js
+> git cat-file -s 17c1314148f5b5b7721518c55200aa4ef53e1465
+> git show :var/www/engine/react/src/components/net/phys.js
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git rev-parse --symbolic-full-name SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller@{u}
+> git rev-list --left-right SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller...refs/remotes/origin/SW-756/Does-not-edit-interfaces-on-an-unauthorized-controller
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git checkout -q SW-757/A-typo-in-the-context-menu-of-physical-interfaces
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-757/A-typo-in-the-context-menu-of-physical-interfaces
+> git rev-parse --symbolic-full-name SW-757/A-typo-in-the-context-menu-of-physical-interfaces@{u}
+> git rev-list --left-right SW-757/A-typo-in-the-context-menu-of-physical-interfaces...refs/remotes/origin/SW-757/A-typo-in-the-context-menu-of-physical-interfaces
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+Failed to watch ref '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-757/A-typo-in-the-context-menu-of-physical-interfaces', is most likely packed.
+Error: ENOENT: no such file or directory, watch '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-757/A-typo-in-the-context-menu-of-physical-interfaces'
+    at FSWatcher.start (internal/fs/watchers.js:165:26)
+    at Object.watch (fs.js:1270:11)
+    at Object.t.watch (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:606659)
+    at T.updateTransientWatchers (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:84393)
+    at e.fire (/snap/code/34/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:242)
+    at e.updateModelState (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:103799)
+
+> git config --get commit.template
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/react/src/components/net/phys.js
+> git cat-file -s 661d2aca3f9c5beb61dc14dcd12bb4c35f878c38
+> git show :var/www/engine/react/src/components/net/phys.js
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-757/A-typo-in-the-context-menu-of-physical-interfaces
+> git rev-parse --symbolic-full-name SW-757/A-typo-in-the-context-menu-of-physical-interfaces@{u}
+> git rev-list --left-right SW-757/A-typo-in-the-context-menu-of-physical-interfaces...refs/remotes/origin/SW-757/A-typo-in-the-context-menu-of-physical-interfaces
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+Failed to watch ref '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-757/A-typo-in-the-context-menu-of-physical-interfaces', is most likely packed.
+Error: ENOENT: no such file or directory, watch '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-757/A-typo-in-the-context-menu-of-physical-interfaces'
+    at FSWatcher.start (internal/fs/watchers.js:165:26)
+    at Object.watch (fs.js:1270:11)
+    at Object.t.watch (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:606659)
+    at T.updateTransientWatchers (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:84393)
+    at e.fire (/snap/code/34/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:242)
+    at e.updateModelState (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:103799)
+
+> git config --get commit.template
+> git checkout -q SW-747/implement-mapping-of-bond-interfaces
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-747/implement-mapping-of-bond-interfaces
+> git rev-parse --symbolic-full-name SW-747/implement-mapping-of-bond-interfaces@{u}
+> git rev-list --left-right SW-747/implement-mapping-of-bond-interfaces...refs/remotes/origin/SW-747/implement-mapping-of-bond-interfaces
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+Failed to watch ref '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-747/implement-mapping-of-bond-interfaces', is most likely packed.
+Error: ENOENT: no such file or directory, watch '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-747/implement-mapping-of-bond-interfaces'
+    at FSWatcher.start (internal/fs/watchers.js:165:26)
+    at Object.watch (fs.js:1270:11)
+    at Object.t.watch (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:606659)
+    at T.updateTransientWatchers (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:84393)
+    at e.fire (/snap/code/34/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:242)
+    at e.updateModelState (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:103799)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+> git config --get commit.template
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/react/src/components/net/phys.js
+> git show :var/www/engine/react/src/components/net/phys.js
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-747/implement-mapping-of-bond-interfaces
+> git rev-parse --symbolic-full-name SW-747/implement-mapping-of-bond-interfaces@{u}
+> git rev-list --left-right SW-747/implement-mapping-of-bond-interfaces...refs/remotes/origin/SW-747/implement-mapping-of-bond-interfaces
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+Failed to watch ref '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-747/implement-mapping-of-bond-interfaces', is most likely packed.
+Error: ENOENT: no such file or directory, watch '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-747/implement-mapping-of-bond-interfaces'
+    at FSWatcher.start (internal/fs/watchers.js:165:26)
+    at Object.watch (fs.js:1270:11)
+    at Object.t.watch (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:606659)
+    at T.updateTransientWatchers (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:84393)
+    at e.fire (/snap/code/34/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:242)
+    at e.updateModelState (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:103799)
+
+> git config --get commit.template
+> git show :var/www/engine/bin/NETWORK/change-network.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/change-network.py
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :react/src/components/net/phys.js
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/react/src/components/net/phys.js
+> git cat-file -s ea729ab2d564f44f2cea2f26decc5c32102f7b98
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-747/implement-mapping-of-bond-interfaces
+> git rev-parse --symbolic-full-name SW-747/implement-mapping-of-bond-interfaces@{u}
+> git rev-list --left-right SW-747/implement-mapping-of-bond-interfaces...refs/remotes/origin/SW-747/implement-mapping-of-bond-interfaces
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+Failed to watch ref '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-747/implement-mapping-of-bond-interfaces', is most likely packed.
+Error: ENOENT: no such file or directory, watch '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-747/implement-mapping-of-bond-interfaces'
+    at FSWatcher.start (internal/fs/watchers.js:165:26)
+    at Object.watch (fs.js:1270:11)
+    at Object.t.watch (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:606659)
+    at T.updateTransientWatchers (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:84393)
+    at e.fire (/snap/code/34/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:242)
+    at e.updateModelState (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:103799)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-747/implement-mapping-of-bond-interfaces
+> git rev-parse --symbolic-full-name SW-747/implement-mapping-of-bond-interfaces@{u}
+> git rev-list --left-right SW-747/implement-mapping-of-bond-interfaces...refs/remotes/origin/SW-747/implement-mapping-of-bond-interfaces
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+Failed to watch ref '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-747/implement-mapping-of-bond-interfaces', is most likely packed.
+Error: ENOENT: no such file or directory, watch '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-747/implement-mapping-of-bond-interfaces'
+    at FSWatcher.start (internal/fs/watchers.js:165:26)
+    at Object.watch (fs.js:1270:11)
+    at Object.t.watch (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:606659)
+    at T.updateTransientWatchers (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:84393)
+    at e.fire (/snap/code/34/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:242)
+    at e.updateModelState (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:103799)
+
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :.vscode/settings.json
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/.vscode/settings.json
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-747/implement-mapping-of-bond-interfaces
+> git rev-parse --symbolic-full-name SW-747/implement-mapping-of-bond-interfaces@{u}
+> git rev-list --left-right SW-747/implement-mapping-of-bond-interfaces...refs/remotes/origin/SW-747/implement-mapping-of-bond-interfaces
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+Failed to watch ref '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-747/implement-mapping-of-bond-interfaces', is most likely packed.
+Error: ENOENT: no such file or directory, watch '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-747/implement-mapping-of-bond-interfaces'
+    at FSWatcher.start (internal/fs/watchers.js:165:26)
+    at Object.watch (fs.js:1270:11)
+    at Object.t.watch (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:606659)
+    at T.updateTransientWatchers (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:84393)
+    at e.fire (/snap/code/34/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:242)
+    at e.updateModelState (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:103799)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+> git config --get commit.template
+> git show :var/www/engine/bin/NETWORK/constants.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/constants.py
+> git show :var/www/engine/bin/NETWORK/controllers/phys.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/controllers/phys.py
+> git show :.vscode/settings.json
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/.vscode/settings.json
+> git show :var/www/engine/bin/NETWORK/change-network.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/change-network.py
+> git show :react/src/components/net/phys.js
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/react/src/components/net/phys.js
+> git cat-file -s ea729ab2d564f44f2cea2f26decc5c32102f7b98
+> git show :react/src/components/net/style.scss
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/react/src/components/net/style.scss
+> git cat-file -s a8982316e78d693f7876536dd718f7201b70dbb1
+> git show :react/src/components/net/index.js
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/react/src/components/net/index.js
+> git cat-file -s 4a4d81be3a54151f8fc9c8c162aeea214cc23070
+> git show :react/src/components/net/static.js
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/react/src/components/net/static.js
+> git cat-file -s 8d4979992e83d7b0102633a68fe10ae7bdfe8180
+> git show :react/src/components/net/index.js
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/react/src/components/net/index.js
+> git cat-file -s 4a4d81be3a54151f8fc9c8c162aeea214cc23070
+> git check-ignore -v -z --stdin
+> git show :react/src/index.js
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/react/src/index.js
+> git cat-file -s 3aa435c7c18bc223674fca2c022160ec4187cf9e
+> git check-ignore -v -z --stdin
+> git show :react/src/components/core/widget.scss
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/react/src/components/core/widget.scss
+> git cat-file -s b2978805b93f280aa5338086c5f3cbcbfb2e7493
+> git show :react/src/components/core/contextMenu.scss
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/react/src/components/core/contextMenu.scss
+> git cat-file -s e69de29bb2d1d6434b8b29ae775ad8c2e48c5391
+> git show :react/src/components/core/choose.scss
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/react/src/components/core/choose.scss
+> git cat-file -s b7b5264feb3145e19b4c2b54e07e9247c215ece3
+> git show :react/src/components/net/phys.js
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/react/src/components/net/phys.js
+> git cat-file -s ea729ab2d564f44f2cea2f26decc5c32102f7b98
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-747/implement-mapping-of-bond-interfaces
+> git rev-parse --symbolic-full-name SW-747/implement-mapping-of-bond-interfaces@{u}
+> git rev-list --left-right SW-747/implement-mapping-of-bond-interfaces...refs/remotes/origin/SW-747/implement-mapping-of-bond-interfaces
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+Failed to watch ref '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-747/implement-mapping-of-bond-interfaces', is most likely packed.
+Error: ENOENT: no such file or directory, watch '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-747/implement-mapping-of-bond-interfaces'
+    at FSWatcher.start (internal/fs/watchers.js:165:26)
+    at Object.watch (fs.js:1270:11)
+    at Object.t.watch (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:606659)
+    at T.updateTransientWatchers (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:84393)
+    at e.fire (/snap/code/34/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:242)
+    at e.updateModelState (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:103799)
+
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-747/implement-mapping-of-bond-interfaces
+> git rev-parse --symbolic-full-name SW-747/implement-mapping-of-bond-interfaces@{u}
+> git rev-list --left-right SW-747/implement-mapping-of-bond-interfaces...refs/remotes/origin/SW-747/implement-mapping-of-bond-interfaces
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+Failed to watch ref '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-747/implement-mapping-of-bond-interfaces', is most likely packed.
+Error: ENOENT: no such file or directory, watch '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-747/implement-mapping-of-bond-interfaces'
+    at FSWatcher.start (internal/fs/watchers.js:165:26)
+    at Object.watch (fs.js:1270:11)
+    at Object.t.watch (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:606659)
+    at T.updateTransientWatchers (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:84393)
+    at e.fire (/snap/code/34/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:242)
+    at e.updateModelState (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:103799)
+
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-747/implement-mapping-of-bond-interfaces
+> git rev-parse --symbolic-full-name SW-747/implement-mapping-of-bond-interfaces@{u}
+> git rev-list --left-right SW-747/implement-mapping-of-bond-interfaces...refs/remotes/origin/SW-747/implement-mapping-of-bond-interfaces
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+Failed to watch ref '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-747/implement-mapping-of-bond-interfaces', is most likely packed.
+Error: ENOENT: no such file or directory, watch '/home/matrix/Documents/aerodisk/engine2/.git/refs/remotes/origin/SW-747/implement-mapping-of-bond-interfaces'
+    at FSWatcher.start (internal/fs/watchers.js:165:26)
+    at Object.watch (fs.js:1270:11)
+    at Object.t.watch (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:606659)
+    at T.updateTransientWatchers (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:84393)
+    at e.fire (/snap/code/34/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:242)
+    at e.updateModelState (/snap/code/34/usr/share/code/resources/app/extensions/git/dist/main.js:1:103799)
+
+> git config --get commit.template
+> git show :react/src/components/net/index.js
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/engine2/react/src/components/net/index.js
+> git cat-file -s 4a4d81be3a54151f8fc9c8c162aeea214cc23070
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin

@@ -1,0 +1,513 @@
+/snap/code/33/usr/share/code/resources/app
+[Google Translate]:
+
+        Метод проверяет поля
+[<============================>]:
+Method checks fields
+
+[Google Translate]:
+
+//button[text()="Добавить маршрут"]
+[<============================>]:
+//button [text () = "Add route"]
+
+[Google Translate]:
+
+# NULL IQN, 1 PORTAL
+
+[<============================>]:
+# NULL IQN, 1 PORTAL
+
+[Google Translate]:
+
+#         element.selected_value_by_name(const.NAME_INPUT_SELECTED_MTU , const.MTU[const.GENERATOR_NAME_INTERFACE.index(interface_name)])
+
+[<============================>]:
+#         element.selected_value_by_name(const.NAME_INPUT_SELECTED_MTU , const.MTU[const.GENERATOR_NAME_INTERFACE.index(interface_name)])
+
+[Google Translate]:
+
+# self.find_element(LocatorValue.by_name(name_value)).send_keys(text_value)
+
+[<============================>]:
+# self.find_element(LocatorValue.by_name(name_value)).send_keys(text_value)
+
+[Google Translate]:
+
+#     Тест редактирует три интерфейса по именам 'enp5s0f1', 'ens11f1', 'enp5s0f0'
+
+[<============================>]:
+# The test edits three interfaces by the names 'enp5s0f1', 'ens11f1', 'enp5s0f0'
+
+[Google Translate]:
+
+        
+[<============================>]:
+
+
+[Google Translate]:
+Str
+[<============================>]:
+Str
+
+[Google Translate]:
+Number on repeat
+[<============================>]:
+Number on repeat
+
+[Google Translate]:
+Select first field
+[<============================>]:
+Select first field
+
+[Google Translate]:
+
+//tbody/tr/td/div/span[text()="
+[<============================>]:
+//tbody/tr/td/div/span[text()="
+
+[Google Translate]:
+
+password
+[<============================>]:
+password
+
+[Google Translate]:
+
+Сетевые интерфейсы
+[<============================>]:
+Network interfaces
+
+[Google Translate]:
+
+//button[text()="Войти"]
+[<============================>]:
+//button[text()="Войти"]
+
+[Google Translate]:
+
+        ip '192.168.2', '192.168.2.aaa', '192.168.2.180', '192.168.555.555'
+[<============================>]:
+ip '192.168.2', '192.168.2.aaa', '192.168.2.180', '192.168.555.555'
+
+[Google Translate]:
+element.send_input_by_name('password', const.USER_PASSWORD)
+[<============================>]:
+element.send_input_by_name('password', const.USER_PASSWORD)
+
+[Google Translate]:
+ip_
+[<============================>]:
+ip_
+
+[Google Translate]:
+Value name
+[<============================>]:
+Value name
+
+[Google Translate]:
+Kwargs
+[<============================>]:
+Kwargs
+
+[Google Translate]:
+
+# TODO 
+
+[<============================>]:
+# EVERYTHING
+
+[Google Translate]:
+Test j delete virt interface
+[<============================>]:
+Test j delete virt interface
+
+[Google Translate]:
+
+        mask 255.255.255.0
+[<============================>]:
+mask 255.255.255.0
+
+[Google Translate]:
+
+        gateway 192.168.2.180
+[<============================>]:
+gateway 192.168.2.180
+
+[Google Translate]:
+
+        enp14s0 | 0000:0e:00.0 | 192.168.2.10 | 00:24:ec:f0:a5:8a | UP | 1Gbit/s | full | 1500
+[<============================>]:
+enp14s0 | 0000:0e:00.0 | 192.168.2.10 | 00:24:ec:f0:a5:8a | UP | 1Gbit/s | full | 1500
+
+[Google Translate]:
+Select next field
+[<============================>]:
+Select next field
+
+[Google Translate]:
+  element.send_input_by_name(by_name=[const.NAME_INPUT_FIELD_MASK, const.NAME_INPUT_FIELD_GATEWAY],
+                                    value=[const.MASK_SUCCESS, const.IP_SUCCESS.format(0)])
+        element.click_xpath_button(const.XPATH_BUTTON_OK)
+[<============================>]:
+element.send_input_by_name(by_name=[const.NAME_INPUT_FIELD_MASK, const.NAME_INPUT_FIELD_GATEWAY],
+                                    value=[const.MASK_SUCCESS, const.IP_SUCCESS.format(0)])
+        element.click_xpath_button(const.XPATH_BUTTON_OK)
+
+[Google Translate]:
+By name
+[<============================>]:
+By name
+
+[Google Translate]:
+element.send_input_by_name(by_name=[const.NAME_INPUT_FIELD_MASK
+[<============================>]:
+element.send_input_by_name(by_name=[const.NAME_INPUT_FIELD_MASK
+
+[Google Translate]:
+const.NAME_INPUT_FIELD_MASK,
+[<============================>]:
+const.NAME_INPUT_FIELD_MASK,
+
+[Google Translate]:
+send_input_by_name(
+[<============================>]:
+send_input_by_name(
+
+[Google Translate]:
+const.NAME_INPUT_FIELD_BOND_IP, const.NAME_INPUT_FIELD_BOND_MASK]
+[<============================>]:
+const.NAME_INPUT_FIELD_BOND_IP, const.NAME_INPUT_FIELD_BOND_MASK]
+
+[Google Translate]:
+Options value
+[<============================>]:
+Options value
+
+[Google Translate]:
+tions_value=const.MTU[const.GENERATOR_NAME_INTERFACE.index(interface_name)])
+            element.click_xpath_button(const.XPATH_BUTTON_OK)
+[<============================>]:
+tions_value=const.MTU[const.GENERATOR_NAME_INTERFACE.index(interface_name)])
+            element.click_xpath_button(const.XPATH_BUTTON_OK)
+
+[Google Translate]:
+
+#Условие выбора поля engine переделать на выбор одниковые=True разные=True
+
+[<============================>]:
+# The condition for choosing the engine field is redone to choose the same = True different = True
+
+[Google Translate]:
+Условие выбора поля engine переделать на выбор одниковые=True разные=True
+[<============================>]:
+The condition for choosing the engine field is redone to choose the same = True different = True
+
+[Google Translate]:
+одниковые=True
+[<============================>]:
+single = True
+
+[Google Translate]:
+   element.selected_comparison_field(const.ENGINE_LIST[0], const.ENGINE_LIST[1], 
+                                            const.OPTIONS_STAT_ADD_ROUD[0],
+                                            const.OPTIONS_STAT_ADD_ROUD[1],
+                                            select_first_field=1,
+                                            select_next_field=1)
+[<============================>]:
+element.selected_comparison_field(const.ENGINE_LIST[0], const.ENGINE_LIST[1], 
+                                            const.OPTIONS_STAT_ADD_ROUD[0],
+                                            const.OPTIONS_STAT_ADD_ROUD[1],
+                                            select_first_field=1,
+                                            select_next_field=1)
+
+[Google Translate]:
+
+//tr[@class="trTableList"]/td[text()="bond
+[<============================>]:
+//tr[@class="trTableList"]/td[text()="bond
+
+[Google Translate]:
+
+//span[text()="Удалить груповой интерфейс"]
+[<============================>]:
+//span [text () = "Delete the group interface"]
+
+[Google Translate]:
+
+Bac12345
+[<============================>]:
+Bac12345
+
+[Google Translate]:
+
+//tbody/tr[td/text()="bond1"]/td/div/span[text()="
+[<============================>]:
+//tbody/tr[td/text()="bond1"]/td/div/span[text()="
+
+[Google Translate]:
+
+#                                             const.MASK_SUCCESS])
+
+[<============================>]:
+#                                             const.MASK_SUCCESS])
+
+[Google Translate]:
+
+//select[@name="engine0"]/option
+[<============================>]:
+//select[@name="engine0"]/option
+
+[Google Translate]:
+
+//span[text()="Создать груповой интерфейс"]
+[<============================>]:
+//span [text () = "Create a group interface"]
+
+[Google Translate]:
+
+//span[text()="Редактировать"]
+[<============================>]:
+//span [text () = "Edit"]
+
+[Google Translate]:
+
+        ip 192.168.2.181
+[<============================>]:
+ip 192.168.2.181
+
+[Google Translate]:
+
+admin
+[<============================>]:
+admin
+
+[Google Translate]:
+
+# def test_e_delete_one_interface(self):
+
+[<============================>]:
+# def test_e_delete_one_interface(self):
+
+[Google Translate]:
+
+1500
+[<============================>]:
+1500
+
+[Google Translate]:
+List
+[<============================>]:
+List
+
+[Google Translate]:
+
+"]/td[text()="
+[<============================>]:
+"]/td[text()="
+
+[Google Translate]:
+
+//span[text()="Удалить"]
+[<============================>]:
+//span [text () = "Delete"]
+
+[Google Translate]:
+
+"]/td/div/span[text()="
+[<============================>]:
+"]/td/div/span[text()="
+
+[Google Translate]:
+
+#                                         value=[const.MTU[const.GENERATOR_NAME_INTERFACE.index(interface_name)], 
+
+[<============================>]:
+#                                         value=[const.MTU[const.GENERATOR_NAME_INTERFACE.index(interface_name)],
+
+[Google Translate]:
+
+#                                     value=[const.IP_SUCCESS_BOND.format(const.GENERATOR_NAME_INTERFACE.index(interface_name)), const.MASK_SUCCESS])
+
+[<============================>]:
+#                                     value=[const.IP_SUCCESS_BOND.format(const.GENERATOR_NAME_INTERFACE.index(interface_name)), const.MASK_SUCCESS])
+
+[Google Translate]:
+
+#         element.selected_value_by_name(by_name=[const.NAME_INPUT_FIELD_BOND_MTU, const.NAME_INPUT_FIELD_BOND_MODE],
+
+[<============================>]:
+#         element.selected_value_by_name(by_name=[const.NAME_INPUT_FIELD_BOND_MTU, const.NAME_INPUT_FIELD_BOND_MODE],
+
+[Google Translate]:
+
+#                                 value=[const.IP_SUCCESS_BOND.format(1), const.MASK_SUCCESS])
+
+[<============================>]:
+#                                 value=[const.IP_SUCCESS_BOND.format(1), const.MASK_SUCCESS])
+
+[Google Translate]:
+
+#     element.selected_value_by_name(by_name=[const.NAME_INPUT_FIELD_BOND_MTU, const.NAME_INPUT_FIELD_BOND_MODE], 
+
+[<============================>]:
+#     element.selected_value_by_name(by_name=[const.NAME_INPUT_FIELD_BOND_MTU, const.NAME_INPUT_FIELD_BOND_MODE],
+
+[Google Translate]:
+IP_SUCCESS
+[<============================>]:
+IP_SUCCESS
+
+[Google Translate]:
+
+#     element.send_input_by_name(const.NAME_INPUT_FIELD_IP, const.IP_SUCCESS.format(1))
+
+[<============================>]:
+#     element.send_input_by_name(const.NAME_INPUT_FIELD_IP, const.IP_SUCCESS.format(1))
+
+[Google Translate]:
+
+#                                         options_value=const.MTU[const.GENERATOR_NAME_INTERFACE.index(interface_name)])
+
+[<============================>]:
+#                                         options_value=const.MTU[const.GENERATOR_NAME_INTERFACE.index(interface_name)])
+
+[Google Translate]:
+
+#                                     value=[const.IP_SUCCESS_BOND[const.GENERATOR_NAME_INTERFACE.index(interface_name)], const.MASK_SUCCESS])
+
+[<============================>]:
+#                                     value=[const.IP_SUCCESS_BOND[const.GENERATOR_NAME_INTERFACE.index(interface_name)], const.MASK_SUCCESS])
+
+[Google Translate]:
+MASK_SUCCESS
+[<============================>]:
+MASK_SUCCESS
+
+[Google Translate]:
+
+#                                     value=[const.IP_SUCCESS_LIST[const.GENERATOR_NAME_INTERFACE.index(interface_name)],
+
+[<============================>]:
+#                                     value=[const.IP_SUCCESS_LIST[const.GENERATOR_NAME_INTERFACE.index(interface_name)],
+
+[Google Translate]:
+
+#     element.assert_value(in_value=True, main_page=const.PATH_PHYS_INTERFACE, xpath=const.ASSERT_PHYS_EDIT_INTERFACE)
+
+[<============================>]:
+#     element.assert_value(in_value=True, main_page=const.PATH_PHYS_INTERFACE, xpath=const.ASSERT_PHYS_EDIT_INTERFACE)
+
+[Google Translate]:
+//span[text()="Создать груповой интерфейс"]
+[<============================>]:
+//span [text () = "Create a group interface"]
+
+[Google Translate]:
+
+        mtu 1500,9000,1500
+[<============================>]:
+person 1500,9000,1500
+
+[Google Translate]:
+
+255.255.255.255
+[<============================>]:
+255.255.255.255
+
+[Google Translate]:
+
+//span[@class="c-menu__name" and text()="Удалить груповой интерфейс"]
+[<============================>]:
+//span [@ class = "c-menu__name" and text () = "Delete the group interface"]
+
+[Google Translate]: request error
+ {"errno":"EAI_AGAIN","code":"EAI_AGAIN","syscall":"getaddrinfo","hostname":"translate.google.cn"} 
+ Try again in 5 minutes.
+[Google Translate]:
+
+//tbody/tr[td/text()="
+[<============================>]:
+//tbody/tr[td/text()="
+
+[Google Translate]:
+
+        ip 192.168.2.170
+[<============================>]:
+ip 192.168.2.170
+
+[Google Translate]:
+
+//span[@class="c-menu__name" and text()="Создать груповой интефейс"]
+[<============================>]:
+//span [@ class = "c-menu name" and text () = "Create a group interface"]
+
+[Google Translate]:
+
+        с адресом 192.168.2.180 из const.IP_SUCCESS
+[<============================>]:
+with the address 192.168.2.180 of const.IP_SUCCESS
+
+[Google Translate]:
+
+ens11f1
+[<============================>]:
+ens11f1
+
+[Google Translate]:
+
+        Тест редактирует один интерфейс с именем 'ens11f1'
+[<============================>]:
+Test edits one interface named 'ens11f1'
+
+[Google Translate]:
+
+" and td/text()="ENGINE-0"]/td[10]
+[<============================>]:
+" and td/text()="ENGINE-0"]/td[10]
+
+[Google Translate]:
+
+//tr[td/text()="
+[<============================>]:
+//tr[td/text()="
+
+[Google Translate]:
+Self
+[<============================>]:
+Self
+
+[Google Translate]:
+Xpath value
+[<============================>]:
+Xpath value
+
+[Google Translate]:
+
+192.168.2.10
+[<============================>]:
+192.168.2.10
+
+[Google Translate]:
+
+        из const.GENERATOR_NAME_INTERFACE
+[<============================>]:
+из const.GENERATOR_NAME_INTERFACE
+
+[Google Translate]:
+
+http://192.168.2.10/net/static
+[<============================>]:
+http://192.168.2.10/net/static
+
+[Google Translate]:
+Xpath
+[<============================>]:
+Xpath
+
+[Google Translate]:
+
+        Удаляет 1 bond с ID 1
+[<============================>]:
+Removes 1 bond with ID 1
+

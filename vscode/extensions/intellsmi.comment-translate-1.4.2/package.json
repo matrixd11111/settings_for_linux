@@ -1,0 +1,130 @@
+{
+	"name": "comment-translate",
+	"displayName": "%commentTranslate.displayName%",
+	"description": "%commentTranslate.description%",
+	"version": "1.4.2",
+	"publisher": "intellsmi",
+	"author": {
+		"name": "Zheng MaoWei",
+		"email": "intellsmi@gmail.com"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"homepage": "https://github.com/intellism/vscode-comment-translate/blob/master/README.md",
+	"bugs": {
+		"url": "https://github.com/intellism/vscode-comment-translate/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/intellism/vscode-comment-translate.git"
+	},
+	"engines": {
+		"vscode": "^1.40.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"comment",
+		"translate",
+		"hover",
+		"google translate",
+		"翻译",
+		"注释",
+		"翻訳"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"icon": "doc/image/icon.png",
+	"main": "./client/out/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "commentTranslate.select",
+				"title": "%commentTranslate.command.select%",
+				"category": "Comment Translate"
+			},
+			{
+				"command": "commentTranslate.changeTargetLanguage",
+				"title": "%commentTranslate.command.changeTargetLanguage%",
+				"category": "Comment Translate"
+			},
+			{
+				"command": "commentTranslate.replaceSelections",
+				"title": "%commentTranslate.command.replaceSelections%",
+				"category": "Comment Translate"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "commentTranslate.select",
+				"key": "ctrl+shift+s"
+			}
+		],
+		"configuration": [
+			{
+				"title": "Comment Translate Configuration",
+				"type": "Object",
+				"properties": {
+					"commentTranslate.targetLanguage": {
+						"type": "string",
+						"enum": [
+							"de",
+							"es",
+							"en",
+							"fr",
+							"it",
+							"ja",
+							"ko",
+							"ru",
+							"zh-CN",
+							"zh-TW"
+						],
+						"enumDescriptions": [
+							"German",
+							"Spanish",
+							"English",
+							"French",
+							"Italian",
+							"Japanese",
+							"Korean",
+							"Russian",
+							"Chinese (Simplified)",
+							"Chinese (Traditional)"
+						],
+						"description": "%commentTranslate.configuration.targetLanguage%"
+					},
+					"commentTranslate.multiLineMerge": {
+						"type": "boolean",
+						"default": false,
+						"description": "%commentTranslate.configuration.MultilineMerge%"
+					},
+					"commentTranslate.concise": {
+						"type": "boolean",
+						"default": false,
+						"description": "%commentTranslate.configuration.concise%"
+					}
+				}
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "cd client && npm run update-vscode && cd .. && npm run compile",
+		"compile:client": "tsc -p ./client/tsconfig.json",
+		"compile:server": "tsc -p ./server/tsconfig.json",
+		"watch:client": "tsc -w -p ./client/tsconfig.json",
+		"watch:server": "tsc -w -p ./server/tsconfig.json",
+		"compile": "npm run compile:client && npm run compile:server",
+		"postinstall": "cd client && npm install && cd ../server && npm install && cd ..",
+		"test": "sh ./scripts/e2e.sh"
+	},
+	"devDependencies": {
+		"@types/node": "^6.0.40",
+		"typescript": "^2.0.3"
+	},
+	"__metadata": {
+		"id": "85668beb-15e7-48c4-86a1-6a02f3133292",
+		"publisherId": "316e2c02-8e44-4f9a-aa45-cf7bc9517fb0",
+		"publisherDisplayName": "intellsmi"
+	}
+}

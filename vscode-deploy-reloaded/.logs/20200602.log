@@ -1,0 +1,53 @@
+INFO extension.deploy.reloaded.loadplugins - [02/Jun/2020:10:18:28 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+NOTICE clients.sftp.uploadfile(3) - [02/Jun/2020:11:16:12 +0000] "'/var/www/engine/bin/NETWORK/controllers/bond.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [02/Jun/2020:11:16:12 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/bond.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [02/Jun/2020:11:16:12 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [02/Jun/2020:11:16:12 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [02/Jun/2020:11:16:12 +0000] "'/var/www/engine/bin/NETWORK/controllers/virt.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [02/Jun/2020:11:16:12 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/virt.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [02/Jun/2020:11:16:12 +0000] "'/var/www/engine/bin/NETWORK/controllers/static.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [02/Jun/2020:11:16:13 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/static.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [02/Jun/2020:11:16:35 +0000] "'/var/www/engine/bin/NETWORK/constants.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [02/Jun/2020:11:16:35 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/constants.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [02/Jun/2020:11:16:35 +0000] "'/var/www/engine/bin/NETWORK/controller.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [02/Jun/2020:11:16:35 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controller.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [02/Jun/2020:11:17:28 +0000] "'/var/www/engine/html/assets/js/react.js' does NOT match with a mode pattern"
+NOTICE clients.sftp.uploadfile(3) - [02/Jun/2020:11:18:22 +0000] "'/var/www/engine/fuel/app/views/leftmenu.php' does NOT match with a mode pattern"
+NOTICE clients.sftp.uploadfile(3) - [02/Jun/2020:11:18:32 +0000] "'/var/www/engine/fuel/app/classes/controller/net.php' does NOT match with a mode pattern"
+NOTICE clients.sftp.uploadfile(3) - [02/Jun/2020:11:41:41 +0000] "'/var/www/engine/bin/NETWORK/controllers/bond.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [02/Jun/2020:11:41:41 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/bond.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [02/Jun/2020:11:41:41 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [02/Jun/2020:11:41:41 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [02/Jun/2020:11:41:41 +0000] "'/var/www/engine/bin/NETWORK/controllers/virt.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [02/Jun/2020:11:41:41 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/virt.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [02/Jun/2020:11:41:41 +0000] "'/var/www/engine/bin/NETWORK/controllers/static.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [02/Jun/2020:11:41:42 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/static.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [02/Jun/2020:11:41:52 +0000] "'/var/www/engine/bin/NETWORK/constants.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [02/Jun/2020:11:41:53 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/constants.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [02/Jun/2020:11:41:53 +0000] "'/var/www/engine/bin/NETWORK/controller.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [02/Jun/2020:11:41:53 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controller.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [02/Jun/2020:11:42:05 +0000] "'/var/www/engine/fuel/app/views/leftmenu.php' does NOT match with a mode pattern"
+NOTICE clients.sftp.uploadfile(3) - [02/Jun/2020:11:42:12 +0000] "'/var/www/engine/fuel/app/classes/controller/net.php' does NOT match with a mode pattern"
+NOTICE clients.sftp.uploadfile(3) - [02/Jun/2020:11:42:21 +0000] "'/var/www/engine/html/assets/js/react.js' does NOT match with a mode pattern"
+NOTICE clients.sftp.uploadfile(3) - [02/Jun/2020:14:23:57 +0000] "'/var/www/engine/html/assets/js/react.js' does NOT match with a mode pattern"
+NOTICE clients.sftp.uploadfile(3) - [02/Jun/2020:14:27:39 +0000] "'/var/www/engine/html/assets/js/react.js' does NOT match with a mode pattern"

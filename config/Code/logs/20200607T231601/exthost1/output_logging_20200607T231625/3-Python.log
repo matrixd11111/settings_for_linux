@@ -1,0 +1,1186 @@
+User belongs to experiment group 'ShowPlayIcon - start'
+User belongs to experiment group 'DebugAdapterFactory - experiment'
+User belongs to experiment group 'PtvsdWheels37 - experiment'
+User belongs to experiment group 'UseTerminalToGetActivatedEnvVars - control'
+User belongs to experiment group 'WebHostNotebook - control'
+User belongs to experiment group 'LocalZMQKernel - control'
+User belongs to experiment group 'NativeNotebook - control'
+User belongs to experiment group 'CollectLSRequestTiming - control'
+User belongs to experiment group 'CollectNodeLSRequestTiming - experiment'
+User belongs to experiment group 'EnableIPyWidgets - experiment'
+User belongs to experiment group 'RunByLine - control'
+> conda --version
+> pyenv root
+> python3.7 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> python3.6 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> python2 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> python ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> conda info --json
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import jupyter"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import jupyter"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import notebook"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import notebook"
+Starting Jedi Python language engine.
+Python interpreter path: /usr/bin/python3
+> conda --version
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.prefix)"
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.prefix)"
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())"
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())"
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py site --user-site
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py site --user-site
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/network-interfaces_valid_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/network-interfaces_valid_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/openconnect.py
+cwd: ~/Documents
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/openconnect.py
+cwd: ~/Documents
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/base_page.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/base_page.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/completion.py
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/completion.py
+##########Linting Output - flake8##########
+9,1,E,E302:expected 2 blank lines, found 1
+23,1,E,E305:expected 2 blank lines after class or function definition, found 1
+31,33,W,W292:no newline at end of file
+##########Linting Output - flake8##########
+3,80,E,E501:line too long (88 > 79 characters)
+7,80,E,E501:line too long (96 > 79 characters)
+36,31,F,F601:dictionary key '//tr/td/div/span[text()={}]' repeated with different values
+36,80,E,E501:line too long (88 > 79 characters)
+37,33,E,E127:continuation line over-indented for visual indent
+37,33,F,F601:dictionary key '//tr/td/div/span[text()={}]' repeated with different values
+37,80,E,E501:line too long (90 > 79 characters)
+38,33,F,F601:dictionary key '//tr/td/div/span[text()={}]' repeated with different values
+38,80,E,E501:line too long (90 > 79 characters)
+39,33,F,F601:dictionary key '//tbody/td[text()={}]' repeated with different values
+40,33,F,F601:dictionary key '//tbody/td[text()={}]' repeated with different values
+41,1,E,E124:closing bracket does not match visual indentation
+42,1,W,W391:blank line at end of file
+##########Linting Output - flake8##########
+1,1,F,F401:'selenium.webdriver' imported but unused
+2,1,F,F401:'selenium.webdriver.common.keys.Keys' imported but unused
+4,1,F,F401:'selenium.webdriver.common.by.By' imported but unused
+5,1,F,F401:'selenium.common.exceptions.NoSuchElementException' imported but unused
+8,1,F,F401:'selenium.webdriver.common.action_chains.ActionChains' imported but unused
+9,1,F,F401:'selenium.common.exceptions.TimeoutException' imported but unused
+11,1,E,E302:expected 2 blank lines, found 1
+18,80,E,E501:line too long (94 > 79 characters)
+21,80,E,E501:line too long (104 > 79 characters)
+44,80,E,E501:line too long (95 > 79 characters)
+50,80,E,E501:line too long (80 > 79 characters)
+51,1,W,W391:blank line at end of file
+51,1,W,W293:blank line contains whitespace
+##########Linting Output - flake8##########
+7,1,F,F401:'selenium.webdriver.common.keys.Keys' imported but unused
+8,1,F,F401:'selenium.webdriver.support.ui.WebDriverWait' imported but unused
+9,1,F,F401:'selenium.webdriver.common.by.By' imported but unused
+10,1,F,F401:'selenium.common.exceptions.NoSuchElementException' imported but unused
+11,1,F,F401:'selenium.webdriver.support.expected_conditions as EC' imported but unused
+12,1,F,F401:'selenium.webdriver.support.ui.Select' imported but unused
+13,1,F,F401:'selenium.webdriver.common.action_chains.ActionChains' imported but unused
+14,1,F,F401:'selenium.common.exceptions.TimeoutException' imported but unused
+17,1,E,E302:expected 2 blank lines, found 1
+42,33,W,W291:trailing whitespace
+49,80,E,E501:line too long (80 > 79 characters)
+51,80,E,E501:line too long (83 > 79 characters)
+56,33,W,W291:trailing whitespace
+63,80,E,E501:line too long (152 > 79 characters)
+66,80,E,E501:line too long (83 > 79 characters)
+67,80,E,E501:line too long (85 > 79 characters)
+68,80,E,E501:line too long (101 > 79 characters)
+69,80,E,E501:line too long (90 > 79 characters)
+70,80,E,E501:line too long (88 > 79 characters)
+71,80,E,E501:line too long (83 > 79 characters)
+76,36,W,W291:trailing whitespace
+83,80,E,E501:line too long (80 > 79 characters)
+86,80,E,E501:line too long (87 > 79 characters)
+92,36,W,W291:trailing whitespace
+100,80,E,E501:line too long (137 > 79 characters)
+103,80,E,E501:line too long (87 > 79 characters)
+104,80,E,E501:line too long (141 > 79 characters)
+105,80,E,E501:line too long (156 > 79 characters)
+106,80,E,E501:line too long (94 > 79 characters)
+107,80,E,E501:line too long (143 > 79 characters)
+108,80,E,E501:line too long (138 > 79 characters)
+131,80,E,E501:line too long (94 > 79 characters)
+132,80,E,E501:line too long (85 > 79 characters)
+133,80,E,E501:line too long (87 > 79 characters)
+138,80,E,E501:line too long (81 > 79 characters)
+150,80,E,E501:line too long (83 > 79 characters)
+155,80,E,E501:line too long (90 > 79 characters)
+157,80,E,E501:line too long (145 > 79 characters)
+158,80,E,E501:line too long (87 > 79 characters)
+159,74,E,E203:whitespace before ','
+159,80,E,E501:line too long (140 > 79 characters)
+176,1,E,E305:expected 2 blank lines after class or function definition, found 1
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+41,80,E,E501:line too long (120 > 79 characters)
+52,80,E,E501:line too long (81 > 79 characters)
+55,80,E,E501:line too long (83 > 79 characters)
+63,1,W,W391:blank line at end of file
+63,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+41,80,E,E501:line too long (120 > 79 characters)
+52,80,E,E501:line too long (81 > 79 characters)
+55,80,E,E501:line too long (83 > 79 characters)
+63,1,W,W391:blank line at end of file
+63,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+41,80,E,E501:line too long (120 > 79 characters)
+52,80,E,E501:line too long (81 > 79 characters)
+55,80,E,E501:line too long (83 > 79 characters)
+63,1,W,W391:blank line at end of file
+63,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+3,80,E,E501:line too long (88 > 79 characters)
+7,80,E,E501:line too long (96 > 79 characters)
+36,31,F,F601:dictionary key '//tr/td/div/span[text()={}]' repeated with different values
+36,80,E,E501:line too long (82 > 79 characters)
+37,33,E,E127:continuation line over-indented for visual indent
+37,33,F,F601:dictionary key '//tr/td/div/span[text()={}]' repeated with different values
+37,80,E,E501:line too long (84 > 79 characters)
+38,33,F,F601:dictionary key '//tr/td/div/span[text()={}]' repeated with different values
+38,80,E,E501:line too long (84 > 79 characters)
+39,33,F,F601:dictionary key '//tbody/td[text()={}]' repeated with different values
+40,33,F,F601:dictionary key '//tbody/td[text()={}]' repeated with different values
+41,1,E,E124:closing bracket does not match visual indentation
+42,1,W,W391:blank line at end of file
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+3,80,E,E501:line too long (88 > 79 characters)
+7,80,E,E501:line too long (96 > 79 characters)
+36,31,F,F601:dictionary key '//tr/td/div/span[text()={}]' repeated with different values
+37,33,E,E127:continuation line over-indented for visual indent
+37,33,F,F601:dictionary key '//tr/td/div/span[text()={}]' repeated with different values
+38,33,F,F601:dictionary key '//tr/td/div/span[text()={}]' repeated with different values
+39,33,F,F601:dictionary key '//tbody/td[text()={}]' repeated with different values
+40,33,F,F601:dictionary key '//tbody/td[text()={}]' repeated with different values
+41,1,E,E124:closing bracket does not match visual indentation
+42,1,W,W391:blank line at end of file
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+3,80,E,E501:line too long (88 > 79 characters)
+7,80,E,E501:line too long (96 > 79 characters)
+36,31,F,F601:dictionary key '//tbody/tr/td/div/span[text()={}]' repeated with different values
+36,80,E,E501:line too long (83 > 79 characters)
+37,33,E,E127:continuation line over-indented for visual indent
+37,33,F,F601:dictionary key '//tbody/tr/td/div/span[text()={}]' repeated with different values
+37,80,E,E501:line too long (85 > 79 characters)
+38,33,F,F601:dictionary key '//tbody/tr/td/div/span[text()={}]' repeated with different values
+38,80,E,E501:line too long (85 > 79 characters)
+39,33,F,F601:dictionary key '//tbody/td[text()={}]' repeated with different values
+40,33,F,F601:dictionary key '//tbody/td[text()={}]' repeated with different values
+41,1,E,E124:closing bracket does not match visual indentation
+42,1,W,W391:blank line at end of file
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+41,80,E,E501:line too long (84 > 79 characters)
+42,80,E,E501:line too long (120 > 79 characters)
+53,80,E,E501:line too long (81 > 79 characters)
+56,80,E,E501:line too long (83 > 79 characters)
+64,1,W,W391:blank line at end of file
+64,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+41,80,E,E501:line too long (84 > 79 characters)
+42,80,E,E501:line too long (120 > 79 characters)
+53,80,E,E501:line too long (81 > 79 characters)
+56,80,E,E501:line too long (83 > 79 characters)
+64,1,W,W391:blank line at end of file
+64,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+27,80,E,E501:line too long (90 > 79 characters)
+29,80,E,E501:line too long (91 > 79 characters)
+29,91,E,E502:the backslash is redundant between brackets
+30,29,E,E124:closing bracket does not match visual indentation
+30,80,E,E501:line too long (134 > 79 characters)
+42,80,E,E501:line too long (120 > 79 characters)
+53,80,E,E501:line too long (81 > 79 characters)
+56,80,E,E501:line too long (83 > 79 characters)
+64,1,W,W391:blank line at end of file
+64,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/network-interfaces_valid_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/network-interfaces_valid_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+##########Linting Output - flake8##########
+7,1,F,F401:'selenium.webdriver.common.keys.Keys' imported but unused
+8,1,F,F401:'selenium.webdriver.support.ui.WebDriverWait' imported but unused
+9,1,F,F401:'selenium.webdriver.common.by.By' imported but unused
+10,1,F,F401:'selenium.common.exceptions.NoSuchElementException' imported but unused
+11,1,F,F401:'selenium.webdriver.support.expected_conditions as EC' imported but unused
+12,1,F,F401:'selenium.webdriver.support.ui.Select' imported but unused
+13,1,F,F401:'selenium.webdriver.common.action_chains.ActionChains' imported but unused
+14,1,F,F401:'selenium.common.exceptions.TimeoutException' imported but unused
+17,1,E,E302:expected 2 blank lines, found 1
+42,33,W,W291:trailing whitespace
+49,80,E,E501:line too long (80 > 79 characters)
+51,80,E,E501:line too long (83 > 79 characters)
+56,33,W,W291:trailing whitespace
+63,80,E,E501:line too long (152 > 79 characters)
+66,80,E,E501:line too long (83 > 79 characters)
+67,80,E,E501:line too long (85 > 79 characters)
+68,80,E,E501:line too long (101 > 79 characters)
+69,80,E,E501:line too long (90 > 79 characters)
+70,80,E,E501:line too long (88 > 79 characters)
+71,80,E,E501:line too long (83 > 79 characters)
+76,36,W,W291:trailing whitespace
+83,80,E,E501:line too long (80 > 79 characters)
+86,80,E,E501:line too long (87 > 79 characters)
+92,36,W,W291:trailing whitespace
+100,80,E,E501:line too long (137 > 79 characters)
+103,80,E,E501:line too long (87 > 79 characters)
+104,80,E,E501:line too long (141 > 79 characters)
+105,80,E,E501:line too long (156 > 79 characters)
+106,80,E,E501:line too long (94 > 79 characters)
+107,80,E,E501:line too long (143 > 79 characters)
+108,80,E,E501:line too long (138 > 79 characters)
+131,80,E,E501:line too long (94 > 79 characters)
+132,80,E,E501:line too long (85 > 79 characters)
+133,80,E,E501:line too long (87 > 79 characters)
+138,80,E,E501:line too long (81 > 79 characters)
+150,80,E,E501:line too long (83 > 79 characters)
+155,80,E,E501:line too long (90 > 79 characters)
+157,80,E,E501:line too long (145 > 79 characters)
+158,80,E,E501:line too long (87 > 79 characters)
+159,74,E,E203:whitespace before ','
+159,80,E,E501:line too long (140 > 79 characters)
+176,1,E,E305:expected 2 blank lines after class or function definition, found 1
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+27,80,E,E501:line too long (90 > 79 characters)
+29,80,E,E501:line too long (91 > 79 characters)
+29,91,E,E502:the backslash is redundant between brackets
+30,29,E,E124:closing bracket does not match visual indentation
+30,80,E,E501:line too long (134 > 79 characters)
+42,80,E,E501:line too long (120 > 79 characters)
+53,80,E,E501:line too long (81 > 79 characters)
+56,80,E,E501:line too long (83 > 79 characters)
+64,1,W,W391:blank line at end of file
+64,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+23,80,E,E501:line too long (84 > 79 characters)
+27,80,E,E501:line too long (90 > 79 characters)
+29,80,E,E501:line too long (91 > 79 characters)
+29,91,E,E502:the backslash is redundant between brackets
+30,29,E,E124:closing bracket does not match visual indentation
+30,80,E,E501:line too long (134 > 79 characters)
+42,80,E,E501:line too long (120 > 79 characters)
+53,80,E,E501:line too long (81 > 79 characters)
+56,80,E,E501:line too long (83 > 79 characters)
+64,1,W,W391:blank line at end of file
+64,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+23,80,E,E501:line too long (120 > 79 characters)
+28,80,E,E501:line too long (90 > 79 characters)
+30,80,E,E501:line too long (91 > 79 characters)
+30,91,E,E502:the backslash is redundant between brackets
+31,29,E,E124:closing bracket does not match visual indentation
+31,80,E,E501:line too long (134 > 79 characters)
+43,80,E,E501:line too long (120 > 79 characters)
+54,80,E,E501:line too long (81 > 79 characters)
+57,80,E,E501:line too long (83 > 79 characters)
+65,1,W,W391:blank line at end of file
+65,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+1,1,E,E902:TokenError: EOF in multi-line statement
+6,1,E,E302:expected 2 blank lines, found 1
+23,80,E,E501:line too long (120 > 79 characters)
+28,80,E,E501:line too long (90 > 79 characters)
+30,80,E,E501:line too long (91 > 79 characters)
+31,80,E,E501:line too long (134 > 79 characters)
+43,80,E,E501:line too long (120 > 79 characters)
+54,80,E,E501:line too long (81 > 79 characters)
+57,80,E,E501:line too long (83 > 79 characters)
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+23,80,E,E501:line too long (120 > 79 characters)
+28,80,E,E501:line too long (90 > 79 characters)
+30,80,E,E501:line too long (91 > 79 characters)
+30,91,E,E502:the backslash is redundant between brackets
+31,29,E,E124:closing bracket does not match visual indentation
+31,80,E,E501:line too long (134 > 79 characters)
+43,80,E,E501:line too long (120 > 79 characters)
+54,80,E,E501:line too long (81 > 79 characters)
+57,80,E,E501:line too long (83 > 79 characters)
+65,1,W,W391:blank line at end of file
+65,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+41,80,E,E501:line too long (125 > 79 characters)
+52,80,E,E501:line too long (81 > 79 characters)
+55,80,E,E501:line too long (83 > 79 characters)
+63,1,W,W391:blank line at end of file
+63,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+41,80,E,E501:line too long (90 > 79 characters)
+53,80,E,E501:line too long (81 > 79 characters)
+56,80,E,E501:line too long (83 > 79 characters)
+64,1,W,W391:blank line at end of file
+64,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+41,80,E,E501:line too long (90 > 79 characters)
+53,80,E,E501:line too long (81 > 79 characters)
+56,80,E,E501:line too long (83 > 79 characters)
+64,1,W,W391:blank line at end of file
+64,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+41,80,E,E501:line too long (90 > 79 characters)
+54,80,E,E501:line too long (81 > 79 characters)
+57,80,E,E501:line too long (83 > 79 characters)
+65,1,W,W391:blank line at end of file
+65,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+3,80,E,E501:line too long (88 > 79 characters)
+7,80,E,E501:line too long (96 > 79 characters)
+36,31,F,F601:dictionary key '//tbody/tr/td/div/span[text()="{}"]' repeated with different values
+36,80,E,E501:line too long (85 > 79 characters)
+37,33,E,E127:continuation line over-indented for visual indent
+37,33,F,F601:dictionary key '//tbody/tr/td/div/span[text()="{}"]' repeated with different values
+37,80,E,E501:line too long (87 > 79 characters)
+38,33,F,F601:dictionary key '//tbody/tr/td/div/span[text()="{}"]' repeated with different values
+38,80,E,E501:line too long (87 > 79 characters)
+39,33,F,F601:dictionary key '//tbody/td[text()="{}"]' repeated with different values
+40,33,F,F601:dictionary key '//tbody/td[text()="{}"]' repeated with different values
+41,1,E,E124:closing bracket does not match visual indentation
+42,1,W,W391:blank line at end of file
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+3,80,E,E501:line too long (88 > 79 characters)
+7,80,E,E501:line too long (96 > 79 characters)
+36,31,F,F601:dictionary key '//tbody/tr/td/div/span[text()="{}"]' repeated with different values
+36,80,E,E501:line too long (90 > 79 characters)
+37,33,E,E127:continuation line over-indented for visual indent
+37,33,F,F601:dictionary key '//tbody/tr/td/div/span[text()="{}"]' repeated with different values
+37,80,E,E501:line too long (92 > 79 characters)
+38,33,F,F601:dictionary key '//tbody/tr/td/div/span[text()="{}"]' repeated with different values
+38,80,E,E501:line too long (92 > 79 characters)
+39,33,F,F601:dictionary key '//tbody/td[text()="{}"]' repeated with different values
+40,33,F,F601:dictionary key '//tbody/td[text()="{}"]' repeated with different values
+41,1,E,E124:closing bracket does not match visual indentation
+42,1,W,W391:blank line at end of file
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+41,80,E,E501:line too long (90 > 79 characters)
+54,80,E,E501:line too long (81 > 79 characters)
+57,80,E,E501:line too long (83 > 79 characters)
+65,1,W,W391:blank line at end of file
+65,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+41,80,E,E501:line too long (90 > 79 characters)
+54,80,E,E501:line too long (81 > 79 characters)
+57,80,E,E501:line too long (83 > 79 characters)
+65,1,W,W391:blank line at end of file
+65,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+41,80,E,E501:line too long (90 > 79 characters)
+54,80,E,E501:line too long (81 > 79 characters)
+57,80,E,E501:line too long (83 > 79 characters)
+65,1,W,W391:blank line at end of file
+65,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+41,17,F,F841:local variable 'text_value' is assigned to but never used
+41,80,E,E501:line too long (90 > 79 characters)
+54,80,E,E501:line too long (81 > 79 characters)
+57,80,E,E501:line too long (83 > 79 characters)
+65,1,W,W391:blank line at end of file
+65,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+41,80,E,E501:line too long (90 > 79 characters)
+54,80,E,E501:line too long (81 > 79 characters)
+57,80,E,E501:line too long (83 > 79 characters)
+65,1,W,W391:blank line at end of file
+65,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+3,80,E,E501:line too long (88 > 79 characters)
+7,80,E,E501:line too long (96 > 79 characters)
+36,31,F,F601:dictionary key '//tbody/tr/td/div/span[text()="{}"]' repeated with different values
+36,80,E,E501:line too long (98 > 79 characters)
+37,33,E,E127:continuation line over-indented for visual indent
+37,33,F,F601:dictionary key '//tbody/tr/td/div/span[text()="{}"]' repeated with different values
+37,80,E,E501:line too long (92 > 79 characters)
+38,33,F,F601:dictionary key '//tbody/tr/td/div/span[text()="{}"]' repeated with different values
+38,80,E,E501:line too long (92 > 79 characters)
+39,33,F,F601:dictionary key '//tbody/td[text()="{}"]' repeated with different values
+40,33,F,F601:dictionary key '//tbody/td[text()="{}"]' repeated with different values
+41,1,E,E124:closing bracket does not match visual indentation
+42,1,W,W391:blank line at end of file
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+3,80,E,E501:line too long (88 > 79 characters)
+7,80,E,E501:line too long (96 > 79 characters)
+36,31,F,F601:dictionary key '//tbody/tr/td/div/span[text()="{}"]' repeated with different values
+36,80,E,E501:line too long (85 > 79 characters)
+37,33,E,E127:continuation line over-indented for visual indent
+37,33,F,F601:dictionary key '//tbody/tr/td/div/span[text()="{}"]' repeated with different values
+37,80,E,E501:line too long (87 > 79 characters)
+38,33,F,F601:dictionary key '//tbody/tr/td/div/span[text()="{}"]' repeated with different values
+38,80,E,E501:line too long (87 > 79 characters)
+39,33,F,F601:dictionary key '//tbody/td[text()="{}"]' repeated with different values
+40,33,F,F601:dictionary key '//tbody/td[text()="{}"]' repeated with different values
+41,1,E,E124:closing bracket does not match visual indentation
+42,1,W,W391:blank line at end of file
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+41,80,E,E501:line too long (90 > 79 characters)
+54,80,E,E501:line too long (81 > 79 characters)
+57,80,E,E501:line too long (83 > 79 characters)
+65,1,W,W391:blank line at end of file
+65,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/network-interfaces_valid_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/network-interfaces_valid_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+##########Linting Output - flake8##########
+7,1,F,F401:'selenium.webdriver.common.keys.Keys' imported but unused
+8,1,F,F401:'selenium.webdriver.support.ui.WebDriverWait' imported but unused
+9,1,F,F401:'selenium.webdriver.common.by.By' imported but unused
+10,1,F,F401:'selenium.common.exceptions.NoSuchElementException' imported but unused
+11,1,F,F401:'selenium.webdriver.support.expected_conditions as EC' imported but unused
+12,1,F,F401:'selenium.webdriver.support.ui.Select' imported but unused
+13,1,F,F401:'selenium.webdriver.common.action_chains.ActionChains' imported but unused
+14,1,F,F401:'selenium.common.exceptions.TimeoutException' imported but unused
+17,1,E,E302:expected 2 blank lines, found 1
+42,33,W,W291:trailing whitespace
+49,80,E,E501:line too long (80 > 79 characters)
+51,80,E,E501:line too long (83 > 79 characters)
+56,33,W,W291:trailing whitespace
+63,80,E,E501:line too long (152 > 79 characters)
+66,80,E,E501:line too long (83 > 79 characters)
+67,80,E,E501:line too long (85 > 79 characters)
+68,80,E,E501:line too long (101 > 79 characters)
+69,80,E,E501:line too long (90 > 79 characters)
+70,80,E,E501:line too long (88 > 79 characters)
+71,80,E,E501:line too long (83 > 79 characters)
+76,36,W,W291:trailing whitespace
+83,80,E,E501:line too long (80 > 79 characters)
+86,80,E,E501:line too long (87 > 79 characters)
+92,36,W,W291:trailing whitespace
+100,80,E,E501:line too long (137 > 79 characters)
+103,80,E,E501:line too long (87 > 79 characters)
+104,80,E,E501:line too long (141 > 79 characters)
+105,80,E,E501:line too long (156 > 79 characters)
+106,80,E,E501:line too long (94 > 79 characters)
+107,80,E,E501:line too long (143 > 79 characters)
+108,80,E,E501:line too long (138 > 79 characters)
+131,80,E,E501:line too long (94 > 79 characters)
+132,80,E,E501:line too long (85 > 79 characters)
+133,80,E,E501:line too long (87 > 79 characters)
+138,80,E,E501:line too long (81 > 79 characters)
+150,80,E,E501:line too long (83 > 79 characters)
+157,80,E,E501:line too long (147 > 79 characters)
+158,80,E,E501:line too long (89 > 79 characters)
+159,80,E,E501:line too long (142 > 79 characters)
+176,1,E,E305:expected 2 blank lines after class or function definition, found 1
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+41,80,E,E501:line too long (90 > 79 characters)
+42,80,E,E501:line too long (88 > 79 characters)
+54,80,E,E501:line too long (81 > 79 characters)
+57,80,E,E501:line too long (83 > 79 characters)
+65,1,W,W391:blank line at end of file
+65,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+3,80,E,E501:line too long (88 > 79 characters)
+7,80,E,E501:line too long (96 > 79 characters)
+36,31,F,F601:dictionary key '//tbody/tr/td/div/span[text()="{}"]' repeated with different values
+36,80,E,E501:line too long (85 > 79 characters)
+37,33,E,E127:continuation line over-indented for visual indent
+37,33,F,F601:dictionary key '//tbody/tr/td/div/span[text()="{}"]' repeated with different values
+37,80,E,E501:line too long (87 > 79 characters)
+38,33,F,F601:dictionary key '//tbody/tr/td/div/span[text()="{}"]' repeated with different values
+38,80,E,E501:line too long (87 > 79 characters)
+39,33,E,E116:unexpected indentation (comment)
+40,33,E,E116:unexpected indentation (comment)
+41,1,W,W391:blank line at end of file
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+41,80,E,E501:line too long (90 > 79 characters)
+42,80,E,E501:line too long (88 > 79 characters)
+54,80,E,E501:line too long (81 > 79 characters)
+57,80,E,E501:line too long (83 > 79 characters)
+65,1,W,W391:blank line at end of file
+65,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+41,80,E,E501:line too long (90 > 79 characters)
+54,80,E,E501:line too long (81 > 79 characters)
+57,80,E,E501:line too long (83 > 79 characters)
+65,1,W,W391:blank line at end of file
+65,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+41,80,E,E501:line too long (90 > 79 characters)
+54,80,E,E501:line too long (81 > 79 characters)
+57,80,E,E501:line too long (83 > 79 characters)
+65,1,W,W391:blank line at end of file
+65,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+41,80,E,E501:line too long (90 > 79 characters)
+54,80,E,E501:line too long (81 > 79 characters)
+57,80,E,E501:line too long (83 > 79 characters)
+65,1,W,W391:blank line at end of file
+65,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+41,80,E,E501:line too long (90 > 79 characters)
+55,80,E,E501:line too long (81 > 79 characters)
+58,80,E,E501:line too long (83 > 79 characters)
+66,1,W,W391:blank line at end of file
+66,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+41,80,E,E501:line too long (90 > 79 characters)
+55,80,E,E501:line too long (81 > 79 characters)
+58,80,E,E501:line too long (83 > 79 characters)
+66,1,W,W391:blank line at end of file
+66,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+41,80,E,E501:line too long (90 > 79 characters)
+55,80,E,E501:line too long (81 > 79 characters)
+58,80,E,E501:line too long (83 > 79 characters)
+66,1,W,W391:blank line at end of file
+66,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+41,80,E,E501:line too long (90 > 79 characters)
+55,80,E,E501:line too long (81 > 79 characters)
+58,80,E,E501:line too long (83 > 79 characters)
+66,1,W,W391:blank line at end of file
+66,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+41,80,E,E501:line too long (90 > 79 characters)
+56,80,E,E501:line too long (81 > 79 characters)
+59,80,E,E501:line too long (83 > 79 characters)
+67,1,W,W391:blank line at end of file
+67,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+41,80,E,E501:line too long (90 > 79 characters)
+57,80,E,E501:line too long (81 > 79 characters)
+60,80,E,E501:line too long (83 > 79 characters)
+68,1,W,W391:blank line at end of file
+68,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+3,80,E,E501:line too long (88 > 79 characters)
+7,80,E,E501:line too long (96 > 79 characters)
+36,32,F,F601:dictionary key '//tbody/tr/td/div/span[text()="{}"]' repeated with different values
+36,80,E,E501:line too long (86 > 79 characters)
+37,33,E,E127:continuation line over-indented for visual indent
+37,33,F,F601:dictionary key '//tbody/tr/td/div/span[text()="{}"]' repeated with different values
+37,80,E,E501:line too long (87 > 79 characters)
+38,33,F,F601:dictionary key '//tbody/tr/td/div/span[text()="{}"]' repeated with different values
+38,80,E,E501:line too long (88 > 79 characters)
+39,33,E,E116:unexpected indentation (comment)
+40,33,E,E116:unexpected indentation (comment)
+41,1,W,W391:blank line at end of file
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+41,80,E,E501:line too long (90 > 79 characters)
+57,80,E,E501:line too long (81 > 79 characters)
+60,80,E,E501:line too long (83 > 79 characters)
+68,1,W,W391:blank line at end of file
+68,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+3,80,E,E501:line too long (88 > 79 characters)
+7,80,E,E501:line too long (96 > 79 characters)
+36,80,E,E501:line too long (87 > 79 characters)
+37,33,E,E127:continuation line over-indented for visual indent
+37,80,E,E501:line too long (89 > 79 characters)
+38,80,E,E501:line too long (89 > 79 characters)
+39,33,E,E116:unexpected indentation (comment)
+40,33,E,E116:unexpected indentation (comment)
+41,1,W,W391:blank line at end of file
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+40,45,E,E999:SyntaxError: invalid syntax
+41,17,E,E113:unexpected indentation
+42,80,E,E501:line too long (94 > 79 characters)
+47,80,E,E501:line too long (80 > 79 characters)
+58,80,E,E501:line too long (81 > 79 characters)
+61,80,E,E501:line too long (83 > 79 characters)
+69,1,W,W391:blank line at end of file
+69,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+42,80,E,E501:line too long (94 > 79 characters)
+47,80,E,E501:line too long (80 > 79 characters)
+58,80,E,E501:line too long (81 > 79 characters)
+61,80,E,E501:line too long (83 > 79 characters)
+69,1,W,W391:blank line at end of file
+69,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+42,80,E,E501:line too long (94 > 79 characters)
+45,80,E,E501:line too long (80 > 79 characters)
+56,80,E,E501:line too long (81 > 79 characters)
+59,80,E,E501:line too long (83 > 79 characters)
+67,1,W,W391:blank line at end of file
+67,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+42,80,E,E501:line too long (94 > 79 characters)
+45,80,E,E501:line too long (80 > 79 characters)
+56,80,E,E501:line too long (81 > 79 characters)
+59,80,E,E501:line too long (83 > 79 characters)
+67,1,W,W391:blank line at end of file
+67,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+42,80,E,E501:line too long (94 > 79 characters)
+45,80,E,E501:line too long (80 > 79 characters)
+56,80,E,E501:line too long (81 > 79 characters)
+59,80,E,E501:line too long (83 > 79 characters)
+67,1,W,W391:blank line at end of file
+67,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+42,80,E,E501:line too long (94 > 79 characters)
+45,80,E,E501:line too long (80 > 79 characters)
+56,80,E,E501:line too long (81 > 79 characters)
+59,80,E,E501:line too long (83 > 79 characters)
+67,1,W,W391:blank line at end of file
+67,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+42,80,E,E501:line too long (94 > 79 characters)
+45,80,E,E501:line too long (80 > 79 characters)
+56,80,E,E501:line too long (81 > 79 characters)
+59,80,E,E501:line too long (83 > 79 characters)
+67,1,W,W391:blank line at end of file
+67,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+42,80,E,E501:line too long (94 > 79 characters)
+45,80,E,E501:line too long (80 > 79 characters)
+56,80,E,E501:line too long (81 > 79 characters)
+59,80,E,E501:line too long (83 > 79 characters)
+67,1,W,W391:blank line at end of file
+67,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+42,80,E,E501:line too long (94 > 79 characters)
+45,80,E,E501:line too long (80 > 79 characters)
+56,80,E,E501:line too long (81 > 79 characters)
+59,80,E,E501:line too long (83 > 79 characters)
+67,1,W,W391:blank line at end of file
+67,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+42,80,E,E501:line too long (94 > 79 characters)
+45,80,E,E501:line too long (80 > 79 characters)
+56,80,E,E501:line too long (81 > 79 characters)
+59,80,E,E501:line too long (83 > 79 characters)
+67,1,W,W391:blank line at end of file
+67,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+42,80,E,E501:line too long (94 > 79 characters)
+44,80,E,E501:line too long (80 > 79 characters)
+55,80,E,E501:line too long (81 > 79 characters)
+58,80,E,E501:line too long (83 > 79 characters)
+66,1,W,W391:blank line at end of file
+66,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+42,80,E,E501:line too long (94 > 79 characters)
+44,80,E,E501:line too long (80 > 79 characters)
+55,80,E,E501:line too long (81 > 79 characters)
+58,80,E,E501:line too long (83 > 79 characters)
+66,1,W,W391:blank line at end of file
+66,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+6,1,E,E302:expected 2 blank lines, found 1
+26,80,E,E501:line too long (90 > 79 characters)
+28,80,E,E501:line too long (91 > 79 characters)
+28,91,E,E502:the backslash is redundant between brackets
+29,29,E,E124:closing bracket does not match visual indentation
+29,80,E,E501:line too long (134 > 79 characters)
+42,80,E,E501:line too long (110 > 79 characters)
+44,80,E,E501:line too long (80 > 79 characters)
+55,80,E,E501:line too long (81 > 79 characters)
+58,80,E,E501:line too long (83 > 79 characters)
+66,1,W,W391:blank line at end of file
+66,1,W,W293:blank line contains whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+cwd: ~/Documents/aerodisk/testing
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+cwd: ~/Documents/aerodisk/testing
+##########Linting Output - flake8##########
+3,80,E,E501:line too long (88 > 79 characters)
+7,80,E,E501:line too long (96 > 79 characters)
+36,80,E,E501:line too long (87 > 79 characters)
+37,33,E,E127:continuation line over-indented for visual indent
+37,80,E,E501:line too long (89 > 79 characters)
+38,80,E,E501:line too long (89 > 79 characters)
+40,33,E,E116:unexpected indentation (comment)
+41,1,W,W391:blank line at end of file

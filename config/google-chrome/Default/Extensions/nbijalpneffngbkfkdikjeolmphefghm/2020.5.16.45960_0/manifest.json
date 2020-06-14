@@ -1,0 +1,59 @@
+{
+   "app": {
+      "display_mode": "browser",
+      "icon_color": "#3AAE77",
+      "launch": {
+         "web_url": "https://developers.google.com/"
+      },
+      "linked_icons": [ {
+         "size": 72,
+         "url": "https://developers.google.com/_pwa/developers/icons/icon-72x72.png"
+      }, {
+         "size": 96,
+         "url": "https://developers.google.com/_pwa/developers/icons/icon-96x96.png"
+      }, {
+         "size": 128,
+         "url": "https://developers.google.com/_pwa/developers/icons/icon-128x128.png"
+      }, {
+         "size": 144,
+         "url": "https://developers.google.com/_pwa/developers/icons/icon-144x144.png"
+      }, {
+         "size": 152,
+         "url": "https://developers.google.com/_pwa/developers/icons/icon-152x152.png"
+      }, {
+         "size": 192,
+         "url": "https://developers.google.com/_pwa/developers/icons/icon-192x192.png"
+      }, {
+         "size": 384,
+         "url": "https://developers.google.com/_pwa/developers/icons/icon-384x384.png"
+      }, {
+         "size": 512,
+         "url": "https://developers.google.com/_pwa/developers/icons/icon-512x512.png"
+      } ],
+      "theme_color": "rgba(255,255,255,1)"
+   },
+   "description": "",
+   "icons": {
+      "128": "icons/128.png",
+      "144": "icons/144.png",
+      "152": "icons/152.png",
+      "192": "icons/192.png",
+      "256": "icons/256.png",
+      "32": "icons/32.png",
+      "384": "icons/384.png",
+      "48": "icons/48.png",
+      "512": "icons/512.png",
+      "64": "icons/64.png",
+      "72": "icons/72.png",
+      "96": "icons/96.png"
+   },
+   "key": "r3qnbpwVXyoYPeXcwwHSLeVfknWTsoiLQe7t1QA4i2Q=",
+   "name": "Google Developers",
+   "url_handlers": {
+      "scope": {
+         "matches": [ "https://developers.google.com/*" ],
+         "title": "Google Developers"
+      }
+   },
+   "version": "2020.5.16.45960"
+}

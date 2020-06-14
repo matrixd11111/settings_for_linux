@@ -1,0 +1,371 @@
+body {
+    margin: 0;
+    padding: 0 0 10px 0;
+    min-width: 570px;
+    min-height: 450px;
+    max-height: 600px;
+}
+
+select {
+    margin-bottom: 0;
+    width: 250px;
+}
+
+.tooltip * {
+    text-align: left;
+}
+
+/* Common classes */
+.ms_navigation {
+    margin: 15px 10px 15px 15px;
+}
+.ms_navigation>li>a {
+    margin-right: 4px;
+}
+
+.ms_navigation.nav-stacked {
+    padding: 0;
+}
+
+.settings_overlay {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.96);
+    text-align: center;
+}
+
+.settings_section {
+    overflow-y: scroll;
+    position: relative;
+    max-height: 500px;
+}
+
+.settings_subheader {
+    margin: 0 0 5px;
+    padding: 3px 0 2px 6px;
+    font-weight: bold;
+}
+
+.settings_subsection {
+    margin: 0 0 5px;
+    padding-left: 20px;
+}
+
+.settings_subsection2 {
+    margin: 0 0 5px 7px;
+}
+
+.settings_section input[type="text"],.settings_section input[type="password"] {
+    margin: 0;
+    width: 250px;
+    height: 30px;
+}
+
+.settings_section input[type="number"] {
+    margin-left: 2px;
+    height: 30px;
+}
+
+.settings_section input[type="radio"],
+.settings_section input[type="checkbox"] {
+    margin: 0 3px 3px 0;
+}
+
+.settings_section label {
+    display: inline-block;
+    margin: 0;
+}
+
+#settings_header {
+    padding: 8px 0 8px 35px;
+    border-bottom: 1px solid #f1f1f1;
+    color: #363636;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.settings_reset_overlay {
+    text-align: left;
+}
+
+/* Image format & quality*/
+#image_type_selector,
+#video_type_selector {
+
+}
+
+#image_quality_input,
+#gif_quality_input,
+#gif_frame_rate_input {
+    margin-bottom: 2px;
+    padding: 10px 5px;
+    width: 50px;
+}
+
+label[for="image_quality_input"],
+label[for="gif_quality_input"],
+label[for="gif_frame_rate_input"] {
+    margin-left: 10px;
+}
+
+/* Others */
+.post_capture_action_radio {
+
+}
+
+#file_save_path_selector {
+    display: none;
+}
+
+#file_save_browse_button {
+    display: none;
+}
+
+.title_template_hint {
+    margin: 2px auto 0;
+    color: #999999;
+    line-height: 1.4;
+}
+
+.hotkey_part {
+    margin-left: 6px;
+    width: 70px;
+}
+
+.open_global_hotkeys_page {
+    cursor: pointer;
+}
+
+#pre_capture_delay_selector {
+    margin-bottom: 2px;
+    padding: 10px 5px;
+    width: 40px;
+}
+
+#settings_reset_to_defaults {
+    display: block;
+    margin: 10px auto 20px;
+}
+
+/* Accounts */
+/* Data export & import */
+.accounts_overlay {
+    /**/
+}
+
+#accounts_import_form,
+#accounts_export_form {
+
+}
+
+#settings_import_password_input,
+#settings_export_password_input {
+    margin: 20px 0 5px;
+}
+
+#accounts_to_export_list {
+    margin: 5px 0;
+}
+
+#accounts_to_export_list > span {
+    margin: 0 10px 0 0;
+}
+
+#settings_import_submit,
+#settings_import_cancel,
+#settings_export_submit,
+#settings_export_cancel {
+
+}
+
+
+/* Accounts settings */
+.accounts_wrapper {
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+}
+
+.accounts_navigation {
+    box-sizing: content-box;
+    padding: 0 10px 0 10px;
+    min-width: 130px;
+    max-width: 135px;
+    height: 100%;
+    border-right: 1px solid #eee;
+}
+
+.account_select_button a {
+    /*padding-right: 16px;*/
+}
+
+.account_status_mark {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background: transparent;
+    border-radius: 10px;
+    border: 2px solid #4587CE;
+    vertical-align: 1px;
+}
+.account_select_button.logged .account_status_mark {
+    background-color: #4587CE;
+}
+.account_select_button:hover .account_status_mark,
+.account_select_button.active .account_status_mark {
+    border-color: white;
+}
+.account_select_button.active.logged .account_status_mark {
+    background-color: white;
+}
+.account_select_button:not(.active):hover .account_status_mark {
+    border-color: #005580;
+}
+.account_select_button:not(.active).logged:hover .account_status_mark {
+    background-color: #005580;
+}
+
+.account_section {
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.account_section .error{
+    margin-top: 18px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    color: red;
+}
+.account_section .error .head{
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+.accounts_details {
+
+}
+
+/* Monosnap account */
+#ms_login_form,
+#ms_profile {
+    display: none;
+    width: 100%;
+}
+.disabled {
+    opacity: 0.6;
+}
+/* Login form */
+#ms_login_form {
+    margin: 5px auto 25px;
+}
+
+#ms_login_form input {
+    display: block;
+    margin: 0 auto 5px !important;
+    width: 60%;
+    height: 30px;
+    font-size: 14px;
+}
+
+#ms_login_submit_button {
+    display: block;
+    margin: 0 auto;
+}
+
+#ms_login_with_fb_button {
+    cursor: pointer;
+    display: block;
+    margin: 35px auto 0;
+    width: 200px;
+    background: #4D50B8;
+    border-radius: 4px;
+}
+
+#ms_login_with_fb_button img {
+    height: 36px;
+    width: auto;
+}
+
+.ms_login_with_fb_text {
+    padding: 0 0 0 6px;
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 32px;
+}
+
+/* User profile */
+#ms_profile {
+
+}
+
+#ms_profile .ms_table {
+    width: 100%;
+}
+
+#ms_profile .ms_td {
+    text-align: left;
+}
+
+#ms_profile_avatar {
+    overflow: hidden;
+    width: 100px;
+    max-width: 100px;
+    height: 100px;
+    max-height: 100px;
+    background-color: white;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+}
+
+#ms_profile_name {
+    font-weight: bold;
+}
+
+#ms_profile_email {
+
+}
+
+#ms_logout_button {
+    margin-top: 3px;
+}
+
+/* Amazon S3 */
+#amazon_settings {
+
+}
+
+#amazon_settings > .ms_tr > .ms_td:first-child {
+    padding-right: 10px;
+    text-align: right;
+}
+
+#amazon_settings > .ms_tr > .ms_td {
+    border-bottom: 5px solid transparent;
+}
+
+/* Feedback */
+.feedback_description {
+    font-weight: 200;
+}
+
+#feedback_email_input {
+    display: block;
+    margin: 0 0 5px;
+    width: 490px;
+}
+
+#feedback_message_input {
+    display: block;
+    margin: 0 0 5px;
+    width: 490px;
+    resize: none;
+}

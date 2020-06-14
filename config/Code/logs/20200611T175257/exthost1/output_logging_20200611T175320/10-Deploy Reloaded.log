@@ -1,0 +1,47 @@
+Deploy (Reloaded) (vscode-deploy-reloaded) - v0.89.0
+Copyright (c) 2017-2020  Marcel Joachim Kloubert <marcel.kloubert@gmx.net>
+
+GitHub : https://github.com/mkloubert/vscode-deploy-reloaded
+Twitter: https://twitter.com/mjkloubert
+Donate : https://paypal.me/MarcelKloubert
+
+
+Extension is initializing ...
+
+
+Initializing workspace '/home/matrix/Documents/aerodisk/engine2' ... [OK]
+
+Your hostname: 'matrix-HP-Notebook'
+Your network interfaces:
+    - 'tun0':
+      [IPv4] '192.168.246.111' / '255.255.255.255' ('00:00:00:00:00:00')
+      [IPv6] 'fe80::4096:6341:d532:b3ae' / 'ffff:ffff:ffff:ffff::' ('00:00:00:00:00:00')
+
+    - 'wlo1':
+      [IPv4] '192.168.43.97' / '255.255.255.0' ('74:df:bf:99:4a:a5')
+      [IPv6] 'fe80::bca2:7977:7d36:4861' / 'ffff:ffff:ffff:ffff::' ('74:df:bf:99:4a:a5')
+
+
+Extension has been initialized.
+
+
+
+[17:58:24] 🚀 Deploying file '/var/www/engine/bin/NETWORK/constants.py' to '/var/www/engine/bin/NETWORK (2.10)' ... ✅ [678 ms]
+
+
+[17:58:27] 🚀 Deploying file '/var/www/engine/bin/NETWORK/constants.py' to '/var/www/engine/bin/NETWORK (2.11)' ... ✅ [620 ms]
+
+
+[18:06:06] 🚀 Deploying file '/var/www/engine/bin/NETWORK/controllers/phys.py' to '/var/www/engine/bin/NETWORK/controllers (2.11)' ... ✅ [641 ms]
+
+
+[18:06:12] 🚀 Deploying file '/var/www/engine/bin/NETWORK/controllers/phys.py' to '/var/www/engine/bin/NETWORK/controllers (2.10)' ... ✅ [634 ms]
+
+
+[19:28:51] 🚀 Deploying file '/var/www/engine/bin/NETWORK/controllers/phys.py' to '/var/www/engine/bin/NETWORK/controllers (2.10)' ... ✅ [927 ms]
+
+
+[19:38:47] 🚀 Deploying file '/html/assets/js/react.js' to '/html/assets/js (2.10)' ... ✅ [24291 ms]
+
+
+[19:50:55] 🚀 Deploying file '/html/assets/js/react.js' to '/html/assets/js (2.10)' ... ✅ [15664 ms]

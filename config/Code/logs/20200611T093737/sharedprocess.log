@@ -1,0 +1,5 @@
+[2020-06-11 09:37:42.400] [sharedprocess] [info] main {"machineId":"dc9c503f2f4af77e2c73b14cbf0036a8eca2cfa80d5972ff0f03ba697e2a75be","windowId":3}
+[2020-06-11 09:37:43.248] [sharedprocess] [info] Deleted from disk vangware.dark-plus-material /home/matrix/.vscode/extensions/vangware.dark-plus-material-2.2.8
+[2020-06-11 09:37:43.261] [sharedprocess] [info] Deleted from disk eamodio.gitlens /home/matrix/.vscode/extensions/eamodio.gitlens-10.2.1
+[2020-06-11 09:37:43.991] [sharedprocess] [info] Deleted from disk ms-python.python /home/matrix/.vscode/extensions/ms-python.python-2020.5.86398
+[2020-06-11 09:38:22.482] [sharedprocess] [info] Starting to clean up unused language packs.

@@ -1,0 +1,162 @@
+/snap/code/34/usr/share/code/resources/app
+[Google Translate]:
+
+niface_speed -j
+[<============================>]:
+niface_speed -j
+
+[Google Translate]:
+
+            current_speed: str
+[<============================>]:
+current_speed: str
+
+[Google Translate]:
+
+            state: str
+[<============================>]:
+state: street
+
+[Google Translate]:
+
+            duplex: str
+[<============================>]:
+duplex: str
+
+[Google Translate]:
+
+    Метод возвращяет speed для определенного имени сетевого интерфейса
+[<============================>]:
+The method returns speed for a specific network interface name
+
+[Google Translate]:
+Name interface
+[<============================>]:
+Name interface
+
+[Google Translate]:
+
+max_speed
+[<============================>]:
+max_speed
+
+[Google Translate]:
+
+        current_speed: str
+[<============================>]:
+current_speed: str
+
+[Google Translate]:
+
+    
+[<============================>]:
+
+
+[Google Translate]:
+
+    Метод раскрывает данные по сетевым интерфейсам
+[<============================>]:
+The method reveals data on network interfaces
+
+[Google Translate]:
+
+            ip: str
+[<============================>]:
+ip: p
+
+[Google Translate]:
+
+            speed: str
+[<============================>]:
+speed: str
+
+[Google Translate]:
+
+    :return: AeroResponse.data = list:
+[<============================>]:
+:return: AeroResponse.data = list:
+
+[Google Translate]:
+
+    :param data: dict
+[<============================>]:
+:param data: dict
+
+[Google Translate]:
+
+ВНИМАНИЕ!!! ДЕКОНФИГУРАЦИЯ ИНТЕРФЕЙСА:
+[<============================>]:
+ATTENTION!!! INTERFACE DECONFIGURATION:
+
+[Google Translate]:
+
+Создать груповой интефейс
+[<============================>]:
+Create group interface
+
+[Google Translate]:
+
+Создать груповой интерфейс
+[<============================>]:
+Create a group interface
+
+[Google Translate]:
+Form
+[<============================>]:
+Form
+
+[Google Translate]:
+Selected
+[<============================>]:
+Selected
+
+[Google Translate]:
+
+Удалить груповой интерфейс
+[<============================>]:
+Delete group interface
+
+[Google Translate]:
+To upper case
+[<============================>]:
+To upper case
+
+[Google Translate]:
+Every
+[<============================>]:
+Every
+
+[Google Translate]:
+
+    Вызывает метод show_phys_local для каждого контоллера.
+[<============================>]:
+Calls the show_phys_local method for each controller.
+
+[Google Translate]:
+
+    :return: AeroRespose object = dict:
+[<============================>]:
+:return: AeroRespose object = dict:
+
+[Google Translate]:
+Data
+[<============================>]:
+Data
+
+[Google Translate]:
+Show phys local
+[<============================>]:
+Show phys local
+
+[Google Translate]:
+
+            mtu: str
+[<============================>]:
+person: str
+
+[Google Translate]:
+
+/
+[<============================>]:
+/
+

@@ -1,0 +1,37 @@
+/snap/code/34/usr/share/code/resources/app
+[Google Translate]:
+
+//span[@class="c-menu__name" and text()="Создать груповой интефейс"]
+[<============================>]:
+//span [@ class = "c-menu name" and text () = "Create a group interface"]
+
+[Google Translate]:
+
+//span[@class="c-menu__name" and text()="Удалить груповой интерфейс"]
+[<============================>]:
+//span [@ class = "c-menu__name" and text () = "Delete the group interface"]
+
+[Google Translate]:
+
+#Условие выбора поля engine переделать на выбор одниковые=True разные=True
+
+[<============================>]:
+# The condition for choosing the engine field is redone to choose the same = True different = True
+
+[Google Translate]:
+Context click clamped control
+[<============================>]:
+Context click clamped control
+
+[Google Translate]:
+
+        Метод прокручивает экран вниз
+[<============================>]:
+Method scrolls the screen down
+
+[Google Translate]:
+
+        :params: str
+[<============================>]:
+:params: str
+

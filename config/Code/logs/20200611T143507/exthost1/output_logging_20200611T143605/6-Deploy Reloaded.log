@@ -1,0 +1,101 @@
+Deploy (Reloaded) (vscode-deploy-reloaded) - v0.89.0
+Copyright (c) 2017-2020  Marcel Joachim Kloubert <marcel.kloubert@gmx.net>
+
+GitHub : https://github.com/mkloubert/vscode-deploy-reloaded
+Twitter: https://twitter.com/mjkloubert
+Donate : https://paypal.me/MarcelKloubert
+
+
+Extension is initializing ...
+
+
+Initializing workspace '/home/matrix/Documents/aerodisk/engine2' ... [OK]
+
+Your hostname: 'matrix-HP-Notebook'
+Your network interfaces:
+    - 'tun0':
+      [IPv4] '192.168.246.111' / '255.255.255.255' ('00:00:00:00:00:00')
+      [IPv6] 'fe80::4ed0:4f0e:e2d1:878' / 'ffff:ffff:ffff:ffff::' ('00:00:00:00:00:00')
+
+    - 'wlo1':
+      [IPv4] '192.168.43.97' / '255.255.255.0' ('74:df:bf:99:4a:a5')
+      [IPv6] 'fe80::bca2:7977:7d36:4861' / 'ffff:ffff:ffff:ffff::' ('74:df:bf:99:4a:a5')
+
+
+Extension has been initialized.
+
+
+
+[15:09:13] 🚀 Deploying file '/var/www/engine/bin/NETWORK/controllers/phys.py' to '/var/www/engine/bin/NETWORK/controllers (2.10)' ... ✅ [1264 ms]
+
+
+🔥 [ERROR] Could not deploy files to '2.11': 'Timed out while waiting for handshake'
+
+
+🔥 [ERROR] Could not deploy files to '2.11': 'Timed out while waiting for handshake'
+
+
+[15:14:37] 🚀 Deploying file '/var/www/engine/bin/NETWORK/controllers/phys.py' to '/var/www/engine/bin/NETWORK/controllers (2.10)' ... ✅ [673 ms]
+
+
+🔥 [ERROR] Could not deploy files to '2.11': 'Timed out while waiting for handshake'
+
+
+[15:24:04] 🚀 Deploying file '/var/www/engine/bin/NETWORK/controllers/phys.py' to '/var/www/engine/bin/NETWORK/controllers (2.11)' ... ✅ [1357 ms]
+
+
+[15:24:13] 🚀 Deploying file '/var/www/engine/bin/NETWORK/controllers/phys.py' to '/var/www/engine/bin/NETWORK/controllers (2.11)' ... ✅ [1032 ms]
+
+
+[16:07:52] 🚀 Deploying file '/var/www/engine/bin/NETWORK/controllers/phys.py' to '/var/www/engine/bin/NETWORK/controllers (2.11)' ... ✅ [628 ms]
+
+
+[16:07:57] 🚀 Deploying file '/var/www/engine/bin/NETWORK/controllers/phys.py' to '/var/www/engine/bin/NETWORK/controllers (2.10)' ... ✅ [661 ms]
+
+
+[16:33:36] 🚀 Deploying file '/var/www/engine/html/assets/js/react.js' to '/var/www/engine/html/assets/js (2.11)' ... ✅ [4453 ms]
+
+
+[16:38:42] 🚀 Deploying file '/html/assets/js/react.js' to '/html/assets/js (2.11)' ... ✅ [2963 ms]
+
+
+[16:48:58] 🚀 Deploying file '/var/www/engine/bin/NETWORK/controllers/phys.py' to '/var/www/engine/bin/NETWORK/controllers (2.11)' ... ✅ [565 ms]
+
+
+[16:52:59] 🚀 Deploying file '/var/www/engine/bin/NETWORK/controllers/phys.py' to '/var/www/engine/bin/NETWORK/controllers (2.11)' ... ✅ [571 ms]
+
+
+[16:57:25] 🚀 Deploying file '/var/www/engine/bin/NETWORK/controllers/phys.py' to '/var/www/engine/bin/NETWORK/controllers (2.11)' ... ✅ [661 ms]
+
+
+[17:14:46] 🚀 Deploying file '/var/www/engine/bin/NETWORK/controllers/phys.py' to '/var/www/engine/bin/NETWORK/controllers (2.10)' ... ✅ [668 ms]
+
+
+[17:16:50] 🚀 Deploying file '/var/www/engine/bin/NETWORK/controllers/phys.py' to '/var/www/engine/bin/NETWORK/controllers (2.10)' ... ✅ [657 ms]
+
+
+[17:16:58] 🚀 Deploying file '/var/www/engine/bin/NETWORK/controllers/phys.py' to '/var/www/engine/bin/NETWORK/controllers (2.11)' ... ✅ [603 ms]
+
+
+[17:17:04] 🚀 Deploying file '/var/www/engine/bin/NETWORK/controllers/phys.py' to '/var/www/engine/bin/NETWORK/controllers (2.11)' ... ✅ [648 ms]
+
+
+[17:18:42] 🚀 Deploying file '/var/www/engine/bin/NETWORK/controllers/phys.py' to '/var/www/engine/bin/NETWORK/controllers (2.11)' ... ✅ [633 ms]
+
+
+[17:22:07] 🚀 Deploying file '/var/www/engine/bin/NETWORK/controllers/phys.py' to '/var/www/engine/bin/NETWORK/controllers (2.10)' ... ✅ [588 ms]
+
+
+[17:24:43] 🚀 Deploying file '/var/www/engine/bin/NETWORK/controllers/phys.py' to '/var/www/engine/bin/NETWORK/controllers (2.11)' ... ✅ [642 ms]
+
+
+[17:27:28] 🚀 Deploying file '/var/www/engine/bin/NETWORK/controllers/phys.py' to '/var/www/engine/bin/NETWORK/controllers (2.11)' ... ✅ [572 ms]
+
+
+[17:29:35] 🚀 Deploying file '/var/www/engine/bin/NETWORK/controllers/phys.py' to '/var/www/engine/bin/NETWORK/controllers (2.11)' ... ✅ [1346 ms]
+
+
+[17:29:52] 🚀 Deploying file '/var/www/engine/bin/NETWORK/controllers/phys.py' to '/var/www/engine/bin/NETWORK/controllers (2.11)' ... ✅ [696 ms]
+
+
+[17:40:34] 🚀 Deploying file '/var/www/engine/bin/NETWORK/controllers/phys.py' to '/var/www/engine/bin/NETWORK/controllers (2.11)' ... ✅ [1720 ms]

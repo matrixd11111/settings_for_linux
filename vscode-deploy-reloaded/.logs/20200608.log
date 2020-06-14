@@ -1,0 +1,64 @@
+INFO extension.deploy.reloaded.loadplugins - [08/Jun/2020:04:52:05 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+INFO extension.deploy.reloaded.loadplugins - [08/Jun/2020:14:18:30 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+INFO extension.deploy.reloaded.loadplugins - [08/Jun/2020:14:18:50 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+NOTICE clients.sftp.uploadfile(3) - [08/Jun/2020:14:19:58 +0000] "'/var/www/engine/fuel/app/views/leftmenu.php' does NOT match with a mode pattern"

@@ -1,0 +1,202 @@
+/snap/code/34/usr/share/code/resources/app
+[Google Translate]:
+
+            mtu: str
+[<============================>]:
+person: str
+
+[Google Translate]:
+
+    Метод раскрывает данные по сетевым интерфейсам
+[<============================>]:
+The method reveals data on network interfaces
+
+[Google Translate]:
+
+           name_interface: str
+[<============================>]:
+name_interface: str
+
+[Google Translate]:
+
+            ip: str
+[<============================>]:
+ip: p
+
+[Google Translate]:
+
+#! /usr/bin/env python3
+
+[<============================>]:
+#! /usr/bin/env python3
+
+[Google Translate]:
+
+    :params: dict
+[<============================>]:
+:params: dict
+
+[Google Translate]:
+
+    Метод собирает данные по контроллерам в один общий список
+[<============================>]:
+The method collects data on controllers in one general list
+
+[Google Translate]:
+
+|ERROR
+[<============================>]:
+|ERROR
+
+[Google Translate]:
+Selected
+[<============================>]:
+Selected
+
+[Google Translate]:
+
+            slot: str
+[<============================>]:
+slot: str
+
+[Google Translate]:
+
+            speed: str
+[<============================>]:
+speed: str
+
+[Google Translate]:
+
+            duplex: str
+[<============================>]:
+duplex: str
+
+[Google Translate]:
+
+NETWORK-0007|Интерфейс 
+[<============================>]:
+NETWORK-0007 | Interface
+
+[Google Translate]:
+
+ up > /etc/hostname.
+[<============================>]:
+up > /etc/hostname.
+
+[Google Translate]:
+
+Сетевой интерфейс успешно сконфигурирован. [OK]
+[<============================>]:
+The network interface has been successfully configured. [OK]
+
+[Google Translate]:
+
+Конфигурационный файл записан. [OK]
+[<============================>]:
+The configuration file is recorded. [OK]
+
+[Google Translate]:
+
+iplink
+[<============================>]:
+iplink
+
+[Google Translate]:
+
+ настроен. Адрес:
+[<============================>]:
+configured. The address:
+
+[Google Translate]:
+
+mtu 
+[<============================>]:
+person
+
+[Google Translate]:
+
+, маска подсети 
+[<============================>]:
+, mask remind
+
+[Google Translate]:
+
+Не удалось настроить интерфейс 
+[<============================>]:
+Could not configure interface
+
+[Google Translate]:
+
+/etc/network/interfaces.d
+[<============================>]:
+/etc/network/interfaces.d
+
+[Google Translate]:
+
+/etc/net/ifaces
+[<============================>]:
+/etc/net/ifaces
+
+[Google Translate]:
+
+Ошибка конфигурации интерфейса 
+[<============================>]:
+Interface configuration error
+
+[Google Translate]:
+
+    Метод выполняет деконфигурацию интерфейса
+[<============================>]:
+Method deconfigures the interface
+
+[Google Translate]:
+
+ipv4address
+[<============================>]:
+ipv4address
+
+[Google Translate]:
+
+/sys/class/net
+[<============================>]:
+/sys/class/net
+
+[Google Translate]:
+
+, назначен IP-адрес 
+[<============================>]:
+, assigned IP address
+
+[Google Translate]:
+
+. Желаемый адрес:
+[<============================>]:
+. Desired address:
+
+[Google Translate]:
+
+sudo ip a add 
+[<============================>]:
+sudo ip a add
+
+[Google Translate]:
+
+allow-hotplug 
+[<============================>]:
+allow-hotplug
+
+[Google Translate]:
+
+192.168.2.11
+[<============================>]:
+192.168.2.11
+
+[Google Translate]:
+
+ успешно деактивирован [OK]
+[<============================>]:
+successfully deactivated [OK]
+
+[Google Translate]: request error
+ {"errno":"EAI_AGAIN","code":"EAI_AGAIN","syscall":"getaddrinfo","hostname":"translate.google.cn"} 
+ Try again in 5 minutes.

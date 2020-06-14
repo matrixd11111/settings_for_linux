@@ -1,0 +1,465 @@
+Looking for git in: git
+Using git 2.25.1 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/matrix/Documents/aerodisk/testing
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git check-ignore -v -z --stdin
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :WEBv2/netwoork_interface/constants.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+> git cat-file -s 262d89ae026f53e26f105a2e83666cf8d412054f
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :WEBv2/netwoork_interface/element_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+> git cat-file -s aff1c61c14ec9e89f9bb96b910964e7d3fb2c18c
+> git show :WEBv2/netwoork_interface/constants.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+> git cat-file -s 262d89ae026f53e26f105a2e83666cf8d412054f
+> git show :WEBv2/netwoork_interface/element_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+> git cat-file -s aff1c61c14ec9e89f9bb96b910964e7d3fb2c18c
+> git show :WEBv2/netwoork_interface/constants.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+> git cat-file -s 262d89ae026f53e26f105a2e83666cf8d412054f
+> git show :WEBv2/netwoork_interface/element_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+> git cat-file -s aff1c61c14ec9e89f9bb96b910964e7d3fb2c18c
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :WEBv2/netwoork_interface/constants.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+> git cat-file -s 262d89ae026f53e26f105a2e83666cf8d412054f
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :WEBv2/netwoork_interface/element_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+> git cat-file -s aff1c61c14ec9e89f9bb96b910964e7d3fb2c18c
+> git show :WEBv2/netwoork_interface/constants.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+> git cat-file -s 262d89ae026f53e26f105a2e83666cf8d412054f
+> git show :WEBv2/netwoork_interface/element_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+> git cat-file -s aff1c61c14ec9e89f9bb96b910964e7d3fb2c18c
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :WEBv2/netwoork_interface/constants.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+> git cat-file -s 262d89ae026f53e26f105a2e83666cf8d412054f
+> git show :WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git cat-file -s f86f95f5fd3ecfc45a59612ba318b4342202dc76
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :WEBv2/netwoork_interface/constants.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+> git cat-file -s 262d89ae026f53e26f105a2e83666cf8d412054f
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git cat-file -s f86f95f5fd3ecfc45a59612ba318b4342202dc76
+> git show :WEBv2/netwoork_interface/constants.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+> git cat-file -s 262d89ae026f53e26f105a2e83666cf8d412054f
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :WEBv2/netwoork_interface/element_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+> git cat-file -s aff1c61c14ec9e89f9bb96b910964e7d3fb2c18c
+> git show :WEBv2/netwoork_interface/constants.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+> git cat-file -s 262d89ae026f53e26f105a2e83666cf8d412054f
+> git show :WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git cat-file -s f86f95f5fd3ecfc45a59612ba318b4342202dc76
+> git show :WEBv2/netwoork_interface/constants.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+> git cat-file -s 262d89ae026f53e26f105a2e83666cf8d412054f
+> git show :WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git cat-file -s f86f95f5fd3ecfc45a59612ba318b4342202dc76
+> git show :WEBv2/netwoork_interface/element_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+> git cat-file -s aff1c61c14ec9e89f9bb96b910964e7d3fb2c18c
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git cat-file -s f86f95f5fd3ecfc45a59612ba318b4342202dc76
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :WEBv2/netwoork_interface/element_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+> git cat-file -s aff1c61c14ec9e89f9bb96b910964e7d3fb2c18c
+> git show :WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git cat-file -s f86f95f5fd3ecfc45a59612ba318b4342202dc76
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :WEBv2/netwoork_interface/element_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+> git cat-file -s aff1c61c14ec9e89f9bb96b910964e7d3fb2c18c
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :WEBv2/netwoork_interface/constants.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+> git cat-file -s 262d89ae026f53e26f105a2e83666cf8d412054f
+> git show :WEBv2/netwoork_interface/element_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+> git cat-file -s aff1c61c14ec9e89f9bb96b910964e7d3fb2c18c
+> git show :WEBv2/netwoork_interface/constants.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+> git cat-file -s 262d89ae026f53e26f105a2e83666cf8d412054f
+> git show :WEBv2/netwoork_interface/element_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+> git cat-file -s aff1c61c14ec9e89f9bb96b910964e7d3fb2c18c
+> git show :WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git cat-file -s f86f95f5fd3ecfc45a59612ba318b4342202dc76
+> git show :WEBv2/netwoork_interface/constants.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+> git cat-file -s 262d89ae026f53e26f105a2e83666cf8d412054f
+> git show :WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git cat-file -s f86f95f5fd3ecfc45a59612ba318b4342202dc76
+> git show :WEBv2/netwoork_interface/element_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+> git cat-file -s aff1c61c14ec9e89f9bb96b910964e7d3fb2c18c
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git cat-file -s f86f95f5fd3ecfc45a59612ba318b4342202dc76
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :WEBv2/netwoork_interface/element_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+> git cat-file -s aff1c61c14ec9e89f9bb96b910964e7d3fb2c18c
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git cat-file -s f86f95f5fd3ecfc45a59612ba318b4342202dc76
+> git show :WEBv2/netwoork_interface/element_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+> git cat-file -s aff1c61c14ec9e89f9bb96b910964e7d3fb2c18c
+> git show :WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git cat-file -s f86f95f5fd3ecfc45a59612ba318b4342202dc76
+> git show :WEBv2/netwoork_interface/constants.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+> git cat-file -s 262d89ae026f53e26f105a2e83666cf8d412054f
+> git show :WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git cat-file -s f86f95f5fd3ecfc45a59612ba318b4342202dc76
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :WEBv2/netwoork_interface/constants.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+> git cat-file -s 262d89ae026f53e26f105a2e83666cf8d412054f
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :WEBv2/netwoork_interface/element_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+> git cat-file -s aff1c61c14ec9e89f9bb96b910964e7d3fb2c18c
+> git show :WEBv2/netwoork_interface/constants.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+> git cat-file -s 262d89ae026f53e26f105a2e83666cf8d412054f
+> git show :WEBv2/netwoork_interface/element_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+> git cat-file -s aff1c61c14ec9e89f9bb96b910964e7d3fb2c18c
+> git show :WEBv2/netwoork_interface/constants.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/constants.py
+> git cat-file -s 262d89ae026f53e26f105a2e83666cf8d412054f
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :WEBv2/netwoork_interface/element_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+> git cat-file -s aff1c61c14ec9e89f9bb96b910964e7d3fb2c18c
+> git show :WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git cat-file -s f86f95f5fd3ecfc45a59612ba318b4342202dc76
+> git show :WEBv2/netwoork_interface/element_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/element_test.py
+> git cat-file -s aff1c61c14ec9e89f9bb96b910964e7d3fb2c18c
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse SW-701/add_test_network_interface
+> git rev-parse --symbolic-full-name SW-701/add_test_network_interface@{u}
+> git rev-list --left-right SW-701/add_test_network_interface...refs/remotes/origin/SW-701/add_test_network_interface
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git ls-files --stage -- /home/matrix/Documents/aerodisk/testing/WEBv2/netwoork_interface/network-interfaces_valid_test.py
+> git cat-file -s f86f95f5fd3ecfc45a59612ba318b4342202dc76

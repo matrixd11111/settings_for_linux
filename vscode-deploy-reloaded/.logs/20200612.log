@@ -1,0 +1,52 @@
+NOTICE clients.sftp.uploadfile(3) - [12/Jun/2020:16:28:52 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [12/Jun/2020:16:28:52 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+TRACE workspaces.workspace.ondidchangeactivetexteditor(1) - [12/Jun/2020:16:31:35 +0000] "ENOENT: no such file or directory, lstat '/home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/change-network.py'
+
+Stack:
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/log.js:88:52
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:3198:18
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at ActionLogger.logSync (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:113:14)
+    at ActionLogger.trace (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:136:21)
+    at Workspace.onDidChangeActiveTextEditor (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:2008:30)"
+NOTICE clients.sftp.uploadfile(3) - [12/Jun/2020:16:38:48 +0000] "'/html/assets/js/react.js' does NOT match with a mode pattern"
+TRACE workspaces.workspace.ondidchangeactivetexteditor(1) - [12/Jun/2020:16:41:27 +0000] "ENOENT: no such file or directory, lstat '/home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/constants.py'
+
+Stack:
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/log.js:88:52
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:3198:18
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at ActionLogger.logSync (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:113:14)
+    at ActionLogger.trace (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:136:21)
+    at Workspace.onDidChangeActiveTextEditor (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:2008:30)"
+TRACE workspaces.workspace.ondidchangeactivetexteditor(1) - [12/Jun/2020:16:41:30 +0000] "ENOENT: no such file or directory, lstat '/home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/controllers/phys.py'
+
+Stack:
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/log.js:88:52
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:3198:18
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at ActionLogger.logSync (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:113:14)
+    at ActionLogger.trace (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:136:21)
+    at Workspace.onDidChangeActiveTextEditor (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:2008:30)"
+TRACE workspaces.workspace.ondidchangeactivetexteditor(1) - [12/Jun/2020:16:41:34 +0000] "ENOENT: no such file or directory, lstat '/home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/change-network.py'
+
+Stack:
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/log.js:88:52
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:3198:18
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at ActionLogger.logSync (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:113:14)
+    at ActionLogger.trace (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:136:21)
+    at Workspace.onDidChangeActiveTextEditor (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:2008:30)"
+NOTICE clients.sftp.uploadfile(3) - [12/Jun/2020:16:50:55 +0000] "'/html/assets/js/react.js' does NOT match with a mode pattern"

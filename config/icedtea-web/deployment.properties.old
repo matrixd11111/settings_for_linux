@@ -1,0 +1,3 @@
+#Netx deployment configuration
+#Sun May 31 15:23:37 MSK 2020
+deployment.security.level=ASK_UNSIGNED

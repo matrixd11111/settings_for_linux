@@ -1,0 +1,220 @@
+/snap/code/34/usr/share/code/resources/app
+[Google Translate]:
+Test show static route local
+[<============================>]:
+Test show static route local
+
+[Google Translate]:
+
+NETWORK.controllers.static.Path
+[<============================>]:
+NETWORK.controllers.static.Path
+
+[Error - 10:19:36 AM] Request textDocument/hover failed.
+  Message: Request textDocument/hover failed with message: 105,110,118,97,108,105,100,32,99,111,100,101,32,112,111,105,110,116,32,118,97,108,117,101
+  Code: -32603 
+[Google Translate]:
+max_speed.every((el) => el === max_speed[0]) && engine.every((el) => el === engine[0])
+[<============================>]:
+max_speed.every((el) => el === max_speed[0]) && engine.every((el) => el === engine[0])
+
+[Google Translate]:
+
+delete_bond
+[<============================>]:
+delete_bond
+
+[Google Translate]:
+
+Сетевой интерфейс 
+[<============================>]:
+Network interface
+
+[Google Translate]:
+
+show_phys_local
+[<============================>]:
+show_phys_local
+
+[Google Translate]:
+ **open_interface(ip_info, name_interface),
+            'name': name_interface,
+            'engine': HOSTNAME,
+            'slot': get_adapter_pci_slot(name_interface),
+            **get_adapter_speed(name_interface, speed_interface),
+            'duplex': get_adapter_duplex(name_interface)
+[<============================>]:
+**open_interface(ip_info, name_interface),
+            'name': name_interface,
+            'engine': HOSTNAME,
+            'slot': get_adapter_pci_slot(name_interface),
+            **get_adapter_speed(name_interface, speed_interface),
+            'duplex': get_adapter_duplex(name_interface)
+
+[Google Translate]:
+
+duplex
+[<============================>]:
+duplex
+
+[Error - 11:16:44 AM] Request textDocument/hover failed.
+  Message: Request textDocument/hover failed with message: 105,110,118,97,108,105,100,32,99,111,100,101,32,112,111,105,110,116,32,118,97,108,117,101
+  Code: -32603 
+[Error - 11:18:31 AM] Request textDocument/hover failed.
+  Message: Request textDocument/hover failed with message: 105,110,118,97,108,105,100,32,99,111,100,101,32,112,111,105,110,116,32,118,97,108,117,101
+  Code: -32603 
+[Google Translate]:
+
+/sys/class/net/
+[<============================>]:
+/sys/class/net/
+
+[Google Translate]:
+
+ENGINE-0
+[<============================>]:
+ENGINE-0
+
+[Google Translate]:
+Name
+[<============================>]:
+Name
+
+[Google Translate]:
+
+name
+[<============================>]:
+name
+
+[Google Translate]:
+Key
+[<============================>]:
+Key
+
+[Google Translate]:
+Params
+[<============================>]:
+Params
+
+[Google Translate]:
+
+Вкл.
+[<============================>]:
+On
+
+[Google Translate]:
+Includes
+[<============================>]:
+Includes
+
+[Google Translate]:
+Data
+[<============================>]:
+Data
+
+[Google Translate]:
+
+master
+[<============================>]:
+master
+
+[Google Translate]:
+?p<master>
+[<============================>]:
+?p<master>
+
+[Google Translate]:
+
+niface_speed -j
+[<============================>]:
+niface_speed -j
+
+[Google Translate]:
+
+    Вызывает метод show_phys_local для каждого контоллера.
+[<============================>]:
+Calls the show_phys_local method for each controller.
+
+[Google Translate]:
+
+\<
+[<============================>]:
+\<
+
+[Google Translate]:
+Props
+[<============================>]:
+Props
+
+[Google Translate]:
+Use effect
+[<============================>]:
+Use effect
+
+[Google Translate]:
+
+ДЕКОНФИГУРАЦИЯ ИНТЕРФЕЙСА 
+[<============================>]:
+INTERFACE DECONFIGURATION
+
+[Google Translate]:
+Delete phys interface
+[<============================>]:
+Delete phys interface
+
+[Google Translate]:
+
+КОНФИГУАЦИЯ ИНТЕРФЕЙСА:
+[<============================>]:
+INTERFACE CONFIGURATION:
+
+[Google Translate]:
+
+ деконфигурирован. [OK]
+[<============================>]:
+unconfigured. [OK]
+
+[Google Translate]:
+ath("{}/{}/ipv4address".format(STATIC_ROUTE, interface) if IS_ALT else "{}/{}/ipv4address".format(NETWORK_UBUNTU_PATH, interface)).unlink()
+[<============================>]:
+ath("{}/{}/ipv4address".format(STATIC_ROUTE, interface) if IS_ALT else "{}/{}/ipv4address".format(NETWORK_UBUNTU_PATH, interface)).unlink()
+
+[Google Translate]:
+Path("{}/{}/ipv4address".format(STATIC_ROUTE, interface) if IS_ALT else "{}/{}/ipv4address".format(NETWORK_UBUNTU_PATH, interface)).unlink()
+[<============================>]:
+Path("{}/{}/ipv4address".format(STATIC_ROUTE, interface) if IS_ALT else "{}/{}/ipv4address".format(NETWORK_UBUNTU_PATH, interface)).unlink()
+
+[Google Translate]:
+
+        name: str
+[<============================>]:
+name: str
+
+[Google Translate]:
+
+ успешно деактивирован [OK]
+[<============================>]:
+successfully deactivated [OK]
+
+[Google Translate]:
+hostname = data['engine']
+[<============================>]:
+hostname = data['engine']
+
+[Google Translate]:
+
+engine
+[<============================>]:
+engine
+
+[Google Translate]:
+Hostname
+[<============================>]:
+Hostname
+
+[Google Translate]:
+
+ удалена.|OK
+[<============================>]:
+deleted. | OK
+

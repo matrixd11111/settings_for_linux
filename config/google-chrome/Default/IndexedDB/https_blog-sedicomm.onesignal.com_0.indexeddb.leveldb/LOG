@@ -1,0 +1,15 @@
+2020/05/25-19:03:13.710 f72 Reusing MANIFEST /home/matrix/.config/google-chrome/Default/IndexedDB/https_blog-sedicomm.onesignal.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/05/25-19:03:13.711 f72 Recovering log #19
+2020/05/25-19:03:13.711 f72 Reusing old log /home/matrix/.config/google-chrome/Default/IndexedDB/https_blog-sedicomm.onesignal.com_0.indexeddb.leveldb/000019.log 
+2020/05/25-19:03:15.919 104f Level-0 table #24: started
+2020/05/25-19:03:15.923 104f Level-0 table #24: 3950 bytes OK
+2020/05/25-19:03:15.926 104f Delete type=0 #19
+2020/05/25-19:03:15.927 104f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/05/25-19:03:15.927 104f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x03\x02\x01\x1f\x00w\x00e\x00b\x00h\x00o\x00o\x00k\x00s\x00.\x00n\x00o\x00t\x00i\x00f\x00i\x00c\x00a\x00t\x00i\x00o\x00n\x00.\x00d\x00i\x00s\x00p\x00l\x00a\x00y\x00e\x00d' @ 1077 : 1
+2020/05/25-19:03:15.927 104f Compacting 1@1 + 1@2 files
+2020/05/25-19:03:15.930 104f Generated table #25@1: 91 keys, 2347 bytes
+2020/05/25-19:03:15.930 104f Compacted 1@1 + 1@2 files => 2347 bytes
+2020/05/25-19:03:15.932 104f compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/05/25-19:03:15.932 104f Delete type=2 #24
+2020/05/25-19:03:15.933 104f Delete type=2 #21
+2020/05/25-19:03:15.933 104f Manual compaction at level-1 from '\x00\x01\x03\x02\x01\x1f\x00w\x00e\x00b\x00h\x00o\x00o\x00k\x00s\x00.\x00n\x00o\x00t\x00i\x00f\x00i\x00c\x00a\x00t\x00i\x00o\x00n\x00.\x00d\x00i\x00s\x00p\x00l\x00a\x00y\x00e\x00d' @ 1077 : 1 .. (end); will stop at (end)

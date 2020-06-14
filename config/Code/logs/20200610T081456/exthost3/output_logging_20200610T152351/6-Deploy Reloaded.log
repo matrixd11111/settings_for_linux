@@ -1,0 +1,29 @@
+Deploy (Reloaded) (vscode-deploy-reloaded) - v0.89.0
+Copyright (c) 2017-2020  Marcel Joachim Kloubert <marcel.kloubert@gmx.net>
+
+GitHub : https://github.com/mkloubert/vscode-deploy-reloaded
+Twitter: https://twitter.com/mjkloubert
+Donate : https://paypal.me/MarcelKloubert
+
+
+Extension is initializing ...
+
+
+Initializing workspace '/home/matrix/Documents/aerodisk/engine2' ... [OK]
+
+Your hostname: 'matrix-HP-Notebook'
+Your network interfaces:
+    - 'tun0':
+      [IPv4] '192.168.246.103' / '255.255.255.255' ('00:00:00:00:00:00')
+      [IPv6] 'fe80::3238:98e8:adc9:9fb6' / 'ffff:ffff:ffff:ffff::' ('00:00:00:00:00:00')
+
+    - 'wlo1':
+      [IPv4] '192.168.43.97' / '255.255.255.0' ('74:df:bf:99:4a:a5')
+      [IPv6] 'fe80::bca2:7977:7d36:4861' / 'ffff:ffff:ffff:ffff::' ('74:df:bf:99:4a:a5')
+
+
+Extension has been initialized.
+
+
+
+[15:26:01] 🚀 Deploying file '/html/assets/js/react.js' to '/html/assets/js (2.10)' ... ✅ [13671 ms]

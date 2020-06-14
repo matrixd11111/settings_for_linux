@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title data-i18n="">Monosnap</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="/libs/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/generic.css">
+        <link rel="stylesheet" type="text/css" href="/css/commons/top_export_panel.css"/>
+        <link rel="stylesheet" type="text/css" href="/css/commons/buttons.css"/>
+        <link rel="stylesheet" type="text/css" href="/css/recording/screencast_player.css">
+
+
+        <script type="text/javascript" src="/scripts/js/screencast_player.min.js"></script>
+
+        <!--<script type="text/javascript" src="/libs/ga.js"></script>
+        <script type="text/javascript" src="/libs/jquery/jquery-1.12.4.min.js"></script>
+        <script type="text/javascript" src="/libs/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/libs/imgAreaSelect/js/jquery.imgareaselect.dev.js"></script>
+        <script type="text/javascript" src="/scripts/generic.js"></script>
+        <script type="text/javascript" src="/scripts/tab_manager.js"></script>
+        <script type="text/javascript" src="/scripts/chrome_api/runtime.js"></script>
+        <script type="text/javascript" src="/scripts/commons/communication.js"></script>
+        <script type="text/javascript" src="/scripts/commons/ui/slider.js"></script>
+        <script type="text/javascript" src="/scripts/commons/ui/top_export_panel.js"></script>
+        <script type="text/javascript" src="/scripts/editor/geometric_tools.js"></script>
+        <script type="text/javascript" src="/scripts/recording/screencast_player.js"></script>-->
+    </head>
+    <body class="dark_scrollbar">
+        <div class="ms_panel_wrapper" id="top_panel">
+            <div class="ms_panel_content">
+                <!-- TODO: Add current resolution indicator -->
+                <div class="ms_flex ms_flex_vert_center panel_left_section" id="gif_tools_panel">
+                    <div class="button button_first tool" data-action="crop" data-i18n="tooltip_bottom:editor_tool_crop">
+                        <img src="/images/editor/button_tool_crop.png" class="button_icon">
+                    </div>
+                    <div class="button tool" data-action="resize" data-i18n="tooltip_bottom:editor_tool_resize">
+                        <img src="/images/editor/button_tool_resize.png" class="button_icon">
+                    </div>
+                    <div class="button button_last tool unselectable" id="video_dimensions">width&Cross;height</div>
+
+                    <div class="ms_panel_separator"></div>
+                    <div class="button button_first tool" data-i18n="tooltip:editor_undo" id="edit_history_undo">
+                        <img src="/images/editor/button_undo.png" class="button_icon">
+                    </div>
+                    <div class="button button_last tool" data-i18n="tooltip:editor_redo" id="edit_history_redo">
+                        <img src="/images/editor/button_redo.png" class="button_icon">
+                    </div>
+                </div>
+                <div id="file_header">
+                    <div class="ms_table">
+                        <div class="ms_td">
+                            <input type="text" id="file_title_input" data-i18n="placeholder:editor_screenshot_title_placeholder">
+                        </div>
+                        <div class="ms_td">
+                            <div class="dropdown" id="file_type_dropdown">
+                                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">.webm</a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" style="max-width:100px;">
+                                    <li><a tabindex="-1" href="#" class="ms_file_format" data-type="webm">webm</a></li>
+                                    <li><a tabindex="-1" href="#" class="ms_file_format" data-type="gif">gif</a></li>
+                                    <li><a tabindex="-1" href="#" class="ms_file_format" data-type="">auto</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ms_flex ms_flex_vert_center" id="file_export_toolbar">
+                    <div class="button button_only" id="file_save_button">
+                        <span class="button_text" data-i18n="button_save"></span>
+                    </div>
+                    <div class="btn-group ms_flex" style="position:relative">
+                        <div class="button blue button_first" id="file_upload_button">
+                            <span class="button_text" data-i18n="button_upload"></span>
+                        </div>
+                        <div class="button blue button_last" data-toggle="dropdown" id="file_upload_menu">
+                            <img src="./images/editor/button_upload_hamburger.png" class="button_icon">
+                        </div>
+                        <ul class="dropdown-menu pull-right default_scrollbar" role="menu" aria-labelledby="dropdownMenu">
+                            <li class="dropdown-submenu pull-left upload_to" data-service="monosnap">
+                                <a tabindex="-1" href="#" class="with_icon">Monosnap</a>
+                                <ul class="dropdown-menu default_scrollbar" id="ms_user_folders_list">
+                                    <img src="/images/loader_fb_dark.gif" class="service_loader">
+                                </ul>
+                            </li>
+                            <li class="upload_to" data-service="amazon_s3">
+                                <a tabindex="-1" href="#" class="with_icon">Amazon S3</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ms_table" id="media_wrapper">
+            <div class="ms_td" style="position:relative;">
+                <canvas id="media_player"></canvas>
+                <canvas id="crop_selection_overlay"></canvas>
+                <div id="crop_selection_hint" class="unselectable" data-i18n="screencast_player_hint"></div>
+            </div>
+        </div>
+        <div class="ms_table ms_hidden" id="edit_area_overlay">
+            <div class="ms_td ms_td_vert_center" style="text-align:center;">
+                <div id="image_sizes">
+                    <div>
+                        <input type="number" id="image_width_input" class="" data-i18n="placeholder:editor_width">
+                        &Cross;
+                        <input type="number" id="image_height_input" class="" data-i18n="placeholder:editor_height">
+                    </div>
+                    <div>
+                        <div>
+                            <input type="checkbox" id="image_keep_proportion" style="margin: 0 0 2px;">
+                            <label for="image_keep_proportion" data-i18n="editor_keep_proportion" style="margin: 0;"></label>
+                        </div>
+                        <div class="btn btn-small btn-inverse" id="resize_submit_button" data-i18n="button_ok"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ms_panel_wrapper" id="bottom_panel">
+            <div class="ms_panel_content">
+                <div class="ms_table" id="playback_controls">
+                    <div class="ms_td">
+                        <div id="play_pause_button"></div>
+                    </div>
+                    <div class="ms_td" style="padding:0 10px; width:100%;">
+                        <div id="playback_progress_bar">
+                            <div class="progress_background"></div>
+                            <div class="current_progress"></div>
+                            <div class="slider_handle"></div>
+                            <div class="trim_handle" data-position="begin"><div></div></div>
+                            <div class="trim_handle" data-position="end"><div></div></div>
+                        </div>
+                    </div>
+                    <div class="ms_td unselectable" id="playback_time_indicator">
+                        <span class="current_position">00:00</span>/
+                        <span class="total_duration">00:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

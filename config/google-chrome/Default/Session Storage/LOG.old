@@ -1,0 +1,15 @@
+2020/06/11-09:36:17.472 9dd Reusing MANIFEST /home/matrix/.config/google-chrome/Default/Session Storage/MANIFEST-000001
+2020/06/11-09:36:17.473 9dd Recovering log #288
+2020/06/11-09:36:17.474 9dd Reusing old log /home/matrix/.config/google-chrome/Default/Session Storage/000288.log 
+2020/06/11-09:36:38.154 e20 Level-0 table #292: started
+2020/06/11-09:36:38.176 e20 Level-0 table #292: 44354 bytes OK
+2020/06/11-09:36:38.186 e20 Delete type=0 #288
+2020/06/11-09:36:38.186 e20 Compacting 4@0 + 1@1 files
+2020/06/11-09:36:38.238 e20 Generated table #293@0: 10966 keys, 354204 bytes
+2020/06/11-09:36:38.238 e20 Compacted 4@0 + 1@1 files => 354204 bytes
+2020/06/11-09:36:38.259 e20 compacted to: files[ 0 1 1 0 0 0 0 ]
+2020/06/11-09:36:38.260 e20 Delete type=2 #282
+2020/06/11-09:36:38.260 e20 Delete type=2 #287
+2020/06/11-09:36:38.260 e20 Delete type=2 #285
+2020/06/11-09:36:38.260 e20 Delete type=2 #292
+2020/06/11-09:36:38.260 e20 Delete type=2 #289

@@ -1,0 +1,33 @@
+<div id="colors_palette">
+    <div class="ms_table">
+        <% var i = 0, di = 5, colors = colors.concat(['custom']); %>
+        <% while (i < colors.length) { %>
+            <div class="ms_tr">
+                <% colors.slice(i, i+di).forEach(function(color, index) { %>
+                    <div class="ms_td">
+                        <% if (color !== 'custom') { %>
+                            <div class="button color_selector default_color" data-color="<%= color %>">
+                                <div class="color_preview" style="background:<%= color %>;"></div>
+                            </div>
+                        <% } else { %>
+                            <div class="button color_selector custom_color">
+                                <img src="/images/editor/button_colorpicker.png" class="button_icon">
+                            </div>
+                        <% } %>
+                    </div>
+                <% }); %>
+            </div>
+            <% i += di; %>
+        <% } %>
+    </div>
+</div>
+<div id="extra_settings">
+    <div>
+        <input type="checkbox" checked="checked" id="tool_shadow_checkbox">
+        <label for="tool_shadow_checkbox" data-i18n="editor_tool_settings_shadow"></label>
+    </div>
+    <div>
+        <input type="checkbox" checked="checked" id="tool_outline_checkbox">
+        <label for="tool_outline_checkbox" data-i18n="editor_tool_settings_outline"></label>
+    </div>
+</div>

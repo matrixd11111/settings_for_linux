@@ -1,0 +1,650 @@
+[2020-06-09 08:58:37.876] [exthost] [info] extension host started
+[2020-06-09 08:58:38.766] [exthost] [info] ExtensionService#_doActivateExtension vscode.python {"startup":false,"extensionId":{"value":"vscode.python","_lower":"vscode.python"},"activationEvent":"onLanguage:python"}
+[2020-06-09 08:58:38.781] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/python/dist/pythonMain
+[2020-06-09 08:58:38.795] [exthost] [info] ExtensionService#_doActivateExtension ms-python.python {"startup":false,"extensionId":{"value":"ms-python.python","_lower":"ms-python.python"},"activationEvent":"onLanguage:python"}
+[2020-06-09 08:58:38.796] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/matrix/.vscode/extensions/ms-python.python-2020.5.80290/out/client/extension
+[2020-06-09 08:58:40.798] [exthost] [info] ExtensionService#_doActivateExtension hbenl.vscode-test-explorer {"startup":false,"extensionId":{"value":"littlefoxteam.vscode-python-test-adapter","_lower":"littlefoxteam.vscode-python-test-adapter"},"activationEvent":"onLanguage:python"}
+[2020-06-09 08:58:40.799] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/matrix/.vscode/extensions/hbenl.vscode-test-explorer-2.19.1/out/main.js
+[2020-06-09 08:58:40.996] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"extensionId":{"value":"vscode.debug-auto-launch","_lower":"vscode.debug-auto-launch"},"activationEvent":"*"}
+[2020-06-09 08:58:40.996] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2020-06-09 08:58:41.012] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"extensionId":{"value":"vscode.emmet","_lower":"vscode.emmet"},"activationEvent":"*"}
+[2020-06-09 08:58:41.012] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/emmet/dist/extension
+[2020-06-09 08:58:41.192] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"extensionId":{"value":"vscode.git","_lower":"vscode.git"},"activationEvent":"*"}
+[2020-06-09 08:58:41.193] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/git/dist/main
+[2020-06-09 08:58:41.472] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication {"startup":true,"extensionId":{"value":"vscode.github-authentication","_lower":"vscode.github-authentication"},"activationEvent":"*"}
+[2020-06-09 08:58:41.476] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/github-authentication/dist/extension.js
+[2020-06-09 08:58:41.577] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"extensionId":{"value":"vscode.merge-conflict","_lower":"vscode.merge-conflict"},"activationEvent":"*"}
+[2020-06-09 08:58:41.578] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/merge-conflict/dist/extension
+[2020-06-09 08:58:41.629] [exthost] [info] ExtensionService#_doActivateExtension vscode.search-result {"startup":true,"extensionId":{"value":"vscode.search-result","_lower":"vscode.search-result"},"activationEvent":"*"}
+[2020-06-09 08:58:41.629] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/search-result/dist/extension.js
+[2020-06-09 08:58:41.634] [exthost] [info] ExtensionService#_doActivateExtension vscode.vscode-account {"startup":true,"extensionId":{"value":"vscode.vscode-account","_lower":"vscode.vscode-account"},"activationEvent":"*"}
+[2020-06-09 08:58:41.635] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/vscode-account/dist/extension.js
+[2020-06-09 08:58:41.676] [exthost] [info] ExtensionService#_doActivateExtension eamodio.gitlens {"startup":true,"extensionId":{"value":"eamodio.gitlens","_lower":"eamodio.gitlens"},"activationEvent":"*"}
+[2020-06-09 08:58:41.677] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/matrix/.vscode/extensions/eamodio.gitlens-10.2.1/dist/extension
+[2020-06-09 08:58:41.969] [exthost] [info] ExtensionService#_doActivateExtension hiro-sun.vscode-emacs {"startup":true,"extensionId":{"value":"hiro-sun.vscode-emacs","_lower":"hiro-sun.vscode-emacs"},"activationEvent":"*"}
+[2020-06-09 08:58:41.970] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/matrix/.vscode/extensions/hiro-sun.vscode-emacs-0.1.1/out/src/extension
+[2020-06-09 08:58:41.990] [exthost] [info] ExtensionService#_doActivateExtension intellsmi.comment-translate {"startup":true,"extensionId":{"value":"intellsmi.comment-translate","_lower":"intellsmi.comment-translate"},"activationEvent":"*"}
+[2020-06-09 08:58:41.990] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/matrix/.vscode/extensions/intellsmi.comment-translate-1.4.2/client/out/extension
+[2020-06-09 08:58:42.240] [exthost] [info] ExtensionService#_doActivateExtension mkloubert.vscode-deploy-reloaded {"startup":true,"extensionId":{"value":"mkloubert.vscode-deploy-reloaded","_lower":"mkloubert.vscode-deploy-reloaded"},"activationEvent":"*"}
+[2020-06-09 08:58:42.240] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/extension
+[2020-06-09 08:58:49.673] [exthost] [info] ExtensionService#_doActivateExtension littlefoxteam.vscode-python-test-adapter {"startup":false,"extensionId":{"value":"littlefoxteam.vscode-python-test-adapter","_lower":"littlefoxteam.vscode-python-test-adapter"},"activationEvent":"onLanguage:python"}
+[2020-06-09 08:58:49.676] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/matrix/.vscode/extensions/littlefoxteam.vscode-python-test-adapter-0.4.2/out/src/main.js
+[2020-06-09 08:58:50.433] [exthost] [info] eager extensions activated
+[2020-06-09 09:24:28.404] [exthost] [info] ExtensionService#_doActivateExtension vscode.extension-editing {"startup":false,"extensionId":{"value":"vscode.extension-editing","_lower":"vscode.extension-editing"},"activationEvent":"onLanguage:typescript"}
+[2020-06-09 09:24:28.405] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/extension-editing/dist/extension
+[2020-06-09 09:24:28.456] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"extensionId":{"value":"vscode.typescript-language-features","_lower":"vscode.typescript-language-features"},"activationEvent":"onLanguage:typescript"}
+[2020-06-09 09:24:28.456] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/typescript-language-features/dist/extension
+[2020-06-09 09:40:10.605] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing {"startup":false,"extensionId":{"value":"vscode.configuration-editing","_lower":"vscode.configuration-editing"},"activationEvent":"onLanguage:jsonc"}
+[2020-06-09 09:40:10.606] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/configuration-editing/dist/extension
+[2020-06-09 09:40:10.638] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features {"startup":false,"extensionId":{"value":"vscode.json-language-features","_lower":"vscode.json-language-features"},"activationEvent":"onLanguage:jsonc"}
+[2020-06-09 09:40:10.638] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/json-language-features/client/dist/jsonMain
+[2020-06-09 10:16:52.339] [exthost] [info] ExtensionService#_doActivateExtension vscode.html-language-features {"startup":false,"extensionId":{"value":"vscode.html-language-features","_lower":"vscode.html-language-features"},"activationEvent":"onLanguage:html"}
+[2020-06-09 10:16:52.340] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/html-language-features/client/dist/htmlMain
+[2020-06-09 11:21:20.332] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 11:21:20.334] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 11:21:20.429] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 11:21:20.430] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 11:21:20.525] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 11:21:20.525] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 11:22:37.537] [exthost] [info] ExtensionService#_doActivateExtension vscode.grunt {"startup":false,"extensionId":{"value":"vscode.grunt","_lower":"vscode.grunt"},"activationEvent":"onCommand:workbench.action.tasks.runTask"}
+[2020-06-09 11:22:37.537] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/grunt/dist/main
+[2020-06-09 11:22:37.554] [exthost] [info] ExtensionService#_doActivateExtension vscode.gulp {"startup":false,"extensionId":{"value":"vscode.gulp","_lower":"vscode.gulp"},"activationEvent":"onCommand:workbench.action.tasks.runTask"}
+[2020-06-09 11:22:37.555] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/gulp/dist/main
+[2020-06-09 11:22:37.563] [exthost] [info] ExtensionService#_doActivateExtension vscode.jake {"startup":false,"extensionId":{"value":"vscode.jake","_lower":"vscode.jake"},"activationEvent":"onCommand:workbench.action.tasks.runTask"}
+[2020-06-09 11:22:37.563] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/jake/dist/main
+[2020-06-09 11:22:37.569] [exthost] [info] ExtensionService#_doActivateExtension vscode.npm {"startup":false,"extensionId":{"value":"vscode.npm","_lower":"vscode.npm"},"activationEvent":"onCommand:workbench.action.tasks.runTask"}
+[2020-06-09 11:22:37.569] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/npm/dist/main
+[2020-06-09 11:23:57.639] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 11:23:57.640] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 11:23:57.643] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 11:23:57.644] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 11:23:57.647] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 11:23:57.647] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 11:23:57.651] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 11:23:57.651] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 11:24:07.410] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 11:24:07.410] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 12:59:27.555] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 12:59:27.576] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 12:59:33.181] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 12:59:33.182] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 12:59:41.184] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 12:59:41.185] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 12:59:41.204] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 12:59:41.205] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 12:59:46.190] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 12:59:46.191] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 12:59:46.214] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 12:59:46.214] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 12:59:47.676] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 12:59:47.676] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 12:59:47.701] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 12:59:47.701] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 13:01:14.976] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 13:01:14.976] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 13:23:06.373] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 13:23:06.404] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 13:23:06.470] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 13:23:06.470] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 13:23:19.224] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 13:23:19.224] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 13:27:09.460] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 13:27:09.460] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 13:35:16.805] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 13:35:16.805] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 13:35:18.376] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 13:35:18.376] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 13:35:28.043] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 13:35:28.043] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 13:53:52.084] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 13:53:52.084] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 13:53:52.088] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 13:53:52.088] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 13:54:16.648] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 13:54:16.648] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 13:54:18.398] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 13:54:18.398] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 13:56:13.849] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 13:56:13.849] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 14:11:22.403] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 14:11:22.404] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 14:11:33.843] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 14:11:33.843] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 14:11:53.483] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 14:11:53.484] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 14:12:59.079] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 14:12:59.079] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 14:12:59.084] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 14:12:59.084] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 14:15:33.034] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 14:15:33.035] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 14:15:42.598] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 14:15:42.598] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 14:15:42.599] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 14:15:42.599] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 14:24:51.155] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 14:24:51.156] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 14:25:01.812] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 14:25:01.813] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 14:25:03.388] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 14:25:03.389] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 14:26:25.271] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 14:26:25.271] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 14:26:26.876] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 14:26:26.876] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 15:38:56.781] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 15:38:56.781] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 15:38:56.800] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 15:38:56.800] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 15:44:29.828] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 15:44:29.829] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 15:44:29.842] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 15:44:29.843] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 15:44:29.860] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 15:44:29.860] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 15:44:34.460] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 15:44:34.460] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 15:44:43.573] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 15:44:43.574] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 15:45:03.682] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 15:45:03.682] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 15:45:06.349] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 15:45:06.349] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 15:45:06.365] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 15:45:06.365] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 15:45:06.379] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 15:45:06.379] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 15:45:06.394] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 15:45:06.394] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 15:45:06.415] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 15:45:06.415] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 16:16:33.114] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 16:16:33.132] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 16:21:21.729] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 16:21:21.730] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 16:21:23.820] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 16:21:23.821] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 16:34:23.746] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 16:34:23.788] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 16:49:34.921] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 16:49:34.922] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 16:49:35.059] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 16:49:35.060] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 16:51:55.359] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 16:51:55.360] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 16:51:56.979] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 16:51:56.980] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 16:52:00.951] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 16:52:00.951] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 16:53:05.344] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 16:53:05.344] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 16:53:05.427] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 16:53:05.427] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 16:57:54.913] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 16:57:54.913] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 16:57:56.655] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 16:57:56.655] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 16:57:58.265] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 16:57:58.266] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 17:07:40.527] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 17:07:40.527] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 17:11:45.945] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 17:11:45.945] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 17:13:52.374] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 17:13:52.375] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 17:23:34.903] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 17:23:34.903] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 17:23:35.072] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 17:23:35.073] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 17:23:36.886] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 17:23:36.886] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 17:31:12.470] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 17:31:12.471] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 17:35:39.432] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 17:35:39.433] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 17:49:34.647] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 17:49:34.648] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 17:49:34.704] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 17:49:34.704] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 17:50:23.151] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 17:50:23.151] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 17:51:43.923] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 17:51:43.923] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 18:08:16.596] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 18:08:16.597] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 18:09:43.092] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 18:09:43.092] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 18:10:15.718] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 18:10:15.719] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 18:10:15.777] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 18:10:15.777] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+[2020-06-09 18:22:36.583] [exthost] [error] [ms-python.python] provider FAILED
+[2020-06-09 18:22:36.584] [exthost] [error] Error: DisposableStore is missing...
+    at U._convertCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:574)
+    at U.resolveCompletionItem (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:677:354)
+    at runMicrotasks (<anonymous>:null:null)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+

@@ -1,0 +1,379 @@
+INFO extension.deploy.reloaded.loadplugins - [11/Jun/2020:06:33:04 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+INFO extension.deploy.reloaded.loadplugins - [11/Jun/2020:06:38:26 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+INFO extension.deploy.reloaded.loadplugins - [11/Jun/2020:06:38:33 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:07:15:12 +0000] "'/var/www/engine/html/assets/js/react.js' does NOT match with a mode pattern"
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:07:19:04 +0000] "'/var/www/engine/html/assets/js/react.js' does NOT match with a mode pattern"
+TRACE workspaces.workspace.ondidchangeactivetexteditor(1) - [11/Jun/2020:07:19:57 +0000] "ENOENT: no such file or directory, lstat '/home/matrix/Documents/aerodisk/engine2/react/src/components/net/createBondForm.js'
+
+Stack:
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/log.js:88:52
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:3198:18
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at ActionLogger.logSync (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:113:14)
+    at ActionLogger.trace (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:136:21)
+    at Workspace.onDidChangeActiveTextEditor (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:2008:30)"
+TRACE workspaces.workspace.ondidchangeactivetexteditor(1) - [11/Jun/2020:07:22:11 +0000] "ENOENT: no such file or directory, lstat '/home/matrix/Documents/aerodisk/engine2/bin/NETWORK/controllers/phys.py'
+
+Stack:
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/log.js:88:52
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:3198:18
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at ActionLogger.logSync (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:113:14)
+    at ActionLogger.trace (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:136:21)
+    at Workspace.onDidChangeActiveTextEditor (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:2008:30)"
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:07:53:30 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:07:53:30 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:07:53:40 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:07:53:40 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:07:57:35 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:07:57:35 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:07:57:46 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:07:57:47 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:07:57:57 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:07:57:58 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:08:31:07 +0000] "'/var/www/engine/html/assets/js/react.js' does NOT match with a mode pattern"
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:08:32:55 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:08:32:56 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:08:33:49 +0000] "'/var/www/engine/html/assets/js/react.js' does NOT match with a mode pattern"
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:08:37:49 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:08:37:49 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:08:42:21 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:08:42:21 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:08:44:45 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:08:44:45 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:08:46:02 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:08:46:03 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:08:48:04 +0000] "'/var/www/engine/html/assets/js/react.js' does NOT match with a mode pattern"
+INFO extension.deploy.reloaded.loadplugins - [11/Jun/2020:09:01:42 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:09:03:00 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:09:03:01 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:09:03:11 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:09:03:11 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:09:10:09 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:09:10:09 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:09:10:13 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:09:10:14 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:09:10:21 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:09:10:22 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+TRACE workspaces.workspace.ondidchangeactivetexteditor(1) - [11/Jun/2020:09:21:41 +0000] "ENOENT: no such file or directory, lstat '/home/matrix/Documents/aerodisk/engine2/bin/NETWORK/controllers/phys.py'
+
+Stack:
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/log.js:88:52
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:3198:18
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at ActionLogger.logSync (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:113:14)
+    at ActionLogger.trace (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:136:21)
+    at Workspace.onDidChangeActiveTextEditor (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:2008:30)"
+INFO extension.deploy.reloaded.loadplugins - [11/Jun/2020:09:23:44 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+INFO extension.deploy.reloaded.loadplugins - [11/Jun/2020:10:34:23 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+INFO extension.deploy.reloaded.loadplugins - [11/Jun/2020:10:39:08 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:10:39:28 +0000] "'/var/www/engine/fuel/app/views/leftmenu.php' does NOT match with a mode pattern"
+INFO extension.deploy.reloaded.loadplugins - [11/Jun/2020:11:06:22 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:11:11:40 +0000] "'/var/www/engine/bin/NETWORK/controllers/bond.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:11:11:41 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/bond.py' to 777 ..."
+INFO extension.deploy.reloaded.loadplugins - [11/Jun/2020:11:35:43 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+INFO extension.deploy.reloaded.loadplugins - [11/Jun/2020:11:36:08 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:12:09:14 +0000] "'/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:12:09:14 +0000] "Setting mode for '/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:12:14:38 +0000] "'/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:12:14:38 +0000] "Setting mode for '/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:12:24:05 +0000] "'/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:12:24:05 +0000] "Setting mode for '/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:12:24:14 +0000] "'/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:12:24:14 +0000] "Setting mode for '/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:13:07:52 +0000] "'/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:13:07:53 +0000] "Setting mode for '/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:13:07:58 +0000] "'/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:13:07:58 +0000] "Setting mode for '/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:13:33:37 +0000] "'/var/www/engine/var/www/engine/html/assets/js/react.js' does NOT match with a mode pattern"
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:13:38:43 +0000] "'/var/www/engine/html/assets/js/react.js' does NOT match with a mode pattern"
+TRACE workspaces.workspace.ondidchangeactivetexteditor(1) - [11/Jun/2020:13:44:52 +0000] "ENOENT: no such file or directory, lstat '/home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/constants.py'
+
+Stack:
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/log.js:88:52
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:3198:18
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at ActionLogger.logSync (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:113:14)
+    at ActionLogger.trace (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:136:21)
+    at Workspace.onDidChangeActiveTextEditor (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:2008:30)"
+TRACE workspaces.workspace.ondidchangeactivetexteditor(1) - [11/Jun/2020:13:45:34 +0000] "ENOENT: no such file or directory, lstat '/home/matrix/Documents/aerodisk/engine2/var/www/engine/bin/NETWORK/controllers/phys.py'
+
+Stack:
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/log.js:88:52
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at /home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:3198:18
+    at ActionLogger.onLog (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:233:21)
+    at ActionLogger.log (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:100:91)
+    at ActionLogger.logSync (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:113:14)
+    at ActionLogger.trace (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/node_modules/vscode-helpers/lib/logging/index.js:136:21)
+    at Workspace.onDidChangeActiveTextEditor (/home/matrix/.vscode/extensions/mkloubert.vscode-deploy-reloaded-0.89.0/out/workspaces.js:2008:30)"
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:13:48:58 +0000] "'/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:13:48:58 +0000] "Setting mode for '/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:13:52:59 +0000] "'/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:13:52:59 +0000] "Setting mode for '/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:13:57:25 +0000] "'/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:13:57:26 +0000] "Setting mode for '/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:14:14:47 +0000] "'/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:14:14:47 +0000] "Setting mode for '/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:14:16:51 +0000] "'/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:14:16:51 +0000] "Setting mode for '/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:14:16:59 +0000] "'/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:14:16:59 +0000] "Setting mode for '/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:14:17:04 +0000] "'/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:14:17:04 +0000] "Setting mode for '/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:14:18:43 +0000] "'/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:14:18:43 +0000] "Setting mode for '/var/www/engine/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:14:22:07 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:14:22:07 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:14:24:44 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:14:24:44 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:14:27:28 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:14:27:28 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:14:29:36 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:14:29:36 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:14:29:53 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:14:29:53 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:14:40:35 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:14:40:36 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+INFO extension.deploy.reloaded.loadplugins - [11/Jun/2020:14:53:25 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:14:58:25 +0000] "'/var/www/engine/bin/NETWORK/constants.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:14:58:25 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/constants.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:14:58:28 +0000] "'/var/www/engine/bin/NETWORK/constants.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:14:58:28 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/constants.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:15:06:07 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:15:06:07 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [11/Jun/2020:15:06:12 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [11/Jun/2020:15:06:13 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."

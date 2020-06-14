@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#controls_wrapper {
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 7px solid transparent;
+}
+
+#controls_wrapper > .ms_td {
+    vertical-align: middle;
+}
+
+.rec_button {
+    opacity: 0.7;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    line-height: 40px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+.rec_button:hover,
+.rec_button.active{
+     cursor: pointer;
+     opacity: 0.9;
+}
+
+#start_button {
+    margin: 0 0 5px;
+    background: red;
+    color: white;
+    font-size: 50px;
+}
+
+#pause_button {
+    background: #e5e5e5;
+    color: #444444;
+    font-size: 18px;
+}
+
+#pause_button img {
+    width: 16px;
+    height: auto;
+    border-top: 12px solid transparent;
+}
+
+#record_progress {
+    width: 100%;
+    text-align: center;
+}
+#record_progress p {
+    margin: 0;
+}
+
+#rec_duration {
+    width: 100%;
+    color: #666;
+    font-size: 28px;
+    font-weight: 200;
+}
+
+#progress_indicator {
+    display: none;
+    margin: 0 0 5px;
+    font-size: 13px;
+}
+#progress_indicator.active {
+    display: block;
+}
+
+#progress_indicator span {
+    color: red;
+    font-size: 20px;
+    line-height: 13px;
+    vertical-align: sub;
+}
+#progress_indicator.active span {
+    animation: blinking_dot 0.5s ease-in infinite alternate;
+}
+
+@keyframes blinking_dot {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+#memory_status {
+    margin: 10px 0 0;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+#memory_status .ms_td {
+    width: 50%;
+    /*text-align: left;*/
+}
+
+#memory_status .ms_label {
+    display: inline-block;
+    margin: 0 -2px 0 0;
+    width: 16px;
+    height: 16px;
+    box-sizing: border-box;
+    background: #666;
+    border-radius: 3px;
+    color: white;
+    line-height: 16px;
+}
+#memory_status .ms_label:hover {
+    cursor: help;
+}
+
+#rec_size {
+
+}
+
+#free_ram {
+
+}
+
+#capture_audio_checkbox {
+    margin-left: 17px;
+}
+
+hr.separator,.audio-controls,.enabler{
+    width: 92%;
+}
+
+hr.separator{
+
+    height: 3px;
+    background: #d0d0d0;
+    border: 0;
+    margin-top: 0;
+}
+
+.audio-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.audio-controls select,.enabler label{
+    width: 100%;
+    outline: none;
+}
+.audio-controls label{
+    margin-right: 5px;
+}
+.enabler{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+.enabler .no_permission_icon{
+    display: none;
+    width: 18px;
+    height: 18px;
+    background: url(/images/popup/preferences.png) no-repeat;
+    cursor: pointer;
+    background-size: 100%;
+}

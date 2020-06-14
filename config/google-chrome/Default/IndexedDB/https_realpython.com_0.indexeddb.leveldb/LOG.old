@@ -1,0 +1,7 @@
+2020/05/26-23:53:09.596 20d2 Reusing MANIFEST /home/matrix/.config/google-chrome/Default/IndexedDB/https_realpython.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/05/26-23:53:09.597 20d2 Recovering log #3
+2020/05/26-23:53:09.600 20d2 Reusing old log /home/matrix/.config/google-chrome/Default/IndexedDB/https_realpython.com_0.indexeddb.leveldb/000003.log 
+2020/05/27-20:41:51.219 9752 Level-0 table #5: started
+2020/05/27-20:41:51.228 9752 Level-0 table #5: 12278 bytes OK
+2020/05/27-20:41:51.238 9752 Delete type=0 #3
+2020/05/27-20:41:51.239 9752 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

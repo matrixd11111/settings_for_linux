@@ -1,0 +1,284 @@
+User belongs to experiment group 'ShowPlayIcon - start'
+User belongs to experiment group 'DebugAdapterFactory - experiment'
+User belongs to experiment group 'PtvsdWheels37 - experiment'
+User belongs to experiment group 'UseTerminalToGetActivatedEnvVars - control'
+User belongs to experiment group 'LocalZMQKernel - control'
+User belongs to experiment group 'NativeNotebook - control'
+User belongs to experiment group 'CollectLSRequestTiming - control'
+User belongs to experiment group 'CollectNodeLSRequestTiming - experiment'
+User belongs to experiment group 'EnableIPyWidgets - experiment'
+User belongs to experiment group 'RunByLine - control'
+User belongs to experiment group 'CustomEditorSupport - control'
+> conda --version
+> pyenv root
+> python3.7 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> python3.6 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> python2 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> python ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> conda info --json
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import jupyter"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import jupyter"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import notebook"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import notebook"
+Starting Jedi Python language engine.
+Python interpreter path: /usr/bin/python3
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/engine2/bin/NETWORK/controllers/phys.py
+cwd: ~/Documents/aerodisk/engine2
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/engine2/bin/NETWORK/controllers/phys.py
+cwd: ~/Documents/aerodisk/engine2
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/engine2/bin/NETWORK/controllers/bond.py
+cwd: ~/Documents/aerodisk/engine2
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/engine2/bin/NETWORK/controllers/bond.py
+cwd: ~/Documents/aerodisk/engine2
+> conda --version
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.prefix)"
+cwd: ~/Documents/aerodisk/engine2
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.prefix)"
+cwd: ~/Documents/aerodisk/engine2
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+cwd: ~/Documents/aerodisk/engine2
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+cwd: ~/Documents/aerodisk/engine2
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())"
+cwd: ~/Documents/aerodisk/engine2
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())"
+cwd: ~/Documents/aerodisk/engine2
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py site --user-site
+cwd: ~/Documents/aerodisk/engine2
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py site --user-site
+cwd: ~/Documents/aerodisk/engine2
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/completion.py
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/completion.py
+##########Linting Output - flake8##########
+5,80,E,E501:line too long (89 > 79 characters)
+32,1,W,W293:blank line contains whitespace
+82,80,E,E501:line too long (90 > 79 characters)
+94,80,E,E501:line too long (112 > 79 characters)
+96,80,E,E501:line too long (107 > 79 characters)
+99,80,E,E501:line too long (121 > 79 characters)
+117,80,E,E501:line too long (101 > 79 characters)
+121,51,E,E203:whitespace before ','
+121,52,E,E231:missing whitespace after ','
+122,80,E,E501:line too long (100 > 79 characters)
+123,80,E,E501:line too long (104 > 79 characters)
+124,80,E,E501:line too long (110 > 79 characters)
+125,80,E,E501:line too long (106 > 79 characters)
+126,80,E,E501:line too long (95 > 79 characters)
+165,80,E,E501:line too long (100 > 79 characters)
+169,1,W,W293:blank line contains whitespace
+173,80,E,E501:line too long (86 > 79 characters)
+176,80,E,E501:line too long (116 > 79 characters)
+##########Linting Output - flake8##########
+10,1,F,F811:redefinition of unused 'AeroResponse' from line 8
+10,1,F,F811:redefinition of unused 'writeLog' from line 8
+10,1,F,F811:redefinition of unused 'python_logger' from line 8
+10,80,E,E501:line too long (94 > 79 characters)
+22,13,E,E722:do not use bare 'except'
+49,80,E,E501:line too long (83 > 79 characters)
+51,80,E,E501:line too long (101 > 79 characters)
+53,80,E,E501:line too long (86 > 79 characters)
+54,80,E,E501:line too long (121 > 79 characters)
+57,80,E,E501:line too long (80 > 79 characters)
+65,80,E,E501:line too long (162 > 79 characters)
+66,80,E,E501:line too long (82 > 79 characters)
+68,80,E,E501:line too long (189 > 79 characters)
+68,85,F,F524:'...'.format(...) is missing argument(s) for placeholder(s): 4
+69,80,E,E501:line too long (125 > 79 characters)
+72,80,E,E501:line too long (112 > 79 characters)
+75,5,E,E722:do not use bare 'except'
+76,80,E,E501:line too long (113 > 79 characters)
+102,80,E,E501:line too long (83 > 79 characters)
+104,80,E,E501:line too long (82 > 79 characters)
+105,80,E,E501:line too long (148 > 79 characters)
+105,108,F,F821:undefined name 'NETWORK_UBUNTU_PATH'
+106,80,E,E501:line too long (89 > 79 characters)
+109,5,E,E722:do not use bare 'except'
+110,80,E,E501:line too long (103 > 79 characters)
+115,53,W,W291:trailing whitespace
+117,13,W,W291:trailing whitespace
+121,80,E,E501:line too long (138 > 79 characters)
+133,80,E,E501:line too long (83 > 79 characters)
+148,80,E,E501:line too long (99 > 79 characters)
+148,100,W,W291:trailing whitespace
+149,80,E,E501:line too long (89 > 79 characters)
+149,90,W,W291:trailing whitespace
+162,80,E,E501:line too long (80 > 79 characters)
+163,50,W,W291:trailing whitespace
+171,31,W,W291:trailing whitespace
+182,80,E,E501:line too long (268 > 79 characters)
+189,80,E,E501:line too long (307 > 79 characters)
+204,80,E,E501:line too long (88 > 79 characters)
+214,19,W,W291:trailing whitespace
+230,10,W,W291:trailing whitespace
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/engine2/bin/NETWORK/bonding-adapters.py
+cwd: ~/Documents/aerodisk/engine2
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/engine2/bin/NETWORK/bonding-adapters.py
+cwd: ~/Documents/aerodisk/engine2
+##########Linting Output - flake8##########
+75,80,E,E501:line too long (121 > 79 characters)
+80,80,E,E501:line too long (102 > 79 characters)
+81,80,E,E501:line too long (114 > 79 characters)
+82,80,E,E501:line too long (103 > 79 characters)
+83,5,E,E265:block comment should start with '# '
+83,80,E,E501:line too long (102 > 79 characters)
+84,5,E,E265:block comment should start with '# '
+84,80,E,E501:line too long (106 > 79 characters)
+85,80,E,E501:line too long (95 > 79 characters)
+86,80,E,E501:line too long (102 > 79 characters)
+87,80,E,E501:line too long (107 > 79 characters)
+88,80,E,E501:line too long (103 > 79 characters)
+89,80,E,E501:line too long (93 > 79 characters)
+90,80,E,E501:line too long (111 > 79 characters)
+91,80,E,E501:line too long (107 > 79 characters)
+96,80,E,E501:line too long (97 > 79 characters)
+97,80,E,E501:line too long (102 > 79 characters)
+101,80,E,E501:line too long (83 > 79 characters)
+102,80,E,E501:line too long (102 > 79 characters)
+103,80,E,E501:line too long (80 > 79 characters)
+104,80,E,E501:line too long (107 > 79 characters)
+109,5,E,E303:too many blank lines (3)
+111,80,E,E501:line too long (96 > 79 characters)
+112,80,E,E501:line too long (106 > 79 characters)
+113,80,E,E501:line too long (114 > 79 characters)
+114,80,E,E501:line too long (103 > 79 characters)
+115,5,E,E265:block comment should start with '# '
+115,80,E,E501:line too long (102 > 79 characters)
+116,5,E,E265:block comment should start with '# '
+116,80,E,E501:line too long (106 > 79 characters)
+117,80,E,E501:line too long (102 > 79 characters)
+118,80,E,E501:line too long (117 > 79 characters)
+119,80,E,E501:line too long (119 > 79 characters)
+120,80,E,E501:line too long (107 > 79 characters)
+131,80,E,E501:line too long (110 > 79 characters)
+143,80,E,E501:line too long (96 > 79 characters)
+145,80,E,E501:line too long (122 > 79 characters)
+149,80,E,E501:line too long (100 > 79 characters)
+167,80,E,E501:line too long (83 > 79 characters)
+168,80,E,E501:line too long (114 > 79 characters)
+169,80,E,E501:line too long (113 > 79 characters)
+173,80,E,E501:line too long (117 > 79 characters)
+174,80,E,E501:line too long (121 > 79 characters)
+175,80,E,E501:line too long (127 > 79 characters)
+176,80,E,E501:line too long (123 > 79 characters)
+177,80,E,E501:line too long (129 > 79 characters)
+178,80,E,E501:line too long (95 > 79 characters)
+179,80,E,E501:line too long (101 > 79 characters)
+194,80,E,E501:line too long (82 > 79 characters)
+206,80,E,E501:line too long (86 > 79 characters)
+208,80,E,E501:line too long (98 > 79 characters)
+216,80,E,E501:line too long (84 > 79 characters)
+219,5,E,E722:do not use bare 'except'
+236,16,E,E231:missing whitespace after ','
+248,80,E,E501:line too long (194 > 79 characters)
+255,35,W,W605:invalid escape sequence '\d'
+255,39,W,W605:invalid escape sequence '\s'
+268,60,E,E231:missing whitespace after ','
+268,80,E,E501:line too long (118 > 79 characters)
+268,80,E,E231:missing whitespace after ','
+268,99,E,E231:missing whitespace after ','
+271,61,E,E231:missing whitespace after ','
+273,80,E,E501:line too long (81 > 79 characters)
+274,54,E,E203:whitespace before ':'
+275,21,E,E265:block comment should start with '# '
+278,80,E,E501:line too long (86 > 79 characters)
+280,21,F,F821:undefined name 'result'
+282,54,W,W605:invalid escape sequence '\s'
+282,61,W,W605:invalid escape sequence '\s'
+287,17,E,E741:ambiguous variable name 'l'
+308,5,E,E722:do not use bare 'except'
+326,80,E,E501:line too long (143 > 79 characters)
+342,5,E,E722:do not use bare 'except'
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/engine2/bin/NETWORK/controllers/bond.py
+cwd: ~/Documents/aerodisk/engine2
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/engine2/bin/NETWORK/controllers/bond.py
+cwd: ~/Documents/aerodisk/engine2
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+##########Linting Output - flake8##########
+5,80,E,E501:line too long (89 > 79 characters)
+32,1,W,W293:blank line contains whitespace
+82,80,E,E501:line too long (90 > 79 characters)
+94,80,E,E501:line too long (112 > 79 characters)
+96,80,E,E501:line too long (107 > 79 characters)
+99,80,E,E501:line too long (121 > 79 characters)
+117,80,E,E501:line too long (101 > 79 characters)
+121,51,E,E203:whitespace before ','
+121,52,E,E231:missing whitespace after ','
+122,80,E,E501:line too long (100 > 79 characters)
+123,80,E,E501:line too long (104 > 79 characters)
+124,80,E,E501:line too long (110 > 79 characters)
+125,80,E,E501:line too long (106 > 79 characters)
+126,80,E,E501:line too long (95 > 79 characters)
+165,80,E,E501:line too long (100 > 79 characters)
+169,1,W,W293:blank line contains whitespace
+173,80,E,E501:line too long (86 > 79 characters)
+176,80,E,E501:line too long (116 > 79 characters)
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/engine2/bin/NETWORK/controllers/bond.py
+cwd: ~/Documents/aerodisk/engine2
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py flake8 --format=%(row)d,%(col)d,%(code).1s,%(code)s:%(text)s ~/Documents/aerodisk/engine2/bin/NETWORK/controllers/bond.py
+cwd: ~/Documents/aerodisk/engine2
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+##########Linting Output - flake8##########
+5,80,E,E501:line too long (89 > 79 characters)
+32,1,W,W293:blank line contains whitespace
+83,80,E,E501:line too long (90 > 79 characters)
+95,80,E,E501:line too long (112 > 79 characters)
+97,80,E,E501:line too long (107 > 79 characters)
+100,80,E,E501:line too long (121 > 79 characters)
+118,80,E,E501:line too long (101 > 79 characters)
+122,51,E,E203:whitespace before ','
+122,52,E,E231:missing whitespace after ','
+123,80,E,E501:line too long (100 > 79 characters)
+124,80,E,E501:line too long (104 > 79 characters)
+125,80,E,E501:line too long (110 > 79 characters)
+126,80,E,E501:line too long (106 > 79 characters)
+127,80,E,E501:line too long (95 > 79 characters)
+137,80,E,E501:line too long (102 > 79 characters)
+166,80,E,E501:line too long (100 > 79 characters)
+170,1,W,W293:blank line contains whitespace
+174,80,E,E501:line too long (86 > 79 characters)
+177,80,E,E501:line too long (116 > 79 characters)
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> /usr/bin/python3 ~/.vscode/extensions/ms-python.python-2020.5.86806/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"

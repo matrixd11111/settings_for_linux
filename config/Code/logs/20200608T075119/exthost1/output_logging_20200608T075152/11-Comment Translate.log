@@ -1,0 +1,194 @@
+/snap/code/33/usr/share/code/resources/app
+[Google Translate]:
+
+//tbody/tr/td/[text()="enp5s0f1"] and td[text()="
+[<============================>]:
+//tbody/tr/td/[text()="enp5s0f1"] and td[text()="
+
+[Google Translate]:
+
+# '//tbody/td[text()="{}"]': '9000',
+
+[<============================>]:
+# '//tbody/td[text()="{}"]': '9000',
+
+[Google Translate]:
+
+//tbody/tr/[td/text()="enp5s0f1" and td/text()="
+[<============================>]:
+//tbody/tr/[td/text()="enp5s0f1" and td/text()="
+
+[Google Translate]:
+
+//tbody/tr[td/text()="ens11f1"]/td[text()="
+[<============================>]:
+//tbody/tr[td/text()="ens11f1"]/td[text()="
+
+[Google Translate]:
+
+//tbody/tr[td/text()=""]/td/div/span[text()="
+[<============================>]:
+//tbody/tr[td/text()=""]/td/div/span[text()="
+
+[Google Translate]:
+
+#                                         (const.LIST_NAME_INTERFACE[const.GENERATOR_NAME_INTERFACE.index(interface_name)]))
+
+[<============================>]:
+#                                         (const.LIST_NAME_INTERFACE[const.GENERATOR_NAME_INTERFACE.index(interface_name)]))
+
+[Google Translate]:
+
+#     Не активная кнопка удалить групповой интерфейс
+
+[<============================>]:
+# Inactive button delete group interface
+
+[Google Translate]:
+
+#     element.main_page(const.PATH_PHYS_INTERFACE)
+
+[<============================>]:
+#     element.main_page(const.PATH_PHYS_INTERFACE)
+
+[Google Translate]:
+
+#     Выбраны интерфейсы с разных контроллеров 
+
+[<============================>]:
+# Selected interfaces from different controllers
+
+[Google Translate]:
+
+//tbody/tr[td/text()="enp5s0f0"]/td[text()="
+[<============================>]:
+//tbody/tr[td/text()="enp5s0f0"]/td[text()="
+
+[Google Translate]:
+
+//td[text()="
+[<============================>]:
+//td[text()="
+
+[Google Translate]:
+
+//button[text()="Подтвердить"]
+[<============================>]:
+//button [text () = "Confirm"]
+
+[Google Translate]:
+
+# NULL IQN, 1 PORTAL, 1 USER
+
+[<============================>]:
+# NULL IQN, 1 PORTAL, 1 USER
+
+[Google Translate]:
+
+# NULL IQN, NULL PORTAL
+
+[<============================>]:
+# NULL IQN, NULL PORTAL
+
+[Google Translate]:
+
+//table[contains(@class, "loading")]
+[<============================>]:
+//table[contains(@class, "loading")]
+
+[Google Translate]:
+
+"]/td[text()="ENGINE-1"]
+[<============================>]:
+"]/td[text()="ENGINE-1"]
+
+[Google Translate]:
+def test_h_create_group_interface_the_same_speed(self):
+        """
+        Выбраны интерфейсы с разных контроллеров 
+        """
+        element.main_page(const.PATH_PHYS_INTERFACE)
+        element.context_click_clamped_control('//tbody/tr[td/text()="{}"]/td[text()="ENGINE-0"]'.format(const.GENERATOR_NAME_INTERFACE[0]),\
+                                            '//tbody/tr[td/text()="{}"]/td[text()="ENGINE-1"]'.format(const.GENERATOR_NAME_INTERFACE[0]))
+        element.click_xpath_button('//span[text()="Создать груповой интерфейс"]')
+[<============================>]:
+def test_h_create_group_interface_the_same_speed (self):
+        "" "
+        Interfaces selected from different controllers
+        "" "
+        element.main_page (const.PATH_PHYS_INTERFACE)
+        element.context_click_clamped_control ('//tbody /tr [td /text () = "{}"] /td [text () = "ENGINE-0"]'. format (const.GENERATOR_NAME_INTERFACE [0]), \
+                                            '//tbody/tr[td/text()="{►""/td[text()="ENGINE-1""'.format(const.GENERATOR_NAME_INTERFACE[0]))
+        element.click_xpath_button ('//span [text () = "Create a group interface"]')
+
+[Google Translate]:
+
+//tbody/tr[td/text()="
+[<============================>]:
+//tbody/tr[td/text()="
+
+[Google Translate]:
+
+//span[text()="Отменить"]
+[<============================>]:
+//span [text () = "Cancel"]
+
+[Google Translate]:
+
+        Тест не активна кнопка "создать групповой интерфейс" не выбрано два интерфейса
+[<============================>]:
+Test inactive. "Create group interface" button; two interfaces not selected
+
+[Google Translate]:
+
+//span[text()="Создать груповой интерфейс"]
+[<============================>]:
+//span [text () = "Create a group interface"]
+
+[Google Translate]:
+
+http://192.168.2.10/net/static
+[<============================>]:
+http://192.168.2.10/net/static
+
+[Google Translate]:
+
+#                                                                             if const.IP_FAIL_NUMBER_LIST.index(ip_fail) != 3\
+
+[<============================>]:
+#                                                                             if const.IP_FAIL_NUMBER_LIST.index(ip_fail) != 3\
+
+[Google Translate]:
+Classmethod
+[<============================>]:
+Classmethod
+
+[Google Translate]:
+Test j delete virt interface
+[<============================>]:
+Test j delete virt interface
+
+[Google Translate]:
+Test authentication page
+[<============================>]:
+Test authentication page
+
+[Google Translate]:
+
+#     return WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator)).clear()
+
+[<============================>]:
+#     return WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator)).clear()
+
+[Google Translate]:
+
+my
+[<============================>]:
+my
+
+[Google Translate]:
+
+//span[text()="Удалить груповой интерфейс"]
+[<============================>]:
+//span [text () = "Delete the group interface"]
+

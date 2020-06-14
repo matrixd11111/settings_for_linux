@@ -1,0 +1,114 @@
+INFO extension.deploy.reloaded.loadplugins - [20/May/2020:05:36:09 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:07:05:43 +0000] "'/var/www/engine/html/assets/js/react.js' does NOT match with a mode pattern"
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:07:05:58 +0000] "'/var/www/engine/bin/NETWORK/constants.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [20/May/2020:07:05:58 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/constants.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:07:06:06 +0000] "'/var/www/engine/bin/NETWORK/controller.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [20/May/2020:07:06:06 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controller.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:07:06:11 +0000] "'/var/www/engine/bin/NETWORK/controllers/bond.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [20/May/2020:07:06:11 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/bond.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:07:06:11 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [20/May/2020:07:06:11 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:07:06:11 +0000] "'/var/www/engine/bin/NETWORK/controllers/virt.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [20/May/2020:07:06:11 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/virt.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:07:06:11 +0000] "'/var/www/engine/bin/NETWORK/controllers/static.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [20/May/2020:07:06:12 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/static.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:07:46:01 +0000] "'/var/www/engine/html/assets/js/react.js' does NOT match with a mode pattern"
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:07:47:21 +0000] "'/var/www/engine/html/assets/js/react.js' does NOT match with a mode pattern"
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:08:38:49 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [20/May/2020:08:38:49 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:08:41:11 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [20/May/2020:08:41:11 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:08:42:59 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [20/May/2020:08:43:00 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:08:44:23 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [20/May/2020:08:44:23 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:08:48:05 +0000] "'/var/www/engine/html/assets/js/react.js' does NOT match with a mode pattern"
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:08:48:20 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [20/May/2020:08:48:20 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:08:49:02 +0000] "'/var/www/engine/html/assets/js/react.js' does NOT match with a mode pattern"
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:09:40:50 +0000] "'/var/www/engine/bin/NETWORK/controllers/bond.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [20/May/2020:09:40:51 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/bond.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:09:42:00 +0000] "'/var/www/engine/bin/NETWORK/controllers/bond.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [20/May/2020:09:42:01 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/bond.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:09:43:44 +0000] "'/var/www/engine/bin/NETWORK/controllers/bond.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [20/May/2020:09:43:44 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/bond.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:09:44:57 +0000] "'/var/www/engine/bin/NETWORK/controllers/bond.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [20/May/2020:09:44:57 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/bond.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:09:45:40 +0000] "'/var/www/engine/bin/NETWORK/controllers/phys.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [20/May/2020:09:45:40 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/phys.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:09:46:09 +0000] "'/var/www/engine/bin/NETWORK/controller.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [20/May/2020:09:46:09 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controller.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:09:46:17 +0000] "'/var/www/engine/bin/NETWORK/constants.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [20/May/2020:09:46:17 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/constants.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:09:50:38 +0000] "'/var/www/engine/bin/NETWORK/controllers/bond.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [20/May/2020:09:50:38 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/bond.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:09:51:28 +0000] "'/var/www/engine/bin/NETWORK/controllers/bond.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [20/May/2020:09:51:28 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/bond.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:09:51:54 +0000] "'/var/www/engine/bin/NETWORK/controllers/bond.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [20/May/2020:09:51:54 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/bond.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:09:53:39 +0000] "'/var/www/engine/bin/NETWORK/controllers/bond.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [20/May/2020:09:53:39 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/bond.py' to 777 ..."
+NOTICE clients.sftp.uploadfile(3) - [20/May/2020:10:05:11 +0000] "'/var/www/engine/bin/NETWORK/controllers/bond.py' matches with mode pattern '/**/*.py'"
+INFO clients.sftp.uploadfile(1) - [20/May/2020:10:05:12 +0000] "Setting mode for '/var/www/engine/bin/NETWORK/controllers/bond.py' to 777 ..."
+INFO extension.deploy.reloaded.loadplugins - [20/May/2020:11:56:12 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"
+INFO extension.deploy.reloaded.loadplugins - [20/May/2020:11:59:27 +0000] "Loaded 19 plugins:
+- app
+- azureblob
+- batch
+- compiler
+- dropbox
+- each
+- ftp
+- list
+- local
+- mail
+- map
+- prompt
+- s3bucket
+- script
+- sftp
+- slack
+- switch
+- test
+- zip
+"

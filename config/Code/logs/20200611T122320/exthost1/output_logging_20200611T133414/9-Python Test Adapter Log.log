@@ -1,0 +1,4 @@
+2020-06-11T10:34:14.614Z info at 'testing' [unittest runner]: Reading configuration for workspace testing
+2020-06-11T10:34:14.635Z info at 'testing' [unittest runner]: Unittest test discovery is disabled
+2020-06-11T10:34:14.637Z info at 'testing' [pytest runner]: Reading configuration for workspace testing
+2020-06-11T10:34:14.645Z info at 'testing' [pytest runner]: Pytest test discovery is disabled
